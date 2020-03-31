@@ -1,0 +1,218 @@
+title=And now for something completely different, OR, The code That Almost Toppled Microsoft. Almost.
+date=2008-11-06
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p>I just visited the Phillipines. While there, my-brother-in-law gave me a hard disk with 60GBs of photographs. I
+    wanted them on Flickr. Complicating matters further were the photos that my girl's photos. Her photos - every
+    blessed one of them -- were perfect. Mine, on the other hand, were an affront to color, tone, lighting and God.
+    Nothing short of a week in front of GIMP and Flickr could save them. </p>
+
+<p>
+    Nothing, that is, except perhaps some automation. I devised a plan: auto color correct the images using ImageMagic
+    (You know how Photoshop has the "Auto Levels" command that transforms images from Warhol's to Monet's?), correct
+    some of the EXIF issues I had, and then upload all 65GBs of photos to Flickr. </p>
+<h2>Approach </h2>
+<P>
+    I chose Ruby for the solution because I've worked with some of these APIs before. I know how I would approach this
+    problem from Java: <a href="http://jmagick.wiki.sourceforge.net">JMagick</a> for ImageMagick access, <a
+        href="http://flickrj.sourceforge.net/">FlickrJ</a> for Flickr, and I'd probably just shell out to
+    <a href="http://www.sno.phy.queensu.ca/~phil/exiftool"><code>exiftool</code></a>, which is a command line tool on
+    Linux. I've disabused myself of the notion that this script going on to become the 100 lines of code that topples
+    Microsoft, and thus I don't care if it just works on Linux. </p>
+<P>
+    I chose not to use Java because, frankly, I'm really picky about how I build my Java applications. Picky, to the
+    point that sometimes it hinders me when I'm just trying to express an application. Unless it's for the most trivial
+    of applications (where "trivial" most certainly does NOT include assimilating 3 different libraries and performing
+    image processing for 2 days) I can't help but introduce elements from my war chest. </p><p>My war chest is derived
+    from years of doing this singular task, from programming in Java. Years of experience have taught me to readily
+    employ, for example: Maven, unit testing, persistence (so that I can keep track of what's been processed, for
+    example) and with all of that, why not Spring? After all, I was going to write to interfaces anyway. My years of
+    experience have taught me that I should plan the application out a little bit before I take to coding. After all, by
+    the time I've integrated all those APIs, change will be slower going, and it's easier to refactor UML than DDL. My
+    years of experience have made me slow for the small applications and fast for the big applications. </p>
+<p>I chose not to use Python because I didn't know the APIs for Flickr that well in Python. Simple enough. I always use
+    Python. It's the language I write my one-offs in. It's the language I go to when I want to express a solution
+    without UML. It would have been perfect for this job. It's most redemptive quality is, in fact, how frequently I
+    find myself thinking it would be perfect for a job. It inspires hope. But again, I don't know the API very well, no
+    need to get lost in the weeds of Ruby offers a paved road. </P>
+<h2>Prerequisites </h2>
+<p>The players having been selected, I wrote a small checklist of what I'll need.</p>
+<OL>
+    <LI>
+
+        <a href="http://www.flickr.com/services/api/keys/apply/">Flickr API License key</a> Make sure you choose the non
+        professional version.
+    </li>
+    <li> Photos</LI>
+    <LI>Ruby compiler. And the gem command, definitely don't forget those. You'll need some packages to get this
+        running. I installed the packges using my Operating Systems package manager. I'm using Ubuntu Hardy Heron. The
+        script I used to reproduce the solution on another machine (and thus to whose viability I can speak) is: <br/>
+<PRE><CODE>
+    sudo apt-get install libimage-exiftool-perl
+    sudo apt-get install libfreetype6-dev libfreetype6
+    sudo apt-get install libwmf0.2-7 ghostscript libjpeg62
+    sudo apt-get install libpng3 libpng3-dev
+    sudo apt-get install imagemagick
+    sudo apt-get install make gcc autoconf ruby rubygems ruby1.8-dev libmagick9-dev
+
+    sudo gem install rflickr
+    sudo gem install rmagick
+    sudo gem install mini_exiftool
+    sudo gem install openwferu-extras
+</CODE></pre>
+    </li>
+</oL>
+
+<h2>Code! </h2>
+<P>
+    I took large swatches of this from loadr.rb script that ships with the Flickr library's source code. The application
+    is anything if not fragile, and perhaps not even very efficient, but it does work, and that's what mattered here.
+</P>
+<PRE><CODE>#!/usr/bin/ruby
+
+    require 'rubygems'
+    require 'pp'
+    require 'find'
+    require 'RMagick'
+    require 'fileutils'
+    require 'mini_exiftool'
+    require 'flickr'
+
+    <B>#you will get these values when you sign up with Flickr. Make sure you choose the non professional version. </b>
+    $flickr_email = 'YOUR_YAHOO_EMAIL'
+    $api_key = 'YOUR_YAHOO_FLICKR_API_KEY'
+    $shared_secret = 'YOUR_YAHOO_SHARED_SECRET'
+    $flickr = Flickr.new("/tmp/flickr.cache", $api_key, $shared_secret) <B># change the path as you like </b>
+    setname = 'the_set_to_which_I_want_to_upload_these_photos'
+
+    def filename_to_title(filename)
+    arr = filename.split(File::SEPARATOR).last.split('.')
+    arr.pop
+    my_title = arr.join('.')
+    end
+
+    <B># this will run each time. The first time it runs
+        # it will cause Flickr to display a screen prompting you
+        # to give permission to the application, which you will do.
+    </B>
+    def auth_rflickr(api, secret)
+    unless $flickr.auth.token
+    $flickr.clear_cache
+    $flickr.auth.getFrob
+    url = $flickr.auth.login_link
+    `firefox '#{url}'`
+    puts "A browser is being opened to bring you to:\n#{url}. When you are done authorizing this application, hit
+    enter."
+    gets
+    $flickr.auth.getToken
+    end
+    end
+
+    <b># change the paths as you like </b>
+    dir_for_output =Dir.new( FileUtils.mkdir_p("../output"))
+    dir_for_input = Dir.new "/home/yourUser/Desktop/photos/"
+
+    <b># here we run through the input folder and examine
+        #the contents, building up the array of files to upload.</b>
+    files= []
+    Find.find(dir_for_input.path) do |path|
+    if !FileTest.directory?(path)
+    tags = File.dirname(path )[dir_for_input.path.length .. -1]
+    if tags[-1]== '/' or tags[0] == '/'
+    tags = tags[1 .. -1]
+    end
+    if ['.jpg', '.tiff', '.tif'].include? File.extname(path).downcase <b>#only include images</b>
+    files << path
+    end
+    end
+    end
+
+
+    auth_rflickr($api_key, $shared_secret) unless $flickr.auth.token
+
+    <b># clean up the existing tmp folder</b>
+    if File.exists?(dir_for_output.path )
+    FileUtils.rm_rf(dir_for_output.path )
+    end
+
+    if not File.exists?(dir_for_output.path )
+    if not Dir.mkdir(dir_for_output.path )
+    raise "Can't create the directory!"
+    end
+    end
+
+    sets = $flickr.photosets.getList
+    set = sets.find{|s| s.title == setname}
+    set &&= set.fetch
+
+    eligible = (set ? set.fetch : [])
+    to_upload = []
+    uploaded = []
+
+    files.each do |filename|
+    my_title = filename_to_title(filename)
+    photo = eligible.find{|photo| photo.title==my_title}
+    if photo
+    uploaded << photo
+    else
+    to_upload << filename
+    end
+    end
+
+    tix = []
+    to_upload.each { |fn|
+    <b> # here's where the most interestig work is done. </b>
+    ifile= File.new fn<b> # output file</b>
+    ofile = File.join( dir_for_output.path, File.basename(fn))<b> # input file </b>
+    before = Magick::Image.read( ifile.path ).first<b> # read in an image using ImageMagick </b>
+    after = before.normalize
+    after.write( ofile )
+    exif_out = MiniExiftool.new ofile
+    <b> # open the file with MiniExiftool, which wraps exif
+        #tool, and perform operations on the exif metadata.</b>
+    exif_in = MiniExiftool.new ifile.path
+    exif_out['Orientation'] = exif_in ['Orientation']
+    puts 'couldnt save exif data!' if !exif_out.save
+    tags = File.dirname(fn )[dir_for_input.path.length .. -1]
+    if tags[0]== '/'
+    tags = tags[1 .. -1]
+    end
+    if tags[-1] == '/'
+    tags = tags.chomp
+    end
+    tags = tags.strip.split('/')
+    tix << $flickr.photos.upload.upload_file_async( ofile, filename_to_title(ofile),
+    nil, 'tag1 tag2 tag3'.split(' ')+tags)
+    <b># change these tags as you need to. They will be used to categorize the images on Flickr. </b>
+    }
+
+
+    tix = $flickr.photos.upload.checkTickets(tix)
+    while (tix.find_all{|t| t.complete==:incomplete }.length > 0)
+    sleep 2
+    puts "Checking on the following tickets: "+
+    tix.map{|t| "#{t.id} (#{t.complete})"}.join(', ')
+    tix = $flickr.photos.upload.checkTickets(tix)
+    end
+
+    failed = tix.find_all{|t| t.complete == :failed}
+    failed.each { |f| puts "Failed to upload #{to_upload[tix.index(f)]}." }
+    0.upto(tix.length - 1) { |n| puts "#{to_upload[n]}\t#{tix[n].photoid}" }
+
+    uploaded += tix.find_all{|t| t.complete == :completed}.map do |ticket|
+    $flickr.photos.getInfo(ticket.photoid)
+    end
+    uploaded.each do |photo|
+    if set
+    set << photo unless set.find{|ph| ph.id == photo.id}
+    else
+    set = $flickr.photosets.create(setname, photo, 'DESCRIPTION_HERE')
+    set = set.fetch
+    puts "creating set #{setname}"
+    end
+    end
+
+</CODE></PRE>

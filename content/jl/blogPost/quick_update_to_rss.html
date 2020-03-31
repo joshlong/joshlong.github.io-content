@@ -1,0 +1,20 @@
+title=Quick Update to RSS
+date=2009-08-22
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p> I just published a change to the code that should hopefully
+prevent readers (like <a href="http://www.google.com/reader">Google
+Reader</a>) from constantly requeuing all my old blog entries as
+"unread." �I don't know if it'll work (I've never had to debug this
+particular web client!), but we'll see. </p><p>I suspect the issue is
+something like the following: the spider hits the page which in turn
+causes it to get a cookie from Java Server Faces, which makes the blog
+feed look "new." I've checked the last modified dates and so on using
+<a href="http://livehttpheaders.mozdev.org/">Http Live Headers</a> and
+the Last-Modified dates and everything look alright. Anyway, I'll post
+back with results once they manifest (or, hopefully, don't manifest!)
+</p> <p>Succinctly, the change involved creating a servlet (sort of)
+and using that to write/render (I wanted to say "feed") the feed.</p>

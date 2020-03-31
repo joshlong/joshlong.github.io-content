@@ -1,0 +1,61 @@
+title=Spring BlazeDS and your RIA/Thick/Thin/Fat client
+date=2010-01-06
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p>  How are you handling messaging in your thin client, thick client, 
+fat client, RIA, or mobile client?  </p><p> <a 
+href="http://opensource.adobe.com/wiki/display/blazeds/BlazeDS">BlazeDS</a> 
+provides the ability to  proxy   messages from a JMS destination. Your 
+AIR / Flex client can subscribe to it and provide a callback, very 
+much like a Message Driven EJB or Spring's Message Driven POJOs. </p> 
+<p>Traditionally, reacting to an event on a bus in a client (which 
+very well could exist outside the firewall) means polling some service 
+or setting up a specialized proxy or perhaps having  separate DMZ-safe 
+JMS destination where you forward client-bound messages. 
+</p><p>Suffice it to say, all of this is tedious and imposes an 
+unecessary burden on the architecture and the developers. When it 
+comes to messaging and remoting based services, there is 
+<i>definitely</i> an extra burden on the developer of a RIA to secure 
+or handle that requirement where this burden simply does not exist 
+with traditional web applications. It is too frequently glossed over 
+when architecting a system and then becomes a pain point. </p><p> 
+There are <i>some</i> tools... </p><p>If you are using AJAX for your 
+RIA, then you will have mastered tools like comet for push-based 
+messaging. Even here, though, the burden of connecting and configuring 
+comet is on you, the developer. For example, <a 
+href="http://directwebremoting.org/dwr/index.html">DWR</a> - which is 
+fantastic - doesn't have a way of proxying a JMS destination that I 
+know of. It <i>can</i> be done, of course.</p><p><a 
+href="http://www.dossot.net/">David Dossot</a> showed me a very 
+interersting, albeit specific, <a 
+href="http://docs.codehaus.org/display/JETTY/Integrating%20with%20ActiveMQ">solution</a> 
+that solves the problem for Ajax using ActiveMQ's JavaScript client. 
+</p> 
+<p> So, back to the question at hand - how are you solving the 
+problem? Do you just avoid building systems that have the problem? You 
+truly can't think of at least one or two or a millino problems that 
+would be better served by messaging? </p> 
+<p> To me, the most <b>complete</b> solution appears to be Flex 
+partnered with Spring and BlazeDS. If this post sounds like that of a 
+gushing fan boy, you'll forgive me. It's true, unbounded enthusiasm. 
+This technology is liberating, enabling! It reduces a real problem to 
+a half hour of configuration - relegating the architectural burden 
+back to the "gloss over" column, if you're using Flex. The Spring - 
+BlazeDS integration is more than just a lot of "could"s. It provides 
+out-of-the box support for connecting to JMS, and if you use the 
+<b>excellent</b> <a 
+href="http://www.springsource.org/spring-flex">Spring/BlazeDS</a> 
+solution, then you can do all of this with  aplomb, and you can  hook 
+up any flex client to any channel on your Spring Integration bus with 
+a minimum of fuss. 
+  </p> <p>Naturally, all of that will all be covered in <a 
+href="http://www.apress.com/book/view/1430224991">Spring Web 
+Recipes</a>, so stay tuned! </p><p> 
+So: how are <b>you</b> talking to your messaging middleware?  Remember 
+- messaging is even MORE important in the wild Web 2.0 / cloud world 
+than the client-server applications of yesteryear. Temporal decoupling 
+brings scalability. 
+</p>

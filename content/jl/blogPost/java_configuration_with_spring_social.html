@@ -1,0 +1,70 @@
+title=Java Configuration with Spring Social
+date=2013-04-14
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<P>In <A href="http://www.joshlong.com/jl/blogPost/java_configuration.html">the first post in this series</a>,  I introduced Spring's Java configuration mechanism. There is the base configuration style, and - as we saw - there are annotations (like <CODE>@EnableWebMvc</CODE>) that turn on container-wide, and often conventions-oriented features. In the case of <CODE>@EnableWebMvc</Code>, the annotation enables Spring MVC and turns on support for correctly exposing <CODE>@Controller</CODE>-annotated beans as HTTP endpoints. Java configuration APIs of the same style as <CODE>@EnableWebMvc</CODE> can often optionally implement interfaces that are used to contribute, change, or otherwise tailor the API. Most Spring projects today offer beta-or-better APIs that work in this same manner.  
+In this post, we'll look at <A href="http://springsource.org/spring-social"> Spring Social</a>.
+</P>
+ <p>
+Spring Social a OAuth 1.0, 1.0.a and 2.0-compliant REST-services client and builds on top of this strongly typed Java bindings. Here's an example setup.
+</p>
+<pre><CODE>
+@Configuration
+@EnableJdbcConnectionRepository
+@EnableFacebook(appId = "${blog.facebook.appId}", appSecret = "${blog.facebook.appSecret}")
+public class SocialConfiguration {
+
+    @Bean
+    public ConnectController connectController(ConnectionFactoryLocator connectionFactoryLocator, 
+                                               ConnectionRepository connectionRepository) {
+        return new ConnectController(connectionFactoryLocator, connectionRepository);
+    }
+
+    @Bean
+    public ProviderSignInController providerSignInController(
+            ConnectionFactoryLocator connectionFactoryLocator, 
+            UsersConnectionRepository usersConnectionRepository) {
+        
+        return new ProviderSignInController(connectionFactoryLocator, usersConnectionRepository, new SignInAdapter() {
+            @Override
+            public String signIn(String userId, Connection<?> connection, NativeWebRequest request) {
+                return SignInUtils.signIn(userId);
+            }
+        });
+    }
+
+    @Bean
+    public DisconnectController disconnectController(Environment environment, UsersConnectionRepository usersConnectionRepository) {
+        return new DisconnectController(usersConnectionRepository, environment.getProperty("blog.facebook.appSecret"));
+    }
+
+    @Bean
+    public UserIdSource userIdSource() {
+        return new UserIdSource() {
+            @Override
+            public String getUserId() {
+                Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+                if (authentication == null) {
+                    throw new IllegalStateException("Unable to get a ConnectionRepository: no user signed in");
+                }
+                return authentication.getName();
+            }
+        };
+    }
+}
+</CODE></PRE> 
+
+<P> Once you've done this, you can simply inject instances of the Facebook API binding and make calls against it. Spring Social will attempt to make the call if there is an authenticated user, and if not will prompt the user 
+to approve the API access and then proceed with the call.
+</P>
+<PRE><CODE>
+@Inject private Facebook facebook;
+
+@RequestMapping("/hello")
+public void showProfileInformation( Model model){ 
+  model.addAttribute( "name", facebook.userOperations().getUserProfile().getName() );
+}
+</CODE></PRE>

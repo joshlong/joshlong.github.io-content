@@ -1,0 +1,20 @@
+title=TestNG, Spring TestContext, and Maven
+date=2008-10-07
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p>If you've ever used the testing support in prior versions of Spring you know that it was essentially JUnit 3.x, oriented. There were ways to make those scaffolding classes work for (my personal favorite) TestNG or even Junit 4, but they largely were engineering hacks, not real solutions. For example, with the TestNG case you could override the setUp method and annotate it such that TestNG would call that method for setup, while also complying with Junit's interface requirements. Now there's a better way. Here's how I got it workiung with Maven and Surefire and TestNG 5.7. 
+First, I added support for TestNG 5.7 (which is current as of this writing.):  </p>
+
+<p>&lt;dependency&gt;  &lt;artifactId&gt;testng&lt;/artifactId&gt; &lt;groupId&gt;org.testng&lt;/groupId&gt; &lt;version&gt;5.7&lt;/version&gt; &lt;classifier&gt;jdk15&lt;/classifier&gt; &lt;/dependency&gt;</p>
+
+<p>Then I added support for SureFire to the Maven POM: </p>
+<pre>  &lt;plugins&gt; <br />               &lt;plugin&gt; <br />                   &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; <br />                    &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt; &gt;<br />                     &lt;version&gt;2.4&lt;/version&gt; <br />                  &lt;configuration&gt; <br />                       &lt;suiteXmlFiles&gt; <br />                           <br />&lt;suiteXmlFile&gt;${basedir}/src/test/resources/testng.xml&lt;/suiteXmlFile&gt; <br />                        &lt;/suiteXmlFiles&gt; <br />           &lt;/configuration&gt; <br /> <br />     &lt;/plugin&gt;          <br /> <br />       &lt;/plugins&gt;</pre> 
+<p>Finally, it comes time to write the test. Maven has a structure that's realized using the following command:</p>
+<code>mkdir -p src/{test,main}/{java,resources}; </code>
+<p>Your unit test code goes into <code>src/test/java</code> and your <code>testng.xml</code> goes into <code>src/test/resources</code>. </p>
+<p>Here's an example of the testng.xml:</p>
+<pre>&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;<br />&gt; &lt;suite name=&quot;myProject&quot; verbose=&quot;5&quot;&gt; <br />  &lt;test name=&quot;serviceTests&quot;&gt; <br />        &lt;packages&gt; <br />           &lt;package<br />name=&quot;com.joshlong.myProject.test.services&quot;/&gt; <br />        &lt;/packages&gt; <br />   &lt;/test&gt; <br /> <br /> &lt;/suite&gt; <br /></pre><p>And, finally, here's an example of a test class that works:</p> 
+<pre>package com.joshlong.myProject.tests.services;<br />import com.joshlong.myProject.utils.LoggingUtils;<br />import org.springframework.beans.factory.annotation.Autowired;<br />import org.springframework.test.annotation.DirtiesContext;<br />import org.springframework.test.context.ContextConfiguration;<br />import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests; <br />// THIS ONE's IMPORTANT! There are one of these for each of the 3 frameworks you're likely to want to use. <br />import static org.testng.Assert.assertTrue;<br />import org.testng.annotations.BeforeMethod;<br />import org.testng.annotations.Test;<br /><br />/**<br /> * @author Josh Long<br /> */<br />@ContextConfiguration(locations = {&quot;classpath:service-context.xml&quot;, &quot;classpath:test-context.xml&quot;})<br />public class MyProjectTest extends AbstractTransactionalTestNGSpringContextTests {<br /><br />    @BeforeMethod public void announceClass() throws Throwable {<br />        loggingUtils.log(&quot;Inside of MyProjectTest!&quot;);<br />    }<br /><br /> <br />    @Autowired<br />    private LoggingUtils loggingUtils;  // this gets automatically injected from one of the contexts listed in the @ContextConfiguration annotations.<br /> <br />    @Test<br />    public void testBasicMath() throws Throwable {<br />        loggingUtils.log(&quot;foo()&quot;);        <br />        assertTrue( 1 &lt; 2, &quot;1 &lt; 2 -- pray that this is correct and that this test never does fail!&quot;);<br />    }<br />}<br /></pre>

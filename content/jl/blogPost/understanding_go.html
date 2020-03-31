@@ -1,0 +1,87 @@
+title=Understanding Go
+date=2009-11-17
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p> <a href="http://www.golang.org">Go,</a> a new language from 
+Google, has created quite a stir. It has a great pedigree, owing to 
+renowned experts like Rob Pike (a member of the Unix team, and a 
+creator of the Plan 9 OS from Bell Labs.) The language is a procedural 
+language (like C, or Python) which offers a strongly typed, but 
+flexible type system (not centered around object-oriented facilities 
+as we know them from languages like Java and Ruby). The syntax is a 
+strange mix of C and Python. Honestly, it feels like C when you read 
+it, but it writes more like Python - lots of features in the syntax 
+that are designed to be consistent, predictable. </p> <p> <a 
+href="http://www.cowlark.com/2009-11-15-go/">One blog entry</a> 
+prompted a very lively discussion of the language: it made the 
+comparison that Go seemed awfully similar to Algol 68, a language 40 
+years past irrelevance. The blog entry said that while Algol 68 was a 
+nice language, Go might be considered an efficient language. It 
+claimed that efficient languages are the ones that - ultimately - 
+propagate. Witness COBOL, C, C++, and Java, for example. Go, thus, may 
+very well be a very <i> efficient</i> language, but it's not even 
+close to a <i>nice</i> language. It's a lost opportunity. </p> <p> 
+Programming languages tend to come and go, but they all advance basing 
+their innovation in some small part on their predecessors. Programming 
+languages <i>have</i> to evolve slowly.  Languages do not exist in a 
+vacuum. They must respect the work that's preceded them, while 
+innovating. They must strike a careful balance, never alienating the 
+existing community, the legacy base, and always advancing the state of 
+the art. Doing so incorrectly can be the biggest sin a language can 
+make. Kowtowing to the legacy of C crippled the evolution of C++, 
+leaving it  a confusing mix of phantom requirements and artificial 
+features. Conversely, Java achieved meteoric propagation because it 
+looked and felt like C++ without many of the warts. This made the 
+transition to Java easy. Compatibility is a double edged sword. </p> 
+<p> Most recent languages look and feel like C/C++. They've innovated 
+ever so slightly, inducting into the syntax features  formerly handled 
+by libraries. Or, the language is flexible enough to support 
+requirement-specific DSLs. You can see this with Scala and Groovy, 
+Ruby and C#. They're all fairly familiar, but offer advantages in 
+their grammar over their predecessors. C#, for example, introduced 
+LINQ, while Scala surfaced its concurrency facilities as an Actors 
+DSL. The idea of a language syntax as a differentiators is even more 
+relevant of late. The .NET runtime popularized the idea of a 
+multi-language run time. It meant that choosing a language did not 
+mean forsaking libraries. The JVM has matured, and there are many 
+languages implemented atop it, as well. Other infrastructure VM 
+projects have emerged, like the LLVM. </p> <p> So, I don't blame Go 
+for looking so much like its predecessors. That's the cost of doing 
+business. It's intended to be a general purpose language, after all. 
+It does have a few unique features surfaced as language constructs, 
+like intrinsic concurrency facilities, which it calls 
+<i>gorountines</i>. </p> <p> I don't understand why they have built 
+another virtual machine. If Go is going to innovate, it will be in its 
+Virtual Machine. Why not the CLI, JVM, or LLVM? The language has 
+strong support for interop - easily wrapping native code much like you 
+might using C++. The .NET CLI supports this sort of thing, though. I 
+understand the language needed to run on Unix (at the moment, you 
+<i>can't</i> run it on Windows!), and perhaps Mono wasn't sufficiently 
+advanced. Why not the JVM? Would building that kind of infrastructure 
+be that hard? What about the LLVM? It seems well suited to working on 
+Unix and to handling interop. Perhaps interop is not the only concern. 
+The implementation of the <i>goroutines</i> seems to have been a 
+priority. The language does not yet have assertions or exceptions 
+specifically because doing so would be awkward with goroutines. This 
+language, as Mr. Pike explained it, was created for Google to build 
+servers. Cheap, and efficient threading was priority #1. This piques 
+my curiosity. Why could the JVM - which hosts Scala and Clojure - not 
+be used to build goroutines. Is there some fundamental flaw that makes 
+ concurrency on the JVM a non starter? I don't understand. </p> <p> I 
+would agree that the language is not particularly novel. What I don't 
+understand is why the VM is novel. Clearly there are requirements I 
+don't understand, and this is why I think Go will be worth paying 
+attention to, in much the same way Erlang is. </P> <p> There is also 
+something refreshing about a genuinely new language. New platform, new 
+libraries, new syntax. Programs written in a language like that 
+represent advances. Shortly after the debut of the language, a <a 
+href="http://codingrobots.org/p/gotweet/doc/tip/www/index.wiki">command 
+line Twitter client emerged</a>. The example is promising - by 
+definition the implementation was from-scratch. It was quick, and the 
+result is imminently readable. </p> <p> Perhaps I'm over thinking 
+this. Perhaps the language will be successful <i>because</i> it's 
+simple, and efficient. Perhaps the VM is some how unique and better 
+served by a custom implementation. Only time will tell. </p>

@@ -1,0 +1,110 @@
+title=CRUD's Not The Answer
+date=2009-09-10
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p> I was really glad to see  <a 
+href="http://www.udidahan.com/2009/09/01/dont-delete-just-dont/">Udi 
+Dahan's, "Don't Delete. Just Don't."</a> I wholely agree with the main 
+premise - that deletion is rarely, if ever, a valid business state and 
+that care should be taken in dealing with it. He cites various 
+examples, saying, "The real world doesn't cascade." His example is of 
+a marketing department that deletes an item from the catalog. Should 
+all orders containing that item then be unlinked? Should they redo the 
+company's profit and loss statments? </p> <p> His example's a  perfect 
+illustration of a valid case where care needs to be taken both in 
+modeling the case and dealing with it in code. I fear a lot of people 
+have gotten hooked on instant-models or CRUD "frameworks." The idea 
+that you can annotate a few entity classes and suddenly you have a 
+model and business logic all taken care. A lot of this became popular 
+with Ruby on Rails and has only gotten worse in the JEE world. It's 
+now common to expose <code>EntityManager</code>s to the web tier (both 
+the Seam and Spring Web Flow examples, not to mentino the Open Session 
+in View pattern itself, speak to this) and to let web frameworks 
+handle the lifecycle of entities and  committing transactions on that 
+EntityManager to persist those entities. We now think of record 
+creation and managment as so mundane that we've automated it and 
+surrounded it in scaffolding. </p> <p> Unfortuntately, this misses the 
+true value. Objects in a system have state that has dependencies. Just 
+because an entity has a (required) no-args constructor, it doesn't 
+mean that you should not write a constructor with dependencies. A lot 
+of this stems from the "active objects" or "naked objects" pattern, 
+where objects are open books whose state can be mutated on the UI tier 
+directly and those changes propagated directly. We tell ourselves that 
+we can apply Hibernate validations (or validations in any other ORM 
+framework) and that we'll guarantee valid business constraints thus, 
+but it rarely works out that way. Prescribing the valid creation and 
+destruction of an object is critical. </p> <p> The most insidious part 
+of this abuse is that it  rarely ever occurs in the first iterations 
+of a project, only in maintenance.  People "forget" how an object is 
+created, or destroyed. They forget details. Consistancy with other 
+parts of the system is forsaken because, after all, how much could 
+there be to it? This happens more often than you'd expect: new people 
+come on to the team and are assigned to rework an existing feature and 
+screen in a system. Institutional knowledge is important but it's not 
+always easily transferred, so safe-guards need to be taken. </p> <p> 
+Plus, as business evolves, object creation is often only part and 
+parcel with a larger process. If a new customer is added to a 
+database, and nobody does anything with it, did it really get added? 
+Put another way: if a new customer gets added to a database, there's 
+an implied lifecycle that customer must follow. Perhaps a trial period 
+window and then a follow up email? Perhaps a monthly subscriptio fee? 
+Who knows, but the act of instantiating a <code>Customer</code> object 
+and then issuing <code>entityManager.persist( customer ) </code> will 
+rarely, if ever, be enough. </p> <p> Indeed, I've seen  many projects 
+build their models using only a <code>GenericDao&lt;T&gt;</code> 
+variant.  This is dangerous.  Transitions from one state to another 
+for an entity can often cost money.  </p> <p>Do things the old 
+fashioned way, building services that handle the business operations, 
+not merely <b>C</b>reate, <b>R</b>ead,<b>U</b>pdate and <b>D</b>elete 
+objects.  Using Dao's in a view tier is almost as ghastly a sin as 
+making JDBC calls from the view, and encourages the same kind of 
+copy-n-paste code reuse we prided ourselves on having moved away from. 
+</p> <p> While the services approach isn't exactly code-generation 
+friendly, it can pay off in the long run. As soon as you decide to use 
+your services in a phsically separated tier, you'll be glad.  It's 
+easier to build services that express every dependency as a method 
+parameter. There are several reasons why this works out. While web 
+service support is getting better, object marshalling is still the 
+number one headache. Most toolkits make interoping with primitives a 
+brease, though. It may seem like your losing ground by not taking 
+advantage of the POJO you have floating around in the view tier, but 
+in point of fact it's rarely that big a burden to unmarshal the 
+relevant fields and use those instead. On the services side, reloading 
+the relevant record is painless because the entity's usually cached 
+and thus refetching it is cheap. </p> <p> Take for example the idea of 
+a shopping cart which surfaces methods for adding line items to 
+orders, orders to shopping carts and shopping carts to customers.  A 
+clean version of this might look like: <pre><code> 
+ public interface ShoppingCartService { 
+     ShoppingCart createShoppingCartForCustomer( long customerId, 
+                                                 Date 
+whenShoppingSessionStarted ) ; 
+     Order createOrderForShoppingCart( long shoppingCart ) ; 
+     LineItem createLineItemForOrder( long orderId, long productId, 
+int quantity) ; 
+     void removeLineItemFromOrder( long orderId, long lineItem ) ; 
+     void startOrderFulfillment( long orderId ) ; 
+     /*  other methods for loading and removing the various 
+         objects, as appropriate 
+     */ 
+  } 
+</code></pre> </p> <p> In these methods, you can do sanity checks, 
+care for business cases, handle the state of the various objects and 
+not worry about having a transactional resource like an <code> 
+EntityManager</code> or Hibernate Session open in the client thread. 
+In this example, you might imagine the <code> Order</code> won't 
+officially be fulfilled until it's paid for, at which point it'll move 
+to the <code>PAID</code> state.  Simialarly, adding a 
+<code>LineItem</code> might require a check to an inventory, 
+decrementing how many of those <code>Product</code>s are in stock. The 
+same is true of the inverse operation: 
+<code>removeLineItemFromOrder</code> should appropriately restore the 
+inventory count and update the <code>totalPrice</code> field on the 
+<code>Order</code>.</p> This requires one interface method 
+declaration's work more than if you had simply obtained the 
+<code>EntityManager</code> from your Seam backing bean and executed 
+the logic there, <i>except</i> now the logic's codified and reusable. 
+</p>

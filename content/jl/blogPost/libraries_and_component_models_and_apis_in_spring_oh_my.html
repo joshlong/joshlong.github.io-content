@@ -1,0 +1,70 @@
+title=Libraries and Component Models and APIs (in Spring), Oh My!
+date=2011-09-23
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<P> One of the most importants about a framework is that it is  pluggable, that it is <a href="http://en.wikipedia.org/wiki/Extensibility">extensible</a>. 
+This is very much a core promise of a good framework, and separates it from mere libraries. 
+Most of the Spring frameworks are exposed as libraries and component models. These are the two levels most people interact with Spring: they reuse the numerous and powerful libraries as-is, or - when the libraries aren't able to read your mind, Spring provides some surface-level API against which to write pluggable code for certain responsibilities.
+  For example, Spring Integration comes with batteries included, many, many batteries, actually. In this case, the batteries I refer to are the integration technologies supported in terms of the various modules that are provided: web services, databases, message brokers (JMS, AMQP), file systems (FTP, FTPS, SFTP, and regular filesystem mounts), etc., etc. The same is true of Spring Batch and indeed of all the other Spring frameworks. 
+If the batteries included aren't quite what you want, and you'd like to plug in your own logic, the 80% cases are accounted for in terms of the component models that the projects expose.  
+ </p><P> In Spring Integration, the 80% case is to reuse the libraries. It is possible to not write a single line of Java code and solve complex problems using Spring's declarative XML namespaces. 
+When this isn't enough, the next tier of support is the Spring Integration component model that works with annotations.  The only time you need to use these component models is to help the framework fill in the gaps, to understand the parts of your application that it could'nt possibly already know or infer.  
+ For example,  if you want to provide conditional routing based on your business logic - the integration equivalent of an <em>if/else</em> statement - then you need to work in terms of a <EM>router</EM>.
+Here's how you write the rough skeleton of a custom router, one that's specific to your application, in Spring Integration:
+</P><pre>
+@Router( ... )
+public class MyBlogRouter  { 
+ public String chooseWhichChannelBasedOnTheInputMessage( Message&lt;String&gt; msg) { 
+   if(msg.getPayload().equals( "a") { 
+     return "channelA"; 
+   }
+   ...
+ }
+}
+</pre>
+ 
+<p>
+ In Spring MVC, the 80% case is creating a <EM> controller</EM> that can handle requests as they come in from the web, and naturally, there's an easy, declarative way of telling Spring MVC about controllers, like this: 
+</P>
+<pre>
+@Controller 
+public class MyBlogController { 
+  @RequestMapping( ...)
+  public String handleRequest( @PathVariable("id") long id) { 
+   ... 
+  }
+} 
+</pre>  
+<P>  In both of these cases, the component model lives side by side with the framework itself. There's an interplay, an unspoken contract: 
+the framework provides all the machinery to automate as much as possible. Ideally, when you do come to the point of needing to plug in code, it's because you're trying to express something quintessentially related to your business problem, and not focusing on the machinery of writing an integration flow, or handling HTTP requests. 
+Small focused hooks provide a lot of power, and these two layers go a long way for most users.
+  
+</p> 
+<p>  
+ What a lot of people don't know is that all of the Spring frameworks (notably, Spring core itself) provide a third echelon of support, of functionality. To me, this third echelon is the APIs that it provides against which you can code. I like to think that, when the 80% cases aren't enough, you should look for the 20%  answer in the APIs.  </p><P>You deal with these APIs a lot, and sometimes they overlap with the component models, so the line can be a bit blurry. One <EM>blurry</EM> example is if you register a bean that implements <CODE>InitializingBean</CODE>, then Spring will automatically invoke the <CODE>InitializingBean#afterPropertiesSet()</CODE> method when the bean has had its dependencies satisfied and is about to be made available in the context. This, in effect, gives you a construction hook, like a second constructor that gets called <em>after</EM> the properties have been satisfied. This is an API. You get power by implementing an interface. However, from the component model perspective, there's an alternative: you can use the JSR 250 annotations, e.g., <CODE>@javax.annotation.PostConstruct</CODE> to trigger that <EM>any</EM> arbitrary method be invoked.   Here's an example:
+ </p> 
+<pre>
+@Component
+public class MyClass { 
+  @javax.inject.Inject DataSource dataSource ;
+  @PostConstruct 
+  public void setup() { ... }
+}
+</pre> 
+<P>  
+ Either one's fine, and at this level it's largely a matter of personal style. </P><P> Taking the examples further, and moving from the ambiguous to the clearly API-centric, Spring provides convenient interfaces that give you access to the lower level  workings of the Spring framework. Examples of these include the <CODE>BeanPostProcessor</CODE> and the <CODE>BeanFactoryPostProcessor</CoDE>.  At this level, you start tapping a <EM>lot</EM> of power. 
+  
+  Admittedly, a lot of people aren't going to need or consume the framework in this way, but it's nice to know it's there. These APIs are the force multipliers that the other Spring frameworks leverage to provide the powerful abstractions for you.  Ever wondered how Spring does its magic when you use  declarative transaction  annotation, <CODE>@Transactional</CODE>?  You might be surprised to learn there's a <CODE>BeanPostProcessor</CODE> involved. Nothing in the Spring framework is <EM>magic</EM> -- you can build infrastructure or framework code just like the other Spring projects do for your users by tapping into these APIs. 
+  </P><P>
+Exposing your frameworks and common abstractions in terms of these well known, idiomatic Spring APIs provides a powerful, familiar surface to your API that consumers of your abstraction can leverage.   
+ There are extension points all over the place in Spring - places where you can provide your own implementation that fits into the machinery - an example of the <em>strategy</em> pattern. 
+ In Spring MVC, <a href="http://static.springsource.org/spring/docs/2.0.x/reference/view.html"><CODE>ViewResolver</CODE></a>s help map abstract view names (Strings) into concrete view resources (that might mean a <CODE>.jsp</CODE>, a Velocity or <a href="http://www.thymeleaf.org/">ThymeLeaf</A> template, or any of a zillion other implementations.  In core Spring's REST support there exists an interface, <CODE>HttpMessageConverter&lt;T&gt;</CODE>, that Spring uses to figure out how to convert HTTP request and response payloads into domain-centric objects: a POST request with bytes might becomes a <CODE>java.io.InputStream</CODE>, a response with a JAXB object might need to be marshalled into XML and then sent as the response, etc. Those strategies are  all codified as implementations of this interface. Adding new ones is quite easy.  In Spring Integration, outbound adapters implement the <CODE>MessageHandler</CODE> interface, and provide the interface between the messaging code and an external system. You can add new ones and teach Spring Integration new tricks by implementing this interface.  
+</P>
+<p>Anyway, I could go on, but - for my own good - I won't, since I wouldn't have anything left for my talk at SpringOne! </P><P>What talk at SpringOne, you say? Oh Yeah! About that: if you want to hear more about these extensibility hooks and the powerful, intricate layering  that's possible using the Spring frameworks, come check out my talk at SpringOne on <a href="http://www.springone2gx.com/conference/chicago/2011/10/session?id=24033">"Tailoring Spring for Custom Usage" in Chicago, in October 2011!</a>
+</P>
+  
+ 
+ 

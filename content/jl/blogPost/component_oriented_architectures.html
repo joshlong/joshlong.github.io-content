@@ -1,0 +1,119 @@
+title=Component Oriented Architectures
+date=2009-08-20
+type=post
+tags=blog
+status=published
+~~~~~~
+
+ <p>Warning, this blog entry is as much a rant as a blog, and tends on
+the somewhat lengthy side. You've been warned. I'm looking for the
+secret of life, as always, and failing it, I'll settle for the secrets
+of software. This is a blog I don't know how to write, but have wanted
+to, for a long time. I suspect getting it out on paper will let me
+revisit with more clarity later. </p> <p> Prompted by <a
+href="http://twitter.com/bsbodden">Brian Sam-Bodden's</a> musing on
+the subject a week or so ago on Twitter, I've been ruminating on the
+notion of a "component."   I think that the evolutions of modern day
+software development are embodied in the notion of a component, not a
+"service," or a "bean," or anything else. Those words don't convey
+enough. </p><p> Thinking about it, a "component" can be broadly
+defined as a thing which integrates readily into a bigger thing  -
+that is, it's adapted to the thing that uses it, and any other such
+thing could be made to follow suit, with the same adaptations. The
+container is composed of components. </p><p> Getting more specific, we
+think about a component in <i>software</i> as a thing that is
+integrated into a <i>container</i> and that can only  function as a
+subordinate entity to the container. In practice, this vague
+description manifests itself as class that implements an well-known
+interface. Sometimes, being a component means is simply a matter of
+letting the container control when the component starts working and
+when it is stopped. Here, you might not even need to implement an
+interface since object creation and destruction or (<i>typically!</i>)
+built into the language itself, and thus there's no need to codify it
+further. </p><p> This ends up quite often being too much of an
+abstraction. Something that is everything is also nothing. So, again,
+in practice it's a matter of establishing a common interface. In
+recent years, the "interface" for a component has evolved beyond the
+literal notion of a language interface and can be any number of things
+now. After all, all the interface does is distinguish an object as
+being a <i>component</i> in a sea of non-components. Such a
+distinction can otherwise be made, as with annotations or attributes
+in the Java and .NET platforms, respectively.  </p><p> So, a component
+is something that belongs to a container and that so marks itself as
+usable in that container with an interface or some other
+distinguishing feature. </p><p> Now, when the component is deployed,
+it sustains some sort of behavior, perhaps over a period of time.
+There is often a setup phase and a destruction phase.  This implies a
+lifecycle, to setup state to begin servicing requests and to stop
+servicing requests. This lifecycle might provide hooks tot he
+component unique the containing environment. </p><p> Because the
+component exists inside of a container, collisions are apt to occur.
+Language features like assemblies or packages help isolate a
+component, but often the container will provide addressing to further
+isolate a component from its siblings. </p><p> At this point, I think,
+the nuances are what qualify the application of a component. If we
+agree on the previous points applying to most components, then surely
+we agree that following aspects apply only to some components. The
+specification is where the term component is starts being prefixed,
+i.e., "web component," "service component," etc. </p><p> Analyzing
+these definitions, a HUGE number of things could be consider a
+component. </p> <ol> </li><li> the now-defunct Avalon framework had
+"components" </li><li> Spring has a @Component stereotype that marks
+beans as "components" </li><li> JCDI  - the pending DI component model
+in JEE6 describes "components" </li><li> Indeed, EJB's original
+documentation spoke of EJB "beans," which you might argue was Sun's
+jargon for "component." </li><li> The web frameworks Tapestry, Wicket,
+Echo, etc, provide components for the user.  </li><li> The Java UI
+model, Swing, provides components </li><li> The J2ME and Android
+mobile phone platforms provide "components" </li> </ol> <p> The list
+goes on and on, but you can see plainly that the idea of a "component"
+is not new. A component by any other name... </p><p> These various
+notions of a component - though not all of them - share several more
+concepts which we might describe as key to any description of a
+component. </p><p> Most of them provide some way to export state. In
+Tapestry, Seam and JCDI, you can "outject" values, effectively binding
+an internal value to a client's state, so that the internal state is
+reflected in the external variable when state inside the component
+changes. This is often called just "binding," and is -usually -an
+abbreviated way of responding to some event and then synchronizing
+client state with the state of the component manually. JavaBeans
+themselves, a core tenant of the Java platform, provides this notion
+of properties, which are nothing more than accessor/mutator pairs by
+which state may be shared in a generic fashion. The Dojo JavaScript
+framework, Wicket, Echo, and Spring, ASP.NET, and Swing all provide
+support for broadcasting state changes as events. This tends to be
+very effective as it decouples the listeners from the component
+itself. </p><p> In this discussion I've lumped both events and
+properties as goals by which to achieve the same thing, and though
+these concepts are not present everywhere, they're key for good
+components in this author's experience. </p><p> In this respect,
+Delphi, C# and Scala and other languages that embrace these concepts
+and codify events and properties have the edge. Software development
+can't be about  being able to bundle state and functionality, it has
+to be about components that play nicely with each other, not in a box
+but in an ocean. Promoting the ideas behind a component promotes
+decoupled, and well behaved, software. </p><p> Indeed, the trends in
+software development themselves beg for components. Grids, with many
+concurrences and actors at play, are very well suited to components
+-services exposed behind a publish/subscribe mechanism. Services so
+exposed publish functionality that other actors in the system can
+consume if they can address them. This sort of dynamism is already
+alive and well in things like Jini or GridGain. The components
+themselves comply with a life-cycle for their respective containers.
+</p> <p> The very idea of a component - things out of which something
+bigger is composed - implies composition. The biggest thing to come
+out of SOA is the push towards service reuse and composition, which
+components encourage.  </p> <p> Clearly, I'm thinking this through as
+I write it, and so any input's appreciated (good, bad, or
+indifferent.) </p><p> The addressability part is key. Brian mentions
+the notion of a REST-ful component. In the specific, he was talking
+about a component on a page amight be addressable, but the question is
+equally well put to how to expose distributed components uniformally.
+</p> <p> Is there an ideal way to build components and to model these
+concepts  - what's the next generation of software going to bring us?
+Clearly, functional languages are here to stay, but they don't
+preclude the idea of a component, in fact I imagine it might work for
+it.  </p> <p> What do you think? What's the most succinct way to model
+software? Is your architecture composed of objects and services? Of
+global variables and functions? Or of components? What will the
+architectures of tomorrow look like?</p>

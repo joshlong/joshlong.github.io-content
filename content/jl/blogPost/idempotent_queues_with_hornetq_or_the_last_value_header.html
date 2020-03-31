@@ -1,0 +1,93 @@
+title=Idempotent Queues With HornetQ (or: the 'Last Value  Header')
+date=2010-05-04
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p> 
+  Often times, a message queue is used as a way to publish "events" to 
+other services in the enterprise. The publish/subscribe architecture 
+decouples clients from the senders and alleviates the publisher from 
+specific knowledge of the consumers of the messages. This, plus the 
+asynchronous nature of a message queue 
+ - the publisher does not block while clients consume the events - 
+makes it ideal for publishing events to keep other systems aware of 
+the state of a given system. 
+</p><p> 
+ Now, let's establish the use case: we want to consume events in a 
+very busy system. In our case, it's possible to receive multiple 
+events. Or, perhaps in your system you've positioned the message queue 
+as a way to deliver commands - "pings" - using the "command bus" 
+pattern. It may - and quite often is - be acceptable to ignore 
+duplicate requests in architectures like these. 
+ For example, a "command" message notifying a system that it can being 
+processing a batch of data for the day only needs to be handled once 
+per day, not 10 times, even if 10 different events are published. It'd 
+be ghastly and inefficient to process the load 10x a day. What's 
+required is some way to make message submission <em>idempotent</em> 
+for certain messages - to make them indifferent to duplicate message 
+submission. 
+</p>  <p>  Backstory: I've been playing with JBoss' <a 
+href="http://jboss.org/hornetq/">HornetQ</a> a lot recently. It's a 
+<em>very</em> fast message queue: it recently bested ActiveMQ in the 
+<a href="http://www.timfox.me/2010/02/jboss-hornetq-sets-record-specjms2007.html">SpecJMS2007 
+benchmark by more than 300%!</a>. It is able to perform these feats 
+because it uses a native, asynchronous IO layer on Linux centered 
+around the kernel's <code>libaio</code> functionality. 
+ On all other platforms, it's just gosh darned fast, regardless, but 
+doesn't benefit from the native code acceleration. 
+</p> <p>   So, imagine my surprise when I found out that HornetQ 
+supports something it calls a Last-Value Header - a well known message 
+header that - when the value is duplicated by other messages - causes 
+the submitted message to override the existing message: the latest 
+message with a duplicate header wins. 
+</p><p> Here's how code submission to the queue looks using Spring's 
+<a href="http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jms.html#jmstemplate">JmsTemplate</a> 
+functionality: </p> 
+<PRE> <CODE> 
+this.jmsTemplate.send(this.destination, new MessageCreator() { 
+    public Message createMessage(final Session session) throws JMSException { 
+        TextMessage textMessage = session.createTextMessage( ... ); 
+       <b> textMessage.setStringProperty("_HQ_LVQ_NAME", 
+someUniqueStringThatYouSpecify); </b> 
+        return textMessage; 
+    } 
+}); 
+</CODE></PRE> 
+<p> So, it's often easy to find a business value that can be used to 
+derive a semantically correct, unique key to identify duplicate 
+events. Processing a customer's order with 3 items in the shopping 
+cart at 12:30:30s PM? Build a key combining the 30 second window, the 
+customer ID, the count of items, and the order ID. This provides a 
+service-level mechanism to prevent nasty double submit issues, for 
+example. 
+<p> You need to enable this characteristic on the queue itself in the 
+configuration files. 
+<p> 
+ In HornetQ there are a few files under the 
+<CODE>$HORNETQ/config/</code> folder that you need to be aware of to 
+configure HornetQ: <code>hornrtq-jms.xml</code>, 
+<code>hornetq-configuration.xml</code>, and 
+<code>hornetq-users.xml</code>. In this scenario, we need to only 
+modify the <code>hornetq-configuration.xml</code>. 
+</p> 
+<p> For a queue configured in <code>hornetq-jms.xml</code as follows: </p> 
+<PRE><CODE> 
+   &lt;queue name="dupesQueue"&gt; 
+        &lt;entry name="<b>/queue/dupesQueue</b>"/&gt; 
+        &lt;durable&gt;true&lt;/durable&gt; 
+    &lt;/queue&gt; 
+</pre></CODE> 
+<p> ... you'll need to make the following changes to 
+<code>hornetq-configuration.xml</code>:</p> 
+<code><pre> 
+  &lt;address-setting match="<b>jms.queue.dupesQueue</b>"&gt; 
+         <span style ="text-decoration:underline"> 
+&lt;last-value-queue&gt;true&lt;/last-value-queue&gt;</span> 
+        &lt;/address-setting&gt; 
+</pre></code> 
+ <p>Simple, right? So, go ahead, send all the messages you want - only 
+one will remain (unless of course that message is consumed. This only 
+guards against duplicate submissions assuming the messages haven't 
+been delivered yet. Enjoy!</p>

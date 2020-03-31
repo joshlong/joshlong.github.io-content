@@ -1,0 +1,10 @@
+title=Subversion 1.5, IntelliJ IDEA, and you
+date=2008-08-10
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p> I recently had to upgrade a project to Subversion 1.5 which caused IntelliJ's Subversion support to lose its mind. It would paint the files blue as though it realized the file was &quot;dirty&quot; but then when I hit ctrl + k to submit the changes to Subversion, it would respond, &quot;No Changes found&quot;.  I did some sleuthing: <a href="http://www.jetbrains.net/confluence/display/IDEADEV/Selena+EAP">IntelliJ IDEA build 7938</a> fixes the issue.
+</p><p>I installed the new version and opened up a project and everything was in error. It was almost as thought it didn't have a JDK set, so I tried to point it at a JDK but that didn't work. Finally, I removed my IntelliJ metadata folder (a desperate move, but I had little time and nothing to lose) which is where IntelliJ stores user specific metadata (<code>/home/jlong/.IntelliJIdea70</code>). <b>That</b> worked! 
+</p> <p> In all, I lose 20 minutes of time. By far, one of the longest periods that IntelliJ itself (where it wasn't genuine user error!) has delayed me... now, Eclipse on the other hand...  </p>

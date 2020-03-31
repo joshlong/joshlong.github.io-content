@@ -1,0 +1,67 @@
+title=Getting Started With Zero Turnaround's JavaRebel
+date=2009-02-14
+type=post
+tags=blog
+status=published
+~~~~~~
+
+ 
+
+<p>
+I go out of my way to make the development experience quick. I'm still a java developer and not, say, a Python developer, but I loathe the iteration time. It's the number one thing I wish we could do better in Java. Sure, during development I go out of my way to make iteration less painful. One aspect of this is using Maven's Jetty plugin, which lets me edit HTML, JSP(X), CSS, JS files without undo redeploys. However, it's not enough.  I keep my model and services tier in a separate VM for testing, so that the code isn't collocated by default. This has the effect of making the occasional redeploy of a web application much more bearable.  However, even thoere, sometmes you find yourself fidgeting with things inside of an Action or a Spring MVC controller that aren't broad strokes but really sort of fine granularity changes. Each time you redeploy you lose your session and it's just generally an unnerving mental interference, even if it is only a few seconds.
+</p><p>
+Recently, I was trying to show this application to a friend (one of those PHP people I keep hearing about...) and he complained that the redeploys on changes to the Java class were annoying. I know he was just trying to spread some religion. That's alright. In this case, he was right. If you use a scripting language and are used to the instant feedback cycle, then Java's a hard sell (even in light of the less and less meaningful, "well, it scales," or "it has a broad library" arguments).
+</p><p>
+This next paragraph reads something like a sales pitch. I'm in no way affiliated with JavaRebel. You may, however, skip the next paragraph if you want.
+</p><p> <a href="http://www.zeroturnaround.com"><img border = "0" src = "/media/17892" style = "float:left; margin-right :10px; " /></a>
+I'd heard of, and even experimented with, JavaRebel before when it came out, so I knew of the solution. My main reservation was that it was proprietary. There's a US $99.00 personal license fee to pay in its use. However, the license wasn't a license for deployment, it was a license for development, in much the same way you can deploy a million instances of software written using one license for IntelliJ IDEA, the same applies here. Additionally, the jar doesn't need to be deployed in the production artifact. You carry it with you and use it on any development. As tools go for engineers - it's really cheap. I already spend on (or win! Thank you <a href="http://www.phxjug.org">Phoenix Java User Group!</a> ) copies of IntelliJ because as a craftsman I demand the best tools. An extra US $99.00 for hassle-free development seemed a great compromise. More to the point, there's a proven productivity gain had in zero turnaround development iteration from other languages, so this would only be a win-win for any projects I worked under. I might even be able to pitch it to a boss one day and get them to spring for it!
+</p><p>
+
+At this point I decided I'd need to walk the walk if I want to talk the talk. I set about integrating it. My setup's pretty plain:
+</p><p>
+<ul> <LI>
+Maven 2.0.8</li><li>
+IntelliJ IDEA 8.1 for edits (by the by, have you tried the new <a href="http://www.intellij.com">IntelliJ</a>? Markedly faster, in some cases especially related to large projects.)
+</li><li>
+Java 5 </li><li>
+Spring MVC 2.5</li></ul>
+<p>
+My definition of success would be to be able to update a Controller, compile that one class, and then refresh the page and have those changes reflected. This meant that all code relying on Spring itself should also work. For example
+</p>
+<p>
+You can declare variables to be injected into you controller via annotations.
+</p>
+
+<code><pre>@Autowired private IServiceInterface service;</pre></code>
+<p>
+And, similarly, you can add new configurations for Spring MVC requests inside a Controller with no problem, thus:
+</p> <code><pre>
+@RequestMapping("foo.do")
+public String handleRequestForFooDo( Model model) {
+  model.addAttribute( "message", "Hello, World!" ) ;
+ return "foo" ;
+ }
+ </pre></code>
+ <p>Both of these code snippets should just do the right thing and work when I refresh the page.  </p>
+ <p>
+
+So, the first part of the solution was getting JavaRebel installed for development at all.
+</p><p>
+This was relatively straight forward. Go to zeroturnaround.com and <a href="http://www.zeroturnaround.com/download">download the Jar for the trial.</a> Unzip it and put the <code>javarebel.jar</code> someplace you can find it.  I created a folder called javarebel in my home directory and put the jar in there. You will put the license in the same folder if you buy the product.
+</p><p>
+The next trick is to make sure it's available to your Java server's process as a boot agent. Since I'm using Maven's Jetty plugin, my configuration was simply to update <code>MAVEN_OPTS</code>, before running Maven, thus:
+</p> <code><pre>
+export MAVEN_OPTS="-noverify -Drebel.log=true -javaagent:~/javarebel/javarebel.jar "     ;
+mvn jetty:run ;
+</pre></code>
+<p>
+This is already an improvement.
+</p><p>
+I did one more thing, which was to disable Intellij's urge to build a .war itself each time I compiled anything. Do this by right clicking on the web application in Intellij, File > Project Structure, clicking on the Web component of your web project (it's a blue icon.), then clicking on Java EE Build Settings. I unchecked both "Create web facet war file", and "Web Facet Exploded Directory."
+</p><p>
+At this point, if I modify a class in IntelliJ (say I have a controller open and I change a method body) the change will be manifest if I reload the controller in the browser. However, if I add any new fields, or change any method signiatures, it won't be reflected in the reloaded class because Spring won't have had a chance to "refresh" the class. Any annotations for Spring injections will be there, but the Spring runtime won't have had the chance to react to them.
+</p><p>
+So the next piece is to ensure you give Spring a chance to react to the new class. This is done using a plugin. The plugin's free open source software, which you can download readily from <a href="http://www.zeroturnaround.com/javarebel/plugins">here</a>. You can add the plugin however you like. I'm using Maven. While I know that ZeroTurnaround has a repository, I found that the jar didn't work. So, I just downloaded that one and deployed it to my own repository and dependended on that .jar, which has worked just fine. At this point, I can now edit a controller in Intellij, including addding methods, etc, without more than a compile (<code>ctrl + shift + F9</code>) - it's tantamount to the time it'd take to save a class in Eclipse) and a page refresh.
+</p><p>
+Hope this helps somebody else looking for information on how to get started. This is really quite powerful.
+</p>

@@ -1,0 +1,184 @@
+title=Supporting Your Own Field or Method Injection Annotation Processors in Spring
+date=2012-01-01
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<P>
+	
+		 So, I had a use case the other day - I wanted to support a custom annotation for denoting injection at the class level.  
+		Spring users will know that Spring already supports  
+		 Spring's native 
+		<CODE>@Autowired</CODE>, JSR 330's <CODE>@javax.inject.Inject</CODE>, and JSR 250's '<CODE>@javax.resource.Resource</CODE>.  
+		
+		These annotations, when placed on a setter, or a field, signal to Spring that  		
+		a value should be injected at the site of the annotation. These annotations 
+		are synonyms for the same thing.
+		
+		Spring also supports other annotations - like the JPA 1.0 <CODE>@javax.persistence.PersistenceContext</CODE>  
+		annotation. The annotation is used in a special circumstance, when you want Spring to inject an <CODE>EntityManager</CODE> or an <CODE>EntityManagerFactory</CODE>.
+		 Here are some examples. 
+		</p>
+<PRE><CODE>
+	@javax.inject.Inject 
+	private DataSource dataSource ;
+	
+	@Autowired  
+	public void setDataSource(DataSource ds){
+	  this.datSource = ds ;
+	}
+	
+	@PersistenceContext 
+	private EntityManager entityManager; 	
+</CODE></PRE>		
+		<P>  
+		 To "teach" Spring what to do with a custom annotation like <CODE>@PersistenceContext</CODE> is fairly easy once you know the actors involved. 
+		 The work is typically done inside of a special <CODE>BeanPostProcessor</CODE>.  What we want is a framework hook to inspect the beans after the bean's have been created, but before they've been populated with properties. 
+	 The <CODE>BeanPostProcessor</CODE> interface is powerful, but not quite what we need. What we actually need 
+	is a combination of the the more specialized <CODE>InstantiationAwareBeanPostProcessor</CODE> and <CODE>MergedBeanDefinitionPostProcessor</CODE>.  
+	
+<CODE>InstantiationAwareBeanPostProcessor</CODE>   
+  provides the following callback method: </P><PRE><CODE>PropertyValues postProcessPropertyValues( PropertyValues pvs, PropertyDescriptor[] pds, 
+		                       Object bean, String beanName) throws BeansException;</CODE></PRE>  
+	The callback hook  lets you  stipulate a value for a properties on the bean. We can use that to inject custom values.
+		
+		It turns out that Spring already provides a convenient framework object that you can use to handle the duty of injection called <CODE>InjectionMetadata</CODE>. The metadata represents information about the injection sites. You can extend this class and provide specific metadata about the call site - perhaps by caching the contents of the annotation that you're dealing with - and then use that to actually perform the injection. It is up to you to crawl the beans - including the super classes and so on - to gather the fields and property setters and then provide the relevant <CODE>InjectionMetadata</CODE>. 
+		
+ There's a lot of expectations here, but it's pretty simple to implement. I have provided a reusable base class (below) that generalizes all but the specific concerns. This code is written in Scala, but it can be reused from Java, once compiled. Alternatively, it wouldn't be hard to translate to Java. The only thing that wouldn't map nicely into Java are the uses of callback methods, which can be expressed nicely in Scala, but would require an object with a callback method. (I probably should re-write it in Java and provide callback interfaces  in lieu of the various callback methods or provide an abstract base class with well known, abstract callback methods) 
+Anyway, you can basically ignore the implementation - it's presented so you can include it in your project (under the Apache 2 license, of course). 
+See you after the example to 
+    see how to implement it.
+		
+	 </P>
+   <PRE><CODE>
+	package com.joshlong.spring.util 
+	import org.springframework.beans.factory.support.{RootBeanDefinition, MergedBeanDefinitionPostProcessor}
+	import org.springframework.beans.factory.annotation.InjectionMetadata
+	import org.springframework.beans.factory.BeanCreationException
+	import java.beans.PropertyDescriptor
+	import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor
+	import org.springframework.beans.PropertyValues
+	import java.util.LinkedList
+	import java.lang.{String, Class}
+	import java.lang.reflect.{Method, Field, Member, Modifier}
+	import org.apache.commons.logging.LogFactory
+	class AnnotatedSiteInjectionPostProcessor [T &lt;: AnyRef, X &lt;: java.lang.annotation.Annotation]
+	  (annotation: Class[X], fieldMetadataCallback: (X, Field) => InjectionMetadata.InjectedElement, methodMetadataCallback: (X, Method) => InjectionMetadata.InjectedElement)
+	  extends InstantiationAwareBeanPostProcessor with MergedBeanDefinitionPostProcessor {
+	  val logger = LogFactory.getLog(getClass)
+	  def postProcessBeforeInstantiation(beanClass: Class[_], beanName: String) = null
+	  def postProcessBeforeInitialization(bean: AnyRef, beanName: String) = bean
+	  def postProcessAfterInstantiation(bean: AnyRef, beanName: String) = true
+	  def postProcessAfterInitialization(bean: AnyRef, beanName: String) = bean
+	  def postProcessMergedBeanDefinition(beanDefinition: RootBeanDefinition, beanType: Class[_], beanName: String) {
+	    if (beanType != null) {
+	      var metadata: InjectionMetadata = findInjectionSiteMetadata(beanType)
+	      metadata.checkConfigMembers(beanDefinition)
+	    }
+	  }
+	  def postProcessPropertyValues(pvs: PropertyValues, pds: Array[PropertyDescriptor], bean: AnyRef, beanName: String): PropertyValues = {
+	    try {
+	      logger.debug("about to attempt injection for class "+ bean.getClass )
+	      val metadata = findInjectionSiteMetadata(bean.getClass)
+	      metadata.inject(bean, beanName, pvs)
+	    } catch {
+	      case ex: Throwable =>
+	        throw new BeanCreationException(beanName, "Injection of persistence dependencies failed", ex)
+	    }
+	    pvs
+	  }
+	  private def doWithMembers[T &lt;: Member](clazz: Class[_], filter: T =&gt; Boolean, fieldsFactory: (Class[_]) =&gt; Array[T], doWith: T =&gt; Unit) = {
+	    var targetClass: Class[_] = clazz
+	    do {
+	      fieldsFactory(targetClass).filter(filter).foreach(doWith)
+	      targetClass = targetClass.getSuperclass
+	    } while (targetClass != null &amp;&amp; !targetClass.equals(classOf[AnyRef]))
+	  }
+	  private def findInjectionSiteMetadata(clazz: Class[_]): InjectionMetadata = {
+	    val currElements = new LinkedList[InjectionMetadata.InjectedElement]
+	    doWithMembers[Field](clazz, f => !Modifier.isStatic(f.getModifiers) &amp;&amp; f.getAnnotation(annotation) != null, c => c.getDeclaredFields, f => {
+	      val fieldAnnotation = f.getAnnotation(annotation)
+	      val injectedElement = fieldMetadataCallback(fieldAnnotation, f)
+	      currElements.add(injectedElement)
+	    })
+	    doWithMembers[Method](clazz, f => !Modifier.isStatic(f.getModifiers) &amp;&amp; f.getAnnotation(annotation) != null, c => c.getDeclaredMethods, m => {
+	      val methodAnnotation = m.getAnnotation(annotation)
+	      val injectedElement = methodMetadataCallback(methodAnnotation, m)
+	      currElements.add(injectedElement)
+	    })
+	    new InjectionMetadata(clazz, currElements)
+	  }
+	}
+	</CODE></PRE>
+	
+<p>
+	
+	This class takes care of crawling the beans and performing the injection for you. All it needs from you is a subclass of  <CODE>InjectionMetadata.InjectedElement</CODE>, which you provide. That object in turn is responsible for ultimately providing the reference to the object that you want to be injected based on the metadata available. To make this easy, this particular responsibility is factored out as callback functions which you provide in your concrete implementation. 
+	
+ To do its work, you need to tell this class which annotation to match, and the type of object you'd like to inject (you could stipulate just a regular  <CODE>java.lang.Object</CODE>, or, in Scala terms, an <CODE>AnyRef</CODE>.).  
+	</P>
+ <P> 
+	In this particular example, I want an annotation that can be used to lookup, and inject, a reference to an 
+	<a href = "http://akka.io">Akka</a> actor, called a <CODE>ActorRef</CODE> in Akka parlance. Akka actors can live locally, or remotely, and when injected you can lookup an Actor by a logical name or by a path, which itself can be absolute, or relative, as Akka actors form supervisory hierarchies which map very much like a file system. For more information on the supported addressing scheme, check out <A href ="http://akka.io/docs/akka/2.0-M1/general/addressing.html">ths document from the Akka documentation</A>.
+</p>
+<P> So, the example (in Java) might look like this:</P>
+<code><pre>@ActorReference("akka://my-system@serv.example.com:5678/app/service-b") private ActorRef actorRef ; </pre></CODE> or (in Scala)
+	<code><pre>@ActorReference("akka://my-system@serv.example.com:5678/app/service-b") private var actorRef: ActorRef = _  </pre></CODE> 
+	
+Let's see how to implement this using the base class described above.
+ </P>
+<P> First, we need to extend the base class, and provide the callback hooks that tell the base class what to do with a field or property (a setter method).  In our case, this is pretty simple, and straight forward:
+</p>
+<PRE><CODE>class ActorReferenceAnnotatedSiteInjectPostProcessor(actorSystem: ActorSystem)
+  extends AnnotatedSiteInjectionPostProcessor[ActorRef, ActorReference](
+    classOf[akka.spring.ActorReference],
+    (ar: ActorReference, f: Field) => new ActorReferenceInjectedElement(actorSystem, ar, f, null),
+    (ar: ActorReference, m: Method) => new ActorReferenceInjectedElement(actorSystem, ar, m, BeanUtils.findPropertyForMethod(m)))
+</CODE></PRE>
+  <P> In this class, we extend the base class and call the constructor, passing in the class of the annotation to detect, a callback method which accepts an instance of the annotation and a particular instance of a field, and another callback method and a particular instance of a method.  The contract is that, given the instance of the annotation and matching field or method, you will return an instance (or sublcass of) the <CODE>InjectionMetadata.InjectedElement</CODE> class.  So, that's what we do, constructing an instance of <CODE> ActorReferenceInjectedElement</CODE> with the <CODE>ActorSystem</CODE> reference given in this subclass' constructor and the detected  <CODE>ActorReference</CODE> annotation, and the detected class member to which the annotation was attached, a <CODE>java.lang.reflect.Field</CODE> or <CODE>java.lang.reflect.Method</CODE> as well as the annotation itself.
+	
+	</p>
+	 <P> The <CODE>ActorReferenceInjectedElement</CODE> is where the important work happens. 
+	       Let's take a look at that class. 
+	 </P>
+	<PRE><CODE>class ActorReferenceInjectedElement(
+  actorSystem: ActorSystem, 
+  annotation:ActorReference, 
+  member: Member, 
+  propertyDescriptor: PropertyDescriptor) 
+extends InjectionMetadata.InjectedElement(member, pd) {
+			
+  override def getResourceToInject(target: AnyRef, requestingBeanName: String) = actorSystem.actorFor(annotation.value() )
+}
+	</PRE></CODE>
+	<P>If you read Scala, then this is a pretty simple class. The constructor (the prototype of which is included inline in the class declaration, at the top) expects an <CODE>ActorSystem</CODE>, a reference to the <CODE>ActorReference</CODE> annotation, a <CODE>java.lang.reflect.Member</CODE> (the common base class of both <CODE>Field</CODE> and <CODE>Method</CODE>), and a <CODE>PropertyDescriptor</CODE>. We don't use the <CODE>PropertyDescriptor</CODE> in this code (except to invoke the super constructor), but it's nice to know that we have it available. It might be <CODE>null</CODE>, however, if we're looking at a <CODE>java.lang.reflect.Field</CODE>. The unspoken bit is that the constructor arguments implicitly become class variables, and so are reference-able from other methods. 
+		</p>
+		<P>  In the class, we override the <CODE>getResourceToInject</CODE> method, providing the object to be injected. 
+ We simply need a reference to the actor, so call <CODE>actorSystem.actorFor</CODE> with the String that was provided as part of the annotation (the <CODE>value()</CODE> field). We could, for example, provide a wrapper object  instead of the reference itself.  This is what happens when you use the <CODE>@PersistenceContext</code> annotation. It injects an <CODE>EntityManager </CODE> proxy that in turn manages thread-local  
+ <CODE>EntityManager</CODE>s so that no matter which thread you call a method on, if it accesses the class <CODE>EntityManager</CODE>, it's guaranteed to be thread-safe. We don't do anything fancy like that in this case, but it's easy to see the potential there.
+			</P>
+			<P>Now, all that's left to do is register the <CODE>ActorReferenceAnnotatedSiteInjectPostProcessor</CODE> 
+				 in your Spring configuration.  It's just a regular bean with constructor arguments. Spring detects the interfaces and calls the appropriate methods. Here's a code configuration based example (written in Scala):
+				</p>
+				<PRE><CODE>
+@Configuration 
+class MyAkkaConfiguration  {
+  @Bean def actorSystem = ... // provide your own reference 
+	
+  @Bean def actorReferenceAnnotatedSiteInjectPostProcessor = 
+    new ActorReferenceAnnotatedSiteInjectPostProcessor( this.actorSystem())	
+	
+  @Bean("sample") def someBeanThatDependsOnActors =
+    new Object {  // anonymous inline object just to show you what a usage might look like 
+      @ActorReference("myActor") 
+      var someActor:ActorRef = _ 	
+    }
+} 					
+object Main {
+  val ac = new AnnotationConfigApplicationContext(classOf[MyAkkaConfiguration])
+  val sample  = ac.getBean("sample")
+  Assert.notNull( sample.actorSystem )	
+}
+		
+</code></pre>

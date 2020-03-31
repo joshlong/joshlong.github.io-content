@@ -1,0 +1,22 @@
+title=Hot to Retrieve Your Application From Google App Engine
+date=2011-03-12
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p> 
+ Sometimes, just sometimes - once every 5 years - I need to reverse engineer my own binary because I've either FUbar'd the code or the code is lost to me. Don't care to explain why the latter is true this particular time, but it is true. I need a built version of an application so I can run it through a trust Java Decompiler like the trustworthy  <a href="http://www.varaneckas.com/jad">JAD</a> tool. 
+JAD tool hasn't correctly reverse current Java code since Java 1.5, but it does come close and it's far easier to simply clean that up (you can see the structure of the code, even if it isn't immediately obvious what to do to get it to compile again). 
+</p>
+<P> In my particular scenario, my deployed Spring application lives on Google App Engine. 
+      So, at least it's safe. 
+ A bit too safe, unfortunately. I didn't know how to get a copy of the binary for my own purposes from Google App Engine. I did some Googling and found some documents that suggested a fix - use the Google App Engine's SDK tool <em>appcfg</em> - to download the deployed source. Only catch was that the documents describing the tool were for the Python SDK, not the Java SDK. 
+ I looked at the Java SDK and even tried running the command as described in the Python documents and got nowhere. So, I cheated. I did some more Googling, and by this I mean I simply contacted my friend at Google. 
+He pointed out that I'd already had the answer: use the Python SDK to <em>download your Java application</em>!
+</p> <P> So,  <em> if</em> you're on Google App Engine, and  <em> if</em> for one reason or another you obliterate your only copy of the source code and  <em> if</em> you want to work against a deployed binary (a <em>very</em> specific situation, sure, but it <em>could</em> happen to somebody else besides me... one day!), then run the following command:
+ <PRE>
+./appcfg.py -e $YOUREMAIL@gmail.com download_app -A $YOURAPPID $NAME_OF_FOLDER_TO_WRITE_THE_RESULTS_TO
+</PRE>
+</p>
+</p>

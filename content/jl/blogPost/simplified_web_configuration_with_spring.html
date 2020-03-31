@@ -1,0 +1,140 @@
+title=Simplified Web Configuration with Spring
+date=2013-06-19
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p>Most people know that Spring's long supported Servlet 3 Java-based initializer classes. This facility builds on Servlet 3's <code>javax.servlet.ServletContainerInitializer</code> facility. Basically, you declare a class that implements <code>org.springframework.web.WebApplicationInitializer</code> and this class will be scanned by Spring on application startup and bootstrapped. This class has one responsibility: assemble the web application&#39;s moving parts, like you would in a <code>web.xml</code>, but in code. Here&#39;s an example: </p>
+
+<pre><code class="java">public class MyWebAppInitializer implements WebApplicationInitializer {
+
+    @Override
+    public void onStartup(ServletContext container) {
+
+        // Create the &#39;root&#39; Spring application context
+        AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();
+        rootContext.register(ServiceConfiguration.class);
+
+        // Manage the lifecycle of the root application context
+        container.addListener(new ContextLoaderListener(rootContext));
+
+        // Create the dispatcher servlet&#39;s Spring application context
+        AnnotationConfigWebApplicationContext dispatcherServlet = new AnnotationConfigWebApplicationContext();
+        dispatcherServlet.register(WebMvcConfiguration.class);
+
+        // Register and map the dispatcher servlet
+        ServletRegistration.Dynamic dispatcher = container.addServlet(&quot;dispatcher&quot;, new DispatcherServlet(dispatcherServlet));
+        dispatcher.setLoadOnStartup(1);
+        dispatcher.addMapping(&quot;/&quot;);
+    }
+
+}
+
+</code></pre>
+
+<p>In the above example, <code>WebConfiguration</code> and <code>ServiceConfiguration</code> are Java configuration classes. <code>ServiceConfiguration</code> presumably describes how the service tier - with its data sources and transaction managers and thread pools and ORM mapping - are assembled. The <code>WebMvcConfiguration</code> class describes how the web tier - supported by Spring MVC - is put together. We use the <code>ServletContext</code> to build up the web application. But, a lot of this is procedural. We will have basically the same arrangement each time, simply plugging in different values as required. </p>
+
+<p>The point of this post isn&#39;t to describe how Java configuration works, rather to introduce the <code>WebApplicationInitializer</code> implementation, called <code>org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer</code>.</p>
+
+<p>To use it, you simply extend it and satisfy fill in the blinks (in the form of template methods). Here&#39;s an example:</p>
+
+<pre><code class="java">
+import com.jl.crm.services.ServiceConfiguration;
+import org.springframework.context.annotation.*;
+import org.springframework.data.repository.support.DomainClassConverter;
+import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
+import org.springframework.format.support.FormattingConversionService;
+import org.springframework.hateoas.config.EnableHypermediaSupport;
+import org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter;
+import org.springframework.security.web.session.HttpSessionEventPublisher;
+import org.springframework.web.filter.HiddenHttpMethodFilter;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.support.*;
+import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.config.annotation.*;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+import javax.servlet.*;
+import java.io.File;
+
+public class CrmWebApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+
+    private int maxUploadSizeInMb = 5 * 1024 * 1024; // 5 MB
+
+    @Override
+    protected Class&lt;?&gt;[] getRootConfigClasses() {
+        return new Class&lt;?&gt;[]{ServiceConfiguration.class};
+    }
+
+    @Override
+    protected Class&lt;?&gt;[] getServletConfigClasses() {
+        return new Class&lt;?&gt;[]{RepositoryRestMvcConfiguration.class, WebMvcConfiguration.class};
+    }
+
+    @Override
+    protected String[] getServletMappings() {
+        return new String[]{&quot;/&quot;};
+    }
+
+    @Override
+    protected Filter[] getServletFilters() {
+        return new Filter[]{new HiddenHttpMethodFilter(), new MultipartFilter(), new OpenEntityManagerInViewFilter()};
+    }
+
+    @Override
+    protected void registerDispatcherServlet(ServletContext servletContext) {
+        super.registerDispatcherServlet(servletContext);
+
+        servletContext.addListener(new HttpSessionEventPublisher());
+
+    }
+
+    @Override
+    protected void customizeRegistration(ServletRegistration.Dynamic registration) {
+
+        File uploadDirectory = ServiceConfiguration.CRM_STORAGE_UPLOADS_DIRECTORY;
+
+        MultipartConfigElement multipartConfigElement = 
+            new MultipartConfigElement(uploadDirectory.getAbsolutePath(),
+                maxUploadSizeInMb, maxUploadSizeInMb * 2, maxUploadSizeInMb / 2);
+
+        registration.setMultipartConfig(multipartConfigElement);
+
+    }
+}
+</code></pre>
+
+<p>In typical Spring fashion, we have callbacks where Spring can&#39;t possibly devine our intents (it can&#39;t possibly know what the names of our configuration classes are, for example) but otherwise it&#39;s all taken care of for us. I had to override the default <code>ServletRegistration.Dynamic</code> instance so I could tailor where file uploads are stored by the Servlet 3 container, which I do in the <code>customizeRegistration</code> method. The rest of the code is fairly straightforward: Spring registers the <code>Filter</code>s provided by the <code>getServletFilters</code> method, it registers the configuration classes returned from the <code>getRootConfigurationClasses</code> as part of a global <code>ContextLoaderListener</code>, and it registers the configuration classes returned from the <code>getServletFilters</code> as part of the <code>DispatcherServlet</code>. This reflects the typical layering in most Spring applications: global beans and services that are potentially to be shared among multiple <code>DispatcherServlet</code> implementations are stored in the <code>ContextLoaderListener</code>, and <code>DispatcherServlet</code>-local beans are configured there.  My web configuration class is shown below. I show this mainly for completeness, but you can see I&#39;ve registered and configured <code>.jsp</code> support, as well as multipart file upload support (taking advantage of the Servlet 3-powered <code>StandardServletMultipartResolver</code>). The other thing worth mentioning is that we&#39;ve turned on Spring HATEOAS with the <code>@EnableHypermediaSupport</code>. </p>
+
+<pre><code class="java">
+@Configuration
+@ComponentScan
+@EnableWebMvc
+@EnableHypermediaSupport
+class WebMvcConfiguration extends WebMvcConfigurationSupport {
+    @Bean
+    public DomainClassConverter&lt;?&gt; domainClassConverter() {
+        return new DomainClassConverter&lt;FormattingConversionService&gt;(mvcConversionService());
+    }
+
+    @Override
+    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+        configurer.enable();
+    }
+
+    @Bean
+    public MultipartResolver multipartResolver() {
+        return new StandardServletMultipartResolver();
+    }
+
+    @Bean
+    public ViewResolver internalResourceViewResolver() {
+        InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver();
+        internalResourceViewResolver.setPrefix(&quot;/WEB-INF/crm/&quot;);
+        internalResourceViewResolver.setSuffix(&quot;.jsp&quot;);
+        return internalResourceViewResolver;
+    }
+}
+</code></pre>

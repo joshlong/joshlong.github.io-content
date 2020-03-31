@@ -1,0 +1,24 @@
+title=iCloud (Part #1)
+date=2013-07-01
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p>I really liked Apple's iCloud when I first started playing with it. The idea is many-pronged. </p>
+
+<p>Apple's in the SaaS business: they've got email, calendaring, messaging, and a whole slew of other stuff. And, if you're an application developer, then your application can also participate in iCloud, storing OSX-application or iOS application-specific state in Apple's cloud.  </p>
+
+<p>Additionally, Apple's Operating Systems are cloud-aware. To their credit, it's fairly easy to plugin standard e-mail servers, CalDAV servers, etc., from other vendors. There are even more expedient setup processes for well-known SaaS providers like Google Accounts (Google Calendar, Gmail, Tasks, GTalk, etc.), Vimeo, Flickr, Weibo, Facebook, Twitter. You can access all of this in <strong>System Preferences</strong> -&gt; <strong>Mail, Contacts &amp; Calendars</strong>. </p>
+
+<p>So, if you're on OSX, or an iPhone, or an iPad, in theory you could setup a calendar entry and see that same calendar entry across all devices. You could also see reminders, notes, email, etc. For me, I'm most interested in synchronzing with Google's applications. I use them at both <a href="http://gopivotal.com">Pivotal</a> and for my personal e-mail. </p>
+
+<p>So, I set up <code>Mail.app</code>. Mail is a fine application, but it just felt underpowered. It's way better than Thunderbird, but not particularly great. I don't feel more, or less, empowered in it than I do in GMail, and at least in the GMail web app once something's visually acknowledged, it's as good as done. (no sync'ing!) Anyway, I've tried a few other things. So far I'm digging <a href="http://www.postbox-inc.com/">Postbox.app</a> for OSX, and while I love the official GMail app on iPad, I got access to <a href="http://www.wired.com/business/2013/05/gentry-underwood/">Mailbox</a>. Postbox is a fine app with a lot going for it, but for me it's mostly just that it feels snappy <em>and</em> it's offline friendly. I tried using GMail's <em>offline</em> client before, but that's a whole separate flow - a separate application - and as such isn't likely to be primed with your email when you're unexpectedly offline.</p>
+
+<p>Mailbox, for those of you who follow the news, is a mail client for iOS that makes it dead simple to blaze through a <em>lot</em> of e-mail using gestures. It's lacking a <em>lot</em> of features. When I started using it, there was no easy to way to accept calendar invites. Forwarding email is still a nightmare. So is word wrapping in the compose e-mail panel. Yet, it's <em>still</em> so insanely popular that it was sold to Dropbox for $100 million before one person had even started using it. They even setup a waiting list stretching into the 800,000s. When I signed up, I was <em>permitted</em> to start using it within a month. Why? Because most people get a <em>lot</em> of e-mail and all the other e-mail solutions are designed with one-by-one inspection and processing workflows in mind. So, Postbox.app on the desktop, Gmail on the iPad and when at another person's computer, and Mailbox on my iPhone. All of these talking to my two Google Gmail e-mail accounts. Mailbox, by the way, doesn't even work with other mail services. Only GMail. Typing (and reading) that still shocks me. So, basically, what this application says (perhaps I'm reading between the lines?) is: <em>Gmail is so unproductive that any grossly deficient alternative that makes processing email much more productive is worth a $100 million, and is so-demanded that it merits a waiting list</em>! </p>
+
+<p>Anyway, e-mail on Apple devices tangent aside, I really quite like the rest of the setup: Apple <code>Reminders.app</code> works nicely, as does <code>Notes.app</code> and <code>Calendar.app</code>. Just set up the appropriate services when setting up the Google accounts and these should all work out of the box. Except when they don't. One problem I encountered when working with Calendar and Reminders is that it would some times stop syncing. In this situation, I found it helpful to go to the <em>System Preferences</em> &gt; <em>Mail, Contacts &amp; Calendars</em>. Disable the <em>Calendar &amp; Reminders</em> option, then <code>mv ~/Library/Calendars ~/some_where_else</code>. Then, doing your best Windows shutdown theme hum, reboot. Re-enable everything and it should start working again. </p>
+
+<p>The other problem I've encountered is that it's easy to get duplicate notes or reminders. The easiest way to fix this is to pick on service capable of storing notes and reminders and just stick with it, disabling the rest. For me, this is my personal GMail account. So I've disabled the Reminders from iCloud, deleted all the notes and now when I add a note in one account it appaears across the other devices. </p>
+
+<p>I'll chime back in as I discover more.</p>

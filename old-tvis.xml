@@ -1,0 +1,21 @@
+language: java
+
+jdk:
+  - oraclejdk11
+  
+cache:
+  directories:
+  - $HOME/.m2/repository/
+  - $HOME/.sdkman/
+  - $HOME/bin/
+
+# install:  
+# -  ./install_shell_tools.sh 
+
+script:
+-  ./build_site.sh
+
+
+env:
+- SPRING_PROFILES_ACTIVE=ci
+

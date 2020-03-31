@@ -1,0 +1,81 @@
+title=The Mystery of the Indexer Segfault in Eclipse CDT, a True Story
+date=2011-03-18
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p>I just hit a good 'ol fashioned segfaulting bug! 
+ For reasons I'm not proud of, I had cause to write some C++ code. I downloaded Eclipse CDT (And before some sadist comes along suggesting I should've stuck with vi or <a href="http://xkcd.com/378/">butterflies</a>, I've tried just about every C/C++ environment out there. I'm one of those guys that just doesn't understand writing C or C++ code without an editor. I'd sooner write Java than C or C++. Far too many things that can go wrong, it seems.) 
+ 
+ I downloaded the latest one based on <a href="http://www.eclipse.org">Eclipse Helios</a>, installed it and then created a new C++ project (<code>File</code> &gt; <code>New</code> &gt; <code>C++ Project</code> &gt; <code>Executable</code> &gt; <code>Hello World C++ Project</code>). As soon as the Eclipse indexer started churning, Eclipse suddenly just disappeared! One second, I'm looking at Eclipse, and then a blink later, I'm staring at my computer Desktop! The darned thing had segfaulted on me!  I triaged the droppings it had left just before it died - here are the salient excerpts  of the log: 
+</p>
+<PRE><CODE>#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007ffc8537f61e, pid=412, tid=140722453255936
+#
+# JRE version: 6.0_24-b07
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (19.1-b02 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x29861e]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+---------------  T H R E A D  ---------------
+Current thread (0x0000000040530800):  JavaThread "CompilerThread0" daemon
+  [_thread_in_vm, id=422, stack(0x00007ffc7fc69000,0x00007ffc7fd6a000)]
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x000000000000000d
+Registers:
+RAX=0x0000000000000000, RBX=0x0000000000000005, RCX=0x0000000000000000, RDX=0x00000000d8000000
+...
+Register to memory mapping:
+RAX=0x0000000000000000
+0x0000000000000000 is pointing to unknown location
+...
+RDX=0x00000000d8000000
+{other class} 
+ - klass: {other class}
+RSP=0x00007ffc7fd671e0
+0x00007ffc7fd671e0 is pointing into the stack for thread: 0x0000000040530800
+"CompilerThread0" daemon prio=10 tid=0x0000000040530800 nid=0x1a6 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+...
+RSI=0x00007ffc85a840d0
+0x00007ffc85a840d0: <offset 0x99d0d0> in /usr/lib/jvm/java-6-sun-1.6.0.24/jre/lib/amd64/server/libjvm.so at 0x00007ffc850e7000
+...
+R9 =0x0000000040534d90
+0x0000000040534d90 is a global jni handle
+R10=0x00000000404f5790
+0x00000000404f5790 is pointing to unknown location
+...
+R15=0x0000000000000001
+0x0000000000000001 is pointing to unknown location
+Top of Stack: (sp=0x00007ffc7fd671e0)
+0x00007ffc7fd671e0:   0000000000000005 000000004080b200
+...
+Instructions: (pc=0x00007ffc8537f61e)
+0x00007ffc8537f60e:   48 89 fe 0f 84 2e 01 00 00 4c 8b 05 8a 13 83 00
+0x00007ffc8537f61e:   8b 53 08 41 8b 48 08 48 d3 e2 49 03 10 8b 4a 18 
+Stack: [0x00007ffc7fc69000,0x00007ffc7fd6a000],  sp=0x00007ffc7fd671e0,  free space=1016k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x29861e]
+V  [libjvm.so+0x296c0b]
+...
+Current CompileTask:
+C2:1110      org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTFunctionDeclarator.postAccept(
+ Lorg/eclipse/cdt/core/dom/ast/ASTVisitor;)Z (97 bytes)
+---------------  P R O C E S S  ---------------
+Java Threads: ( => current thread )
+  0x000000004129e000 JavaThread "Worker-9" [_thread_blocked, id=781, stack(0x00007ffc623e6000,0x00007ffc624e7000)]
+  ...
+  0x00007ffc79ad8000 JavaThread <b>"org.eclipse.cdt.internal.ui.text.CReconciler"</b> daemon [_thread_blocked, id=760, stac</CODE></PRE>
+ 
+<p> My many years of experience have helped me in these situations - they inform my professionalism and abiity to react decisevly and appropriately. It is imperative that one keep is cool when things don't  work out as planned. </p> 
+<p>So, I sucked my thumb, all the while whimpering a little. I mean, c'mon! Somewhere in the <EM>millions</EM> of lines of Linux source code and the entire 30+ <EM>million</EM> lines of Eclipse source code was a bug, <em>actively</eM> working to ruin my day! You'd cry too if you just thought about it a little. 
+</p>
+<p> But I had one last defense before the false recourse of sticking Eclipse itself under a bugger (and, how I would've done that remains unclear; I couldn't very well have used Eclipse CDT to debug itself and the interactions between Eclipse CDT and the native code in the JRE!). I knew that I could ask my old pair programming pal, Google! I then started scanning looking for unique, repeatable information (i.e., something that would make a good, precise Google query.). At the bottom, I found  <b>"org.eclipse.cdt.internal.ui.text.CReconciler,"</b> and away I went! I asked The Google about any issues with that class in Eclipse CDT, and was given <a href="http://www.eclipse.org/forums/index.php?t=tree&th=200460&S=02b8aad7b1bd5e0c66361e1ec1e6f92f#page_top">this Eclipse forums link</a>. That eventually led me to <a href="https://bugzilla.redhat.com/show_bug.cgi?id=647737">this bug report</a>. That is where I found a workaround. It didn't quite match my situation, but the <a href="https://bugzilla.redhat.com/show_bug.cgi?id=647737#c31">fix</a> was the same: add <CODE>-XX:-UseCompressedOops</CODE> to the end of my <code>eclipse.ini</code>.
+</p>
+<p>So, I hope this blog has helped you avoid this particular bug. It'll probably be fixed soon, but my pain remains. The worst part about all of this? I did <em>all that work</em> just to end up in a position where I could write C++ code! That's like... helping the Dentist look for his <em>really big</eM> drill so he can give  you a root canal! </p><p>Meh.</p>
+</P>

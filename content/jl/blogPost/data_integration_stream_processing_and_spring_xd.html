@@ -1,0 +1,36 @@
+title=Data Integration, Stream Processing and Spring XD
+date=2013-09-22
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<h1>The Value of Streaming Processing and Spring XD</h1>
+
+<p>I really enjoyed GridGain CEO Nikita Ivanov&#39;s post on <a href="http://gridgaintech.wordpress.com/2013/09/18/four-myths-of-in-memory-computing/"><em>Four Myths of In-Memory Computing</em></a>. He nicely explains some of the applications of in-memory computing. While all his points were good, I was really happy to see him touch on <a href=""><em>stream processing</em></a> as a use case.</p>
+
+<blockquote>
+<p>I also think that in-memory databases are important use case… for today. They solve a specific use case that everyone readily understands, i.e. faster system of records. It’s sort of a low hanging fruit of in-memory computing and it gets in-memory computing popularized. I do, however, think that the long term growth for in-memory computing will come from streaming use cases. Let me explain. <em>Streaming processing is typically characterized by a massive rate at which events are coming into a system</em>. Number of potential customers we’ve talked to indicated to us that they need to process a sustained stream of up to 100,000 events per second with out a single event loss. For a typical 30 seconds sliding processing window we are dealing with 3,000,000 events shifting by 100,000 every second which have to be individually indexed, continuously processed in real-time and eventually stored. This downpour will choke any disk I/O (spinning or flash). The only feasible way to sustain this load and corresponding business processing is to use in-memory computing technology. There’s simply no other storage technology today that support that level of requirements. <strong>So we strongly believe that in-memory computing will reign supreme in streaming processing</strong>.</p>
+</blockquote>
+
+<p>I&#39;ve also heard this field roughly called <strong>data integration</strong>. </p>
+
+<p>It&#39;s a very vibrant field. I like the way <a href="https://twitter.com/medriscoll">Michael E. Driscoll (@medriscoll)</a>, CEO at Metamarkets, put it: </p>
+
+<p><img src = "/media/18757" /></p>
+
+<p><a href="http://projects.spring.io/spring-integration">Spring Integration</a> makes it dead simple to integrate with various messaging systems (JMS, AMQP, STOMP, MQTT, websockets, Twitter, Kafka, etc.)   to build <a href="http://wikipedia.org/wiki/pipe-and-filter">pipe-and-filter</a> architectures. Its API elements mirror the patterns of the same name in Gregor Hohpe and Bobby Woolf&#39;s canonical tome on the subject,  <a href="http://www.eaipatterns.com/"><em>Enterprise Integration Patterns</em></a>.  In Spring Integration, <code>Message</code>s flow from one component - a splitter, or <em>router</em>, an <em>aggregator</em>, a <em>transformer</em>, etc. - along <em>channels</em>. Components are decoupled in that they communicate only through <code>Message</code>s. <code>Message</code>s in turn have headers - a map of metadata about the payload - and a payload. </p>
+
+<p><a href="http://projects.spring.io/spring-batch">Spring Batch</a> has great support for managing the state and orchestration of long-running, data-centric jobs. It has the ability to work with a variety of systems where input and output is most efficiently done <a href="http://en.wikipedia.org/wiki/Batch_processing"><em>in batch</em></a>. Spring Batch supports the notion of <em>job</em>s, which are composed of a sequence of <em>steps</em>. Each <em>step</em> can optionally read data, optionally process, and optionally write data. So, for example: one step might read data (<em>lots</em> of data! Millions of records! Batch will scale..) from, for example, a SQL database or a large tab delimited file. Once the data&#39;s read, a natural next step is to process it and then - once finished - write the changes somewhere.</p>
+
+<p><em>Data integration</em>, or <em>stream processing</em>, or <em>ingestion</em>, etc. is all about managing the integration with, and accquisition of, data from varied systems and supporting its ingestion, analysis, processing and ultimate storage. </p>
+
+<p>As Nikita points out, with data storage options so cheap these days, we can record as much data as we want. The real question is: how do we <em>process</em> it? How do we extract value out of it? Sure, it&#39;s easy to put hundreds of terabytes of Hadoop data onto an HDFS data lake, but how do you transform that data into business value? How do you integrate with other systems - online systems, warehouses, reporting? How do you accommodate the ingest of new data even in the face of a tidal data deluge? </p>
+
+<p>To do this right, you need  data processing support (extraction, transformation, and loading) and a  event- and messaging-centric programming model to stitch together otherwise decoupled components in  distributed, messaging-centric workflows. This is where <a href="http://projects.spring.io/spring-xd"><strong>Spring XD</strong></a> comes in. Spring XD is a new project in the stream processing space. It builds on the strengths of <a href="http://projects.spring.io/Spring-Batch">Spring Batch</a>, <a href="http://projects.spring.io/Spring-Integration">Spring Integration</a>, and <a href="http://projects.spring.io/Spring-Data">Spring Data </a> and <a href="http://projects.spring.io/spring-hadoop/">Spring for Hadoop</a> to meet this new generation of challenges. </p>
+
+<p><img src = "/media/18756" /></p>
+
+<p>That picture&#39;s fairly marketitecture-ish, but it does a nice job of sort of visualizing the place of Spring XD in your architecture <em>and</em> in understanding it, you <em>already</em> understand the programming model of Spring XD: <em>streams</em> represent the flow of data from a <em>source</em> to a <em>sink</em>. A <em>source</em> is some point of entry, like a database, syslog, HDFS, etc. A <em>sink</em>  represents the place where the data ultimately gets written to. You can put in processors along the stream to process, transform, and audit the data. A <em>tap</em> is a component that intercepts the data, but doesn&#39;t terminate the stream. In the integration world, the closest analog is a <em>wire tap</em>.   </p>
+
+<p>I&#39;ll let you read <a href="https://spring.io/blog/2013/04/23/introducing-spring-xd/">this introductory blog post for more</a>. </p>

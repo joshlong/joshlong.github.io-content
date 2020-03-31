@@ -1,0 +1,39 @@
+title=Reframing the Question
+date=2011-06-30
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<P>
+ Just watched a recording on JavaEE6 and JBoss AS7. JBoss AS7's looks like it's evolved by leaps and bounds! 
+ I wonder if it's as mature as Glassfish now... Some of the new features in JBoss AS 7 seem to just be bug fixes. </p>
+ <ul>
+	<LI>It's faster (which is great, because it's always been dog slow. JBoss AS5 had startup times of 60 seconds or more on trivial applications!)</li>
+		<LI>It doesn't leak classes (because previous versions had all sorts of classloader issues and this was a very common complaint)
+			</li>
+			<LI>It supports the full JavaEE6 specification (because JBoss AS6 - the first release of the JBoss AS server line after the JavaEE 6 specification was finalized - didn't, instead choosing to only support the web profile)
+				 </li>
+			<LI>It's productized into part of the JBoss EAP (which is great, because JBoss AS 6 wasn't, and - as JBoss AS 7 is <em>still</em> not out yet, this means that  
+				<a href="http://www.ibm.com/developerworks/websphere/techjournal/1106_alcott/1106_alcott.html">Websphere (!!) was quicker to market</a> with a supported version of Java EE 6 (both full profile and web profile) than JBoss! 
+				</li>
+				</ul>
+ 
+<P>Towards the end, one of the presenters made the nonsensical assertion that, basically, Spring is quite old (and was therefore straddled with all of this imaginary legacy code), and that CDI is - in contrast - quite new. This is an example of "reframing." 
+</p>
+<P>
+	Spring's been around since 2003, in some form, and since 2004, in a big way. It's certainly older than CDI, sure. Obviously.   
+	
+	However, applications written in 2004 still run without modification on Spring 3.0 and the upcoming Spring 3.1, with very few exceptions. The <em>only</em> exceptions are on the very few cases where we've deprecated certain APIs like our support for Apache OJB. Even still, if the older, relevant extension library is loaded, it runs. The supported parts of the component model haven't changed, just the libraries that we ship that build on top of the component model. Usually when we deprecate something, it just means we're not shipping it with the project, not that the code won't work on current versions of Spring.
+	</P>
+	<P>
+		In contrast, if you'd written your application on the "standard" EJB 2 (which was the norm when Spring first emerged), it would <em>not</em> run on contemporary versions of these Java EE 6 application servers, especially those that just support the web profile. For that matter, if your application in Seam 2 (which was current six months ago!), it would not run once you upgraded to Seam 3 without heavy migration. (Definitely not anything close to a drop-in upgrade)
+		</p>
+		<P> Spring's older, but evidently far stabler than both the J2EE / JavaEE implementations <em>and</em> the standards.
+			
+  		If you're running Java SE 5, then there's little reason Spring wouldn't continue to work on an existing J2EE 1.4 server.			
+To boot, new versions of Spring support programming models that are more powerful and as lightweight, as anything JavaEE has, <em>while</em> maintaining</em> backwards compatibility.   It's unfortunate that JavaEE6 can't maintain its legacy code <em>and</em> add support for "new" component models at the same time, and even more so that this is what passes for a "standard." Spring has a better backwards compatibility story, within Spring as well as within J2EE and JavaEE application servers. 
+			</p>
+			<P> Don't let people maliciously reframe this point. <B> Spring's maturity is a strength, not a weakness.</B> The component model introduced in XML in 2004 still works today, and we've provided several alternative input configuration types to tap this same component model, including annotations and Java-based configuration. This is possible because any  configuration mechanisms - be it XML, Java configuration, annotations, the Groovy BeanBuilder, or anything else, is  eventually  normalized to a common component type at runtime.
+				</p> 
+			

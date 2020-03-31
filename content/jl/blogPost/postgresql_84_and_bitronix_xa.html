@@ -1,0 +1,57 @@
+title=PostgreSQL 8.4 and Bitronix XA
+date=2009-12-31
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p>I use <a href="http://www.postgresql.org/">PostgreSQL</a> 8.3 - 
+highly recommended by the way - 
+and I just updated an application to 8.4. 
+The application is built principally using Spring, Hibernate, and JMS. 
+Naturally, some level of 
+cooperation among transactions is required, so I use an XA provider - 
+<a href="http://docs.codehaus.org/display/BTM/Home">Bitronix.</a> 
+Everything was working swimmingly 
+with PostgreSQL 8.3, but the application buckled on startup with 
+errors when I upgrade PostgreSQL to 8.4: 
+</p><PRE><CODE>Dec 30, 2009 11:25:50 PM 
+bitronix.tm.twopc.AbstractPhaseEngine logFailedResources 
+<b>SEVERE: resource xasql failed on a Bitronix XID [737072696E672D62746D2D- 
+73656E64657200000125E3A04B9900000038 : 737072696E672D62746D2D73656E6465720- 
+0000125E3A04BA40000003A] 
+org.postgresql.xa.PGXAException: Error preparing transaction</b> 
+at org.postgresql.xa.PGXAConnection.prepare(PGXAConnection.java:254) 
+at bitronix.tm.twopc.Preparer$PrepareJob.run(Preparer.java:134) 
+at bitronix.tm.twopc.executor.SyncExecutor.submit(SyncExecutor.java:12) 
+at bitronix.tm.twopc.AbstractPhaseEngine.runJobsForPosition(AbstractPhaseEngine.java:109) 
+at bitronix.tm.twopc.AbstractPhaseEngine.executePhase(AbstractPhaseEngine.java:71) 
+at bitronix.tm.twopc.Preparer.prepare(Preparer.java:68) 
+at bitronix.tm.BitronixTransaction.commit(BitronixTransaction.java:176) 
+at bitronix.tm.BitronixTransactionManager.commit(BitronixTransactionManager.java:95) 
+at org.springframework.transaction.jta.JtaTransactionManager.doCommit(JtaTransactionManager.java:1009) 
+at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:754) 
+at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:723) 
+at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:394) 
+at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:117) 
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172) 
+at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:89) 
+at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172) 
+at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:202) 
+... 
+<b>Caused by: org.postgresql.util.PSQLException: ERROR: prepared 
+transactions are disabled</b> 
+at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:1592) 
+at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1327) 
+at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:192) 
+at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:451 
+</CODE></PRE> 
+<P> 
+If you're in my situation, the immediate cure is to uncomment and set 
+the <code>max_prepared_transactions</code> 
+attribute in <code>data/postgresql.conf</code>. A safe value seems to 
+be 10, though your mileage may vary. 
+There must be a reason they've disabled this in 8.4, so further 
+investigation is required. In the meantime, though, everything seems 
+performant and works as it did before. 
+</P>

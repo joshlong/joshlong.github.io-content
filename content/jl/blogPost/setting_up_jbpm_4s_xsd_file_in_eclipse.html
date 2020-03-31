@@ -1,0 +1,33 @@
+title=Setting Up jBPM 4's XSD File In Eclipse
+date=2009-09-03
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<P> I've recently been playing with jBPM 4.1 and, while I haven't 
+quite gotten into it, I did manage to break an Eclipse setup of my 
+"old" jBPM 4.0 code. This is definitely a user error. So, trying to 
+ensure I have a reproduciable baseline,  I start setting everything up 
+again (I don't have the jBPM plugins or anything installed -- I keep 
+it mean and lean, if possible. ) </p> <p> I got  to the point where 
+everything was running fine again from the IDE, but I noticed I no 
+longer had code   completion for my jBPM <code>.XSD</code> file. I'm 
+not sure if I ever did, or if I did, then I've forgotten how. So, I 
+stumbled through getting it working with the Eclipse Resource Catalog. 
+Here are the steps to reproducing it if you have the same issue. </p> 
+ <ol> <lI>  You'll need a copy of the <code>.XSD</code> itself. For 
+me, the simplest option was to just download the source 
+<code>jar</code> and use the <code>XSD</code> file therein. 
+<code><pre>mkdir ~/xsds; cd ~/xsds ; 
+wget http://repository.jboss.com/maven2/org/jbpm/jbpm4/jbpm-api/4.0/jbpm-api-4.0-sources.jar 
+; 
+jar xvf jbpm-api-4.0-sources.jar ; 
+</pre></code> </li> <li> In Eclipse, go to Window > Preferences 
+</li><li>Search for "XML Catalog," under the "XML" node.    </li> <li> 
+Click "Add..." </li> <li> <li> Fill out the dialog, using the values 
+below. <br/> <img src = 
+"/media/17857" 
+/> </li> </ol> <p> I hope this spares somebody some pain. Once you've 
+got it working, go check out the awesome <a 
+href="http://jboss.org/jbossjbpm/">new jBPM 4.1</a>! </p>

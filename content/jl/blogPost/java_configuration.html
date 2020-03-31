@@ -1,0 +1,71 @@
+title=Java Configuration
+date=2013-04-13
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<P>
+In my last post I talked a little bit about how – at runtime – Spring beans are all just the same thing. I tried to emphasize that beans defined in any number of styles can be mixed and matched. While the XML format will always be supported, I personally like the increasingly numerous Java-configuration centric APIs and DSLs that the Spring projects are exposing. 
+</P><P>
+Java configuration offers some of the strengths of both XML-based configuration and convention-oriented component scanning. It’s a single definition of the components in your system, and it’s type safe and defined by Java types, not a secondary grammar that doesn’t enjoy the same validation cycle as the compiled code.
+</P> 
+<PRE><CODE>
+@Configuration
+@PropertySource("classpath:services.properties")
+@ComponentScan  
+@EnableTransactionManagement  
+public class ServiceConfiguration {
+
+    @Bean 
+    public DataSource dataSource(Environment e) {
+        org.apache.tomcat.jdbc.pool.DataSource ds = new org.apache.tomcat.jdbc.pool.DataSource();
+        ds.setDriverClassName(e.getProperty("dataSource.driverClassName"));
+        ds.setPassword(e.getProperty("dataSource.password"));
+        ds.setUsername(e.getProperty("dataSource.user"));
+        ds.setUrl(
+                String.format("jdbc:postgresql://%s:%s/%s",
+                        e.getProperty("dataSource.host"),
+                        Integer.parseInt(e.getProperty("dataSource.port")),
+                        e.getProperty("dataSource.db")));
+        return ds;
+    }
+
+    @Bean 
+    public PlatformTransactionManager platformTransactionManager(DataSource dataSource) {
+        return new DataSourceTransactionManager(dataSource);
+    }
+}
+</code></pre>
+
+<P>
+This class does a lot of things that you might recognize from the XML format. It’s a configuration class because of the <CODE>@Configuration</CODE> annotation. You feed this class to an instance of <CODE>AnnotationConfig(Web)ApplicationContext</CoDE>, which will scan the bean and look for methods annotated with <CODE>@Bean</CODE>. It invokes each in turn, giving each bean the same lifecycle services as it would an XML bean, and makes the returned value from the method available for injection. Other methods may depend on it by specifying an argument of the type, optionally qualifying it with the ID, for example, using <CODE>@Qualifier</CODE>. We turn on declarative transaction management (<CODE>@Transactional</CODE>) and define a bean that’ll be used to handle transaction management with the <CODE>@EnableTransactionManagement</CODE> annotation. Annotations of the form <CODE>@Enable*</CODE> typically correspond to *:annotation-driven elements in the XML, enabling features and component models declaratively. The <CODE>@ComponentScan</CODE> annotation tells Spring to register all components in the same package or lower as this configuration class, in this case beans annotated with <CODE>@Component</CODE> or <CODE>@Service</CODE>. The <CODE>@PropertySource</CODE> annotation tells Spring to load property values, which can then be injected with a reference to the system object called <CODE>Environment</CODE>. 
+</p><P>
+Then, we can easily imagine moving our application into the web tier, so we’ll setup Spring MVC using Java configuration, like this.
+</p><pre><COde>
+@Configuration
+@EnableWebMvc
+@Import(ServiceConfiguration.class)
+public class WebConfiguration extends WebMvcConfigurerAdapter {
+
+    @Bean
+    public ViewResolver viewResolver() {
+        InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver();
+        internalResourceViewResolver.setSuffix(".jsp");
+        internalResourceViewResolver.setPrefix("/WEB-INF/views/");
+        return internalResourceViewResolver;
+    }
+
+    @Override
+    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+        configurer.enable();
+    }
+}
+</code></PRE><P>
+This class is too annotated with <Code>@Configuration</CODE>. It enables Spring MVC (bean validation, file upload support, REST, etc. etc.), and scans the context for beans of well known plugin objects like <CODE>ViewResolver</CODE>s. But here we see something new: the configuration class extends a base class, or implements an interface having the word “<CODE>Configurer</CODE>” in it. Typically the framework runs these callback implementing instances and uses it to tailor how it builds itself. Here, for example, we have callback methods we can implement to provide things like <code>HttpMessageConverters</code>, validation, view controllers, etc. We use <CODE>@ComponentScan</CODE> to scan and register beans (typically beans of type <CODE>@Controller</CODE>) in or below the package that the configuration class is in. And, because we want to inject references to the services we’ve just defined, we’ve used the <COde>@Import</CODE> annotation to import the bean definitions from the <CODE>ServiceConfiguration</code> class. 
+</p> 
+<P> 
+This was by no means an exhaustive look at Java configuration, but hopefully you see that there is a lot of  convenience in this approach. You can still substitute values from external property files, you can still override and extend the frameworks, and you can still achieve a single configuration artifact – a place where you can get a bird’s eye view of the system. 
+</p><P>
+ There are many Spring projects that provide idiomatic, Java configuration centric APIs and DSLs as Spring core does for building services using Spring and web applications using Spring MVC.
+</P>

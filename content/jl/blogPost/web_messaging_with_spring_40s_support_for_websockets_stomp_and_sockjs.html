@@ -1,0 +1,14 @@
+title=Web Messaging with Spring 4.0's Support for WebSockets, STOMP and Sock.js
+date=2013-09-23
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p>Spring 4 will see some core types in Spring Integration be promoted to the core Spring framework. These types - in a new <code>spring-messaging</code> module - deal with common messaging idioms like a message (<a href="https://github.com/spring-projects/spring-framework/blob/master/spring-messaging/src/main/java/org/springframework/messaging/Message.java"><code>org.springframework.messaging.Message</code></a>), a message channel (<a href="https://github.com/spring-projects/spring-framework/blob/master/spring-messaging/src/main/java/org/springframework/messaging/MessageChannel.java"><code>org.springframework.messaging.MessageChannel</code></a>) and  message headers  (<a href="https://github.com/spring-projects/spring-framework/blob/master/spring-messaging/src/main/java/org/springframework/messaging/MessageHeaders.java"><code>org.springframework.messaging.MessageHeaders</code></a>)</p>
+
+<p>This eventually implies a common foundation for messaging abstractions across the various Spring projects. I suspect in Spring Integration 4.0 they&#39;ll move to those core types as the primitives. It&#39;s not hard to imagine these types one day being in other messaging abstractions across Spring Data Redis, Spring AMQP, Spring Data GemFire, and Spring Integration. Right now, this gives us the ability to talk about first class support for web.next technologies like WebSockets in a future-proof API.</p>
+
+<p>Spring core and web ninja  Rossen Stoyanchev talks at length about some of this stuff in this blog post, <a href="http://wp.spring.io/2013/07/24/spring-framework-4-0-m2-websocket-messaging-architectures/?utm_source"><em>Spring Framework 4.0 M2: Websocket Messaging Architectures</em></a>. I think, however, you&#39;d get a lot more by letting his <a href="https://github.com/rstoyanchev/spring-websocket-portfolio">kick-ass Stock Trading application do the talking</a>. The easiest way by far is to simply run <code>mvn jetty:run</code> in the same directory as the <code>pom.xml</code> file is.</p>
+
+<p><img src = "/media/18765" /></p>

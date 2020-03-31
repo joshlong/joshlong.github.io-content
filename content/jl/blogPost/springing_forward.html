@@ -1,0 +1,202 @@
+title=Springing Forward
+date=2011-01-02
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<P>I can't believe how quickly things have come and gone. I thought
+2009 was great, but 2010 year no doubt takes the cake! Now that we're
+all on the other side of the new year, I thought I'd take a quick
+look at my year (and my decade) and talk about the Spring framework.</P>
+<P>Last decade started strangely for a lot of us here in the United
+States. We saw a very strange election, the source of much discord in
+the political world. Scandalous though that might have seemed, it
+would all seem so fleeting when two planes crashed into the twin
+towers in New York City, New York. The reactions of a panicked
+country seemingly under siege would change the landscape over the
+next several years. The ramifications are still very pronounced and
+felt, I fear, in every corner of this tiny little planet.</P>
+<P>I started the decade, and my professional career, wading through
+the dot-com boom and subsequent bust. I've been fortunate to have
+worked with a lot of startups over the years. I've also worked in
+stodgy, established corporations.  I feel like working at a bank is
+the easiest way to fall through the cracks in life. It never ceases
+to amaze me that there are projects in some banks being started this
+very day, January 1, 2011 (1/1/11..!) using Struts 1. 
+</P>
+<P>It has been my experience that startups have the blessing - and
+burden - of having no room for failure. I have spent a lot of time
+making things work that just shouldn't work. While I've always been
+best-practices-oriented, I was leery of any gospel according to the
+vendors. I once had a manager utterly terrorize me because I was
+using EJBs when he had PHP script kiddies that purported to be able
+to deliver a huge function of the project done by "just downloading
+a script!" This taught me a valuable lesson. Looking back, I
+suspect the manager's claim was probably genuine, and I feel like
+such a heel for blindly relying on the vendors' claims that EJBs were
+the way forward, the future. I never could convince myself that the
+PHP way was <I>the </I> way, but
+there was no denying the obvious productivity gains for many common
+tasks.  There was a time when I was looking pretty seriously at
+moving to .NET because it promised radically improved turnaround
+times. One of my main reservations about the then-nascent .NET
+ecosystem was the lack of open-source. I've always worked hard to use
+open-source if I could. 
+</P>
+<P>The Spring framework came along just in time. Engineers that
+survive in startups tend to be scrappy engineers who are interested
+in results, not process, and who aren't in it for the 9-5 shift, but
+for results. The Spring framework is open source; it closed the gap
+between .NET and Java by providing niceties like declarative
+remoting, declarative transactions, etc; it also helps further
+best-practices, not hinder them. I've been a true believer in the
+Spring framework from day one.  
+</P>
+<P>In early 2005, I moved to Tempe, Arizona to help start a company.
+The venture was a victim of the wayward economy when the housing bust
+hit. While I made some great friends, I was
+glad to return to Los Angeles in March of 2009. 
+</P>
+<P>
+<img src = "/media/17882" width ="250" style ="float:left;border:0; margin-right:10px;"/>
+Early in 2010 I had the fantastic good fortune to join a company
+here in Los Angeles called <A HREF="http://www.shopzilla.com">Shopzilla</A>
+- they're the group behind <A HREF="http://www.bizrate.com/">BizRate.com</A>,
+<A HREF="http://www.beso.com/">BeSo.com</A>, <A HREF="http://www.shopzilla.com/">Shopzilla.com</A>,
+and <A HREF="http://tada.com/">tada.com</A>, each of which gets a
+staggering amount of traffic. They use the Spring framework
+extensively and feature an excellent engineering environment as well
+as one of the best workplace environments in the business (arcade,
+lounge, free lunch, great perks, gym, etc., etc.). There are many
+brilliant people at Shopzilla. I think it is our natural tendency to
+approach strange codebases with trepidation and a sense of, "well,
+I could do this better!" and a lot of times, unfortunately, that
+instinct is on the money. I never felt that way with the large swaths
+of code I encountered in Shopzilla's codebase. 
+</P>
+<P>I've been in the unfortunate position in my life of having to work
+at places where engineers were begrudged unit tests; where code and
+projects were wildly inconsistent, or antiquated across projects;
+where there was a strong, undue sense of code ownership and code was
+walled off to all but two engineers (who had twelve weeks off yearly
+and were busy planning their retirements). Shopzilla was the
+antithesis. It was... wonderful to be completely unencumbered by
+management and bureaucrats. 
+</P>
+<P>I loved Shopzilla's earnest maximization of the Spring framework. </P>
+<P>Let me try to explain. If you'll permit a generalization,
+engineers at startups can't afford to trust, anything. No time, after
+all. You hope that people already appreciate the benefits of code
+reuse, of course. I wonder if those people also realize the
+responsibility that comes with reuse. If something breaks in that
+code, its up to you to see it gets fixed. Keeping a stack as
+open-source centric as possible facilitates fixes. Broken code in a
+server is bad, but try <I>proving </I>it, let alone fixing it,
+without the source code! Support contracts might help there, but
+rarely as quickly as you need it to. It takes courage to use other
+people's code, and it takes courage to trust <I>and</I>
+verify promises extended by that code. It takes skill to integrate -
+and to care - about the big picture system, and not just the
+individual moving parts, too.  
+</P>
+<P> That is my conceptual framework
+when approaching projects. I use the Spring framework because it
+integrates with many different technologies and insulates users from
+the idiosyncrasies between various technologies through a unified
+component model. It levels the playing field. Depending on the stack,
+there are any number of places one might have to tailor a project 's
+behavior to the requirements of a system. Logging frameworks, service
+tiers, web service tiers, caching frameworks, web (including core
+APIs like Servlets), workflow engines, integration engines,
+processing grids, batch processing frameworks, job scheduling
+frameworks, etc., all have their own notion of a "component" in
+that domain, and each one of them expects you to work in terms of
+that component model, ignoring the uniformity and conventions you'd
+hoped to establish across your code base. 
+</P>
+<P> Spring opens the doors to all
+these technologies (and untold many others) and lets you work in
+terms of <I>your </I> domain
+model. The engineers behind the Spring framework have plumbed the
+depths of these various frameworks and done the legwork to make it
+easy for you to integrate them in a manner consistent with your
+codebase. Where they've had to, they've fixed parts of these
+projects, and provided less risky paths for integration. Often, this
+process is as simple as dismantling the custom component model in
+place and letting people think in terms of plain 'ol Java objects
+(POJOs), avoiding the inconsistent, ever-varying, project-specific
+configuration files.  
+</P>
+<P>Spring's power - and the reason why I personally find the very
+notion of some other pure play IoC container like CDI as a "competitor"
+to Spring to be laughable at best - is its rich, unified libraries
+and the platform that it provides through its integrations. Spring
+provides a clean, consistent metaphor for approaching problems. It
+provides libraries that are idiomatic and that work wonderfully
+together, and it provides services that can be weaved in a clean way
+across an application. These libraries are often layered. They
+present the 90% case solution first, but provide hooks through the
+use of things like strategy interfaces and callback methods should
+you need to tailor the behavior. 
+</P>
+<P>The Spring framework is a very good example of the <A HREF="http://en.wikipedia.org/wiki/Open/closed_principle">open/closed
+principle</A>. It is telling that very few people even know about all
+of the Spring framework's extension points; most people don't need
+them. For 90% of the use cases, Spring makes the impossible easy, and
+provides the flexibility to tackle the other 10%. Where possible,
+Spring makes facets of an application invisible -  things that used
+to require an API. Where there is still an API dependency, Spring
+typically ships with a cleaner API that insulates you from it or
+simplifies it. 
+</P>
+<P>I mention all of this because Shopzilla's architecture and
+applications - as much as possible - lived in the 90%; things were as
+simple as possible thanks to Spring and the <I>incredible </I>diligence
+of the engineering team. Shopzilla really excelled in all the little
+10% spots, too. They used or extended everything, taking nothing for
+granted. Shopzilla had a custom Spring MVC view resolver and view
+templating format, for example. They have a custom JMS message
+listener container that was geared to batching in the style of the
+Spring framework's message listener container. They made ingenious
+use of monitoring, Spring's amazing AOP support, JMX, and various
+open source projects to handle terabytes of logging. The entire
+federated architecture across several different teams used REST and a
+standard, Maven controlled archetype to keep projects standardized.
+In essence, as part of a engineering-wide culture of consistency, and
+code reuse, Shopzilla had built upon and extended the Spring
+framework, and it underpinned everything they did. Shopzilla
+integrated technologies and published reusable solutions for common
+problems so that <I>everybody</I> 
+benefited in the same way that the Spring framework itself does.</P>
+<P>Shopzilla's amazing, and I would recommend it to anybody if you're
+looking for an amazing company to work for.</P>
+<P> 
+ <img src = "/media/17881" width ="250" style ="float:left;border:0; margin-right:10px;"/>
+So, when I was approached to join SpringSource as the Spring
+developer advocate, I was at once sad to leave Shopzilla, but elated
+at the prospect of playing a part in this technology that had so well
+served me for the better part of the last 8 years. Leaving Shopzilla
+was painful, of course, but I had to see this opportunity through. I
+have a deep respect for SpringSource and the committed engineers
+there who  - even as I write this, on the last Saturday on New
+Year's weekend - are sending emails about developments in the
+projects! I've been with SpringSource since August. SpringSource is a
+worldwide organization, so no matter what time of day it is, there is
+somebody committing something awesome, somewhere, in plain view of
+the world. If I'm not careful, I forget to leave my desk trying to
+keep up with all the exciting stuff! 
+</P>
+<P>Spring's made my decade much more pleasant than it might've
+otherwise been. If you'd told me we'd have something like the Spring
+framework in 2000, and that I'd be privileged enough to work with the
+people behind it, I would have dropped my CORBA and EJB books on your
+feet. It would have seemed so cruel to joke about something like
+that. 
+</P>
+<P>It's been a fantastic decade, and a particularly fantastic 2010,
+and I can't wait to see what comes next. 
+</P>
+<P>I hope you had a safe, joyous New Years, and I wish you a
+fantastic new year, and a new decade. 
+</P>

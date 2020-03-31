@@ -1,0 +1,15 @@
+title=One Big Bag of Beans
+date=2013-04-13
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<P>At runtime, Spring is just a bunch of beans. Spring provides basic services like dependency injection and lifecycle management, of course, but everything else is just a bean that can be injected, and participate in all the services that the container provides. One big bag of beans. To take advantage of this, all you have to do is tell Spring about your beans. You don’t need to tell it much – just basic things, like the bean's class, optionally an <CODE>id</CODE> by which to disambiguate it, an optional scope, and information about which dependencies a bean has. If you want to build the bean in a special way, besides just using a regular no-arg constructor, you need to tell Spring what to do: use the constructor, use a factory method, etc.
+</P>
+<P>Before Java 5, the natural way to describe this information to Spring in the enterprise Java landscape was XML. So, that begat Spring’s XML flavor. But, as I say, this is just a format by which Spring ingests information about your classes. Metadata. There are lots of other ways. The <A href="http://grails.org/doc/latest/guide/spring.html#14.3 Runtime Spring with the Beans DSL">Groovy Bean Builder</a>. The <A href="http://blog.springsource.org/2012/12/10/introducing-spring-scala/"> Spring Scala</a> approach. At one point early on there was a property-file based approach that you could use to manage beans (not from SpringSource, obviously, but still pretty novel!) Some of you may remember the work being done by the XBean project before Spring 2 had official support for namespaces.
+</P><P>
+Then Java 5 came out and with it annotations. We had ways for the class files to carry the metadata with them! And very shortly after that, we saw the first annotation-centric approaches to – by convention – applying services in Spring with the <CODE>@Transactional</CODE> annotation. Then the stereotype annotations emerged -<CODE>@Controller</CODE>, <CODE>@Component</CODE>, <CODE>@Service</CODE>, etc, that – along with component scanning and <CODE>@Autowired</CODE> – made it dead simple to register beans entirely based on convention. Concurrently, work began on Spring Java Config. This approach predates Guice or CDI, for example. Spring Java Configuration lived on the side, as a separate project where the ideas could be fleshed out. In 2009, for Spring 3.0, it was merged into the core framework. </p>
+
+<P>Remember, at runtime all of these beans exist as beans in the same, giant bag, described using the same metadata. For this reason, Spring makes it very easy to assemble applications that employ different approaches as appropriate. You can let component scanning and stereotypes carry you 80% of the way, use Java configuration to assemble everything else and then use XML DSLs in domains where an expressive DSL is available. Beans defined by component scanning can participate in AOP defined by Java configuration, etc. Beans defined in Java configuration can have injected references to beans defined in XML. One type of stuff at runtime. One big bag of beans. 
+</P>

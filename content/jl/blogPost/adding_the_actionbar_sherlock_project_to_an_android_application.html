@@ -1,0 +1,100 @@
+title=Adding the ActionBar Sherlock Project to an Android Application
+date=2013-09-18
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p><a href="http://twitter.com/royclarkson">Roy Clarkson (@royclarkson)</a> and I gave a talk at <a href="http://SpringOne2GX.com/">SpringOne2GX 2013</a> in which we talked about building REST services with an eye towards consuming those services on mobile platforms like Android and iOS. This talk demonstrates the progressive evolution of an application using Spring MVC, Spring HATEOAS, Spring Data REST, Spring Security, Spring Security OAuth, and Spring Android. The code&#39;s benefited from a lot of help from Rob Winch.</p>
+
+<p>I am pulling this blog together to introduce how we used the <a href="http://actionbarsherlock.com/">ActionBar Sherlock project</a> in the sample application. There is nothing here related to Spring, but I thought the whole process was hard enough that some notes might help someone else. </p>
+
+<h2>What is an ActionBar?</h2>
+
+<p><img src="/media/18751" width="300" /></p>
+
+<p>From the <a href="http://developer.android.com/guide/topics/ui/actionbar.html">documentation</a>, the <code>ActionBar</code>:</p>
+
+<blockquote>
+<ol>
+<li>Provides a dedicated space for giving your app an identity and indicating the user&#39;s location in the app.</li>
+<li>Makes important actions prominent and accessible in a predictable way (such as Search).</li>
+<li>Supports consistent navigation and view switching within apps (with tabs or drop-down lists).</li>
+</ol>
+</blockquote>
+
+<p>The ActionBar, pictured above in an image from the Google documentation, provides a sort of hub for interaction UIs like menus, toolbars, etc., in your application. It&#39;s also a nice place to install a widget like a search field that can provide functionality and trigger behavior independent of any single view. </p>
+
+<p>The ActionBar API (<code>android.app.ActionBar</code>), however,  is only available in Android API level 11 and greater. There is a sort of backwards compatible API called the <a href="http://developer.android.com/tools/support-library/index.html">Android Support Library</a> (<code>android.support.v7.app.ActionBar</code>) that works with versions lower than API level 11.</p>
+
+<h2>What is the  ActionBar Sherlock?</h2>
+
+<p>From the ActionBar Sherlock website: </p>
+
+<blockquote>
+<p><a href="http://actionbarsherlock.com/">ActionBarSherlock</a> is an extension of the <a href="http://developer.android.com/tools/support-library/index.html">support library</a> designed to facilitate the use of the action bar design pattern across all versions of Android with a single API. </p>
+</blockquote>
+
+<p>So, it provides a clean API that wraps and adapts to existing implementations if available, and otherwise does a remarkable job simulating the effect in older versions of the platform, all with no change to your code.</p>
+
+<p>All of this works in a consistent way on the ActionBar. On devices that support the hardware <strong>Menu</strong> button, this menu is available using that button. Otherwise it shows up as shown here, as part of the ActionBar. </p>
+
+<h2>Our Sample Application</h2>
+
+<p>In our sample application, the user has the ability to:</p>
+
+<ul>
+<li>sign in, or out of a session</li>
+<li>search for records </li>
+<li>update the user profile photo</li>
+</ul>
+
+<p><img  src = "/media/18752" /></p>
+
+<h2>Using   ActionBar Sherlock</h2>
+
+<p>The sample application uses Android <code>Fragment</code>s to make the layout more dynamic inside of a single <code>Activity</code>, so in practice there is only <em>one</em> <code>Activity</code> that needs to extend the <code>SherlockFragmentActivity</code> class. </p>
+
+<p>To use the ActionBar, an <code>Activity</code> should extend one of the ActionBar Sherlock-provided <code>Activity</code> instances. This way, you get a reference to the ActionBar via the <code>getActionBar()</code> method. Conveniently, you won&#39;t really need that reference, though.</p>
+
+<p>Below, I demonstrate how to setup a search field in the application. The <code>Activity#onCreateOptionsMenu(Menu)</code> callback method gives you a pointer to the <code>menu</code> reference which you may use to add menu items. </p>
+
+<pre><code>    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        this.menu = menu;
+
+        SearchManager searchManager = (SearchManager) 
+               activity.getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = new SearchView(activity);
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(activity.getComponentName()));
+        searchView.setQueryHint(getString(R.string.search_hint));
+        searchView.setIconified(true);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                runQuery(query);
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return true;
+            }
+        });
+
+        // search menu item       
+        MenuItem menuItem  = menu.add( getString(R.string.search));
+        menuItem.setTitle(title);
+        menuItem.setActionView(searchView);
+        menuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);        
+
+         // ..
+
+     }
+
+</code></pre>
+
+<h2> 
+	Adding the ActionBar project to your Maven Build
+</h2>
+<P> I had to go through some fits to make the Android build work perfectly as the ActionBar Sherlock project is delivered as an Android <CODE>.apk</code> bundle, not a <CODE>.jar</CODE>. <a href="https://raw.github.com/joshlong/the-spring-rest-stack/master/code/client/android/pom.xml">Check out the build file</a> for the nitty gritty. </p>

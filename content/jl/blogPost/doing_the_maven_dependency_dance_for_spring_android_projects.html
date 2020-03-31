@@ -1,0 +1,85 @@
+title=Doing the Maven Dependency Dance for Spring Android Projects
+date=2013-09-17
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p><a href="http://twitter.com/royclarkson">Roy Clarkson (@royclarkson)</a> and I gave a talk at <a href="http://SpringOne2GX.com/">SpringOne2GX 2013</a> in which we talked about building REST services with an eye towards consuming those services on mobile platforms like Android and iOS. This talk demonstrates the progressive evolution of an application using Spring MVC, Spring HATEOAS, Spring Data REST, Spring Security, Spring Security OAuth, and Spring Android. The code&#39;s benefited from a lot of help from Rob Winch, </p>
+
+<h2>Layout of the Code</h2>
+
+<p>The code for the talk is on my <a href="http://github.com/joshlong/the-spring-rest-stack/">GitHub account (github.com/joshlong/<strong>the-spring-rest-stack</strong>)</a>. Importantly, the code lives in the <code>code</code> directory. Beneath that there are two choices:  <code>web</code> (where you&#39;ll find the <code>rest</code>, <code>hateoas</code>, <code>hateoas-data</code>, and <code>oauth</code>, <code>social</code> modules) and <code>client</code> (where you can load the Android module and the iOS module). The modules in the <code>web</code> folder  in respective order, demonstrate the evolution of a simple REST service which incorporates hypermedia, Spring Data repositories and OAuth security. The <code>social</code> module demonstrates how to build an OAuth client that consumes the service.</p>
+
+<h2>Building and Editing the Code</h2>
+
+<p>The project is all, at the moment, Maven based, though moving to Gradle seems imminent as that is the Google-endorsed route for Android builds.  I know the Android client to be importable and buildable using  IntelliJ IDEA&#39;s  Android support (which in theory should work in <a href="http://intellij.com/android-studio">Android Studio</a>, which is freely available). </p>
+
+<h2>The Dependency Dance and Android</h2>
+
+<p>We used up-to-date revisions of major libraries in our <a href="https://github.com/spring-projects/spring-android/tree/master/spring-android-rest-template">build file, linked for reference</a>. Up-to-date and sometimes bleeding edge.  The Android application uses the Spring Android project, which - basically - provides an API compatible implementation of the <code>RestTemplate</code> found in Spring core. </p>
+
+<p>It does <em>not</em> however provide the entire framework, and if you bring in certain libraries from the core you&#39;ll get weird issues because some classes in the Spring Android modules are <em>mostly</em> the same in Spring Android and in the core, but they&#39;re not identical, due to the differing natures of the environments in which they run. The easiest way to ensure everything&#39;s OK is to explicitly exclude all Spring modules <em>except</em> the Spring Android dependencies then, <em>selectively</em>, re-introduce the types as you need them. </p>
+
+<p>The types in the <a href="https://github.com/spring-projects/spring-android/tree/master/spring-android-rest-template">Spring Android RestTemplate module</a> provides more than enough compatibility  to let Spring Social&#39;s client machinery work unchanged on Android. This, of course, means that we can use the Spring Social-powered OAuth client in the <code>social</code> module in our Android application. Awesome!  </p>
+
+<p>For example, while I needed the Spring Social core types and implementations, I didn&#39;t need the core Spring libraries that it brought in. So, we get this rather dramatic stanza:</p>
+
+<pre><code>&lt;dependency&gt;    
+    &lt;groupId&gt;org.springframework.social&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-social-core&lt;/artifactId&gt;
+    &lt;version&gt;${spring-social.version}&lt;/version&gt;
+    &lt;exclusions&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-jdbc&lt;/artifactId&gt;
+        &lt;/exclusion&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;com.h2database&lt;/groupId&gt;
+            &lt;artifactId&gt;h2&lt;/artifactId&gt;
+        &lt;/exclusion&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-core&lt;/artifactId&gt;
+        &lt;/exclusion&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-web&lt;/artifactId&gt;
+        &lt;/exclusion&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-tx&lt;/artifactId&gt;
+        &lt;/exclusion&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+        &lt;/exclusion&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-beans&lt;/artifactId&gt;
+        &lt;/exclusion&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-expression&lt;/artifactId&gt;
+        &lt;/exclusion&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-aop&lt;/artifactId&gt;
+        &lt;/exclusion&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;aopalliance&lt;/groupId&gt;
+            &lt;artifactId&gt;aopalliance&lt;/artifactId&gt;
+        &lt;/exclusion&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;com.joshlong.restfuliterations&lt;/groupId&gt;
+            &lt;artifactId&gt;services&lt;/artifactId&gt;
+        &lt;/exclusion&gt;
+    &lt;/exclusions&gt;
+&lt;/dependency&gt;    
+</code></pre>
+
+<p>These dependencies can be hard to find. Use the <code>mvn dependency:tree</code> command to see where things are being imported <em>transitively</em>. Spring Security, another library whose top level types we wanted on the <code>CLASSPATH</code>, also required <code>exclusion</code> elements because it drags in Spring core. </p>
+
+<h2>Some Classes - like JAXB - You Just Can&#39;t Avoid</h2>
+
+<p>Any class that&#39;s not in Android&#39;s JDK-class whitelist is not available on Android and thus renders code that depends on it incompatible. Some classes, like those in the JAXB module, are hard to ignore as they&#39;re pervasive. I wanted to use the Spring HATEOAS <code>Resource</code>, <code>Link</code>, types. These types are used as representations of various entities in REST responses that are sometimes rendered as XML using JAXB, they could not be loaded in Android! So, I <a href="https://github.com/joshlong/the-spring-rest-stack/tree/master/code/client/android/src/org/springframework/hateoas">had to copy those types locally</a> and mirror the package structure and remove the offending annotations. Hopefully I can clean this up going forward. </p>

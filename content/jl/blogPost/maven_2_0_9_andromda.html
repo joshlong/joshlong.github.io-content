@@ -1,0 +1,9 @@
+title=Maven 2.0.9, Andromda 3.[2,3]
+date=2008-12-06
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<P> I was building a project I have that's using the <a href="http://galaxy.andromda.org/docs-3.3">Maven Andromda plugin</a> to cross compile UML class diagrams into Java EJB3 entity classes. The plugin's worked flawlessly for a long time now, but this time it failed. It complained that it couldn't find the UML file that was referenced in the configuration file. It's no wonder: the file path it was looking for was doubled up, that is, it was equivalent to <code>/myfolders/foo/uml.uml2/myfolders/foo/uml.uml2</code>. I did some research and <a href="http://galaxy.andromda.org/forum/viewtopic.php?t=5862&sid=0d9daa204dea84e3141a98af9c57ea3d">found this bug report</a>. This proves that it wasn't my Andromda installation, but the Maven installation. This makes sense as I'd just recently upgraded from <u>Ubuntu Hardy Heron (8.04)</u> to <u>Ubuntu Intrepid Ibex</u> (what's an Ibex?; 8.10) and the package I was using (<code>maven2</code>) had been updated to 2.0.9. So, the moral of the story here is: <b>make sure your Maven package didn't change under your nose.</b>
+</p>

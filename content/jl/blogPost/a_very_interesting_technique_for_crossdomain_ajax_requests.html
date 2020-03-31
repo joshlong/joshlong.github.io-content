@@ -1,0 +1,58 @@
+title=A Very Interesting Technique For Cross-Domain AJAX Requests
+date=2010-01-13
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<P> 
+I read a <b>very</b> good article on breaking the crossdomain wall for 
+Ajax requests. It's presented   <span style ="font-size:larger;"><a 
+href="http://www.wait-till-i.com/2010/01/10/loading-external-content-with-ajax-using-jquery-and-yql/">here, 
+as an entry on http://www.wait-till-i.com</a></span>. In it, Chris 
+Heilmann talks about using a Yahoo service and JSON-P requests with 
+Ajax to load any site's contents. You should most certainly read his 
+article - it's fantastic. 
+I post here the most salient bit (for me) since it genuinely knocked 
+my socks off. To re-use this in your own code, copy the parts I've 
+highlighted in bold. You can use your own version of jQuery, 
+naturally, as the most interesting aspect is the bits inside the 
+<code>ajax</code> function (which itself is pretty trivial. I created 
+the wrapper function so that the code could be stashed away and 
+re-used more readily). 
+I demonstrate its use in the script fragment below that, where I load 
+the HTML for this very site. 
+<PRE> 
+<CODE> 
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+"http://www.w3.org/TR/html4/strict.dtd"&gt; 
+&lt;html&gt; 
+&lt;head&gt; 
+  &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt; 
+  &lt;title&gt; ZOMG! &lt;/title&gt; 
+  &lt;link rel="stylesheet" href="styles.css" type="text/css"&gt; 
+&lt;/head&gt; 
+&lt;body&gt; 
+<b> 
+&lt;script src="http://code.jquery.com/jquery-latest.pack.js"&gt;&lt;/script&gt; 
+&lt;script language="javascript"&gt; 
+function ajax( url, cb){ 
+ var yqlUrl =  "http://query.yahooapis.com/v1/public/yql?"+ 
+            "q=select%20*%20from%20html%20where%20url%3D%22"+ 
+              encodeURIComponent(url)+ 
+            "%22&format=xml'&callback=?" ; 
+ $.getJSON( yqlUrl,  cb ); 
+} 
+&lt;/script&gt; 
+</b> 
+&lt;script language="javascript"&gt; 
+$(document).ready(function(){ 
+ ajax( 'http://www.joshlong.com', function(data){ 
+  alert( data.results[0] +'' ) ; 
+ }); 
+}); 
+&lt;/script&gt; 
+&lt;/body&gt; 
+&lt;/html&gt; 
+</CODE></PRE> 
+</P>

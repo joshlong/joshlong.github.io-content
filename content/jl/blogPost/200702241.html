@@ -1,0 +1,8 @@
+title=IntelliJ 6.0 and JDK 6.0 upgrade
+date=2007-02-24
+type=post
+tags=blog
+status=published
+~~~~~~
+
+I'm about to upgrade to JDK6 on my Windows XP machine. I'm running IntelliJ 6, which I understand works well on the new JDK. Confusing is the lackluster availability of the JRE. I expect Java.com to yeld a JRE 6 build, but instead it's still pushing the old JRE 5, which is also still being bundled with various PC vendors by default. Why is this? At what point does Sun certify a release as being "good enough" for the developers AND the rest of the world? &nbsp;<br><br>The consensus seems to be that Java SE 6.0 offers the best out-of-the-box performance boost yet, by far.<br><br>After a bit of searching, I finally got to <a href="http://support.jetbrains.com/kb/entry.jspa?externalID=222&amp;categoryID=4">this thread</a>&nbsp; which has the whole process spelled out for you. I went with the second choice enumerated on the page (deleting the jre, and replacing it with JDK1.6's JRE as I didn't want to have to use idea.bat. Using idea.bat causes the DOS console to stay open while you're in IntelliJ. I created a second .bat file whose job it was to load the first one (idea.bat) like so: start idea.bat, however, the trouble is that didn't seem to work. I didn't want to give it much more thought and simply pursued the second option. <br><br>I wholely recommend the upgrade it's very quick. Loading IntellIJ would be one kind of speed increase, but loading a very big project quite another, and they both dramatically improved, to the point that IntelliJ no longer shows me "Tip Of The Day" when I'm doing these actions because it doesn't have to keep me entertained. <br>&nbsp;<br>Completely worth it!&nbsp;

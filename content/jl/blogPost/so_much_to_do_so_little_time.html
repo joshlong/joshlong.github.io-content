@@ -1,0 +1,237 @@
+title=So Much to Do, So Little Time!
+date=2009-12-28
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p><a href="http://www.springsource.org/about">Spring 3.0's out (you 
+didn't get the memo?),</a> and there's a <i>lot</i> of interesting 
+stuff. 
+This release has been long in coming due in no small part to the 
+specifications it tracks and to the intense furvor and emphasis placed 
+on quality assurance and testing. One target platform - JEE6 (and with 
+it the final versions of JSR330) - also just recently went final, and 
+you'll find support for these technologies, as well, where 
+appropriate. 
+Now that it's out, you can start certifying applications in production 
+on it. I've found that - aside from dealing with the new Maven 
+imports - the upgrade process has been flawless. I've taken complex 
+applications and merely fixed the jars and they continue to work. You 
+will find, however, that there are a lot of reasons to go through and 
+start selectively enabling new features, and namespaces. 
+</p><p> In our book <a href= 
+"http://www.apress.com/book/view/1430224975">Spring Enterprise 
+Recipes</a>, my co-author Gary Mak and I discuss a lot of the new, 
+exciting Spring 3.0 features. Spring 3.0 debuts slightly more 
+streamlined scheduling / TaskExecutor / thread pool support. The idea 
+is that you can more readily model asynchronous, repeating (at a 
+scheduled time, rate, or both), and concurrent programming problems 
+using these facilities and - in some cases - do so while leveraging 
+more advanced facilities underlying a given target platform, like the 
+WorkerJ implementations, the Java5 task executors, and thread pools 
+and more. </p> 
+<p> I won't go into much of that here as the book ablely covers most 
+of it, but one thing I did want to cover (which we couldn't cover in 
+time in the book as the feature was not ready as the book went to 
+press) was the very elegant <code>task</code> namespace. 
+<h2>Background </h2><p> It should be noted that these features are 
+not, exactly, novel. Spring has shipped with a Quartz scheduling 
+framework integration for years. Among many other niceties included 
+therein was (and still is, for what it's worth) a <a 
+href="http://static.springsource.org/spring/docs/1.2.x/reference/scheduling.html">MethodInvokingJobDetailFactoryBean</a> 
+that allowed you to schedule future executions of a method on a Java 
+bean using Quartz. </P><P> A few years later, EJB 3 debuted support 
+for a limited form of scheduling using the <code>Timer</code> 
+mechanism. One major limitation was the lack of support for CRON-like 
+expressions and for asynchronous methods. Naturally, you could use JMS 
+to acheive the same effect, in a way...</P><P>The JBoss gang debuted 
+JBoss Seam support for <a 
+href="http://docs.jboss.org/seam/2.2.0.GA/reference/en-US/html_single/#d0e21502">scheduled 
+and asynchronous method execution on a Seam component</a> as well as a 
+proprietary mechanism to <a 
+href="http://www.jboss.org/file-access/default/members/jbossejb3/freezone/docs/tutorial/1.0.7/html/Asynchronous_Invocations.html">do 
+the same with EJB 3.</a> In Seam, using these features was simply a 
+matter of adding the appropriate configuration (as we do in Spring) to 
+enable the executor (they have a few, including one based on the EJB3 
+Timer and one based Quartz.) The usage here is familiar to what has 
+recently been debuted in Spring 3.0. </p><p> Clearly, the need for 
+such features is common enough that they've both been fully 
+incorporated <a 
+href="http://docs.sun.com/app/docs/doc/820-7627/bnbpe?a=view">into 
+JEE6 and EJB3.1.</a> There, you can specify CRON expressions as well 
+as defer the invocation of a method using the 
+<code>@Asynchronous</code> or <code>@Schedule</code> annotations. A 
+simple example looks like: 
+</p><P><PRE><CODE>package com.joshlong.ejb.timer ; 
+import java.util.Date; 
+import java.util.logging.Logger; 
+import javax.annotation.Resource; 
+import javax.ejb.Schedule; 
+import javax.ejb.Asynchronous; 
+import javax.ejb.Stateless; 
+import javax.ejb.Timeout; 
+import javax.ejb.Timer; 
+import javax.ejb.TimerService; 
+@Singleton 
+public class PeriodicGreeter { 
+ // you could use this to schedule things manually 
+ @Resource TimerService timerService; 
+ // or use the annotations to do so automatically 
+ @Schedule(minute="*/3", hour="*") 
+ public void sayHelloPeriodically() { 
+   System.out.println( String.format( "Hello, world, at %s" , new 
+Date()) ) ; 
+ } 
+ @Asynchronous 
+ public Future&lt;String&gt; sayHelloAsynchronously() { 
+   System.out.println( String.format( "Hello, world, at %s" , new 
+Date()) ) ; 
+   // ... 
+ } 
+}</CODE></PRE> 
+</p> 
+<h2> Spring 3.0 Implementation </h2> 
+<p> 
+The <code>task</code> namespace let's you declaratively configure a 
+<code>TaskScheduler</code> and a <code>TaskExecutor</code> instance 
+using XML. From here, you can configure beans that have scheduled, or 
+asynchronous, executions using the XML or - my personal favorite if 
+you can get access to the code - via Java annotations. </p> <p>Here's 
+an example Spring application context featuring this namespace and 
+configuring a scheduler and executor with default-ish settings:</p> 
+<P><PRE><CODE> 
+&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;beans xmlns="http://www.springframework.org/schema/beans" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xmlns:task="http://www.springframework.org/schema/task" 
+   xmlns:context="http://www.springframework.org/schema/context" 
+   xsi:schemaLocation=" 
+       http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+       http://www.springframework.org/schema/lang 
+       http://www.springframework.org/schema/lang/spring-lang-3.0.xsd 
+       http://www.springframework.org/schema/context 
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd 
+       <b>http://www.springframework.org/schema/task 
+       http://www.springframework.org/schema/task/spring-task-3.0.xsd</b>"&gt; 
+ &lt;context:annotation-config/&gt; 
+ &lt;context:component-scan annotation-config="true" 
+       base-package="com.yourbasepackage.scheduling" /&gt; 
+<B> 
+ &lt;task:scheduler id="scheduler" pool-size="10"/&gt; 
+ &lt;task:executor id="executor" pool-size="10"/&gt; 
+ &lt;task:annotation-driven scheduler="scheduler" executor = "executor" /&gt; 
+</B> 
+&lt;/beans&gt; 
+</CODE></PRE></P> 
+<P> What you do from here is up to you. You could simply start 
+defining tasks inline with your XML. 
+That approach certainly has its redeeming qualities, not the least of 
+which is that your code is more readily "documented" and 
+<i>conceivably</i> 
+adjustable at runtime with some refresh trickery... sure.. you 
+<i>could.</i></p> 
+<CODE><PRE> 
+&lt;task:scheduled-tasks scheduler="myScheduler"&gt; 
+ &lt;task:scheduled ref="greeter" method="sayHello" fixed-delay="5000"/&gt; 
+ &lt;task:scheduled ref="greeter" method="sayHello" fixed-rate="5000"/&gt; 
+ &lt;task:scheduled ref="greeter" method="sayHello" cron="*/5 * * * 
+* MON-FRI"/&gt; 
+&lt;task:scheduled-tasks/&gt; 
+</PRE></CODE> 
+<p>...In practice, however, the annotation approach just <i>FEELS</i> 
+soo much better! So, here is how you might write a scheduled or 
+asynchronous bean in Spring. 
+</p> 
+<PRE><CODE>package com.joshlong.spring.timer ; 
+import org.springframework.beans.factory.annotation.Autowired; 
+import org.springframework.scheduling.annotation.Scheduled; 
+import org.springframework.stereotype.Component; 
+import javax.annotation.PostConstruct; 
+import javax.annotation.Resource; 
+import java.util.Date; 
+@Component 
+public class SpringPeriodicGreeter { 
+ // you can do everything you normally would using Spring, obviously 
+ @Autowired CustomerService customerService ; 
+ // this runs once every 5 minutes 
+ @Scheduled(fixedRate = 1000 * 60 * 5) 
+ public void sayHelloEveryFiveMinutes() { 
+   System.out.println( String.format( "Hello, world, at %s" , new 
+Date()) ) ; 
+ } 
+ @Scheduled(cron="*/5 * * * * MON-FRI") 
+ public void sayHelloOnlyOneWeekdays() { 
+   System.out.println( String.format( "Hello, world, at %s" , 
+new Date()) ) ; 
+ } 
+ @Async 
+ public void doSomething(String s) { 
+  // this will be executed asynchronously 
+ } 
+ @Async 
+ public Future&lt;String&gt; returnSomething(int i) { 
+   // this will be executed asynchronously, but you can get the 
+   // result by blocking on <code>Future.get</code> 
+ } 
+} 
+</CODE></PRE> 
+<p> Thus, this is nothing too strange - very simialar in fact to 
+what's in JEE6. Obviously, I've not mentioned <i>every</i> permutation 
+of the features from the various technologies, but hopefully this gets 
+you past the initial cognitive "hump" of adapting a new technology. 
+It helps that - at least in the Spring case - it's dead simple to 
+start using it if you're already using Spring. 
+I wonder if there will be support for working with 
+the JEE6 annotations that describe the same things? The major 
+takeaways are that you can get this simply by updating your version of 
+Spring, which should be painless if you're not tied to Java 1.4. You 
+can get the JEE6 functionality by updating your version of the 
+platform and server, if the platform/server are ready (Glassfish is!). 
+</p> 
+<h2>Use</h2> 
+<P> Now, as to <i>where</i> this stuff might be used, well, I can only 
+think of a few <i>thousand</i> things... </p> 
+<OL><LI> Quartz is probably still more powerful, but the 
+implementation and usage are hackneyed - this new approach will feel 
+much more elegant. You could probably get away with removing the old 
+Quartz code and using this for most of your implementation needs. 
+</LI> 
+<LI>Because Spring's implementations are swappable, you could back 
+this functionality with varying TaskExecutors/TaskSchedulers of your 
+own implementation, if you wanted.</LI><LI>The obvious use case is 
+that you can now remove <b>CRON</b>, <b>Autosys,</b> <b>Flux</b> and 
+any number of other third-party, dedicated middleware schedulers from 
+your architecture (if you're only using them to run Java 
+services.)</LI> 
+<LI>As with Spring itself, this abstraction is useful because you can 
+deploy it inside of a web applicatior or any other place you can 
+imagine Spring running, so you don't need to install a scheduler if 
+you just want something run periodically inside your web container 
+</LI> 
+<li>If you have a Spring Batch job, this might be an ideal way to kick 
+the jobs off periodically. You need to start processing the billing 
+batch every night at 2am, but only on weekdays? This is a match made 
+in heaven! How you get a Batch job to start running is left mainly as 
+an exercise to the user. I recommend using an ESB (like Spring 
+Integration) to react to events, or using a scheduler like this 
+<code>task</code> namespace (or Quartz) to kick the jobs off. </li> 
+<li>Spring Integration has a gateway mechanism that lets you front 
+what is essentially a send (and/or) recieve operation on a channel 
+(think: JMS queue/topic) with a method on an interface. I <i>love</i> 
+this feature and use it a lot because I don't want to surface JMS 
+queues / topics to the client (that's a little <i>too</i> loose and 
+decoupled an API!). I also use it because it allows me to model 
+fire-n-forget messaging using Java interfaces, which is exactly what 
+the <code>@Async</code> annotation does. The other benefit of the 
+Spring Integration feature is that the processing leaves the VM and 
+goes somewhere to finish (ostensibly, wherever the consumer for the 
+topic/queue lives) the job and then return the result. This provides 
+scalability benefits to both the client <i>and</i> the server, whereas 
+the <code>@Async</code> annotation would only increase the thoroughput 
+of the client, in this case: processing still takes place on the node 
+with the <code>@Async</code> annotation, it's simply deferred... 
+Deferment <i>is </i> a valid way to increase capacity while decreasing 
+thoroughput.</li> 
+</ol>

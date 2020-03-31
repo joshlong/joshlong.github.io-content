@@ -1,0 +1,179 @@
+title=Dependency Injection with Dagger on Android
+date=2013-05-15
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<h2>Limitations of Android Dependency Injection Solutions</h2>
+
+<p>A question that I often in my work as the Spring Developer Advocate at SpringSource is: <em>How do I do dependency injection in Android</em>? <a href="http://springsource.org/spring-android">Spring for Android</a> doesn&#39;t have a dependency injection story as there are a <em>lot</em> of restrictions to what an inversion-of-control (IoC) container can hope to achieve on Android. </p>
+
+<p>First, Android controls all the important objects in an Android application including the <code>Activity</code> instances. Normally, Spring instantiates an object (&quot;bean&quot;) -satisfying any constructor injections required - and then attempts to satisfy any injection sites on fields (field injection) and through methods (setter injection). When it's done, Spring hands back the fully configured reference and makes it available for injection in other beans. As Android creates the <code>Activity</code> instance - it's not possible to simply tell Android to use a bean configured with a dependency injection container - the only thing a DI container can do is handle injections <em>after</em> the <code>Activity</code> has been created. This implies some fragile state management and explicit dependencies on the dependency injection container that is akin to the sort of hacks required to use Spring inside of EJB 2.x beans from years ago. At a minimum - it requires invasive code in the heart of your business logic components.</p>
+
+<p>Second, reflection has historically been very slow on Android (and any constrained environment, including the original PCs that debuted Java in 1994!), and a lot of the tried-and-true solutions for byte-code manipulation don&#39;t work nearly so well on Android as they should. A lot of this has improved in recent years, but nonetheless solutions that favor compile-time weaving or other solutions that minimize reflection are preferable. </p>
+
+<h2>Dagger</h2>
+
+<p>With all of these limitations in mind, I still personally like <a href="https://github.com/square/dagger">Dagger</a>, from Square. Dagger provides a JSR 330 compliant dependency injection container (and so - in theory - you could run JSR 330-compliant Spring code on Android). Using it is fairly simple, except that it&#39;s a bit more invasive than I&#39;m used to in Spring. It relies on a Java agent that changes the code at compile time, inserting code that eliminates the need for costly, or sometimes impossible, reflection.</p>
+
+<h3>A Dagger Module</h3>
+
+<p>The simplest way to get started with it is to create a <em>module</em> class. Let&#39;s look at an example:</p>
+
+<pre><code class="java">
+import ...
+
+// Dagger and JSR 330 APIs
+import dagger.*;
+import javax.inject.*;
+
+// RestTemplate 
+import org.springframework.http.converter.json.MappingJacksonHttpMessageConverter;
+import org.springframework.web.client.RestTemplate;
+
+
+@Module(
+ injects = {
+  WelcomeActivity.class
+ }
+)
+public class CrmModule {
+  // ...
+} 
+
+</code></pre>
+
+<p>You'll note a few things of interest already. This class is annotated with the <code>@Module</code> annotation. The <code>@Module</code> annotation is more or less like Spring's <code>@Configuration</code> annotation. It tells the container that this class contains the definition of beans, which themselves are annotated with <code>@Provides</code>, much like Spring's <code>@Bean</code>-annotated configuration annotation. </p>
+
+<p>The <code>injects</code> attribute in Dagger&#39;s <code>@Module</code> annotation enumerates all the classes that may that may receive injections that *are not defined explicitly using an <code>@Provider</code>-annotated method in the module. I think. I&#39;ll be honest, I haven&#39;t completely figured this out. The nice thing is that if you get it wrong, you get a compile-time error! Handy!  </p>
+
+<p>As shown, we could start declaring fields or constructor arguments in our <code>WelcomeActivity</code> instance and annotating them with JSR 330&#39;s <code>@Inject</code>. When Dagger sees <code>@Inject</code>, it attempts to instantiate an instance of the bean using the default, no-args constructor and then <em>inject</em> it at the injection site.</p>
+
+<p>However, not all beans can be provided this way. For example, if the type declared is an interface, then how&#39;s Dagger to know which implementation to provide? What if we only want one, and only one, instance (a singleton)? What if we want to inject values into a third party bean where it would be impractical to attempt to update the code with <code>@Inject</code> annotations? For all these scenarios, you can explicitly wire up the bean definitions using <em>provider</em> methods in your module, like this:</p>
+
+<pre><code class="java">
+import ...
+
+// Dagger and JSR 330 APIs
+import dagger.*;
+import javax.inject.*;
+
+// RestTemplate 
+import org.springframework.http.converter.json.MappingJacksonHttpMessageConverter;
+import org.springframework.web.client.RestTemplate;
+
+
+@Module(
+  injects = {
+    WelcomeActivity.class
+  }
+)
+public class CrmModule {
+    private Crm application;
+    private Context context;
+
+    public CrmModule(Crm crm) {
+        this.application = crm;
+        this.context = this.application.getApplicationContext();
+    }
+
+    @Provides
+    @InjectAndroidApplicationContext
+    public Context provideApplicationContext() {
+        return this.context;
+    }
+
+    @Singleton
+    @Provides
+    public RestTemplate provideRestTemplate() {
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.getMessageConverters().add(new MappingJacksonHttpMessageConverter());
+        return restTemplate;
+    }
+
+    @Singleton
+    @Provides // CustomerService is the interface, CustomerServiceClient is the implementation
+    public CustomerService provideCustomerService(
+             @InjectAndroidApplicationContext Context context, 
+             RestTemplate restTemplate ){
+        String baseUri = context.getString(R.string.base_uri);
+        CustomerServiceClient customerServiceClient = new CustomerServiceClient( baseUri );
+        customerServiceClient.setRestTemplate(restTemplate);
+        return customerServiceClient;
+    }
+
+}
+
+</code></pre>
+
+<p>The <code>@Provides</code>-annotated methods work as expected: you construct an object in a method and the value returned is made available for consumption through injection in other beans by type(s, as it also creates a binding between any interfaces implemented by the bean. We use this to our advantage when we create the <code>CustomerService</code> bean. </p>
+
+<p>Note that - just as with Spring&#39;s <code>@Configuration</code> class - you can declare <em>provider</em> methods with arguments and the container will attempt to provide a value for the argument based on the type of the argument. In some cases, there may be many types that satisfy the requirement and so you can use a <code>@Qualifier</code>-annotated meta-annotation, like <code>@InjectAndroidApplicationContext</code>, to specify <em>which</em> instance you want. Here, we annotate the <code>Crm</code> argument in the <code>provideCustomerService</code> method with <code>@InjectAndroidApplicationContext</code>. By using the same annotation at the provider method as well as at the site of the injection, we establish a unique binding. </p>
+
+<h3>Using the Android <code>Application</code> instance as an Application-Wide Global <CODE>Context</CODE>.</h3>
+
+<p>Our module class expects an instance of the current application&#39;s <code>Application</code> class. I&#39;ve specified the class <code>....Crm</code> for this application class in my <code>AndroidManifest.xml</code> through the <code>android:name</code> attribute in the <code>manifest</code> element. As I mentioned earlier, key components in an Android application, like the <code>Application</code> subclass, are instantiated, managed and destroyed by Android itself. Dagger can&#39;t <em>instantiate</em> the <code>Application</code> subclass  and provide the reference for us. Instead, we need to insert Dagger in a place that it can capture a reference to that <code>Application</code> instance. We do this in our <code>onCreate</code> method in our <code>Application</code> instance.</p>
+
+<pre><code class="java">import ...
+import android.app.Application;
+import dagger.ObjectGraph;
+
+import java.util.*;
+
+public class Crm extends Application {
+
+    private ObjectGraph objectGraph;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        Object[] modules = getModules().toArray();
+        objectGraph = ObjectGraph.create(modules);
+    }
+
+    protected List&lt;Object&gt; getModules() {
+        return Arrays.&lt;Object&gt;asList(
+                new CrmModule(this)
+        );
+    }
+
+    public ObjectGraph getObjectGraph() {
+        return this.objectGraph;
+    }
+}
+
+</code></pre>
+
+<p>Here, in the <code>onCreate</code> method we assemble the various module classes - including our <code>CrmModule</code> -  that we want to instantiate and use it to create an <code>objectGraph</code>. Because <code>Application</code> subclasses provide an effective application-global singleton, it&#39;s convenient to stash a reference to the Dagger <code>objectGraph</code> in this class, as well. The <code>objectGraph</code> more or less corresponds to Spring&#39;s <code>ApplicationContext</code>. In our <code>onCreate</code> method we create the <code>CrmModule</code> passing in a reference to <code>this</code> which can then be used in a <code>provide</code> method in our module so that we can easily inject an Android application <code>Application</code> instance (which in turn provides a <code>Context</code>, which is a very useful sort of god object in Android applications) wherever we use Dagger for dependency injection.</p>
+
+<h3>Dependency Injection with Android <code>Activity</code> Instances and Other Android Components</h3>
+
+<p>Since we want to inject beans into our <code>Activity</code> subclasses, and <code>Activity</code> classes are managed by Android in the same way as <code>Application</code> instances, we need a similar hook into the <code>Activity</code>&#39;s lifecycle to let Dagger work its magic <em>after</em> the object&#39;s been created. For convenience, you&#39;ll probably have a common base-class where you can insert this behavior and then simply extend. Here is such a base-class.</p>
+
+<pre><code class="java">import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import ...Crm;
+
+import javax.inject.Inject;
+
+public class CrmBaseActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Crm crm = (Crm) getApplication(); 
+        crm.getObjectGraph().inject(this);
+    }
+}
+
+</code></pre>
+
+<p>The code simply obtains the current <code>Application</code> instance (the <code>Application</code> subclass, <code>Crm</code>), which we know has a pointer to the current, stashed, <code>ObjectGraph</code> instance, and then uses the <code>ObjectGraph#inject(Object)</code> method to have Dagger scan the object given as an argument and satisfy any dependencies.</p>
+
+<p>You&#39;ll use a similar approach when dealing with other Android components like <code>Fragment</code> classes.</p>
+
+<h2>Summary</h2>
+
+<p>This blog has demonstrated how to use Dagger in the context of Android. Dagger also works outside of Android, of course, but if you&#39;re working outside of Android, you&#39;re better off just using Spring. For another look at how to use Dagger, check out <a href="http://square.github.io/dagger/">the Dagger introduction on the Square site</a> which focuses on Dagger, generically. </p>

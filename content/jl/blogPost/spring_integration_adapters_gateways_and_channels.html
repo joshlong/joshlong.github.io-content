@@ -1,0 +1,32 @@
+title=Spring Integration Adapters, Gateways, and Channels
+date=2014-06-06
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p>A community member was a little unclear on the role of Spring Integration adapters, gateways, and channels. I put together a response and thought I'd share it here, too. Here's my response:</p>
+
+<p>A <code>channel</code> is a named conduit between components in a system. By default, it's more or less synonymous with a <code>java.util.Queue</code>. Data goes in one side of the tunnel, comes out the other.</p>
+
+<p>Let's ignore the discussion of <code>channel</code>s for a moment.</p>
+
+<p>A gateway is a terminating component, like an inbound/outbound adapter. That is, messages either come in from the outside world (beyond the memory space of your Spring Integration flow) or they leave the Spring Integration flow for some external system or component (also beyond the memory space of your Spring Integration flow).</p>
+
+<p>An adapter receives messages from an external messaging system (JMS, e-mail, SFTP, whatever) and "adapts" it to the messaging system (as a Spring Integration <code>Message&lt;T&gt;</code>). The inbound email adapter takes messages sitting in a mail-box (IMAP, or whatever) and "adapts" it to the Spring Integration <code>Message&lt;T&gt;</code> type. And vice-versa: it takes a Spring Integration <code>Message&lt;T&gt;</code> and "adapts" it to the formats required of an external system. For example, the outbound e-mail adapter takes Spring Integration <code>Message&lt;T&gt;</code>s and turns them into emails that get sent.</p>
+
+<p>Once a message comes in, via an inbound adapter, it flows from one component to another via <code>channel</code>s. Ultimately, it might be appropriate to write that message out somewhere. You can write the message using an outbound adapter.</p>
+
+<p>A gateway is just like an adapter, except that it can take replies. So, for example, perhaps a message comes in via JMS, and it has specified a JMS destination to which replies should be sent. The example above can be thought of as an inbound gateway. If you send a message TO a gateway and want the reply to come back via that gateway, then that's an outbound gateway. (Perhaps you've made an HTTP request on one <code>channel</code> through the gateway, and the HTTP response comes back into the system via the gateway on another <code>channel</code>).</p>
+
+<p>The gateway can handle that sort of inbound AND outbound work for the same message flow.</p>
+
+<ul>
+<li><strong>Adapter</strong>s write out, or read in, but not both.</li>
+<li><strong>Gateways</strong>  write out and wait for reply, or read in and send response. Gateways only make sense where there's the need for a reply.</li>
+</ul>
+
+
+<p>Returning now to <code>channel</code>s, you don't need to worry about <code>channel</code>s most of the time. I worry about them when: I want to make parts of the flow have different concurrency characteristics, when I want to make sure that the transit of messages in the system itself is durable (for example, by switching out the java.util.Queue-ish default <code>channel</code> for something that delegates to JMS for persistence), or when I want to insert auditing logic in a central place (around the <code>channel</code> through which messages flow is a great place for that sort of thing). Often, if you don't mind the default, synchronous <code>java.util.Queue</code>-like behavior, u don't even need to define a <code>channel</code>. Just specify a name where a <code>channel</code> reference is expected. As long as the names are the same, Spring Integration will create the beans for you at runtime and connect wire everything up for you.</p>
+
+<p>In related news: check out this amazing video by <a href="https://www.youtube.com/watch?v=g3DgdSqEgzI">Spring Integration lead  Gary Russell on using the Spring Integration Java configuration API and DSL</a>.</p>

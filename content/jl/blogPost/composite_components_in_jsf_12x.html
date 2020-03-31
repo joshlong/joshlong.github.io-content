@@ -1,0 +1,25 @@
+title=Composite components in JSF 1.2.x
+date=2009-07-22
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p>
+  I'm trying to build a component in JSF that in turn has several drop downs that, with the magic of RichFaces, updates the server on the state via Ajax and rerenders the components "downstream" of the component whose state has changed. 
+ This is the classical idiom of a drop down has options depend on the previous selections made. 
+The component's used in several places on the system and it would be magnificent if we could blackbox its internals. 
+
+ </p>
+
+<p> With Tapestry, you could build a component that does its work and then "outjects" or writes a value to a property upon completion. Imagine, for example, a login form. The login form has two text fields (email, password, or anything like that) and a backing class. As the login form component is rendered, you might have preconditions to establish, so you use the Tapestry component life cycle to setup state on the fields before rendering. Finally the text fields are rendered. When the form is submitted the fields values are updated and you have a chance to read the values and perhaps do something with them. For example, if the credentials are correct, you might do a query and create a valid <code>User</code> object. The <code>User</code> object is then set on a property and that property can be bound to a  property of the client of the component. If you use the same component 10 times on the same page, they all have their own internal copy of the property and they can all update the same one or they could update 10 individual properties. That is, the "backing bean" is scoped to the component, not the page.  
+
+ 
+</p><p> 
+ The difference with JSF is that for any kind of composite components you have to do soething like building the tree or using Facelets. These components will in turn require some place to store the values they submit. For the above example of the login form, the user name and the password need some place to be stored. Since facelet <code>ui:components</code> don't have their own backing bean, you need to provide the backing bean for the values. Thus, it's up to the client of the component to provide storage for internal state of the component. Not very component oriented. And, more to the point, it quickly becomes untenable if you want to use the component more than one time in the scope the backing bean lives. That is, you can only use the component once per request or once per session (without creating new backing beans, at least).
+
+ </p> 
+
+<p> I know that JSF 2.0 will feature better support for composite components, but I need this to work on JSF 1.2, and have not managed to find many good resources / examples on how to build a sophisticated <code>UIComponent</code> subclass so it can handle its own storage. </p> 
+
+<p> Anybody have any   ideas? </p>

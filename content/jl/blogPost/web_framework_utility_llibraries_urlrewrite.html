@@ -1,0 +1,30 @@
+title=Web Framework Utility Llibraries: URLRewrite, JAWR, DWR, and HeaderFilter
+date=2009-01-09
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p>
+I've had the dubious pleasure of doing some web programming in the last week (actually, 4 days) and I've had quite a few different requirements which, frankly, I was surprised to find weren't eally me by the framework I was using (Spring MVC). Instead, I came upon a sle of single-focused, quality components out there that I think ever Java web developer should have in his or her arsenal. These component usually work across frameworks and are Servlet agnostic. They seem to be reasonably well documented. While I promise I will go into great depth about them in a future post, I want to at least list them here right now i the hopes that they save some people some trouble.  </p>
+
+<H3>Url Rewriting For Servlets</H3>
+<p>
+I've had to do some URL rewriting to support search engine optimization. SEO is something of a black art, I admit, but there' still something to be said for building your web application wit search engine navigability in mind.  Naturally, this means man things, not the least of which exposing your pages on friendly book markable URLs. Spring MVC supports accessing low level servle configuration, but what is most appropriate for this sort o requirement is mod_rewrite. Mod_rewrite let's you map URLs coming into the server and transform them into other types of URLs, which then are used to access HTTP resources on your application. I didn't have - and didn't want to commit to – a full installation of Apache HTTPD or anything like that. Instead, I wanted something inside the servlet container. I stumbled upon <a href="http://tuckey.org/urlrewrite/">UrlRewriteFilter</a>. It's fairly well documented and definitely powerful enough for 80% of your usecases. It can even match against request variables. It's got support for wildcard syntax as well as regular expressions. My regex-fu was strong enough that it just made sense to use that from the get-go. </p>
+
+<h3>JavaScript, CSS Minification and GZIP Compression  </h3>
+<p>
+I had to deploy quite a bit of CSS and JavaScript, but wanted to take advantage of the compression savings of gzip, css and JavaScript minification and of the enormous HTTP latency reduction had by consolidating my JavaScript and css into one file. Lacking the discipline and time, I turned to <a href="https://jawr.dev.java.net">JAWR</a>, which does all of the above an plays nicely with your choice of frameworks. It's got smarts enough that you won't have to have to deploy/build yourself, like knowing whic revision of IE 6 should not be served gzip content. I wrote about this <a href="http://www.joshlong.com/jl/entry/20080412">filter before</a>.  </p> <h3>Ajax</h3> <p>The following are pretty commonly known, but they bear repeating.
+I needed to do Ajax and talk to a simple Spring bean I was exposing as a client facade from the servlet. I used a package called <a href="http://directwebremoting.org">DWR</a>, which stands for "Direct Web Remoting." This package has been well documented and covered elsewhere. Suffice it to say that it allows you to invoke methods on a JavaScript object from your web page and it takes care of marshaling that to the server and invoking methods on a server-side bean. It's got all sorts of options and definitely merits some investigation of your own.  </p> 
+ <h3>Performance With YSlow and <code>Expire Headers</code></h3>
+<p>
+
+I wanted to make sure that any page elements I use were reasonably performant and in line with good standards like what the <a href="http://developer.yahoo.com/yslow">Yslow</a>  plugin from Yahoo! Recommends.  One of the main improvements was  sending <code>Expire Headers </code> for  <code>*.jpgs</code>, <code>*.gifs</code>, <code>*.css</code> and <code>*.js</code> resources. I did this using <a href="http://juliusdev.blogspot.com/2008/06/tomcat-add-expires-header.html">a very powerful filter by "Julius, A simple dev", to add headers to requests</a> whose code is similar in spirit to this <a href="http://www.onjava.com/pub/a/onjava/2004/03/03/filters.html">oldie but goodie by Jason Falkner</a>. Either is powerful enough to do the job. 
+ </p>  
+<h3>Synergies of the Solutions </h3> 
+<p> The synergy between JAWR and DWR is wonderful. DWR tends to expose your beans as JavaScript, which it dynamically writes for you. The onus is on you to include that JavaScript file in your page. So, if you have 10 server side beans and you want to talk to all of them on the client, then you'd end up with 10 different HTTP requests and JavaScript <code>&lt;script&gt;</code> tags. JAWR, however, sports an integration option with DWR and will treat your dynamic DWR URLs exactly as if they were standard JavaScript using special configuration elements.</p>
+<p> The synergy between JAWR and the HeaderFilter's been wonderful. JAWR's gzip compressing and minifying content. It servers content on random URLs based on a hash of the content itself. So, if content changes it gets a new URL, which is immune to the cache issue, if you need to upgrade your application. Otherwise, the existing content is cached for a long time. Beautiful! 
+</p>
+ <p>What a week! I had a fascinating time building this solution. Because of all the techniques I've used, the application is now very SEO friendly, very performant (it has a grade 'B' on the YSlow plugin, which Yahoo.com itself does, as well. I wouldn't want to have had to do all that manually, though. Thanks again to the creators of those many brilliant utilities!</p> 
+
+</p>

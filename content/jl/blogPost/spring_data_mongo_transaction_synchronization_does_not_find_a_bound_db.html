@@ -1,0 +1,34 @@
+title=Spring Data Mongo transaction synchronization does not find a bound DB
+date=2012-11-25
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p> 
+There's an issue with Spring Data Mongo   when used in the context of an application with existing <code>PlatformTransactionManager</code>-based transaction management setup, where Spring's <code>TransactionSynchronizationManager</code> tries to find the bound Spring Data Mongo <CODE>DB</code>  instance, but fails and throws an exception. </p><P>
+
+  The issue  is <a href= "https://jira.springsource.org/browse/DATAMONGO-546"> <em>resolved</em></a>, but you wouldn't know that if you checked the <A href= "http://www.springsource.org/spring-data/mongodb">Spring Data MongoDB</a> web site  because there is no mention of the later releases.  This issue is fixed in the latest releases, however, versions, <CODE>1.1.1.RELEASE</CODE>.
+</p>
+<P> If you're using Maven, you can specify the latest revision with the following Maven coordinates: 
+ <PRE>
+ &lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.data&lt;/groupId&gt;
+    &lt;artifactId>spring-data-mongodb&lt;/artifactId&gt;
+    &lt;version>1.1.1.RELEASE&lt;/version&gt;
+  &lt;/dependency&gt;
+</PRE>
+ </p> 
+
+<p> The error looks like this:
+ <pre>
+<b>java.lang.IllegalStateException: No value for key [Mongo: localhost:27017] bound to thread [1128017935@qtp-1027055145-3]</b>
+at org.springframework.transaction.support.TransactionSynchronizationManager.unbindResource(TransactionSynchronizationManager.java:209) ~[spring-tx-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+at org.springframework.transaction.support.ResourceHolderSynchronization.beforeCompletion(ResourceHolderSynchronization.java:69) ~[spring-tx-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+at org.springframework.transaction.support.TransactionSynchronizationUtils.triggerBeforeCompletion(TransactionSynchronizationUtils.java:106) ~[spring-tx-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+at org.springframework.transaction.support.AbstractPlatformTransactionManager.triggerBeforeCompletion(AbstractPlatformTransactionManager.java:937) [spring-tx-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:738) [spring-tx-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:723) [spring-tx-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:393) [spring-tx-3.1.1.RELEASE.jar:3.1.1.RELEASE]
+ </pre>
+</p> <p> Hat tip to the one and only  <a href= "https://twitter.com/olivergierke">Oliver Gierke</a> for helping me with this! </P>

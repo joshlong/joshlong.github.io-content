@@ -1,0 +1,148 @@
+title=Embedding The Apache Mina FTP Server
+date=2009-03-08
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p>I had the requirement to provision users of a system with an FTP solution. I wanted something lightweight and very configurable. I chose to embed <a href="http://mina.apache.org/ftpserver/downloads.html">The Apache Mina FTP Server</a> since it's flexible, imminently hackable,  (it's written in Java and is deployed using Maven and Spring) and embeddable. This entry is about that process.</p>
+
+<p> Essentially, I didn't want to have to wrap it in a layer of abstraction just to support adding and removing users and configuration options like their home directory. It also had to be flexible, as there may be different requirements down the line oriented towards security. </p><p>
+
+My use case is simple: I want to build  a processing pipeline for images (who doesn't?). I want users of the system to be able to login to an FTP with their same credentials and upload media. On the server, <a href="http://www.springsource.org/spring-integration">Spring Integration</a> will watch for uploads and send off a message to the message queue which is where the BPM engine sits, and is waiting to begin image processing on inbound images.
+</p>
+<p> What could be simpler? In this blog entry, I will only discuss addressing the first requirement: provisioning system users with accounts on an FTP server.
+</p>
+
+ <p> I did look at some other alternatives, namely HermesFTP and AxlRadius, which seemed both to be interesting projects. I really have no opinions  for  - or against - them, Apache just has the backing foundry's name and more sophisticated documentation.</p>
+
+
+<P>To test, I suggest using  <a href="http://filezilla-project.org/">FileZilla</a>, because it's powerful, free and features  a no-pain installation for the big 3 operating systems,  </p>
+
+<p>
+
+ You can run the application as a stand alone server, but I'm running it as process that piggybacks the web application. In this blog, I'll simply introduce using it a   simple <code>public static void main(String [] args)</code> context.
+
+</p>
+<h2>Installation</h2>
+<p> Getting the server is easy, as I'm using Maven. Below are the dependency elements to add to a POM if you don't already have them. Note the strangeness with <code>slf4j</code>. I don't know if you'll encounter any issues with it in your configuration. My setup was riddled with ClassNotFound exceptions, and the configuration resolved them. You may very well be able to remove the exclusion from the <code>org.apache.ftpserver</code> dependency as well as the two explicit  dependencies on <code>slf4j</code> at the top.
+          I don't include the Spring framework dependencies here, but I do make use of Spring 2.5.x, though I suspect this would run just fine with Spring 2.0. Your mileage may vary.
+<PRE><code>
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
+            &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;
+            &lt;version&gt;1.5.3&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
+            &lt;artifactId&gt;slf4j-log4j12&lt;/artifactId&gt;
+            &lt;version&gt;1.5.3&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.apache.ftpserver&lt;/groupId&gt;
+            &lt;artifactId&gt;ftpserver-core&lt;/artifactId&gt;
+            &lt;version&gt;1.0.0&lt;/version&gt;
+            &lt;exclusions&gt;
+                &lt;exclusion&gt;
+                    &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
+                    &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;
+                &lt;/exclusion&gt;
+            &lt;/exclusions&gt;
+        &lt;/dependency&gt;
+
+</code></pRE>
+</p>
+
+<h2>Code</h2>
+<p> Now that the JARs are in place, you need some a Java class to launch it and some configuration.
+
+The java code is below. It loads the Spring application context and punts the chore of configuring the server to it and the Spring XML file I've setup, <code>ftp-server.xml</code>. Once a freshly obtained instance of the server is obtained, the server is started.
+<pre><code>
+package com.foo.integrations.ftp;
+
+import org.apache.ftpserver.FtpServer;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Main {
+    public static void main(String[] args) throws Throwable {
+        ApplicationContext classPathXmlApplicationContext =
+           new ClassPathXmlApplicationContext("ftp-server.xml");
+        FtpServer ftpServer = (FtpServer)
+           classPathXmlApplicationContext.getBean("server");
+        ftpServer.start();
+    }
+}
+</code></pre>.
+
+</p>
+
+<h2>Configuration</h2> <P> The configuration's the most involved bit, but should be pretty self explanatory shortly. It's included below. The FTP server exposes configuration using a Spring XML Schema, which acts as something of a DSL in this case.
+The XML configures the server instance, tells it to defer authentication to a database. It seems like the component provide is expecting data to be available in a table called ftp_user. In this case I modeled a table called ftp_user and created columns in it for testing. The final solution will either be a view on top of existing data that vends the table and columns expected by the component, or a series of triggers that keep a real <code>ftp_user</code> table in sync with the canonical user/password and status data in other tables.
+I'm not sure which is more performant, and will address that later. It should be evident how that might work, I hope. In the code below you can see we're giving the database authentication component the SQL queries to use. I'm not sure I want to keep the delete/update functionality in place there. I don't think it's accessible from the FTP protocol, but instead there are APIs that Mina ships with, and I think use of those APIs delegates to these queries.
+</p> <p>  The <code>dataSource</code> is just like any other dataSource inside of Spring. I'm not using the Apache Commons Connection Pool class here because I didn't want to require more jars for you, dear reader, to try this example out. But use your judgment. If your application server requires something else, then use that.  </p>
+
+<P>Finally,
+a word about directories. Below, in the <code>&lt;select-user&gt;</code> configuration, I return a result set that contains a column <code>homedirectory</code>. The home directory in this case is not an Operating System home directory (~, for example), but instead the directory the logged in user should be dropped. Here I'm using ficticious UNIX path and suffixing it with the user's ID. The user ID and the path are then returned as the home directory when the user tries to login. As it's configured now, if the user's folder doesn't exist on login then Mina FTP server will create it. This behavior is controllable  by setting the <code>create-home</code>  attribute on the <code>native-filesystem</code> element below.
+</p><p>
+I tested this code on Unix and Windows. I set it to run on port 2121, so that I wouldn't have to get access to the privileged port 21 on Unix. The configuration for that is on the <code>nio-listener</code> element. The other interesting behavior which only became evident to me when, surprisingy, it still worked on Windows, is that the path <code>/folder/to/store.. </code> resolved under Windows! Now, I'm not sure if <code>java.io.File</code> has some intrinsic support for POSIX-style paths, or there's some handler registered by cygwin on my particular system, or what, but I tried opening up a grails console and verifying the absolute path of a <code>java.io.File</code> object for "/" and sure enough it returned "C:". So, don't worry if you want to test this on either operating system, I guess!
+
+</p>
+ <PRE><CODE>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;beans:beans xmlns="http://mina.apache.org/ftpserver/spring/v1"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:tx="http://www.springframework.org/schema/tx"
+             xmlns:aop="http://www.springframework.org/schema/aop"
+             xsi:schemaLocation=" http://www.springframework.org/schema/beans
+             http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+             http://www.springframework.org/schema/tx
+             http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+             http://www.springframework.org/schema/aop
+             http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+             http://www.springframework.org/schema/lang
+             http://www.springframework.org/schema/lang/spring-lang-2.0.xsd
+             http://mina.apache.org/ftpserver/spring/v1
+             http://mina.apache.org/ftpserver/ftpserver-1.0.xsd "&gt;
+    &lt;beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"&gt;
+        &lt;beans:property name="driverClassName" value="JDBC_DRIVER"/&gt;
+        &lt;beans:property name="url" value="JDBC_URL"/&gt;
+        &lt;beans:property name="username" value="YOUR_USER"/&gt;
+        &lt;beans:property name="password" value="YOUR_PASSWORD"/&gt;
+    &lt;/beans:bean&gt;
+    &lt;server id="server"&gt;
+        &lt;listeners&gt;
+            &lt;nio-listener name="default" port="2121"&gt;&lt;/nio-listener&gt;
+        &lt;/listeners&gt;
+        &lt;db-user-manager encrypt-passwords="clear"&gt;
+            &lt;data-source&gt;                &lt;beans:ref bean="dataSource"/&gt;
+            &lt;/data-source&gt;
+            &lt;insert-user&gt;INSERT INTO FTP_USER ( user_id, user_password, home_directory,
+                enable_flag, write_permission,
+                idle_time, upload_rate, download_rate ) VALUES ('{userid}', '{userpassword}', '{homedirectory}',
+                '{enableflag}', '{writepermission}', {idletime}, {uploadrate}, {downloadrate})
+            &lt;/insert-user&gt;
+            &lt;update-user&gt;UPDATE FTP_USER SET user_password
+                ='{userpassword}',home_directory='{homedirectory}',enable_flag={enableflag},
+                write_permission={writepermission},idle_time={idletime},
+                upload_rate={uploadrate},download_rate={downloadrate}
+                WHERE user_id='{userid}'
+            &lt;/update-user&gt;
+            &lt;delete-user&gt;DELETE FROM FTP_USER WHERE user_id = '{userid}'&lt;/delete-user&gt;
+            &lt;select-user&gt;SELECT user_id as userid, 100000 as maxloginperip ,
+                100000 as maxloginnumber , user_password as
+                userpassword, '/folder/to/store/files/uploads/'|| user_id as homedirectory, true as
+                enableflag, true as writepermission, true as readpermission, 100000 as idletime, 100000 as uploadrate,
+                100000 as downloadrate FROM FTP_USER WHERE user_id = '{userid}'
+            &lt;/select-user&gt;
+            &lt;select-all-users&gt;SELECT user_id FROM FTP_USER ORDER BY user_id&lt;/select-all-users&gt;
+            &lt;is-admin&gt;SELECT user_id as userid FROM FTP_USER WHERE user_id='{userid}' AND user_id='admin'&lt;/is-admin&gt;
+            &lt;authenticate&gt;SELECT user_password as userpassword from FTP_USER WHERE user_id='{userid}'&lt;/authenticate&gt;
+        &lt;/db-user-manager&gt;
+        &lt;native-filesystem case-insensitive="false" create-home="true"/&gt;
+    &lt;/server&gt;
+&lt;/beans:beans&gt;</CODE></PRE>
+
+<p>All in all, I'd say using the FTP Server's been pleasant - except for the ugliness concerning <code>slf4j</code> - and I hope it works for you. I am well aware of the availability of other FTP servers that support database backends, but I really was looking for something lightweight and embeddable, and ideally something I could unit test in Java. This worked out well. It's interesting to see how much of our own dogfood we Java developers manage to get away with using. I used Apache's James email server several years ago. It was very powerful and not a little bit complicated, but it worked, and it was all Java. It scaled and was also very robust, and even with it's wharts was still easier to get working than <code>sendmail.</code> So: I use a Java editor, Java web /application server, Java middleware, Java build tools, Java FTP servers and even a Java text editor. I should really start looking into H2 or Derby and see if I can't close the gap on a completely Java infrastructure stack! It'd be freaking sweet if I could <code>mvn clean install</code> an entire environment (which, for that matter doesn't care which host operating system it's on...)
+
+ </p> <p> Now to begin the count down to having a completely Groovy based stack! </p>

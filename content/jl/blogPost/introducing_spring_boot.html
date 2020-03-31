@@ -1,0 +1,22 @@
+title=Introducing Spring Boot
+date=2013-08-07
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<P> Also, have you seen the <A href="http://blog.springsource.org/2013/08/06/spring-boot-simplifying-spring-for-everyone/"> amazing news</a>? We just released <A href="https://github.com/SpringSource/spring-boot#spring-boot">Spring Boot</a>, which makes it dead simple to do application development with Spring.  
+
+A working REST application (its entirety!) can fit in a single tweet! Here's a groovy-language <CODE>@Controller</CODE>:
+</p>
+
+<PRE><CODE>@Controller
+class ThisWillActuallyRun {
+
+    @RequestMapping("/")
+    @ResponseBody
+    String home() {
+        return "Hello World!"
+    }
+}
+</CODE></PRE>

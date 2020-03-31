@@ -1,0 +1,31 @@
+title=Validating with Spring MVC, JSR 303, and BindingResult Arguments
+date=2013-03-05
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<P><B>TL;DR</B>: In your Spring MVC controller handler method, make sure that the <CODE>BindingResult</CODE> argument is immediately after the <EM>command</EM> or <em>model</em> argument. </p>
+<P> 
+Ran into something of an odd behavior in my Spring MVC application: 
+ The following code works fine: requests come in and if there are request attributes whose names map to JavaBean-style properties on the <CODE>SignInAttempt</CODE> POJO, an instance of that POJO is created and populated with the values from the request. This POJO is then made available in the Spring MVC  controller methods that depend on them, like this one below. 
+
+If there is a JSR 303 <CODE>@Valid</CODE> annotation on the  POJO, as in this case, Spring MVC will validate that the POJO itself complies with the constraints. If it <EM>doesn't</EM>, it will bind the errors it finds in the <CODE>BindngResult</CODe>  object, as message keys (like <CODE>Email.signInAttempt.username</code>) which can be used to display errors to the client.
+ </p>
+<PRE><CODE>public String signin(@ModelAttribute @Valid SignInAttempt signInAttempt, BindingResult result, Model model)</code></pre> 
+
+<p> What <EM>won't</EM> work so well is if you bind position the <CODE>BindingResult</code> anywhere besides immediately after the <em>model</EM> / <EM>command</EM> / POJO itself as we have above. Thus, all of the following configurations will fail with an exception. 
+</p> <PRE><CODE>public String signin(@ModelAttribute @Valid SignInAttempt signInAttempt, Model m, BindingResult result  ) 
+
+public String signin(@ModelAttribute @Valid SignInAttempt signInAttempt, @RequestParam String username, BindingResult result  ) 
+
+// etc.
+</code></pre> 
+ 
+<P> So, takeaway and rule of thumb: all model object arguments must be succeeded by a
+ <CODE>BindingResult</code> in your Spring MVC request handler method.
+</p>
+
+
+
+</code></pre>

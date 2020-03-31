@@ -1,0 +1,125 @@
+title=Spring Corner: What's a Factory Bean?
+date=2011-07-22
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<DIV  style = "padding:10px; background-color:#999; ">
+I've decided I'm going to try to write up a series of small posts on things about Spring that are perhaps common knowledge, but helpful to know, anyway. 
+These posts are geared decidedly towards newcomers, though old hats might learn a thing or two. 
+</div>
+<P>
+	</p>
+	<P> In this post, I'll look at  Spring's <code> org.springframework.beans.factory.FactoryBean&lt;T&gt;</code> interface. 
+		
+		The definition of this interface is: 
+ </p>
+<PRE>public interface FactoryBean&lt;T&gt; {
+  T getObject() throws Exception;
+  Class&lt;?&gt; getObjectType();
+  boolean isSingleton();
+}
+</PRE>
+<P> A FactoryBean is a pattern to encapsulate interesting object construction logic in a class.  It might be used, for example,
+	 to encode the construction of a complex object graph in a reusable way. 
+	Often this is used to construct complex objects that have many dependencies. It might also be used when the construction logic itself is highly volatile and depends on
+	the configuration. 
+	
+	A FactoryBean is also useful to help Spring construct objects that it couldn't easily construct itself. For example, in order to inject a reference to a bean that was obtained from JNDI,
+	the reference must first be obtained. You can use the <CODE>JndiFactoryBean</CODE> to obtain this reference in a consistent way.
+	
+  You may inject the result of a <CODE>FactoryBean</CODE>'s <CODE>getObject()</CODE> method into any other property.  
+	</p> 
+	<p> Suppose you have a <code>Person</code> class whose definition is thus:
+		</p>
+		<PRE>public class Person { 
+ private Car car ;
+ private void setCar(Car car){ this.car = car;  }	
+}
+</pre> and a <CODE>FactoryBean</code> whose definition is thus:
+	
+	<PRE>
+public class MyCarFactoryBean implements FactoryBean&lt;Car&gt; {
+  private String mark; 
+  private int year ;
+  public void setMark(String m){ this.mark =m ; }
+  public void setYear(int y){ this.year = y; }
+  public Car getObject(){ 
+    // wouldn't be a very useful FactoryBean 
+    // if we could simply instantiate the object ;-)
+    CarBuilder cb = CarBuilder.car();
+	
+    if(year!=0) cb.setYear(this.year);
+    if(StringUtils.hasText(this.mark)) cb.setMark( this.mark); 
+    return cb.factory(); 
+  }
+  public Class<Car> getObjectType() { return Car.class ; } 
+  public boolean isSingleton() { return false; }
+}
+</pre>
+	
+				<p> You could wire up a <CODE>Car</CODE> instance using a hypothetical <CODe>CarFactoryBean</CODE> like this:
+					</p>
+<Pre>
+&lt;bean class = "a.b.c.MyCarFactoryBean" id = "car"&gt;
+	&lt;property name = "mark" value ="Honda"/&gt;
+	&lt;property name = "year" value ="1984"/&gt;
+&lt;/bean&gt;
+&lt;bean class = "a.b.c.Person" id = "josh"&gt;
+	&lt;property name = "car" ref = "car"/&gt;
+&lt;/bean&gt;
+</PRE> 
+<P> 
+		In this example, the result of the <CODE> FactoryBean</CODE>'s <CODE>getObject</CODE> method will be passed, not the actual <code>FactoryBean</code> itself.  
+	Spring knows that the result can be injected into the target property because it'll consult the <Code>FactoryBean</code>'s <code>getObjectType()</code> type  
+		 and check whether the target property's type is assignable.
+		
+		Spring reserves - but in practice doesn't always exercise - the right to cache the returned bean if the <CODE>FactoryBean</CODE>'s <code>isSingleton()</code> method returns true.
+		 
+</p>	
+	<p>  If you are using Spring's newer (and far more elegant, in my humble opinion) Java based configuration, then you will find this doesn't work quite as you'd expect, but it can still be 
+		made to work, but you must dereference the <CODE>FactoryBean</CODE> explicitly and call <code>getObject()</CODE> yourself, like this:
+		</p>
+		
+		<pre>
+// identical configuration in Java to the XML above			
+@Configuration 
+public class CarConfiguration { 
+  @Bean public MyCarFactoryBean carFactoryBean(){ 
+	MyCarFactoryBean cfb = new MyCarFactoryBean();
+	cfb.setMark("Honda");
+	cfb.setYear(1984);
+	return cfb;
+  }
+  @Bean public Person josh (){ 
+	Person p = new Person();
+	p.setCar( carFactoryBean()<b>.getObject()</b> );
+	return p; 
+  }	
+}
+</pre>
+<p>Spring <CODE> FactoryBean</code>s have all the other characteristics of any other Spring bean, 
+	including the lifecycle hooks and services (like AOP) that all beans in the Spring container enjoy.
+	</p>
+<p>So, if you'd like a chance to perform construction logic after the properties on the <CODE>FactoryBean</code> have been set, but before the <code>getObject()</CODE> method has been called,
+	then you can avail your <CODE>FactoryBean</CODE> of a method, annotated with <CODE>@PostConstruct</CODE> (or simply implement <code>InitializingBean</CODE>). This method will be called,
+	 in this case, after both the <code>mark</code> and the <code>year</code> properties have been set.
+	You might use this callback to do sanity checks before the object construction's started.
+	
+	</p>
+<PRE>
+ @PostConstruct 
+ public void setup () throws Throwable { 
+   // these methods throw an exception that 
+   // will arrest construction if the assertions aren't met
+   Assert.notNull(this.mark, "the 'mark' must not be null")	;
+   Assert.isTrue(this.year > 0, "the 'year' must be a valid value"); 
+ }
+</pre>			
+<P>One important takeaway here is that it is the <Code>FactoryBean</CODE>, <em>not</em> the factoried object itself, that lives in the Spring 
+	container and enjoys the lifecycle hooks and container services. The returned instance is transient - Spring knows nothing about what you've returned from <code>getObject()</code>, and 
+	will make no attempt to excercise any lifecycle hooks or anything else on it. 
+	This point often confused people.
+	</p>
+	

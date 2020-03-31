@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jls on </title>
+    <link>/jl/</link>
+    <description>Recent content in Jls on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="/jl/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title></title>
+      <link>/jl/blogPost/20070124/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jl/blogPost/20070124/</guid>
+      <description>title=Archy - a maven archetype aggregator, and the 10 minute test your project so richly deserves
+date=2007-01-24
+type=post
+tags=blog
+status=published
+~~~~~~
+
+&lt;p&gt;I just found a tool called &lt;a href=&#34;https://www.twdata.org/projects/archy&#34;&gt;&#34;archy&#34;&lt;/a&gt;!&lt;br&gt;&lt;br&gt;I have archetype-fever. I’m not ashamed of it. Long have I lusted over toolset x but not had the inner strength or resolve to spend the night setting up an ant build that MIGHT  one day be integrated into my workflow, let alone quick enough for a 5 minute test. Maven archetypes make the agile “10 minute test” a possibility. Java’s robbed open source projects of their 10 minute tests by being so complicated to bootstrap. With installation and compilation the norm, configuration is par for the course. Who has time? Who has more than 10 minutes, anyway?&lt;br&gt;&lt;br&gt;A really polished project will have some sort of installation mechanism. But often times, it’s non standard, or half-assed. Download Tomcat for Windows and be received with a windows installer with all the bells and whistles. Download it for linux and…look forward to configuring a few things..&lt;br&gt;&lt;br&gt;If you’ve got a project that’s a webapplication and you’ve got an installation process, then that’s impressive! Tigris.org’s Scarab, for example, has an installer. That’s not to say that there’s no configuration at all,  What’s more, in Scarab’s case, I definitely would have preferred some documentation and a few bug fixes in lieu of that installer!&lt;br&gt;&lt;br&gt;Archetypes give the project the spotlight and take care of the minutiae. This is why, unless it’s &lt;i&gt;very&lt;/i&gt; exotic (J2ME and Jini spring to mind! A proposito: has any one found a useful maven 2 plugin for J2ME or GWT?), I wait for the archetype. Simply add the archetype’s repository to ~/.m2/settings.xml and run that familiar invocation, “mvn archetype:create …”.  Voilà, out pops a working project. You invoke mvn idea:idea at the root and off you go building a new application!&lt;br&gt;&lt;br&gt;So fine, maven archetypes are amazing. Though, now you’re where you started, in a sense, aren’t you? Not quite as bad, but bad. You have to know where the archetypes are for them to be of any use to you!  You could easily spend the time just looking for a way to avoid getting invested too much into some technology without a result.&lt;br&gt;&lt;br&gt;That’s where archy comes in. It has a centralized listing of archetypes and their corresponding repositories and a command line interface to guide you through using any of them.  It reads from &lt;a href=&#34;http://docs.codehaus.org/display/MAVENUSER/Archetypes+List&#34;&gt;this Wiki page&lt;/a&gt;, and it reads from archetypes.xml, on the local classpath. There doesn’t seem to be an easy to use way to expand that, though. I suppose you could just author your own archetypes.xml and put that on the root of classpath and it would resolve that, instead. I haven’t perused the source itself, so I don’t know.  I’ll certainly get into it as I add more archetypes to my arsenal.    Here are a few of note: &lt;a href=&#34;http://appfuse.org/display/APF/AppFuse+QuickStart#AppFuseQuickStart-create&#34;&gt;Matt Raible&#39;s Appfuse&lt;/a&gt;, and a &lt;a href=&#34;http://www.lunarlogic.com/blog/show/maven_archetype_for_jboss_seam&#34;&gt;JBoss Seam archetype&lt;/a&gt;.&lt;/p&gt;&lt;span style=&#34;font-weight: bold;&#34;&gt;Update: &lt;/span&gt;I just found &lt;a href=&#34;http://pyx4me.com/&#34; target=&#34;_blank&#34;&gt;Pyx4me.com&lt;/a&gt;, which, among MANY other golden nuggets, seems to have a working Maven 2/J2ME plugin. Goodbye kludgy old Maven 1 / Antenna wrapper! I hope!&lt;br&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jl/blogPost/20070125/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jl/blogPost/20070125/</guid>
+      <description>title=EJB DAO &#34;data access layer&#34; spring hibernate persistence
+date=2007-01-25
+type=post
+tags=blog
+status=published
+~~~~~~
+
+&lt;p&gt;Before Spring/Hibernate/that whole wave came along, I don’t remember being particularly inspired to have persistence and business logic attached to the entities on which that logic acted… In fact, I rather disliked EJB’s entity beans pattern specifically because everything was on the bean itself. Often times it’d be on a SessionBean, and that’s good. But even there, entity beans have basic persistence, removal and lifecycle operations built into it. A Car doesn’t car how it’s persisted, does it?  &lt;br&gt;&lt;br&gt;Then along came Rails (the most infamous example of this pattern) and suddenly everything is built into the object itself. And, honestly, I like the pattern there. Everything is static if its an operation that would be done by a DAO in Java. It’s a property if its to be persisted. Simple. You know where you stand. I also like the DAO/domain objects mechanism in modern day Java. &lt;br&gt;&lt;br&gt;That said, I’m astonished at how ugly having the DAO functionality built into the domain object can get in Java. &lt;br&gt;&lt;br&gt;I ran across some code that has factory methods for returning the entity! Then, as you modify the properties in the entity (mutator by mutator), it writes them to the database! Ugh! Modify 10 properties on the object, and lo 10 update statements fly by your console. &lt;br&gt;&lt;br&gt;Furthermore, I’ve gotten used to the idea that you can have an interface defining a contract and then an implementation of that DAO’s interface. You can hide that implementation (especially with Spring) behind its contract through any number of remoting technologies, simple base casts and more in a local call, and more. You don’t have to include the accessor / mutators in the interface, too. That’s pretty remarkable.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jl/blogPost/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jl/blogPost/1/</guid>
+      <description>title=Digression: Setting Up Spring, Velocity, JavaMail, Multi Part MIME messages and Gmail
+date=2008-06-14
+type=post
+tags=blog
+status=published
+~~~~~~
+
+This took quite a bit of Googling to get right, so here it is summarized to help prospective journey makers. Spring&#39;s integration is very good for the common cases, but lack of insight can prevent you from achieving more complex integrations. For example, I wanted to be able to authenticate against Gmail (this is a program I&#39;m writing to scratch a personal itch, but nonetheless knowing how to authenticate against SSL is a very useful thing in the enterprise.). Then I wanted to be able to send email messages that rendered as HTML for the sophisticated email clients that supported it (I suspect that&#39;s the overwhelming majority at this point - it&#39;s been a while since &lt;a href=&#34;http://rfc.sunsite.dk/rfc/rfc822.html&#34; target=&#34;_blank&#34;&gt;RFC 822&lt;/a&gt; was relevant!)&amp;nbsp; and have the content fall back to plain text content otherwise. Finally, I wanted to integrate with Velocity so that I could parameterize my emails readily. This begat the following method, a few stanzas of Spring configuration, and a properties file. &lt;span style=&#34;FONT-WEIGHT: bold&#34;&gt;NB&lt;/span&gt;: Replace the values in the properties file with your own information!&amp;nbsp; &lt;br /&gt;
+  &lt;p&gt;See the &lt;code&gt;public static void main(String[] args)&lt;/code&gt; method to see an example invocation of this code. &lt;br /&gt;&lt;/p&gt;
+  &lt;pre&gt;# utils.properties&lt;br /&gt;mail.smtp.host=smtp.gmail.com&lt;br /&gt;mail.username=USERNAME@gmail.com&lt;br /&gt;mail.password=PASSWORD &lt;br /&gt;mail.smtp.port=465 &lt;/pre&gt;
+  &lt;p&gt;The Spring configuration file is not as overwhelming as it looks - most of it is scaffolding.&lt;/p&gt;
+  &lt;pre&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;beans xmlns=&amp;quot;http://www.springframework.org/schema/beans&amp;quot; &lt;br /&gt;    xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;&lt;br /&gt;       xmlns:tx=&amp;quot;http://www.springframework.org/schema/tx&amp;quot; &lt;br /&gt;      xmlns:aop=&amp;quot;http://www.springframework.org/schema/aop&amp;quot;&lt;br /&gt;       xsi:schemaLocation=&amp;quot;&lt;br /&gt;         http://www.springframework.org/schema/beans&lt;br /&gt;         http://www.springframework.org/schema/beans/spring-beans-2.0.xsd&lt;br /&gt;         http://www.springframework.org/schema/tx&lt;br /&gt;         http://www.springframework.org/schema/tx/spring-tx-2.0.xsd&lt;br /&gt;         http://www.springframework.org/schema/aop&lt;br /&gt;         http://www.springframework.org/schema/aop/spring-aop-2.0.xsd&lt;br /&gt;         http://www.springframework.org/schema/lang&lt;br /&gt;         http://www.springframework.org/schema/lang/spring-lang-2.0.xsd&lt;br /&gt;        &amp;quot;&amp;gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;    &amp;lt;bean id=&amp;quot;mailSender&amp;quot; class=&amp;quot;org.springframework.mail.javamail.JavaMailSenderImpl&amp;quot;&amp;gt;&lt;br /&gt;        &amp;lt;property name=&amp;quot;host&amp;quot; value=&amp;quot;${mail.smtp.host}&amp;quot;/&amp;gt;&lt;br /&gt;        &amp;lt;property name=&amp;quot;port&amp;quot; value=&amp;quot;${mail.smtp.port}&amp;quot;/&amp;gt;&lt;br /&gt;        &amp;lt;property name=&amp;quot;username&amp;quot; value=&amp;quot;${mail.username}&amp;quot;/&amp;gt;&lt;br /&gt;        &amp;lt;property name=&amp;quot;password&amp;quot; value=&amp;quot;${mail.password}&amp;quot;/&amp;gt;&lt;br /&gt;        &amp;lt;property name=&amp;quot;javaMailProperties&amp;quot;&amp;gt;&lt;br /&gt;            &amp;lt;props&amp;gt;&lt;br /&gt;                &amp;lt;prop key=&amp;quot;mail.smtp.host&amp;quot;&amp;gt;${mail.smtp.host}&amp;lt;/prop&amp;gt;&lt;br /&gt;                &amp;lt;prop key=&amp;quot;mail.smtp.port&amp;quot;&amp;gt;${mail.smtp.port}&amp;lt;/prop&amp;gt;&lt;br /&gt;                &amp;lt;prop key=&amp;quot;mail.smtp.auth&amp;quot;&amp;gt;true&amp;lt;/prop&amp;gt;&lt;br /&gt;                &amp;lt;prop key=&amp;quot;mail.smtp.starttls.enable&amp;quot;&amp;gt;true&amp;lt;/prop&amp;gt;&lt;br /&gt;                &amp;lt;prop key=&amp;quot;mail.debug&amp;quot;&amp;gt;false&amp;lt;/prop&amp;gt;&lt;br /&gt;&lt;br /&gt;                &amp;lt;prop key=&amp;quot;mail.smtp.socketFactory.port&amp;quot;&amp;gt;${mail.smtp.port}&amp;lt;/prop&amp;gt;&lt;br /&gt;                &amp;lt;prop key=&amp;quot;mail.smtp.socketFactory.class&amp;quot;&amp;gt;javax.net.ssl.SSLSocketFactory&amp;lt;/prop&amp;gt;&lt;br /&gt;                &amp;lt;prop key=&amp;quot;mail.smtp.socketFactory.fallback&amp;quot;&amp;gt;false&amp;lt;/prop&amp;gt;&lt;br /&gt;            &amp;lt;/props&amp;gt;&lt;br /&gt;        &amp;lt;/property&amp;gt;&lt;br /&gt;    &amp;lt;/bean&amp;gt;&lt;br /&gt;&lt;br /&gt;    &amp;lt;bean id=&amp;quot;emailUtils&amp;quot; class=&amp;quot;com.joshlong.example.util.EmailUtils&amp;quot;&amp;gt;&lt;br /&gt;        &amp;lt;property name=&amp;quot;mailSender&amp;quot; ref=&amp;quot;mailSender&amp;quot;/&amp;gt;&lt;br /&gt;    &amp;lt;/bean&amp;gt;&lt;br /&gt;&lt;br /&gt;    &amp;lt;bean class=&amp;quot;org.springframework.beans.factory.config.PropertyPlaceholderConfigurer&amp;quot;&amp;gt;&lt;br /&gt;        &amp;lt;property name=&amp;quot;location&amp;quot;&amp;gt;&lt;br /&gt;            &amp;lt;value&amp;gt;utils.properties&amp;lt;/value&amp;gt;&lt;br /&gt;        &amp;lt;/property&amp;gt;&lt;br /&gt;        &amp;lt;property name=&amp;quot;ignoreUnresolvablePlaceholders&amp;quot;&amp;gt;&lt;br /&gt;            &amp;lt;value&amp;gt;true&amp;lt;/value&amp;gt;&lt;br /&gt;        &amp;lt;/property&amp;gt;&lt;br /&gt;    &amp;lt;/bean&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;/beans&amp;gt; &lt;br /&gt;&lt;br /&gt;&lt;/pre&gt; &lt;/p&gt;
+  &lt;p&gt;And finally, the utility code itself. I have a Maven POM that&#39;s bringing in most of this stuff. You could probably get there by using Spring-All and making sure to add velocity, Apache Commons Lang, and the JavaMail/Activation jars. &lt;p&gt;
+  &lt;pre&gt;&lt;br /&gt;package com.joshlong.example.util;&lt;br /&gt;&lt;br /&gt;import org.apache.commons.io.IOUtils;&lt;br /&gt;import org.apache.commons.lang.StringUtils;&lt;br /&gt;import org.apache.log4j.Logger;&lt;br /&gt;import org.apache.velocity.VelocityContext;&lt;br /&gt;import org.apache.velocity.app.Velocity;&lt;br /&gt;import org.apache.velocity.tools.generic.DateTool;&lt;br /&gt;import org.springframework.context.ApplicationContext;&lt;br /&gt;import org.springframework.context.support.ClassPathXmlApplicationContext;&lt;br /&gt;import org.springframework.mail.MailException;&lt;br /&gt;import org.springframework.mail.javamail.JavaMailSenderImpl;&lt;br /&gt;&lt;br /&gt;import javax.mail.Message;&lt;br /&gt;import javax.mail.internet.InternetAddress;&lt;br /&gt;import javax.mail.internet.MimeBodyPart;&lt;br /&gt;import javax.mail.internet.MimeMessage;&lt;br /&gt;import javax.mail.internet.MimeMultipart;&lt;br /&gt;import java.io.StringWriter;&lt;br /&gt;import java.util.ArrayList;&lt;br /&gt;import java.util.HashMap;&lt;br /&gt;import java.util.List;&lt;br /&gt;import java.util.Map;&lt;br /&gt;&lt;br /&gt; /** &lt;br /&gt;  *&lt;br /&gt;  * @author Josh Long&lt;br /&gt;  * &lt;br /&gt;  * This class is designed to support _easily_ sending out e-mails and parameterizing them. &lt;br /&gt;  * In approach, this is &amp;lt;i&amp;gt;almost&amp;lt;/i&amp;gt; as simple as PHP&#39;s send() function! Naturally, it&#39;s&lt;br /&gt;  * quite a bit more powerful for it&#39;s simplicity. &lt;br /&gt;  * &lt;br /&gt;  */&lt;br /&gt;public class EmailUtils {&lt;br /&gt;&lt;br /&gt;    private Logger log = Logger.getLogger(EmailUtils.class);&lt;br /&gt;    private JavaMailSenderImpl mailSender;&lt;br /&gt;&lt;br /&gt;    public JavaMailSenderImpl getMailSender() {&lt;br /&gt;        return mailSender;&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    public void setMailSender(JavaMailSenderImpl mailSender) {&lt;br /&gt;        this.mailSender = mailSender;&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    public static void main(String a[]) throws Throwable {&lt;br /&gt;        ApplicationContext context = new ClassPathXmlApplicationContext(&amp;quot;utils.xml&amp;quot;);&lt;br /&gt;        EmailUtils utils = (EmailUtils) context.getBean(&amp;quot;emailUtils&amp;quot;);&lt;br /&gt;        Map&amp;lt;String, Object&amp;gt; params = new HashMap&amp;lt;String, Object&amp;gt;();&lt;br /&gt;        params.put(&amp;quot;user&amp;quot;, &amp;quot;John Doe&amp;quot;);&lt;br /&gt;        utils.sendEmailMessage(&amp;quot;from@foobar.com&amp;quot;, new String[]{&amp;quot;towhoever@gmail.com&amp;quot;}, &lt;br /&gt;           &amp;quot;A Subject&amp;quot;, &amp;quot;Hello ${user} from plain text&amp;quot;,&lt;br /&gt;           &amp;nbsp;&amp;quot;&amp;lt;h1&amp;gt;Hello ${user} from High Fidelity HTML&amp;lt;/h1&amp;gt;&amp;quot;, params);&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    public String mergeTemplate(String template, Map&amp;lt;String, Object&amp;gt; macros) throws Throwable {&lt;br /&gt;&lt;br /&gt;        if (StringUtils.isEmpty(template))&lt;br /&gt;            return StringUtils.EMPTY;&lt;br /&gt;&lt;br /&gt;        String answer = null;&lt;br /&gt;&lt;br /&gt;        VelocityContext context = new VelocityContext();&lt;br /&gt;&lt;br /&gt;        context.put(&amp;quot;dateTool&amp;quot;, new DateTool());&lt;br /&gt;&lt;br /&gt;        for (String key : macros.keySet())&lt;br /&gt;            context.put(key, macros.get(key));&lt;br /&gt;&lt;br /&gt;        StringWriter writer = new StringWriter();&lt;br /&gt;&lt;br /&gt;        Velocity.init();&lt;br /&gt;&lt;br /&gt;        if (Velocity.evaluate(context, writer, &amp;quot;LOG&amp;quot;, template)) {&lt;br /&gt;            IOUtils.closeQuietly(writer);&lt;br /&gt;            answer = writer.toString();&lt;br /&gt;        }&lt;br /&gt;        return answer;&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    public void sendEmailMessage(String from, String[] to, String subject, String textBody, String htmlBody, Map&amp;lt;String, Object&amp;gt; params) throws Throwable {&lt;br /&gt;&lt;br /&gt;        MimeMessage msg = mailSender.createMimeMessage();&lt;br /&gt;&lt;br /&gt;        msg.setFrom(new InternetAddress(from));&lt;br /&gt;        msg.setSubject(subject);&lt;br /&gt;        msg.setRecipients(Message.RecipientType.TO, getInternetAddresses(to));&lt;br /&gt;&lt;br /&gt;        MimeMultipart content = new MimeMultipart(&amp;quot;alternative&amp;quot;);&lt;br /&gt;&lt;br /&gt;        if (!StringUtils.isEmpty(textBody)) {&lt;br /&gt;            MimeBodyPart text = new MimeBodyPart();&lt;br /&gt;            text.setText(mergeTemplate(textBody, params));&lt;br /&gt;            content.addBodyPart(text);&lt;br /&gt;        }&lt;br /&gt;&lt;br /&gt;        if (!StringUtils.isEmpty(htmlBody)) {&lt;br /&gt;            MimeBodyPart html = new MimeBodyPart();&lt;br /&gt;            html.setContent(mergeTemplate(htmlBody, params), &amp;quot;text/html&amp;quot;);&lt;br /&gt;            content.addBodyPart(html);&lt;br /&gt;        }&lt;br /&gt;&lt;br /&gt;        msg.setContent(content);&lt;br /&gt;        msg.saveChanges();&lt;br /&gt;&lt;br /&gt;        try {&lt;br /&gt;            mailSender.send(msg);&lt;br /&gt;        } catch (MailException ex) {&lt;br /&gt;            log.info(&amp;quot;Issue with sending out mail having body &amp;quot; + StringUtils.defaultString(textBody) + &amp;quot;; params are:&amp;quot; + params, ex);&lt;br /&gt;        }&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;    private InternetAddress[] getInternetAddresses(String... emails) throws Throwable {&lt;br /&gt;        List&amp;lt;InternetAddress&amp;gt; addys = new ArrayList&amp;lt;InternetAddress&amp;gt;();&lt;br /&gt;        for (String e : emails)&lt;br /&gt;            addys.add(new InternetAddress(e));&lt;br /&gt;        return addys.toArray(new InternetAddress[0]);&lt;br /&gt;    }&lt;br /&gt;&lt;br /&gt;}&lt;br /&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jl/blogPost/20070212/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jl/blogPost/20070212/</guid>
+      <description>title=Sun Java Wireless Toolkit 2.5 for CLDC (Formerly, &amp;#8220;WTK&amp;#8221;) (finally)
+date=2007-02-12
+type=post
+tags=blog
+status=published
+~~~~~~
+
+&lt;p&gt;Aside from all the new APIs supported (and there are a LOT – some only previously available through extensions. Notable among them: Java APIs for Bluetooth ( JSR 82), Wireless Messaging API (WMA, JSR 226), and J2ME Web Services Specification (JSR 172), and of course we can’t forget.. argh... just check out &lt;a href=&#34;http://java.sun.com/products/sjwtoolkit/download-2_5.html&#34;&gt;Sun&#39;s page&lt;/a&gt; for the full scoop), the coolest thing for me has to be the standard support for the Location API’s. These APIs, of course have helped propel J2ME into orbit via Google’s &#34;Google Mobile Maps&#34; application (and the plethora of other maps / GPS applications out there helped, too, I suppose :-) )&lt;br&gt;&lt;br&gt;This is an impressive release and long-awaited. One gripe: where’s my Linux SDK? I’ll have to use the windows version for now, I suppose. I should count my blessings: there doesn’t seem to be any mention of a Mac version!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jl/blogPost/20070221/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jl/blogPost/20070221/</guid>
+      <description>title=Salesforce.com&#39;s new language/platform pack: &#34;Apex&#34;
+date=2007-01-28
+type=post
+tags=blog
+status=published
+~~~~~~
+
+&lt;p&gt;I just noticed Salesforce.com’s latest step towards platform domination: &lt;a href=&#34;http://developer.appexchange.com&#34;&gt;Apex.&lt;/a&gt;&lt;br&gt;&lt;br&gt;I like the name.  Cool. Sounds like Apress, and Ajax. Half buzz, half hard-hitting tech done cheap, with just a twist of that  je ne sais quoi, that “this could be a Windows codename” quality. Yeah! &lt;br&gt;&lt;br&gt;I like the possibilities. The market for middle ware integration is astonishing. The application that’s readily customized is the application that more readily adapts, and is adapted. This should go a long way towards removing all the edge cases defying Salesforce.com’s proliferation. Apparently, they have a little less than 30,000 customers. I don’t know if that’s individual users or entities, or what. It’s not nothing. Interesting: the inclusion of  LINQ-style sql objects:&lt;br&gt;&lt;code&gt;&lt;br&gt;Account acc = [select Id from account where name = &#39;xxx&#39;];&lt;br&gt;Account[] accs = new Account[]{acc};&lt;br&gt;System.assert(accs[acc.id] != null);&lt;br&gt;&lt;/code&gt;&lt;br&gt;It’s a typed SQL query, embedded inline with your java. Not like those opaque String queries I keep hearing about… &lt;br&gt;&lt;br&gt;I got the hint on all of this from eWeek magazine, in a small blurb about Apex of the January 22 issue. To my chagrin I get to the salesforce.com site, and start looking around right there, not too deeply linked,  is &lt;a href=&#34;http://blog.sforce.com/sforce/2007/01/apex_and_pure_v.html&#34;&gt;Peter Coffee&lt;/a&gt;, formerly  a columnist of 18 years at eWeek. He’s just switched jobs! Good luck, Peter!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jl/blogPost/20070224/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jl/blogPost/20070224/</guid>
+      <description>title=Playing with Swing, JSR 296
+date=2007-02-24
+type=post
+tags=blog
+status=published
+~~~~~~
+
+I just started playing with &lt;a href=&#34;http://jcp.org/en/jsr/detail?id=296&#34; target=&#34;_blank&#34;&gt;JSR 296&lt;/a&gt; as I&#39;ve recently started building an application that&#39;s Swing based (albeit, as an applet, which I&#39;d like to make Java Webstart-able). It&#39;s phenomenal! As it stands right now, you can easily databind, internationalize, easily layout GUIs, and build on a useful Action abstraction if you&#39;re willing (and able! And what rocket scientist isn&#39;t?? Oh, you&#39;re &lt;span style=&#34;font-style: italic;&#34;&gt;not &lt;/span&gt;a rocket scientist… well…. I see… Go sit in the corner.) to coordinate the tapestry of solutions out there. &lt;br&gt;&lt;br&gt;JSR 296 seeks to bring a lot of that flexibility to the developer right off the bat. With it you get internationalization, an action model, application lifecycle, persistence, etc. Pretty cool. Still missing is databinding and IOC and a layout mechanism. Fortunately, &lt;a href=&#34;http://spring-rich-c.sourceforge.net/index.html&#34; target=&#34;_blank&#34;&gt;SpringRich&lt;/a&gt;, and &lt;a href=&#34;https://jgoodies.dev.java.net/&#34; target=&#34;_blank&#34;&gt;JGoodies&lt;/a&gt; help alleviate those pain points, so I&#39;m pretty stoked about the possibilities. &lt;br&gt;&lt;br&gt;Maybe one day we&#39;ll have a framework for the desktop user and it&#39;ll endeavor to bring &#34;web-style programming&#34; to the desktop.&lt;br&gt;&lt;br&gt;Which reminds me: all those frameworks endeavoring to bring Swing-style programming to the web (Wicket, JSF, Tapestry, Echo, whatever else I missed: this means you!) should change their attitude a little. It&#39;s telling that all of the things this framework brings to the table have been de rigueur in web frameworks for half a decade.&lt;br&gt;&lt;br&gt;Check out &lt;a href=&#34;https://appframework.dev.java.net/intro/index.html&#34; target=&#34;_blank&#34;&gt;the Swing Application Framework&lt;/a&gt; for more.&lt;br&gt;&lt;br&gt;I wonder what this will mean for so much of the way an application is built currently. Will I have to become very good at securing SOAP services again? Will an easy, useful desktop programming paradigm reverse the transition from Web Services to JSON? I deployed a custom XML-based (not XML-RPC, or SOAP, but my own protocol) service specifically to be able to achieve modest portability/thoroughput on a prototype J2ME application I built a year or so ago. This was so because the XML parsers are sketchy enough. SOAP stacks (while available, even as a standard) weren&#39;t prevalent enough.&amp;nbsp; I can see Spring earning it&#39;s keep here, again. Imagine what could be done with a useful databingn mechanism and a convenient way of exposing services (à la Spring). Desktop applications could become the rich client king again. Maybe. &lt;br&gt;&lt;br&gt;Meanwhile Bruce Eckel &lt;a href=&#34;http://www.artima.com/weblogs/viewpost.jsp?thread=193593&#34; target=&#34;_blank&#34;&gt;seems to think rich clients are where it&#39;s at&lt;/a&gt;, as well. Of course, he&#39;s pitching Flash, and not Swing. &lt;br&gt;&lt;br&gt;Can&#39;t wait to see what&#39;s next. Windows Vista (Aero, WPF) is poised to make the rich client desktop commonplace. Maybe it&#39;ll heat up the landscape enough to drive a resurgence for the desktop developer.&amp;nbsp; Any one use any of these tools? Anything I should know?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jl/blogPost/20070228/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jl/blogPost/20070228/</guid>
+      <description>title=Halfsteps on the Tapestry Archetype; Gmail&#39;s Down!
+date=2007-02-28
+type=post
+tags=blog
+status=published
+~~~~~~
+
+&lt;p&gt;Gmail is down, and Iâve not been able to access it with any
+sort of consistency for hours. What am I missing? Whatâs wrong? This has happened to me before, but never for this duration  &lt;/p&gt;  &lt;p&gt; That aside, I&#39;ve deployed updates to the Tapestry 4.1 Maven archetype,
+and partly updated the documentation. An order of magnitude better, to
+be sure, but there remains much more to be done...&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jl/blogPost/20070227/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jl/blogPost/20070227/</guid>
+      <description>title=A Tapestry 4 Maven Archetype Based On The Tapestry 5 Archetype, Spring and samples included.
+date=2007-02-27
+type=post
+tags=blog
+status=published
+~~~~~~
+
+I love working with Tapestry 4, but I figure that it&#39;s because it&#39;s already configured to do the cool tricks I want to do with it. It&#39;s not easy getting off the ground on a blank new project. (Nor is it easy getting off the ground in a Ruby On Rails project without using the project generator!). Maven offers a solution, but, seemingly, no good archetype for it exists. I want something that&#39;ll let me type mvn jetty6:run and pull up a page immediately after I&#39;ve run the familiar &#34;mvn archetype:create&#34; incantation.&lt;br&gt;&lt;br&gt;I tried the (admittedly preliminary, at this stage in the game) Appfuse archetype,&amp;nbsp; and the one from Webtide. However, I wanted something that I could demo with really quickly. I imagine: 1.) I have the archetype. 2.) I mvn clean install it, and voilà, instant &#34;hello world&#34; application that could be aggressively/quickly modified. I took Howard Lewis Ship&#39;s Tapestry 5 Simple-Project archetype and expanded it/retrofitted it with a lot of Tapestry 4 scenarios. &lt;br&gt;&lt;br&gt;I also wanted something that eased some real-world concerns or, at least, hid them. Something that already had a working example of most common things (setting up an ASO, using Spring. Perhaps I&#39;ll add SEO friendly URLs configured by default (well, for the common ones, with the less-obvious options commented and explained.). &lt;br&gt;&lt;br&gt;Anyway, thanks again to Howard and the Tapestry for such a wonderful product. I&#39;ll evolve this version and clean it up. If there are any suggestions, I&#39;d definitely appreciate it. &lt;br&gt;&lt;br&gt;It&#39;s deployed to my repostory. Run the following command, and you&#39;ll have the archetype installed and a project created. Then, merely cd into the wordking directory and run &lt;code&gt;mvn idea:idea&lt;/code&gt;, or &lt;code&gt;mvn eclipse:eclipse&lt;/code&gt;, and then run &lt;code&gt;mvn jetty6:run&lt;/code&gt; to get started. This will get your application running on port 8080. Simply bring up http://127.0.0.1:8080/ and you&#39;ll get a listing of all the contexts. You can modify the various configuration fles (save, of course, for web.xml), and HTML ad-infinitum without restarting. The second you compile a fresh class, Jetty will reload the context automatically. &lt;br&gt;&lt;br&gt;&lt;code&gt;mvn archetype:create -DarchetypeGroupId=com.codecafe.archetypes
+-DarchetypeArtifactId=tapestry-simple
+-DremoteRepositories=http://codecafe.dev-hda.com/repository
+-DarchetypeVersion=4.1.2-SNAPSHOT -DgroupId=c.b -DartifactId=view&lt;/code&gt;&lt;br&gt;&lt;br&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jl/blogPost/200702241/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jl/blogPost/200702241/</guid>
+      <description>title=IntelliJ 6.0 and JDK 6.0 upgrade
+date=2007-02-24
+type=post
+tags=blog
+status=published
+~~~~~~
+
+I&#39;m about to upgrade to JDK6 on my Windows XP machine. I&#39;m running IntelliJ 6, which I understand works well on the new JDK. Confusing is the lackluster availability of the JRE. I expect Java.com to yeld a JRE 6 build, but instead it&#39;s still pushing the old JRE 5, which is also still being bundled with various PC vendors by default. Why is this? At what point does Sun certify a release as being &#34;good enough&#34; for the developers AND the rest of the world? &amp;nbsp;&lt;br&gt;&lt;br&gt;The consensus seems to be that Java SE 6.0 offers the best out-of-the-box performance boost yet, by far.&lt;br&gt;&lt;br&gt;After a bit of searching, I finally got to &lt;a href=&#34;http://support.jetbrains.com/kb/entry.jspa?externalID=222&amp;amp;categoryID=4&#34;&gt;this thread&lt;/a&gt;&amp;nbsp; which has the whole process spelled out for you. I went with the second choice enumerated on the page (deleting the jre, and replacing it with JDK1.6&#39;s JRE as I didn&#39;t want to have to use idea.bat. Using idea.bat causes the DOS console to stay open while you&#39;re in IntelliJ. I created a second .bat file whose job it was to load the first one (idea.bat) like so: start idea.bat, however, the trouble is that didn&#39;t seem to work. I didn&#39;t want to give it much more thought and simply pursued the second option. &lt;br&gt;&lt;br&gt;I wholely recommend the upgrade it&#39;s very quick. Loading IntellIJ would be one kind of speed increase, but loading a very big project quite another, and they both dramatically improved, to the point that IntelliJ no longer shows me &#34;Tip Of The Day&#34; when I&#39;m doing these actions because it doesn&#39;t have to keep me entertained. &lt;br&gt;&amp;nbsp;&lt;br&gt;Completely worth it!&amp;nbsp;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jl/blogPost/20070305/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jl/blogPost/20070305/</guid>
+      <description>title=New version of the Tapestry 4.1 archetype
+date=2007-03-05
+type=post
+tags=blog
+status=published
+~~~~~~
+
+I just deployed a new version of the Tapestry 4.1 archetype. It&#39;s the same parameters as the archetype discussed &lt;a href=&#34;http://www.joshlong.com/jl/entry/20070227&#34;&gt;previously&lt;/a&gt;. Essentially, the new version provides a few new features:&lt;br /&gt;&lt;ol&gt;&lt;li&gt;an interesting use of an engine service (in this case to provide a working rounded corner generator, as with Google Groups&#39; rounded corner generator URL) and a corresponding component to employ the service.&lt;/li&gt;&lt;li&gt;the rounded corner component mentioned above, which is pretty sophisticated in of itself (as introductory code goes, anyway!)&lt;/li&gt;&lt;li&gt;much better documentation (mvn site, and then peruse the resultant docs in the target directory.) &lt;br /&gt;&lt;/li&gt;&lt;/ol&gt;.&lt;br /&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jl/blogPost/20070310/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jl/blogPost/20070310/</guid>
+      <description>title=Developer Collaboration and Eclipse Jazz
+date=2007-03-10
+type=post
+tags=blog
+status=published
+~~~~~~
+
+&lt;p&gt;The major leap forward seems to be project lifecycle management, and collaboration suites. It doesn&#39;t seem like too long ago that we had a compiler, an editor, and some sticky notes. &lt;/p&gt;&lt;p&gt;In the Microsoft camp, my lowly Visual C++ has evolved into &lt;a href=&#34;http://msdn2.microsoft.com/en-us/teamsystem/default.aspx&#34;&gt;Visual Studio Team System/Team Foundation System/Orca/super maximized enterprise grid suite 2.0/whatever&lt;/a&gt;, which in turn is an editor on top of the compiler, a collaboration suite with groupware-features and a source versioning system&amp;nbsp; (and maybe that&#39;s an undersell?)!&lt;/p&gt;&lt;p&gt;And Borland, oh-don&#39;t-get-me-started! Borland&#39;s &lt;a href=&#34;http://www.borland.com/us/products/index.html&#34;&gt;whole business&lt;/a&gt; is now centered on everything that happens before and after the work in JBuilder has been done: it&#39;s all about the lifecycle of the project. &lt;/p&gt;&lt;p&gt;JetBrains has their &lt;a href=&#34;http://www.jetbrains.com/teamcity/&#34;&gt;TeamCity product&lt;/a&gt;, which - along with their TMate source control client - form a suite of collaboration tools above and beyond working in IntelliJ. Even IntelliJ now has the ability to &#34;share&#34; a coding session with someone. &amp;nbsp;&lt;/p&gt;&lt;p&gt;And, now, I just read about the Eclipse Foundation&#39;s (and tech-lead Erich Gamma&#39;s) push into collab-suites with Eclipse Jazz (eh, &lt;a href=&#34;http://redmonk.com/cote/2006/06/07/rational-jazz-soon-to-eat-more-of-its-own-dog-food-transparency/&#34;&gt;here&lt;/a&gt;, and &lt;a href=&#34;http://www.theserverside.com/tt/talks/videos/ErichGammaText/interview.tss&#34;&gt;here&lt;/a&gt;). Of course, (the former) Rational has always been about this sort of thing in a lot of ways, so it&#39;s no surprise the influence eventually found its way to Eclipse. Interesting, I say! &amp;nbsp;&lt;/p&gt;&lt;p&gt;Does this mean there&#39;s little more vendors can see doing for individual developers? &lt;a href=&#34;http://www.intellij.com&#34;&gt;IntelliJ&amp;nbsp; IDEA&lt;/a&gt;) (mmm.. I love you) is good, but is it really the be-all-end-all of individual productivity? All without one patronizing Wizard? Really? Also, I&#39;m a little unclear on how this new wave of software fits in with traditional tools. &lt;/p&gt;&lt;p&gt;Suppose I have a wiki and bug defect system (&lt;a href=&#34;http://trac.edgewall.org&#34;&gt;Trac&lt;/a&gt;)), a source control system (&lt;a href=&#34;http://subversion.tigris.org/&#34;&gt;Subversion&lt;/a&gt;), an IDE (IntelliJ, emacs) and an email address/IM client, a project management tool (Microsoft Project?), and even a build system with a deficiency complex (&lt;a href=&#34;http://maven.apache.org/&#34;&gt;Maven&lt;/a&gt; and &lt;a href=&#34;http://www.atlassian.com/software/bamboo/&#34;&gt;Bamboo&lt;/a&gt;) what am I missing?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jl/blogPost/20070401/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jl/blogPost/20070401/</guid>
+      <description>title=Spring and GPS (JSR 179 --javax.microedition.location) support
+date=2007-04-01
+type=post
+tags=blog
+status=published
+~~~~~~
+
+&lt;p&gt;April Fools Day is Here! &lt;/p&gt;&lt;p&gt;I suppose I&#39;d forgotten the date. I read Google&#39;s proposed, &lt;a href=&#34;http://www.google.com/tisp/install.html&#34; target=&#34;_self&#34;&gt;free ISP plan&lt;/a&gt; with shock and horror. Then it hit me. Enjoy that one.&lt;/p&gt;&lt;p&gt;In other news, I&#39;m playing with my Sprint A900 handset to use Location Based Services (LBS). It&#39;s frustrating, to say the least. Sprint&#39;s lackluster support of the developer community makes it all the more difficult. Googling the subject reveals post after post on bulletin board after bulletin of people bemoaning no support of LBS on Sprint handset since 2002.&lt;/p&gt;&lt;p&gt;Apparently, for all but a select few phones (the Blackberry among them), JSR 179 (the javax.microedition.location packages) isn&#39;t supported at all. In their stead is Qualcomm&#39;s proprietary JQAE API (probably because the GPS chipset is Qualcomm for a lot (if not all?) of their devices).&lt;/p&gt;&lt;p&gt;That&#39;s fine, I&#39;m willing to use a proprietary API and do the god-awful &#34;detection&#34; dance I find is the norm in J2ME:&lt;/p&gt;&lt;code&gt;try {&lt;br&gt;&amp;nbsp; Class.forName( &#34;javax.microedition.location.Coordinates&#34;) ; &amp;nbsp; &lt;br&gt;&amp;nbsp; // it has support&lt;br&gt;}catch (Throwable t){&amp;nbsp; &lt;br&gt;&amp;nbsp; // it doesn&#39;t. Try loading the Qualcomm API&lt;br&gt;}&lt;/code&gt;&lt;p&gt;See &lt;a href=&#34;http://www.sprintusers.com/forum/showthread.php?t=52772&#34; target=&#34;__blank&#34;&gt;this&lt;/a&gt; and/or &lt;a target=&#34;__blank&#34; href=&#34;http://forum.mgmaps.com/viewtopic.php?printertopic=1&amp;amp;t=74&amp;amp;postdays=0&amp;amp;postorder=asc&amp;amp;start=0&amp;amp;finish_rel=-10000&#34;&gt;this&lt;/a&gt; for more information on that.&lt;/p&gt;&lt;p&gt;However, it turns out even there things aren&#39;t so easy. &lt;/p&gt;&lt;p&gt;Before you&#39;ve tried anything in code, you need to enable your phone&#39;s developer root. Translated: they&#39;ve restricted access to certain APIs (Among them: &#34;LBS: Location Based Services&#34;, &#34;JSR-135 Mobile Media 1.1 API&#34;, &#34;JSR-120 Wireless Messaging 1.1 API&#34; and &#34;JSR-75 Personal information Management (PIM)). You can access them assuming you&#39;ve signed your MIDP with Verisign&#39;s $500 certificate and that you&#39;ve unlocked your specific handset&#39;s (up to 200)&amp;nbsp; privileges from the Sprint.com developer website. I haven&#39;t gone through the process, and so I don&#39;t know if this will work, but it&#39;s certainly frustrating. &lt;/p&gt;&lt;p&gt;And, from what I&#39;ve been reading, you also need to be a Sprint business partner! I don&#39;t even know how you begin to procure that, nor do I care for the moment. It&#39;s as if they don&#39;t want people developing on their platform.&lt;/p&gt;&lt;p&gt;Nokia&#39;s phones are exponentially more approachable. &lt;/p&gt;&lt;p&gt;If I find anything, I&#39;ll report back on this.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jl/blogPost/20070322/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jl/blogPost/20070322/</guid>
+      <description>title=J# Post-Mortem
+date=2007-03-22
+type=post
+tags=blog
+status=published
+~~~~~~
+
+&lt;p&gt;J# retired and I just now caught this! That&#39;s wonderful news! &lt;/p&gt;&lt;p&gt;From the announcement (http://msdn2.microsoft.com/en-us/vjsharp/default.aspx), the following:&lt;/p&gt;&lt;blockquote&gt;&lt;b&gt;Retirement of J# language and Java Language Conversion Assistant from future versions of Visual Studio&lt;/b&gt; Since customers have told us that the existing J# feature set largely meets their needs and usage of J# is declining, Microsoft is retiring the Visual J# product and Java Language Conversion Assistant tool to better allocate resources for other customer requirements. The J# language and JLCA tool will not be available in future versions of Visual Studio. To preserve existing customer investments in J#, Microsoft will continue to support the J# and JLCA technology that shipped with Visual Studio 2005 through to 2015 as per our product life-cycle strategy. For more information, see Expanded Microsoft Support Lifecycle Policy for Business &amp;amp; Development Products. &lt;p&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt; Now of course, there are some issues. Apparently they&#39;ve
+introduced 64 bit support and that ends in 2017. So if nothing else, we
+have 2 (conflicting) dates: 2015, or 2017. &lt;/p&gt;&lt;p&gt; Bah. Either way, we&#39;ll be rid of it within a decade :-)&lt;br&gt;&lt;/p&gt;&lt;p&gt;To read the announcement, you&#39;d think they&#39;re being burdened by it! Which is true. They are. As they are burdened by maintaining the VB6 to VB.NET migration pathways. And the C++ to managed C++ pathways. If .NET debuted with anything in particular as gospel, it was &#34;forward thinking, backwards compatible.&#34; Now it seems like they&#39;re abandoning a lot of this for the pretense it was. I still don&#39;t quite understand what their pitch to the java world is though. The Petstore(s), I don&#39;t think, swayed any opinion. This is especially true given what was perceived to be botched politicking on Microsoft&#39;s part behind the first one.&amp;nbsp; Is there anyone who actually used Java and then preferred having Visual Studio wizard-away everything previously done in ant build file? That is, who would switch to get WYSIWYG-everything? &lt;/p&gt;&lt;p&gt; The main cause for defection in the Java camp is ease-of-use, but those concerns are (seemingly) better addressed by Ruby on Rails, or PHP. &lt;/p&gt;&lt;p&gt;Put another way: the reason J# is being retired is because it&#39;s never been the value proposition Microsoft imagined it would be. There aren&#39;t swarms of people looking to leave Java for .NET of all things. If anything,&amp;nbsp; people are retrofitting their client applications with JavaScript and building the more sophisticated stuff in Java and it&#39;s constantly expanding stacks. &lt;/p&gt;&lt;p&gt;Or, it could be I&#39;m missing everything all together. &lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jl/blogPost/20070405/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jl/blogPost/20070405/</guid>
+      <description>title=Pain Points with Location APIs and Sprint
+date=2007-04-05
+type=post
+tags=blog
+status=published
+~~~~~~
+
+&amp;nbsp;&lt;p&gt;The obvious: J2ME&#39;s suffered a lot of fragmentation (almost necessarily, given the ever broadening range of devices to which an application may be deployed) that have worked against the &#34;write once, run anywhere&#34; mantra. Particularly, Sun has proffered a multitude of JSRs that are considered &#34;optional packages&#34; that any vendor may (or may not) include in its platform/handset. There are so many JSRs (see, for example, &lt;a href=&#34;http://mobilezoo.biz/j2me.php&#34;&gt;this&lt;/a&gt;) that there are occasionally wrapper JSRs that serve only to include other JSRs. Thus, a vendor that implements JSR-185 (&#34;Java Technology for the Wireless Industry&#34;) is really mainly only guaranteeing the presence of other JSRs. Similarly, plenty of platforms have solutions that later were standardized into JSRs. Thus, using a technology is a manner of gambling, where you hope you wager your target platform implements the requisite base platform, technologies, and APIs (that is, you want the JSR version of a given API where available, but if you need it you&#39;ll use a proprietary API, right?) &lt;/p&gt;&lt;p&gt;Sooooo... I have a Sprint handset, the Samsung A900 (&lt;a href=&#34;http://developer.sprint.com/view_devices.do?device=77527&#34;&gt;this one.&lt;/a&gt;) Nokia and Motorola are easily &#34;hacked&#34;. Sprint tends to control their handsets, closely, alas. The same rules as with any other closely guarded platform apply: no hacking! It&#39;s not necessarily in a carrier&#39;s interest to expose these APIs to just anyone. They may want to recoup the cost of developing the technology. They may be only interested in bigger partners with a compelling, mass-appeal application that could be profitable to the carrier.&lt;/p&gt;&lt;p&gt;In this case, vendors had to implement GPS for the E911 laws (see &lt;a href=&#34;http://www.fcc.gov/911/enhanced/&#34;&gt;this&lt;/a&gt; and &lt;a href=&#34;http://jeepx.blogspot.com/2006/02/paul-saffo-got-it.html&#34;&gt;this&lt;/a&gt;), and so the functionality is already present on the phones. And just imagine the slew of applications that could be developed with GPS support-why wouldn&#39;t they want to expose it, right? &lt;/p&gt;&lt;p&gt;Slowly, JSR 172 is taking hold, and where it&#39;s not, you may find QJAE&#39;s Location APIs. QJAE is Qualcomm&#39;s Java Application Extensions which provide useful APIs. My particular handset has this API&#39;s Location Based Service API, and not JSR 172, but at least there is an API! &lt;/p&gt;&lt;p&gt;So, armed with this, I started looking for the compiled classes: they&#39;re nowhere to be found! I have the Spring SDK, and apparently (according to &lt;a href=&#34;http://www.shaftek.org/blog/archives/000139.html&#34;&gt;this&lt;/a&gt; ancient article) the jars with the compiled API were at one point included in the Sprint SDK. It&#39;s not currently. Apparently, Sprint&#39;s stance is that you need to be a partner to access this functionality. Some people have had success reverse engineering the API from documentation and explicitly enumerating the values of the constants at runtime from the handset. Sprint&#39;s stance is that this is illegal.&amp;nbsp; &lt;/p&gt;&lt;p&gt;This also conflicts with my limited understanding of how Sprint limits access to other APIs. Other APIs (such as MMAPI) are accessible if and only if you sign it using a pricy Verisign certificate and obtain a partner account with Sprint (for deployment). For testing, everything seems accessible enough by simply &#34;enabling&#34; your handset on Sprint&#39;s developer site (see &lt;a href=&#34;http://developer.sprint.com/site/global/develop/activation_device/p_device_activation.jsp&#34;&gt;this
+developer.sprint.com article&lt;/a&gt; for more) and using Sprint&#39;s toolkit to sign it (as outlined &lt;a href=&#34;http://developer.sprint.com/getDocument.do?docId=84465&#34;&gt;here&lt;/a&gt;)). &lt;/p&gt;&lt;p&gt;That&#39;s enough for this post. Let&#39;s see what else I can scrounge up. I need more information.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/jl/blogPost/20070408/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/jl/blogPost/20070408/</guid>
+      <description>title=A J2ME Archetype Based On Pyx4me.com&#39;s work, Antenna
+date=2007-04-08
+type=post
+tags=blog
+status=published
+~~~~~~
+
+&lt;p&gt; In recent posts, I&#39;ve blogged about my ambition to get a J2ME archetype up and running, and finally, I can present the fruits of my …quest! You thought I was going to say “labor”, eh? The nice part about the world is there are so many other people better positioned to beat me (or you) to the finish line. Case in point: the &lt;a href=&#34;http://pyx4me.com/snapshot/pyx4me/&#34; target=&#34;_blank&#34;&gt;pyx4me project&lt;/a&gt; project has done an incredible job of wrapping &lt;a href=&#34;http://antenna.sourceforge.net/&#34; target=&#34;_self&#34;&gt;Antenna&lt;/a&gt;, providing a JSE-based emulator, providing framework classes and of providing a working support for different things and of providing useful examples. &lt;/p&gt;&lt;p&gt; I&#39;ve taken their examples and orchestrated an archetype for getting started quickly with J2ME.&amp;nbsp; &lt;/p&gt;&lt;p&gt; Put another way, they&#39;ve already done the work of getting started with J2ME. It just isn&#39;t (to me, a humble J2ME developer with a cause) apparent where to begin. So I made it apparent for my own purposes. Perhaps you&#39;ll find it useful, as well.&amp;nbsp;&amp;nbsp; &lt;/p&gt;&lt;p&gt; To get it up and running, simply issue:&amp;nbsp; &lt;/p&gt;&lt;pre&gt;mvn archetype:create -DarchetypeGroupId=com.codecafe.archetypes \&lt;br&gt;-DarchetypeArtifactId=j2me-simple \&lt;br&gt;-DremoteRepositories=http://codecafe.dev-hda.com/repository \&lt;br&gt;-DarchetypeVersion=1.0-SNAPSHOT -DgroupId=org.example -DartifactId=myapp&lt;/pre&gt;&lt;p&gt; On my system, I have three system variables of importance. Here&#39;s the pseudocode for their organization:&amp;nbsp; &lt;/p&gt;&lt;pre&gt;WTK_HOME=installation of wireless toolkit ;&lt;br&gt;JAVA_HOME=installation of java development kit ;&lt;br&gt;PATH=WTK_HOME/bin;JAVA_HOME/bin ;&lt;/pre&gt;&lt;p&gt; So long as all that&#39;s setup, you need only cd into your “myapp” directory and issue “mvn clean install” and then double click on the resultant .jad file to open up the emulator and preview your application.&amp;nbsp; &lt;/p&gt; &lt;p&gt; Please see &lt;a href=&#34;http://pyx4me.com/snapshot/pyx4me&#34;&gt; the Pyx4me project&#39;s home page&lt;/a&gt; for the overall project,&amp;nbsp;&amp;nbsp; &lt;a href=&#34;http://antenna.sourceforge.net&#34;&gt;the antenna project&lt;/a&gt;, and, lastly &lt;a href=&#34;http://codecafe.dev-hda.com/sites/j2me_archetype/&#34;&gt;my documentation&lt;/a&gt; for information on using the archetype, getting started on an application and coverage of a few common cases I ran into. If you find anything lacking or non intuitive, please drop me a comment and I&#39;ll try to address it.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,86 @@
+title=My Christmas Wish, OR How the JVM Will Outlive the  Cockroach, and .NET
+date=2009-08-29
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p> It started with a Tweet from <a 
+href="http://twitter.com/migueldeicaza/status/3627322220">Miguel De 
+Icaza</a>. Miguel's the leader of the Mono project, whose goal's to 
+bring .NET to Linux. He's also the former leader of the Gnome project. 
+Generally, he's whip smart and not usually prone to flame baits. So, I 
+tend to read his words carefully, as it usually pays off. He said: 
+<cite>"I wish Java tried to compete with .NET, but they seemed to have 
+given up a long time ago: <a 
+href="http://tinyurl.com/mfxmqm">http://tinyurl.com/mfxmqm</a>"</cite> 
+</p> <p>At this point I wanted to write him a terse letter stating 
+my point of view, stating how he had clearly missed the obvious. I 
+resisted,  cried a little, sat on the beach with 
+candles, attended a book club meeting, found Jesus, and then came back 
+and reconciled that I was just sad because he was right. He was also 
+pointing out the obvious. (There, at least I can say that! <span style 
+= "font-size:smaller">in the anonymity of my blog, <span style = 
+"font-size:smaller;">far, far away from where he might see 
+it...</span></span>) </p><p> The link points to integrations in <a 
+href="http://openjdk.java.net/projects/coin/">Project Coin,</a> a 
+project that's taken the JDK and aggressivey evolved the language 
+to try certain features out in an isolated fork. In general, I'm 
+supportive of the movement, but it's a sad truth that any final 
+edition of JDK 7 is already late, and will likely not incorporate many 
+of those integrations in Project Coin, or even many of the originally 
+announced - big ticket changes coming straight from Sun. JDK7 is the 
+Windows Vista/<i>Longhorn</i> of the JDKs.</p><p> You remember 
+Longhorn, right? It was the code name for Windows Vista for a few 
+years. If I recall, there was talk of integrating 4 pillars or waves 
+of technology into the then-hyped next generation of Windows, 
+including <i>WinFS</i> (Am I wrong in thinking that it was called 
+something else, then? Avalon? Or am I thinking of the now-defunct Java 
+DI container?) <i>Indigo</i>, and a slew of others. As the roadmap 
+slipped further and further, more things were dropped. In fairness, in 
+2009, some of those pillars have subsequently shipped, sort of, as 
+parts of .NET 3.0-3.5x. Some are lost to the annals of history. </p> 
+<p>With a heavy heart I proceeded to code, ignoring what he said. I'm 
+tougher than that. I can handle having the rug yanked out from under 
+me. "Why would he say that about my precious Java??" I thought, typing 
+as I thought it. "I wish I could come up with something to refute his 
+claims!", I moaned. Something elegant, quick, crazy fast, and future 
+proof. Something's got the best of C#, F#, Python, JavaScript and 
+more. I tend to ignore skills I've built up over years of use and 
+revert to primitive, conveniently blog-friendly samples from tutorials 
+when I'm stressed (don't you?). And <i>boy</i> was I stressed! I 
+looked at my screen. I was really in a tizzy at this point, 
+thrashing away at the keyboard! (Like in those movies where they 
+feature somebody running their hands along the home row and suddenly 
+they've infiltrated the FBI's secret-most files.) </p><p>Here's what I 
+had typed: </p><pre><code>object Maps { 
+ val colors = Map("red" -> 0xFF0000, 
+ "turquoise" -> 0x00FFFF, 
+ "black" -> 0x000000, 
+ "orange" -> 0xFF8040, 
+ "brown" -> 0x804000) 
+ def main(args: Array[String]) { 
+ for (name <- args) println( 
+ colors.get(name) match { 
+ case Some(code) => 
+ name + " has code: " + code 
+ case None => 
+ "Unknown color: " + name 
+ } 
+ ) 
+ } 
+} 
+</code></pre><p> It was a Christmas miracle! A language on the JVM 
+that already had most of the proposed changes in Project Coin and 
+great deal otherwise <i>and</i> was very fast <i>and</i> that worked 
+on all platforms, <strike>just like Mono!</strike> Errr... that is, 
+just like Java! </p> <p>This language, <a 
+href="http://www.scala-lang.org/">Scala,</a> has gained a great deal 
+of traction in the Java community and even people you'd expect to 
+offer otherwise have endorsed it. People like James Strachan, creator 
+of Groovy, and James Gosling, creator of Java. </p> <p>I just hope 
+that other people can find out about this wonderful language. Why, 
+wouldn't it be nice if -for Java 8 (will we ever get to have a Java X? 
+How cool would that be??) - we just shipped Scala? </p> 
+<p>And that, boys and girls, is how Java outlived the cockroach, in 
+our hearts.</p> <P><i>The End!</i></p>

@@ -1,0 +1,31 @@
+title=How to Deploy Cloud Foundry to Amazon Web Services using BOSH
+date=2013-02-28
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p> 
+ Today I  was fortunate enough to learn from <A href="http://www.twitter.com/drnic"> Dr. Nic</a> as he  introduced his open source utility, <A href = "https://github.com/StarkAndWayne/bosh-bootstrap"><CODE>bosh-boostrap</CODE></a>, which makes shortwork of the chores of setting up and  deploying BOSH and Cloud Foundry on AWS.   Largely, the steps are reproduced and available on his tutorial <A href="https://github.com/StarkAndWayne/bosh-cloudfoundry/#zero-to-cloud-foundry-in-a-few-hours">which he's put online</a> online.
+</P> 
+<P>
+
+ BOSH is the orchestration manager for the underlying IaaS component - vSphere, Amazon Web Services or Open Stack.  
+</p><P>
+ BOSH in turn knows about <EM>releases</EM>, the makeup of some distributed systems, like Cloud Foundry. Cloud Foundry in turn has lots of moving parts and components, like  PostgreSQL, and NATS - the Cloud Foundry message queue.
+</p><P>
+Since BOSH deploys its own packages of components like PostgreSQL, there is a lot of compiling. This process takes a few hours with Dr. Nic's excellent utility. Most of that, happily, is just wait time as you wait for things to compile and upload or download. If you weren't using the  <CODE>bosh-bootstrap</code> utility, however, you'd spend a <EM>lot</EM> more time setting things up and configuring things. BOSH is very flexible, and overwhelming. <CODE>bosh-bootstrap</code> is opinionated, concise, and surfaces only the things it couldn't possibly devine by itself.  
+</p>
+<P> Anyway, feel free to ping <a href="http://twitter.com/drnic">Dr. Nic</a> or <A href="http://www.twitter.com/starbuxman"> me</a> on Twitter if you have questions. It was <EM>really</EM> cool to see it all startup and then be able to deploy applications to it. </p><h2> A few words of caution and advance notice: </h2> <P>
+
+ You'll need an Amazon Web Services account. The utility will leave you with 5 very expensive nodes on Amazon Web Services as well as a  <EM>lot</EM> of configured storage. You should <b>stop</b> the instances and storage or just outright delete them when you're done if you don't intend to keep it running. 
+
+ </p> <P> 
+Also,  you'll need to have a domain you can point to this. During this process  you'll be given an IP, and you'll need to create an A-name record (for <CODE>*</code>) in your DNS configuration for your hostname and point it to that IP.
+</p>
+<P>  I got the application presented here on  
+ <a href="http://preshavedyak.com/2012/12/09/barebones-cloud-foundry-youtube-post-2-5-ruby/">this Pre Shaved Yak blog post</a>   up and running at starbuxman.org, and a colleague got it working on his private instance as well. 
+ <div style = " border:1px solid black ; margin-top: 10px; margin-bottom: 10px; ">
+<img src = "/media/18608" width = "700" /> 
+</div>
+ </P>

@@ -1,0 +1,33 @@
+title=The H2 Embedded Database
+date=2010-11-23
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p>  
+I've been making heavy use of the <a href="http://www.h2database.com">H2</a> database of late.  
+ H2 represents the next big idea from the mind of the gentleman who created <a href="hsqldb.org">HSQL</a>, so, of course, it's a rock-solid alternative to that.  
+</p>
+<p> I used it for my sample code in my blog post on the SpringSource blog <a href="http://blog.springsource.com/2010/11/09/green-beans-putting-the-spring-in-your-step-and-application/">Green Beans: Putting the Spring in Your Step (and Application)</a> 
+a few weeks ago and it worked really well. 
+ Ultimately, the example demonstrated Spring's fantastic support for creating embedded databases through the <code>jdbc</code> namespace. Using the namespace, you can create an in-memory, embedded database instance, feed it setup SQL scripts, and then reference it as a datasource, all in the following 3 tidy little lines:
+</P>
+<PRE><CODE>&lt;jdbc:embedded-database id="ds" type="H2"&gt;
+  &lt;jdbc:script location="classpath:setup.sql"/&gt;
+&lt;/jdbc:embedded-database&gt;
+</CODE></PRE>
+<P> I mention this all because it'd be easy to think of H2 as <em>only</em> an embedded database.  But it's not. I've not used it in anger myself yet, but recently I've seen it used in several places I wouldn't have imagined at first. H2 itself bills itself as the most advanced open-source database out there (not just of the
+ <em>Java</em>, or <em>embedded</em> databases, but <b>all</b> of them!)
+</p>  
+<p> I'm a big believer in the power of a good workflow / business process managment system, and support and use <a href="http://www.activiti.org">Activiti</a> which is an Apache 2 licensed open-source BPMN 2.0 implementation. I'm also a  committer to the project on the SpringSource side, along with the unnaturally brilliant Mr. Dave Syer, but   my knowledge of it is mainly from using it as a consumer. Activiti stores process state in a database (this is how it's able to passivate processes over long expanses of time). The first several milestone releases of Activiti  
+featured exclusive support   for persisting process state in H2, and H2 alone. As the project nears 5.0 GA, support for PostgreSQL and MySQL have also been added, but it's pretty telling that initially H2 was and they weren't.
+</p>  
+<p> 
+ If you spend time spelunking <a href="http://git.springsource.org">git.springsource.org</a> (and why <em>wouldn't</em> you?), you'll know that it's a veritable treasure trove of code - many of the SpringSource open-source projects are there.  Users are also free to create accounts, and  clone and manipulate repositories as they like, in very much the same fashion as one might   with <a href="http://www.github.com">Github</a>. One particularly interesting project is <a href="http://git.springsource.org/greenhouse">Greenhouse</a>, which is a reference application out of which many different, great little projects have emerged like Spring Social, Spring Mobile and Spring Android. The application is an event manager for conferences. Most conferences have something like it to let you build a session schedule and be notified of changes, usually from the convenience of your mobile device, like Greenhouse. It too is built on top of H2 which is already in production and available to a non-trivial userbase. 
+</p>
+<P> The reason I use it is because I tend to do a lot of things in the interest of exhibition, and nothing beats a readily available, easily installed database. With H2, you simply download it, unzip it, <code>cd bin</code>, and then run <code>h2.sh</code>. Boom, up pops a browser which prompts you to login and off you go! You can introspect your schemas, run queries (the query editor has auto complete and is <em>ridiculously</em> intuitive, and keyboard friendly!) and do basic administrative tasks all from your browser. 
+</p> 
+<p>So, what's my point? I didn't know much about this handy little database until a year ago and now, increasingly, I find myself reaching for it all the time! Give it a go if you have a moment, as that's all you need.  
+ As I've never sat down and done a comparison against my  RDBMS-of-choice, <a href="http://www.postgresql.org">PostgreSQL</a>, I don't really know where H2 stands as an alternative, but my cursory sort of uses thus far give me the impression that it'd handily give MySQL a run for its money. </p> 
+</p> 

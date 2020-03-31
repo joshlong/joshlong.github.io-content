@@ -1,0 +1,60 @@
+# Build the Blog 
+
+name: Build the Blawg
+
+env:
+  SPRING_PROFILES_ACTIVE: ci
+  BLOG_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  # BLOG_TOKEN: ${{ secrets.BLOG_TOKEN }}
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - uses: actions/checkout@v2 
+        with:
+          repository: 'joshlong/joshlong.github.io'
+          path: content 
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+
+      - name: Cache bin folder
+        uses: actions/cache@v1
+        with:
+          path: $HOME/bin/
+          key: ${{ runner.os }}-bin
+          restore-keys: ${{ runner.os }}-bin
+
+      - name: Cache Maven repository
+        uses: actions/cache@v1
+        with:
+          path: $HOME/.m2/repository/
+          key: ${{ runner.os }}-m2
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Cache .sdkman folder 
+        uses: actions/cache@v1
+        with:
+          path: $HOME/.sdkman/
+          key: ${{ runner.os }}-sdkman
+          restore-keys: ${{ runner.os }}-sdkman
+
+      - name: Build 
+        run: |
+          git config --global user.email "josh@joshlong.com"
+          git config --global user.name "Josh Long"
+          cd $GITHUB_WORKSPACE
+          ./build_site.sh

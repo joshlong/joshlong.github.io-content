@@ -1,0 +1,239 @@
+title=A Survival Guide to Maven, OR, Why Maven's Still Cool
+date=2009-08-27
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<h2>The Problem: Confusion</h2> <P> I've had a lot of small 
+discussions recently with people where they were just absolutely not 
+interested in using Maven. Has it somehow gotten a bad reputation when 
+I wasn't looking? Am I missing something? When did I suddenly become 
+the guy using a tool that was too slow, or not agile enough for 
+everybody? I can still sing and dance and jump like you guys, too! 
+Even if I do use Maven... </P><P>So, let old Josh tell you a little 
+bit about Maven. Maybe we're not all talking about the same thing. 
+Consider this a survival guide to Maven. </P><P> Maven, like this 
+guide, assumes you're trying to solve the 80% cases effectively. 
+Already, we have a point of confusion! </P><P> I'm pretty confident 
+that your first thoughts on that last sentence were to what Maven 
+considers "80%," and you're probably wondering what you might 
+reasonably call Ant's "80%" cases. I would argue that Maven's "80%" 
+is 80% of a much, much bigger pie. </P><P> I haven't met an Ant build 
+yet that couldn't be cut down in complexity by using Maven. Sure, 
+sometimes the resulting Maven <code>pom.xml</code> was more verbose 
+(though, that doesn't happen all that often in practice, either), but 
+that's not the same as complexity. Intrinsic complexity is one thing. 
+Surface complexity is another. I define intrinsic complexity as the 
+concepts required to effectively deal with a problem in a problem 
+space. I define apparent complexity as the busy work a process 
+presents you with to obtain a goal. </P><P> I'm pretty convinced Ant 
+suffers from both of those kinds of complexities. I wasn't going to 
+start any bar fights about it, but I was pretty sure. Then, Ruby On 
+Rails debuted and made code generation popular again. It brought 
+"convention over configuration" to the mainstream. Then, I knew I was 
+on to something with Maven. </P><P> I might argue that when you 
+download Ant and decide to keep it in your tool chain, you think of it 
+as providing a solution, assuming you've configured it, to: 
+</P><OL><LI> compiling Java source files into classes </LI><LI> 
+copying resources to the right place, such as .XML files, .properties 
+files, etc. </LI><LI> generating .jar or .war artifacts from the 
+aforementioned classes. </LI><LI> generating JavaDocs. I'm adding this 
+one as a "maybe." Does anybody still do this and actually keep 
+JavaDocs floating around? Is the Eclipse or IntelliJ support for 
+rendering in-popup the contents of the JavaDoc not enough? </LI></OL> 
+<P>The enlightened Ant user will also, maybe, add dependency 
+management with Ivy to Ant's 80% cases. I mention this to be fair, 
+though I highly doubt it's that common. I suspect that a lot of Ant 
+users  would still relegate that to the fringe 20% cases. </P> <p> 
+Alright, so we have our 80%. Most people have a sample ant build.xml 
+that they've lugged around and, when it's time to seed a new project, 
+they plop it into place and it's got some variables that need to be 
+replaced and then it does most of the things above. Except JavaDocs 
+and Ivy. I'd be surprised, anyway. </p><p> Maven's got all of those 
+features - right out of the box - in 5 lines of XML and a standard 
+directory structure. This is where it stops being a fair fight. 
+   No matter how much you tug or pull against that list above, chances 
+are you're <i>at least</i> going to use Ant to compile. No way around 
+it. Even the simplest Ant configuration requires more exertion to 
+acheive that than Maven does. This point, and this point alone, is why 
+I'm just not convinced people are taking a look at this and 
+understanding it. If the goal is simplicity, then there's nothing 
+simpler than <i>nothing</i>.  If you've had to put even a moment's 
+care into that list above, than you've already wasted time and could 
+have been using Maven. 
+</p> <p> Now that I've gotten the soap-box speech out of the way, 
+read on to understand a little bit about it, including how to set it 
+up to do all the things in that list (and hundreds of other things) 
+with a few directories and a 5-6 line XML file (the 5-6 lines comes 
+from my formatting. It could easily be 3 lines of XML, if we're 
+honest. </p><h2>Things To Know</h2> <p> <b> Where Can I get Maven? 
+</b> Maven is freely available, just like Ant, <a 
+href="http://maven.apache.org/">from Apache</a>. Alternatively, many 
+distributions have it in their repositories. For Ubuntu, it's 
+<pre><code>sudo apt-get install maven2</code></pre> This version, as 
+with all repository packages, is slightly out of date. But, at least 
+you're off and running.</p> 
+<p> <b> How Do I Install Maven?</b> The simplest way is, like Ant, to 
+unzip it, and add the <code>bin</code> folder of the directory to your 
+system's <code>PATH</code> variable. Alternatively, skip to the next 
+question and simply use your operating system's repository to install 
+it, if possible. </p> 
+<p> <b> How Do I Build a Maven Project</b> Building a Maven project 
+is easy, as the command never changes. <pre><code>mvn 
+install</code></pre> 
+This is true whether it's your project or somebody elses. It's 
+predictable, and consistant. 
+To use it, ascend to the highest directory in the directory tree that 
+contains a <code>pom.xml</code> file. That's usually the parent 
+project. Usually, Maven projects cascade downwards, so you might try 
+issuing:<pre><code>mvn install</code></pre> This will generate a 
+<code>target</code> directory in each project (if there are any). 
+Inspect the <code>target</code> directory for your <code>.jar</code> 
+or <code>.war</code>, or whatever you're expecting. 
+If for some reason there's no <code>target</code> directory in the 
+directory that contains the source code you're trying to build, 
+descend into it to the point where you're adjacent to the 
+<code>pom.xml</code>. Then, issue again: <pre><code>mvn 
+install</code></pre> 
+</p> 
+<p><b>How Do I Bootstrap a New Maven Project </b> The simplest setup 
+requires the creation of directories as well as one XML file. But, 
+you'd likely create these directories and at least one XML file with 
+Ant, too. 
+</p><p>Run the following on the command line. NB: I haven't translated 
+for Windows. I'm sure it's easy enough, there, too. 
+<PRE><code>mkdir -p 
+<b>myproject</b>/src/{main,test}/{java,resources}</code></PRE> 
+You can change <b>myproject</b> to whatever you want. 
+This will create a directory structure like the following: 
+<PRE><CODE>jlong@studio:~/Desktop/myproject$ find . 
+. 
+./src 
+./src/main 
+./src/main/resources 
+./src/main/java 
+./src/test 
+./src/test/resources 
+./src/test/java 
+</CODE></PRE> 
+If you're just getting started and aren't test-driven, then you can 
+ignore <code>src/test/*</code>. 
+That leaves you with <code>src/main/{resources,java}</code>. 
+Java code goes in <code>src/main/java</code>. Things you'd like on the 
+classpath of the same artifact, such as Spring application contexts, 
+go in <code>src/main/resources.</code> 
+</p> 
+<p> Finally, you're going to need an XML POM file. POM standards for 
+"Project Object Model," I think. 
+It's the sole center for configuration related to your project. No 
+need to do includes, or externalized configuration or anything. 
+The simplest <code>pom.xml</code> looks like: 
+<pre><code>&lt;project xmlns="http://maven.apache.org/POM/4.0.0" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+http://maven.apache.org/maven-v4_0_0.xsd"&gt; 
+ &lt;modelVersion>4.0.0&lt;/modelVersion&gt; 
+ &lt;groupId>com.yourproject.crm&lt;/groupId&gt; 
+ &lt;artifactId>utilities&lt;/artifactId&gt; 
+ &lt;version>1.0-SNAPSHOT&lt;/version&gt; 
+&lt;/project&gt; 
+</code></pre>You can copy and paste that into a file called 
+<code>pom.xml</code>, at the root of the <code>myproject</code> folder 
+created above. You're done. 
+</p><p>From here, so long as you're just planning on using the JDK, 
+etc, then this will work fine.  </p> 
+<p><b>What do those directories and 5 lines of XML buy me?</b> 
+Think of that as being equivalent to hundreds of Ant targets. The 
+project already has enough information to, among other things: 
+<ol><li>Generate javadocs: <code>mvn javadoc:javadoc</code></li> 
+<li>Compile classes: <code>mvn compile </code></li> 
+<li>Compile and generate an artifact (a <code>.jar</code>, in this 
+case): <code>mvn install </code></li> 
+<li>Generate a Checkstyle report: <code>mvn 
+checkstyle:checkstyle</code></li> 
+<li>Or, in the alternative (and perhaps a complement): generate a PMD 
+report: <code>mvn pmd:pmd</code></li> 
+<li>Build a web site with documentation on the structure of the 
+project (anemic thing that it is): <code>mvn site</code></li> 
+<li>Build a cross reference of the project's sources: <code>mvn 
+jxr:jxr</code> </li> 
+<li>Setup project files for your favorite IDEs: <code>mvn 
+eclipse:eclipse</code>, or <code>mvn idea:idea</code> (<b>NB:</b> if 
+you're using <a href="http://www.intellij.com/">IntelliJ IDEA</a> 7 or 
+later, or <a href="http://m2eclipse.sonatype.org/">Eclipse with the 
+fabulous m2Eclipse plugin</a>, then you don't need these plugins. You 
+can simply 'open' the project as you would any project by importing or 
+opening the <code>pom.xml</code>. <a 
+href="http://www.netbeans.org/">Netbeans</a> also has incredible 
+support for opening Maven projects directly. </li> </ol> 
+</p><p> <b>How Do I Add JARs to the ClassPath? </b> Short answer: you 
+don't. You let Maven handle it for you. 
+If you need a <code>.jar</code>, more than likely, it's already 
+available in some repository, in the same way that a package might be 
+provisioned by an operating system (such as Windows Update on Windows, 
+<code>apt</code> on Debian distributions, <code>rpm</code> on RedHat 
+distributions, <code>port</code> on OSX, etc..). For Maven, using a 
+depdendency is as simple as identifying it and adding the metadata to 
+the <code>pom.xml</code>. </p><p> There are many ways to "find" a 
+<code>.jar</code>. The simplest is to start browsing <a 
+href="http://mirrors.ibiblio.org/pub/mirrors/maven2/">a central 
+repository</a> and opening the <code>pom.xml</code> files. To add a 
+dependency, you need it's <code>&lt;artifactId&gt;</code>, its 
+<code>&lt;version&gt;</code>, and its <code>&lt;groupId&gt;</code>. 
+These elements are usually at the top of all <code>pom.xml</code>s. To 
+add a dependency on the <a 
+href="http://commons.apache.org/lang/">Apache Commons Lang</a> library 
+to our project above, add the following lines to your 
+<code>pom.xml</code>, right before the closing &lt;project&gt; 
+element: 
+<pre><code>&lt;dependencies&gt; &lt;!-- plenty of room to add 
+dependencies --&gt;&lt;/dependencies&gt;</code></pre> 
+Inside the <code>dependencies</code> section, you will add all your 
+dependency information. The information you enter could be that for a 
+third party <code>.jar</code>, or a <code>.jar</code> in your own 
+project. Perhaps one team's project depends on another's. If Maven 
+can't find the cached version of the <code>.jar</code>, it'll download 
+it for you. 
+<pre><code> &lt;dependency&gt;&lt;groupId&gt;<b>commons-lang</b>&lt;/groupId&gt;&lt;artifactId&gt;<b>commons-lang</b>&lt;/artifactId&gt;&lt;version&gt;<b>2.4</b>&lt;/version&gt;&lt;/dependency&gt; 
+</code></pre> 
+</p> <p> To test, simply rebuild it as before: <code>mvn 
+install</code>. Most of the IDE integrations will have suport for 
+updating the project configuration in the IDE (i.e., the classpath) 
+according to what's in Maven's configuration. If you'd rather not 
+spelunk through the <code>ibiblio</code> repository site, you can 
+always use one of the many Maven repository indexes. A good one is <a 
+href="http://search.mvnsearch.org">Maven Search</a>. Type in a 
+fragment of what you're looking for and it'll provide you with 
+matches. Thus: I entered "commons-lang" and it found <a 
+href="http://search.mvnsearch.org/query.action?cat=jar&q=commons-lang">results</a>. 
+Additionally, most of the IDE's will have support for some form of 
+repository browsing.</p> 
+<p><b>I'm Test Driven!</b> 
+This one's easy. If you <i>do</i> want to use JUnit (or TestNG), then 
+fret not - that's Maven's default M.O.! By default, any JUnit classes 
+put into the <code>src/test/java</code> folder will be compiled and 
+run before proceeding with the build. 
+</p><h2> The Tour's Over, What Did You Think?</h2><p> In this guide, 
+I've given a walk through to the questions I can imagine thinking 
+about when setting up a project with Ant. The result is that you can 
+get a LONG ways with nothing (the minimal <code>pom.xml</code>). 
+</p><p> The balance of a given effort is the 20% stuff. As they say, 
+the 20% cases can take 80% of the time. I can't speak to whether this 
+is true or not as Maven's never delayed me, for any particular length, 
+except when I was pushing it to do stuff that nothing else, including 
+Ant, could have done. 
+Even so, if you hit the 20% cases, you can rest easy in the knowledge 
+that Maven is built to be flexible and extendable. It's whole model is 
+exposed as a lifecycle. If you want to inject custom logic at a custom 
+point, doing so is easy. It's also insanely interoperable. In fact, 
+even if you don't want to use Maven but wan't to get a very high 
+quality build script, setup the project using Maven and then use 
+<code>mvn ant:ant</code>. It'll generate an ant script that'll handle 
+most things you'd want to do. Finally, if you decide you absolutely 
+can't live without, or translate effectively, an Ant script, there's 
+good support for running Ant scriptlets inside of Maven. 
+</p><p> Go ahead and give it a try if you haven't tried it before or 
+if you were put off. It's truly powerful. The most visible testament 
+to this are the ideas (like Ivy) that are inspired by it in Ant. 
+</p>

@@ -1,0 +1,48 @@
+title=Tapestry 5.1
+date=2009-06-07
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<P> Recently, I've been playing with Tapestry 5. The experience has been extremely satisfying. Although there are issues that could be worked on, on the whole this is the most pleasant development environment I've ever use for Java Web development. Frankly, it started as just a way to keep my mind away from a main project I'm working on. I figured I'd give it the five minute test. Actually, this is the third time I 've given it the five minute test, and this time it took. What did it was release 5.1, which sports a few features that indicate that Tapestry 5 is becoming a very "practical" choice, not just the right one.</p><p> Tapestries 5.1 sports the ability to gzip compress, as well as consolidate, JavaScript files. It does other things with images and css, too. It's not just yet on par with JAWR - which, honestly, I love -  because there's something freeing about knowing that if your page needs libraries x, and y, that there's a component out there that's doing everything possible to make the impact of inclusion of that library acceptable. CSS and JavaScript are to the web what "jars" are to the JVM: an encapsulated packaging of externalized, reusable functionality. Being able to optimize loading them, then, is crucial. </p><p> Knowing this, I decided to give it a look. I got into it, just a little. I used the Maven Tapestry archetype and created a separate project. Downloaded Tomcat 6 and even loaded Eclipse 3.4. I imported the Maven project using the m2eclipse plug-in, setup a Tomcat 6 server instance, and deployed my application to the instance. I configured Tomcat to "serve modules without publishing," and disable auto publishing. Then I crossed my fingers and hoped for the best. I loaded the browser and hit the front page. The site that's generated is pretty, but boring. It does, however, prove inviting. I returned to Eclipse, associated the HTML editor to <code>*.TML </code> files, and then started hacking. I started with a change to a <code>.TML </code> file. <code>&lt;h1&gt;Hello, world!&lt;/h1&gt;</code>, placed in the middle of the <code>Index.tml </code> file. I refreshed. It worked...! I went to the Index class itself, and added </p>
+ <pre><code>
+ public String getMyMessage(){
+        return "Hello, moto.";
+ } </code></pre>
+ <p>
+<p> Then, on the Index.tml file, I added <code>${myMessage}</code>. </p> <p>Again, I just refreshed the browser, and it worked! In comparison to Tapestry 3 and 4, this was great. But I've blogged about <a href="http://www.joshlong.com/jl/blogPost/getting_started_with_zero_turnarounds_javarebel.html">Zero Turnaround's JavaRebel</a> product and I've certainly seen Tomcat do some neat things with regular Struts projects or Spring MVC projects. I wasn't.. aghast, just yet. Finally, I started getting into it. </p> <p> I have used the various versions of Tapestry before, so I knew  - essentially - what components to expect and essentially what to imagine possible. I had programmer courage. So I was a little more ambitious and decided I'd tackle something  a little more ambitious. I started with a component to provide a panel. The panel would have a parameter for a ValidationTracker, which is the object that keeps track of what validations have occurred on a <code>@Form </code> component (very much like <code>ActionErrors</code>/<code>ActionMessages </code> in Struts. The panel would turn red if there were errors in the form it contained. This was a hard thing to do before because Tapestry had issues with the order of the layout of the components. </P> <P> Suffice it to say, it worked. It was also blissfully simple. No interfaces, not even annotations if I didn't want them. I was able to parameterize the title of the panel using a <code>@Block </code> (like a facet in JSF). In a package adjacent to my test page, I added a simple POJO, with a few accessor / mutators (a <code>Customer </code> class, with the usual sort of properties..). I declared an instance of it on my test page's class and added a <code>@Property </code> annotation to it - I didn't have to even create a java bean style accesor! I added a Form and a few TextField components to the class, too. </p>
+<PRE><CODE>
+@Component(parameters={"value=customer.email"}) private TextField email ;
+@Component(parameters={"value=customer.password"})  private TextField password ;
+@Component private Form form ;
+</CODE></PRE>
+<p>On my page, the I had:</p>
+<pre><code>
+&lt;form t:id="form"&gt;
+ &lt;t:label for="email" /&gt; &lt;input t:id="email" /&gt; &lt;br/&gt;
+ &lt;t:label for="password" /&gt; &lt;input t:id="password" /&gt; &lt;br/&gt;
+ &lt;input t:id="signup" type="submit" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p> This seemed like enough, so I hit refresh and .. unsurprisingly, it worked!
+ Naturally, this doesn't do anything. I wanted to make the <code>Form</code> component do something on successful submission.
+ I looked around, and the simplest way to do that was to name a method as though I was descrbing it in English:
+
+  <pre><code>
+  void onSuccessFromForm()  {
+    System.out.println( new ReflectionToStringBuilder( this.customer).toString()) ;
+  }
+  </code></pre>
+</p>
+
+<p>And of course, <i>that</i> worked!
+ It's worth mentioning that during all of this - method additions, field additions, component adjustments, etc, I've not redeployed or published or even waited for more than a split second even once.
+The 5 minutes had become an hour. The reason I write this blog is because I'm now well into hour 7, and I'm thoroughly impressed. It's actually <i>fun</i> to work in.
+
+ If you've ever had that <i>wow!</i> moment in a dynamic language where you just can't beleive how nice it is to hit refresh and work, then you'll appreciate Tapestry.
+ I can't usefully compare it to another Java framework because there's nothing like it. It's liberating. Check out Neal Ford's amazing <a href="http://library.theserverside.com/detail/RES/1242309506_447.html?asrc=vcatssc_sitepost_05_14_09">"On the Lame From The Furniture Police"</a>
+  to watch a discussion on keeping focus, flow while working. In it, he basically discusses just how damaging a minute idle time is when developing an application.
+  Tapestry breaks that cycle for you. No more flow stoppages. I've become impatient with the browser's ability to repaint, actually!
+</p><P>I wholely recommend you take a look at <a href="http://tapestry.apache.org">Apache Tapestry 5.1</a>.</p>

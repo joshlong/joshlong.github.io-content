@@ -1,0 +1,18 @@
+title=AOP's Not Just Logging
+date=2011-07-05
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<P>If you've ever read about <a href="http://static.springsource.org/spring/docs/3.0.x/reference/aop.html#aop-introduction">Spring's powerful AOP support</a> then you've probably heard about the canonical example of  introducing logging functionality  - a <em>cross-cutting</em> concern - to your beans. The example goes like this: you want to log the start and stop time for every method invocation. You can either modify every method and introduce logging, which is tedious and error-prone, or you can simply use AOP to <em>wrap</em> every method invocation. With AOP, you'll get a chance to perform logging every time a method is started and finished, or both! This is a common example, but it doesn't even begin to illustrate how powerful AOP can be. The most powerful example of AOP is perhaps the Spring framework itself. It uses it every where! Let's look at some common examples:</P>
+ <UL><LI> In Spring, beans are by default singletons and have no particular guarantees about thread-safety. This is fine most of the time as many objects are thread-safe (e.g., the <code>JdbcTemplate</code>) so consumers never need to know. This usually ends up being the most performant, and most natural, style of Spring bean. One example where Spring uses AOP to acheive the feeling of thread-safety without concerning the developer with it is in  Spring's <code>EntityManager</code> support. Spring will correctly inject a  proxy <code>EntityManager</code> using AOP. <code>EntityManager</code>s   are <EM>not</EM> thread-safe, but the consumer doesn't need to know. As an example, you might write: <code>@PersistenceContext EntityManager em.</code> Spring   then  automatically routes all concurrent requests to the appropriate, thread-local instance being maintained in the background.
+    </li>
+ <LI> 
+	 Spring's declarative transaction management is based heavily on AOP. With a single annotation, Spring can start a transaction before your method is invoked, then commit (or, in the case of an exception, roll it back) when the method terminates. You don't need to know about this as a consumer, of course, but behind the scenes.
+	</li>
+	<LI>Spring Security can guard method invocation access, limiting
+		
+	the call to clients that are secured. This authentication checks against a security context, and - if authorized - proceeds. This works through the judicious use of AOP and some thread local state.</li>
+</UL>
+                                                                                                                                                                                                          

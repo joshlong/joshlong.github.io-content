@@ -1,0 +1,149 @@
+title=Spring Corner: Beyond the FactoryBean
+date=2011-07-23
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<DIV  style = "padding:10px; background-color:#999; ">
+I've decided I'm going to try to write up a series of small posts on things about Spring that are perhaps common knowledge, but helpful to know, anyway. 
+These posts are geared decidedly towards newcomers, though old hats might learn a thing or two. 
+</div>
+<P>
+ 
+I looked at what a basic <code>FactoryBean</code> is in my previous post. While <code>FactoryBeans</code> are important - and knowing what they do can help you navigate
+the framework - they're by and large no longer the recommended approach to the task as of Spring 3.0 and the imminent Spring 3.1.	</p>
+  <p>
+	The whole point of a <CODE>FactoryBean</CODe> is to hide the construction of an object - either because it's  very complex or because it can't simply be instantiated using that  typical constructor-centric approach  used by the Spring container (Maybe it needs to be looked up? Maybe it needs a static registry method?)  
+	 </p> 
+	<P> Spring 3.0 saw the introduction of  Java configuration which lets you define beans using Java.  For instance, to register a regular <code>javax.sql.DataSource</code> with Spring in XML, you   will more than likely delegate to a properties file for the sensitive configuration information (like a database password) and use Spring to instantiate the <code>javax.sql.DataSource</code>, like this:
+		</p> 
+		
+<pre> 
+&lt;beans ...&gt;
+	&lt;context:property-placeholder location = "<B>ds.properties</B>" /&gt;
+	
+	&lt;bean id = "<B>ds</b>" class = "<B>a.b.c.MySqlDataSource</b>"&gt;
+	  &lt;property name = "user" value = "${<B>ds.user</b>}"/&gt;
+	  &lt;property name = "password" value = "${<b>ds.password</b>}"/&gt;
+	&lt;/bean&gt;
+&lt;/beans&gt;
+</pre>
+<P> This is a simple bean, and translates naturally into Java configuration. It would look like this:
+	</p>
+<Pre>
+import a.b.c.* ;
+	
+@Configuration 
+@PropertySource("<B>ds.properties</B>") 
+public class MyConfiguration { 
+    @Inject private Environment env ; 
+	
+    @Bean public <b>MySqlDataSource</b> <b>ds</b>(){ 
+        MySqlDataSource ds = new MySqlDataSource() ; 
+        ds.setUser( env.getProperty("<B>ds.user</b>") );
+        ds.setPassword( env.getProperty("<B>ds.password</b>"));
+        return ds; 
+    }
+}
+</pre>
+	
+	
+	<P> The beauty of this is that you're free to do anything you'd like inside the method. The return value is what's registered in the Spring container. 
+		
+		Anything you do in service of properly constructing this object is up to you - you're no longer bound by the limits of what Spring can instantiate based on the XML specified.  And, this is more natural - it's far easier to guarantee there's no typos using Java than XML.  
+		
+		So, take away from this that Java configuration is - about equal in terms of lines of code, but a lot more powerful, and conceptually more natural.		 
+	 </p> <P> With those limitations lifted, the value of the <code>FactoryBean</code> is starting to lessen. After all, if all a <code>FactoryBean</code> does is encode construction logic in a novel or unique way, then there's no reason that couldn't be done inside a Java configuration method, is there? 
+Let's revisit the example from the last blog post, a custom <code>FactoryBean</code> designed to factory cars.
+		</p>
+	<PRE>
+public class MyCarFactoryBean implements FactoryBean&lt;Car&gt; {
+  private String mark; 
+  private int year ;
+  public void setMark(String m){ this.mark =m ; }
+  public void setYear(int y){ this.year = y; }
+  public Car getObject(){ 
+    // wouldn't be a very useful FactoryBean 
+    // if we could simply instantiate the object ;-)
+    CarBuilder cb = CarBuilder.car();
+	
+    if(year!=0) cb.setYear(this.year);
+    if(StringUtils.hasText(this.mark)) cb.setMark( this.mark); 
+    return cb.factory(); 
+  }
+  public Class<Car> getObjectType() { return Car.class ; } 
+  public boolean isSingleton() { return false; }
+} 
+</pre>
+ <P> In this example, we only conditionally set values if there are values to be set.  So, we do some dancing around to ensure that we have values. This code is ugly, because it has a lot of different execution paths, but it's not particularly novel.  We're adults, we can do this sort of thing ourselves. Let's dispose of the <code>FactoryBean</code> and simply use Java configuration to replace it for a definition of a <code>Car</code>. Again, we happen to know what configuratoin we need,
+	so we don't have to duplicate the null checks in our code.
+	</p>
+	
+	<Pre>
+@Bean public Car honda(){ 
+	return CarBuilder.car()
+	.setYear( 1984 )
+	.setMark("Honda")
+	.factory(); 
+}
+</pre> 
+<P>
+	Not bad! We no longer need the complex <code>FactoryBean</code>, and we have a usable bean definition. 
+	
+	If we wanted to make this reusable, we could, as well, by simply creating a factory method, like this:
+	
+	</p>
+ <PRE>
+// presumably exposed from some place where other configuration classes can reuse it.
+public Car buildCar(int year, String make){ 
+    CarBuilder cb = CarBuilder.car();
+    if(year!=0) cb.setYear( year);
+    if(StringUtils.hasText( mark)) cb.setMark( mark); 
+    return cb.factory();
+}
+...
+// now the Spring definition itself is even simpler, <em>and</em> it's reusable!
+@Bean public Car honda() {
+	return car(1984, "Honda") ;
+}
+</PRE>
+<P> In Spring 3.1, there are many places where Spring also provides a <em>Builder</em> alternative to a <code>FactoryBean</code>.  A Builder, as a pattern, is conceptually simialar to a <code>FactoryBean</code>. In practice, however, they are usually exposed like the <code>CarBuilder</code> demonstrated above. They are 
+	typically chainable - a method returns <code>this</code> and so subsequent invocations don't need to dereference the object, they can 
+	 continue <em>chaining</em> invocations. 
+	 Additionally, a Builder usually does the null pointer checks that I forced in the previous code. 
+	
+	So, a properly rewritten <code>CarBuilder</code> object usage might look like this:
+	</p>
+	<pre>
+@Bean public Car honda(){ 
+ return CarBuilder.car()
+  // doesn't matter if the parameters are null - 
+  // it'll validate in the <b>factory()</b> method
+  .setYear( 1984 )  
+  .setMark( "Honda" )
+  .factory();
+}
+</pre>
+<P>A great example of a builder providing a much smoother experience in 3.1 over Spring's		<code>FactoryBean</code>s is the new Hibernate 3 <code>SessionFactoryBuilder</code>, whose usage looks like this:
+	</p>
+	
+	<PRE>
+		
+@Configuration  
+@EnableTransactionManagment 
+public class ServiceConfiguration {  
+	
+  @Bean public javax.sql.DataSource dataSource(){ ... }
+  @Bean public SessionFactory hibernate3SessionFactory(){ 
+     return new AnnotationSessionFactoryBuilder()
+ 	     .setDataSource(dataSource())
+ 	     // you could do this:
+ 	     //.setAnnotatedClasses( Customer.class, LineItem.class, Order.class )
+ 	     // or simply scan a package where your entities live
+ 	     .setAnnotatedPackages( Customer.class.getPackage().getName()) 
+ 	     .buildSessionFactory();
+ }
+}
+</pre>
+  <P>The equivalent <code>FactoryBean</code>s now delegate to these builder classes, in fact! </p > 

@@ -1,0 +1,8 @@
+title=Salesforce.com's new language/platform pack: "Apex"
+date=2007-01-28
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p>I just noticed Salesforce.com’s latest step towards platform domination: <a href="http://developer.appexchange.com">Apex.</a><br><br>I like the name.  Cool. Sounds like Apress, and Ajax. Half buzz, half hard-hitting tech done cheap, with just a twist of that  je ne sais quoi, that “this could be a Windows codename” quality. Yeah! <br><br>I like the possibilities. The market for middle ware integration is astonishing. The application that’s readily customized is the application that more readily adapts, and is adapted. This should go a long way towards removing all the edge cases defying Salesforce.com’s proliferation. Apparently, they have a little less than 30,000 customers. I don’t know if that’s individual users or entities, or what. It’s not nothing. Interesting: the inclusion of  LINQ-style sql objects:<br><code><br>Account acc = [select Id from account where name = 'xxx'];<br>Account[] accs = new Account[]{acc};<br>System.assert(accs[acc.id] != null);<br></code><br>It’s a typed SQL query, embedded inline with your java. Not like those opaque String queries I keep hearing about… <br><br>I got the hint on all of this from eWeek magazine, in a small blurb about Apex of the January 22 issue. To my chagrin I get to the salesforce.com site, and start looking around right there, not too deeply linked,  is <a href="http://blog.sforce.com/sforce/2007/01/apex_and_pure_v.html">Peter Coffee</a>, formerly  a columnist of 18 years at eWeek. He’s just switched jobs! Good luck, Peter!</p>

@@ -1,0 +1,20 @@
+title=http://code.google.com/p/java-libcdrip/
+date=2008-10-02
+type=post
+tags=blog
+status=published
+~~~~~~
+
+I've just <a href="http://code.google.com/p/java-libcdrip">open sourced and released</a> on Google code an Open API for interacting with CDDA data from Java. Right now the API does basics, only: 
+
+<ul><li> Eject a disc from a drive</li><li> Provide information about whether a CD is loaded</li><li>List the devices on the system (though this seems to be a little flaky at the moment, so we'll have to implement a strict policy of no refunds! &lt;grin&gt;</li><li>Enumerate how many tracks there</li><li>Rip tracks to a .WAV <code>java.io.File</code> object.</li><li>Derive the DISCID from the CD, which in turn can be used to get CDDB data</li></ul> 
+
+<p>Naturally, there are many things <a href="http://code.google.com/p/java-libcdrip/issues/list">to do be done</a>, and the list is constantly growing.</p>
+
+<p>The code itself is JNI code that exposes native code that I've built using two <strong>amazing</strong> open source projects.</p>
+
+<p> On Linux, I'm using <code>grip</code>, <code>cdio</code>, and more, not to mention the GNU toolchain. On Windows, I'm using <code><a href="http://cdexos.sourceforge.net/">CDex</a></code>. 
+</p> 
+
+<p> Since the layer of code that is actually mine is very thin (just enough to normalize the two APIs so that I could get them to conform the JNI-vended header files), it would not be very much use working on this project (unless you <strong>REALLY</strong> want to<strong>!</strong>) Instead, support those projects directly. </p>
+<p>Any feedback on the project is helpful. The C/C++ code is sort of slapdash and isn't necessarily the easiest to build unless you've had time with <a href="http://www.eclipse.org/cdt/">Eclipse CDT</a> or Visual Studio .NET 2008, which is why there are prebuilt binaries in the <code>lib</code> directory in subversion.

@@ -1,0 +1,59 @@
+title=The Week Spring 3.1 Went GA, or, The Holidays Begin Now!
+date=2011-12-17
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<P> 
+  This week has been nothing short of a rollercoaster! 
+ The week started with Spring 3.1 debuting, chock full of new features. From the release announcement, 
+</p> 
+<p>
+ </P>
+ <OL> <LI> The environment abstraction and the associated bean definition profiles, along with centrally configurable property sources for placeholder resolution.  </LI>
+	<LI> Java-based application configuration based on @Enable* annotations on configuration classes, allowing for convenient container configuration: e.g. using @EnableTransactionManagement to activate declarative transaction processing.
+		</LI>
+		<LI>
+			
+ The cache abstraction with our declarative caching solution (@Cacheable etc) on top, focusing on convenient interaction between application code and cache providers.
+</LI>
+<LI> The Servlet 3.0 based <CODE>WebApplicationInitializer</CODE> mechanism for bootstrapping a Spring web application without web.xml! This is a key piece in Spring's web configuration story, providing a rich alternative to XML-based bootstrapping.
+	</li>
+ <LI> Revised MVC processing with flash attribute support, a new <CODE>@RequestPart</CODE> annotation, and further REST support refinements. This new <CODE>HandlerMapping</CODE>/<CODE>HandlerAdapter</CODE> variant is also highly extensible for custom MVC needs.
+Beyond the above major themes, we invested into our O/R Mapping support, allowing for JPA package scanning without <CODE>persistence.xml</CODE>, and supporting Hibernate 4.0 (CR7 at this time - we will fully support Hibernate 4.0 GA once released). </LI>
+<li>Last but not least, this is the first Spring release with first-class Java 7 support. While older Spring versions run perfectly fine on Java 7, Spring 3.1 goes the extra mile and fully supports JDBC 4.1 as well as convenient <CODE>ForkJoinPool</CODE> setup and injection.
+	</li> 
+	<LI> As usual, this release also includes many recent bug fixes. Spring 3.1 is fully compatible with Spring 3.0 and continues to have Java 5+ and Servlet 2.4+ as minimum system requirements. We recommend a Spring 3.1 upgrade to all Spring 3.0.x users. </LI>
+	</ol>
+	<P> 
+ That was Tuesday. The web reacted as expected, with news announcements aplenty, <a href = "http://www.theserverside.com/news/thread.tss?thread_id=63370">on TheServerSide</a>, on <A href = "http://www.infoq.com/news/2011/12/spring31">InfoQ</a>, and on <a href= "http://www.dzone.com/links/r/spring_31_goes_ga.html">Dzone</a>, and <a href= "https://www.google.com/search?ix=heb&sourceid=chrome&ie=UTF-8&q=spring+3.1+goes+GA">on a zillion other sites, too</a>.
+	</P>
+	
+	<P> Then, Costin Leau, who I'm pretty sure never sleeps, shipped  
+		<a href= "http://www.springsource.org/node/3336">Spring Data Gemfire 1.1.0</a>, and <a href= "http://www.springsource.org/node/3337">Spring Data Redis 1.0.0</a>, 
+   both of which have many new features and are compatible with Spring 3.1. 
+ 
+</P>
+<P> Then, <a href= "http://feedproxy.google.com/~r/SpringSourceTeamBlog/~3/YZic2TTMh1A/">Grails 2.0 was released</a>, also compatible with Spring 3.1. </P> 
+ <P> <EM>Then</Em>,  <A href = "http://www.springsource.org/node/3338">vFabric SQLFire 1.0 was Released</a>!
+	
+	SQLFire, for those of you who haven't heard about it before, is an SQL92 compliant database that runs on top of GemFire, the distributed data grid product from VMware. It can be used to run, unchanged, a good many existing RDBMS applications and acheive drastic improvements in speed immediately.  This has little to do with Spring 3.1, but is instead a release of its own import, also released in the last week. 
+	 </P>
+	<P> Then, Spring Social 1.0.1 was released, <em>also</em> compatible with Spring 3.1! Spring Social's release is important too because other projects depend on it. So, we can expect to see the floodgates open even more soon with more releases, all because Spring 3.1 was released. 
+		</p> 
+		<P> To top things off, <a href= "http://www.springsource.org/node/3340">Oleg Zhurakousky's interview at JavaOne with InfoQ on messaging, Spring, and the cloud</a> is now available, and so is  <a href = "http://www.infoq.com/presentations/Making-the-Mobile-Web-Native-with-PhoneGap">Roy Clarkson and Keith Donald's SpringOne2GX talk on Making the Mobile Web Native with PhoneGap</a>. 
+			</P> <P> Awesome. </P> 
+			
+			<P> I for one, need a breather. Can't wait until this weekend. 
+				</P> 
+			
+			<P> 
+				 Next week's going to be crazy, as well. I'll be at the <a href= "http://www.sdjug.org/">San Diego JUG on December 20th</a>, talking about all things Spring and Cloud Foundry. There are actually two talks, one on Spring and Cloud Foundry, and another still on Tailoring Spring for Custom Usage. 
+				 Hope to see you there!
+ 
+			</P>	
+			
+				
+			
+			

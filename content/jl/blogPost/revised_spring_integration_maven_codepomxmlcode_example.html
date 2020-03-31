@@ -1,0 +1,107 @@
+title=Revised Spring Integration Maven <code>pom.xml</code> Example
+date=2009-02-04
+type=post
+tags=blog
+status=published
+~~~~~~
+
+ 
+
+<p> I published an article on <a href="http://www.infoq.com/articles/Spring-Integration-Joshua-Long">Infoq.com recently</a>.
+The code was sound but it used the cock-a-many OSGi friendly
+ Maven jar dependencies that were being provided off the Spring Source Maven repository.
+ 	The problem was that these jars were custom to SpringSource's build of the product. If you had
+ 	an existing Spring application and then you introduced the Spring Integration jars it would
+ 	bring down a different set of jars -- possibily conflicting with your existing jars' classes.
+
+It wasn't addressable using Maven's <code>dependencyManagement</code> element either, as the <code>artifactId</code>s were different.
+
+A bug was <a href="http://jira.springframework.org/browse/INT-245">filed</a>. Finally - and regretfully after the article was beyond my editorial control  - the correct
+ jars are in the public Maven repository using the correct for the Spring Framework proper.
+ </p> <p>What follows is my sample POM for another project. Use it at your discretion. Please note that in this case <code>&lt;spring.version&gt;</code> is <code>2.5.6</code> and <code>&lt;spring.integration.version&gt;</code> is <code><b>1.0.1.RELEASE</b></code>. That updated version is the release that contains the corrected revisions. Upgrade time!
+<pre>
+    &lt;dependencies&gt;
+             &lt;dependency&gt;
+                 &lt;groupId&gt;log4j&lt;/groupId&gt;
+                 &lt;artifactId&gt;log4j&lt;/artifactId&gt;
+                 &lt;version&gt;1.2.14&lt;/version&gt;
+             &lt;/dependency&gt;
+             &lt;!-- COMMONS STUFF --&gt;
+             &lt;dependency&gt;
+                 &lt;groupId&gt;commons-lang&lt;/groupId&gt;
+                 &lt;artifactId&gt;commons-lang&lt;/artifactId&gt;
+                 &lt;version&gt;2.2&lt;/version&gt;
+             &lt;/dependency&gt;
+             &lt;dependency&gt;
+                 &lt;groupId&gt;commons-io&lt;/groupId&gt;
+                 &lt;artifactId&gt;commons-io&lt;/artifactId&gt;
+                 &lt;version&gt;1.1&lt;/version&gt;
+             &lt;/dependency&gt;
+             &lt;dependency&gt;
+                 &lt;groupId&gt;commons-collections&lt;/groupId&gt;
+                 &lt;artifactId&gt;commons-collections&lt;/artifactId&gt;
+                 &lt;version&gt;3.2&lt;/version&gt;
+             &lt;/dependency&gt;
+             &lt;dependency&gt;
+                 &lt;groupId&gt;commons-beanutils&lt;/groupId&gt;
+                 &lt;artifactId&gt;commons-beanutils&lt;/artifactId&gt;
+                 &lt;version&gt;1.7.0&lt;/version&gt;
+             &lt;/dependency&gt;
+             &lt;!-- SPRING FRAMEWORK --&gt;
+             &lt;dependency&gt;
+                 &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+                 &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+                 &lt;version&gt;${spring.version}&lt;/version&gt;
+             &lt;/dependency&gt;
+             &lt;dependency&gt;
+                 &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+                 &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;
+                 &lt;version&gt;${spring.version}&lt;/version&gt;
+             &lt;/dependency&gt;
+             &lt;dependency&gt;
+                 &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+                 &lt;artifactId&gt;spring-context-support&lt;/artifactId&gt;
+                 &lt;version&gt;${spring.version}&lt;/version&gt;
+             &lt;/dependency&gt;
+             &lt;dependency&gt;
+                 &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+                 &lt;artifactId&gt;spring-core&lt;/artifactId&gt;
+                 &lt;version&gt;${spring.version}&lt;/version&gt;
+             &lt;/dependency&gt;
+             &lt;dependency&gt;
+                 &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+                 &lt;artifactId&gt;spring-aop&lt;/artifactId&gt;
+                 &lt;version&gt;${spring.version}&lt;/version&gt;
+             &lt;/dependency&gt;
+             &lt;dependency&gt;
+                 &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+                 &lt;artifactId&gt;spring-aspects&lt;/artifactId&gt;
+                 &lt;version&gt;${spring.version}&lt;/version&gt;
+             &lt;/dependency&gt;
+ 	  		&lt;dependency&gt;
+ 				&lt;groupId&gt;org.springframework.integration&lt;/groupId&gt;
+ 				&lt;artifactId&gt;spring-integration-core&lt;/artifactId&gt;
+ 				&lt;version&gt;${spring.integration.version}&lt;/version&gt;
+ 			&lt;/dependency&gt;
+ 			&lt;dependency&gt;
+ 				&lt;groupId&gt;org.springframework.integration&lt;/groupId&gt;
+ 				&lt;artifactId&gt;spring-integration-httpinvoker&lt;/artifactId&gt;
+ 				&lt;version&gt;${spring.integration.version}&lt;/version&gt;
+ 			&lt;/dependency&gt;
+ 			&lt;dependency&gt;
+ 				&lt;groupId&gt;org.springframework.integration&lt;/groupId&gt;
+ 				&lt;artifactId&gt;spring-integration-file&lt;/artifactId&gt;
+ 				&lt;version&gt;${spring.integration.version}&lt;/version&gt;
+ 			&lt;/dependency&gt;
+ 			&lt;dependency&gt;
+ 				&lt;groupId&gt;org.springframework.integration&lt;/groupId&gt;
+ 				&lt;artifactId&gt;spring-integration-jms&lt;/artifactId&gt;
+ 				&lt;version&gt;${spring.integration.version}&lt;/version&gt;
+ 			&lt;/dependency&gt;
+ 			&lt;dependency&gt;
+ 				&lt;groupId&gt;org.springframework.integration&lt;/groupId&gt;
+ 				&lt;artifactId&gt;spring-integration-adapter&lt;/artifactId&gt;
+ 				&lt;version&gt;${spring.integration.version}&lt;/version&gt;
+ 			&lt;/dependency&gt;
+        &lt;/dependencies&gt;
+        </pre>

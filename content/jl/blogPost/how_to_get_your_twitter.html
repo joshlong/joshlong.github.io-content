@@ -1,0 +1,34 @@
+title=How to get your twitter results visible on your site
+date=2008-11-08
+type=post
+tags=blog
+status=published
+~~~~~~
+
+Matt Raible added <a href="http://www.twitter.com">Twitter</a> updates to his blog. (<a href="http://www.raibledesigns.com">Exhibit A</a>). I decided to the do same. First, you'll need the twitter.js JavaScript. This can be found <a href="http://twitterjs.googlecode.com/">here</a>. I would download <a href="http://twitterjs.googlecode.com/files/twitter-1.11.2.min.js">this one</a>.  Install that script onto your site, ie: 
+ <pre><code>
+ &lt;script type = "text/javascript" src="/js/twitter-1.11.2.min.js" &gt;&lt;/script&gt; 
+ </code></pre>
+</p>
+<p> Finally, add the code on your page to configure and use it.  </p>
+<p>This looks something like this: 
+<pre><code>&lt;script type = "text/javascript"  &gt; 
+     getTwitters('twitter_box', {
+        id: 'YOUR_TWITTER_ID', 
+        prefix: '', 
+        clearContents: false, // leave the original message in place
+        count: 3, 
+        withFriends: true,
+        ignoreReplies: false
+    });
+&lt;/script&gt;   </code></pre></p>
+
+<p> This javascript tells the script to load the latest 3 updates (<code>count</code>) in the HTML element (in my case, a regular old DIV element) having ID "twitter_box". It tells the script that, if there's already something inside that DIV element, it should merely append to it, not overwrite it. </p> 
+
+<p>The <code>prefix</code> attribute let's you specify what code you want to have inserted above and beyond the link and status text. This javascript has its own little macro substitution routine! You can dynamically insert variables like the url of your tweet ("<i>tweet</i> being what a single status update on twitter is called.) into the prefix string and it'll get replaced at runtime. </p> 
+
+<p>Finally, make sure to insert the HTML element where you want the Twitter updates to display somewhere on your page. 
+</p><p>The html is easy, and could be as simple as <br/>
+<code> <PRE> &lt;div id = "twitter_box"&gt; My &lt;a href="http://www.twitter.com"&gt;Twitter.com&lt;/a&gt;. &lt;div&gt;  </PRE></code> 
+ </p>
+<p> Thanks, Matt!</p>

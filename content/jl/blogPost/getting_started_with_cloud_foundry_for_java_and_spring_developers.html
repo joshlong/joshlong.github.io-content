@@ -1,0 +1,128 @@
+title=Getting Started with Cloud Foundry for Java and Spring Developers
+date=2012-11-16
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<P> 
+   I received the following (very awesome) e-mail the other day:
+</p><BLOCKQUOTE>
+<p>	Josh-  </p><P>I have been watching a couple of your videos on YouTube, and I have some questions that are decidedly remedial, which I recognize, but i am also having trouble getting answer to them.
+</p>
+<p>	I am not a developer - I have managed  a bunch of Wordpress sites, and have built 8-10 sites with Dreamweaver, leveraging CSS and basic functionality.  I understand the basics of HTML web development, and have even built a .NET application using Visual Studio.  But I am not a developer - you could call me a hobbyist and have some nominal experience around building websites using HTML and Dreamweaver.
+</p><P>
+	However, I am running into more and more situations where knowing how to write real web applications will be beneficial...  I have installed the latest rev of STS, signed up for CloudFoundry, even configured the micro cloud on my macbook.... but now I don't know how to get started!  what do I do?  how do I build a database (vPostgres, MySQL, I don't care), and connect to it with a web application?  I can't seem to find the tutorials that are remedial enough for me.
+</p><P>
+	Any suggestions?
+<br/>
+	Thanks, Josh -... </strong>
+	</p>
+	</BLOCKQUOTE>
+	<P>A few points: he is referring to <A href= "http://youtube.com/SpringSourceDev">the SpringSourceDev YouTube channel</a>, where I have a few videos (and where you can find a slew of content from other great presenters on all things SpringSource). Additionally, I omitted his name from this email. 
+		
+  </P> 
+ <P>So, what we have here is an essentially tech-minded, but not particularly advanced, developer looking to take the plunge into the wide world of web development, and he wants to get started with <A href= "http://cloudfoundry.org">Cloud Foundry</a>.  This is an <EM>awesome</EM> (and increasingly common) occurence. <A href = "http://www.cloudfoundry.com">Cloud Foundry</a> gives an outlet to all the people and departments that want to get things on the web and in production quickly.  The cloud is an important next step, not only for the hard core developers out there, but also for the infinite many   that need technology in place, quickly, and can't or won't wait for IT to deliver it. 
+	              This happens a lot with what <A href= "http://twitter.com/chanezon">Patrick Chanezon</a> and others refer to as <A href ="http://en.wikipedia.org/wiki/Situational_application"> <EM>situational applications</EM></a>. 
+	
+	</p> <P>  I've updated and included my initial response to him below in the  hopes that it will help others.
+	 	</p>
+ <blockquote>
+<p> You say <EM>remedial</EM> like it's a bad thing! We all get started at some point.
+ </p><P>
+Cloud Foundry is a good way to get started (and continue to mastery!) with web development. </p>
+<P> An  important tool is the <code>vmc</code> command line tool. <CODE>vmc</code> is the simplest way to get started with
+this stuff. Setup vmc and interact with the command line and
+understand the tool's capabilities. Here are some <a href ="http://docs.cloudfoundry.com/tools/vmc/installing-vmc.html">docs on getting
+started with vmc </a> and the <a href= "http://docs.cloudfoundry.com/tools/vmc/caldecott.html">vmc tunnel</a>. If you have questions
+don't hesitate to reach out to me. Once you've got <code>vmc</code>  and the tunnel  installed, there's a lot you can do! </p>
+<P>If you're doing Java development, specifically, then <A href= "http://www.springsource.org/sts">the SpringSource Tool Suite (STS) is a  
+huge start</a>. 
+STS is a free, Eclipse-based distribution. It is a super set of the Java EE distribution of Eclipse, and includes a slew of handy plugins pre-installed, including  Maven support. Maven is a tool that lets you easily compile your code. While you can install STS's plugins on top of an existing Eclipse distribution, you won't get the Maven support, and that's required for this tutorial. </P><P>
+
+Cloud Foundry lets you run and manage web applications. You don't need
+to worry about the hard disk, servers, databases, RAM, etc. However,
+the compromise is that you can only run well known application stacks. <a href = "http://cloudfoundry.com">Cloud
+Foundry.com</a> supports Java (including Spring applications, and anything
+else you might want to run on a command line or inside of Tomcat 6),
+Ruby, Node.js, and Scala. Other ecosystem partners have taken the code and run their own version of Cloud Foundry, and often include extra features.
+ For example, <A href = "http://www.appfog.com">AppFog</a> has support for Python and PHP, above and beyond what  Cloud Foundry offers. 
+	<a href="http://www.tier3.com/">Tier3</a> and <a href="http://uhurusoftware.com/">Uhuru</a> both support .NET on their derivatives. 
+ So, what type of language will you use? I've written the following assuming you're going to use Spring and Java, a very common combination.  
+ </p><P>
+  
+To make sure that everything is easy to find in STS for this tutorial,
+use the <code>Window </code>-> <code>Reset Perspective</code> command.
+</p>
+  <img width ="800" src = "/media/18523"/>
+ 
+<P>
+If you're using STS (which is an Eclipse -based distribution) you'll
+need to install the Cloud Foundry WTP (web tools project) connector. Go to the <CODE> Help</code> -> <code>Eclipse Marketplace</code>. Search for "CloudFoundry" and you'll
+find the "Cloud Foundry integration for Eclipse." Install it if you
+haven't already.   </p> 
+ <img src = "/media/18512" width = "800"/>
+<P> Once installation finishes, right click on the white space in your Servers panel,
+and choose <code>New Server.</code>  
+	</p>
+
+		 <img src = "/media/18520" width = "800"/>
+	
+ <P>  Then choose  <code>VMWare</code>  -> <code>Cloud Foundry</code>.  </p> 
+		 <img src = "/media/18514" width = "800"/>
+ 
+	<p>
+Click <CODE>Next</CODE> on the first screen (there's no need to change anything
+there.) and then enter your credentials to log in to the cloud. </p>
+ <img src = "/media/18517" width="800"/>
+<P> You can verify your credentials by clicking <CODE>Validate Account</CODE>. Then,
+click <code>Finish</code>. 
+</p>
+ <P> Once installed, you can double click on the Cloud Foundry server to see what's going on in your account, just as you would from the <code>vmc</code> command line tool. The tab that presents itself can take up some serious screen real estate, so you might close the <CODE>Spring Explorer</code>,   <CODE>Outline</CODE>, and <CODE>Task List</CODE> panels, as I have. The Cloud Foundry tab has two sub tabs at the bottom: one called <CODE>Overview</code>, and another called <CODE>Applications</CODE>. You can click on an application to see the resources provisioned for the application, including which  <em>services</em> (databases, message queues, etc) have been apportioned for it and how much RAM and CPU the application is taking. </p>
+	
+<table><tr><td>	<img src = "/media/18513" width = "400"/></td><td>
+	 <img src = "/media/18510" width = "400"/>
+	
+</td></tr></table>
+<P> 
+
+To create an application, go to the <CODE> File</code> menu, choose  <CODE>New</code> ->  <CODE>Spring 
+Template Project</code>. </p>
+ <img src = "/media/18511" width = "800"/>
+ <P>  Then choose  <CODE>Spring MVC project</code> and click  <CODE>Next</code>.
+	</p>
+	 <img src = "/media/18519" width = "800"/>
+	<P>
+It might ask you to download a few kilobytes to get the tutorial if you haven't already downloaded this before. 
+If so, click <code>Yes</code>.
+</p>
+ <img src = "/media/18521" width ="800"/>
+ <P>
+ Then fill in an application name and a top-level package. The
+wizard requires 3 tokens in the top-level package name, so
+ <CODE>com.joshlong.cloudfoundrydemo</code> would work, but  <CODE>com.joshlong</code> won't.
+	</p>
+   <img src = "/media/18516" width   ="800"/>
+	<P>
+
+Once you have an application, it's easy enough to deploy it to Cloud
+Foundry. Simply drag the project from the <CODE> Project </code> panel onto the  Cloud
+Foundry server in the  <CODE> Servers </code> panel. It'll ask you to specify
+information about the application: what runtime, what language, etc.
+The defaults are good enough in this case, so just leave them as-is  and click <CODE>Next</code>.
+</p>
+ <img src = "/media/18522" width = "800"/>
+<p>Next, you'll  be asked to specify the URL for the application as well as how much memory to allocate. Again, the defaults are fine in this case.</p>
+<br/> <img src = "/media/18518" width = "800"/>
+<P>
+The application will deploy, and - if you open the URL given in a browser window - you'll be greeted with a new
+application on Cloud Foundry!
+
+
+ </p> <img src = "/media/18515" width = "800"/>
+ <P> Getting started with programming Spring is another story for another blog post   at least! 
+	 In the meantime, <A href= "http://blog.springsource.org/category/green-beans/">you might checkout the <EM>Green Beans</EM> blogs on SpringSource.org</a>
+	</P>
+ </blockquote>
+
+<p> I hope this post has been helpful. If not, always feel free to reach me at <a href= "mailto:josh.long@springsource.com">my email</a>. </p>

@@ -1,0 +1,108 @@
+title=Spring Batch's MultiResourceItemWriter
+date=2009-11-28
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p>If you've ever had to do batch processing, then you know how 
+tedious it can be to write all the infrastructure code surrounding 
+retries and error recovery and usefully handling long running 
+processing and <i>all</i> the other tedium that surrounds a typical 
+batch application. For these types of applications, I use <a 
+href="http://static.springsource.org/spring-batch/">Spring Batch</a>, 
+a batch processing framework from Dave Syer and the fine people at 
+SpringSource. 
+ </p> 
+<p>The basic idea is that you setup <code>job</code>s that have 
+<code>step</code>s, that have <code>tasklet</code>s. This the normal 
+use case, but by no means the only one. You use jobs and steps to 
+string together  sequences of processing input and writing to output 
+via a <code>reader</code> and a <code>writer</code>. 
+Spring Batch has implementations for both reading and writing that 
+will likely meet most of your needs: XML, files, streams, databases, 
+etc. There's so much interesting stuff here, so of course I humbly 
+recommend you take a crack at the documentation or read my book, <i><a 
+href="http://www.apress.com/book/view/9781430224976">Spring Enterprise 
+Recipes</a></i>. 
+</p> 
+<p> That said all said, there's no obvious way to read from an input 
+source and then write to multiple files. The use case here, in my 
+case, is <a href="http://www.google.com/webmasters/tools/">Google's 
+Sitemaps.</a> These are XML files that describe the pages on your 
+site. You list every URL possible. If you have more than 50,000 links, 
+then you must create many files and list those files in a Sitemap 
+index file. 
+ So, I wanted to read from a database and derive all the URLs possible 
+for content, and then write those to sitemap XML files, where each 
+sitemap could not exceed 50,000 entries. Spring Batch ships with an 
+adapter writer that serves exactly this purpose. It's called 
+<code>org.springframework.batch.item.file.MultiResourceItemWriter</code>. 
+You define it just like you might any other writer, except that you 
+wrap another writer with it. 
+</p> 
+<p> Here's the salient bits from my configuration. Most of this is 
+boilerplate. I don't include the configuration of the Spring Batch 
+environment, or the configuration of the reader, because those are 
+pretty typical. Note that here we configure the <code>writer</code> 
+for the <code>job</code> and in turn configure its 
+<code>delegate</code> property, where we have the real writer 
+implementation. In this case, there's no need to configure the 
+delegate writer's <code>resource</code> property.</p> 
+<pre><code> 
+&lt;beans:beans xmlns="http://www.springframework.org/schema/batch" 
+             xmlns:beans="http://www.springframework.org/schema/beans" 
+             xmlns:aop="http://www.springframework.org/schema/aop" 
+             xmlns:tx="http://www.springframework.org/schema/tx" 
+             xmlns:p="http://www.springframework.org/schema/p" 
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+             xsi:schemaLocation=" 
+http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-2.0.xsd 
+http://www.springframework.org/schema/batch 
+http://www.springframework.org/schema/batch/spring-batch-2.0.xsd 
+http://www.springframework.org/schema/aop 
+http://www.springframework.org/schema/aop/spring-aop-2.0.xsd 
+http://www.springframework.org/schema/tx 
+http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"&gt; 
+    &lt;beans:import resource="batch.xml"/&gt; 
+    &lt;job id="batchForCreatingSitemaps"&gt; 
+        &lt;step id="sitemap"&gt; 
+            &lt;tasklet&gt; 
+                &lt;chunk reader="reader" writer="writer" 
+commit-interval="${job.commit.interval}"/&gt; 
+            &lt;/tasklet&gt; 
+        &lt;/step&gt; 
+    &lt;/job&gt; 
+    &lt;beans:bean id="siteMapLineAggregator" 
+class="com...sitemapscreator.SiteMapLineAggregator"&gt; 
+        &lt;beans:property name="domain" value="${sitemaps-domain}"/&gt; 
+    &lt;/beans:bean&gt; 
+    &lt;beans:bean 
+class="com...sitemapscreator2.ResourceSuffixCreator" 
+id="resourceSuffixCreator"/&gt; 
+    &lt;beans:bean id="writer" scope="step" 
+class="<b>org.springframework.batch.item.file.MultiResourceItemWriter</b>"&gt; 
+        &lt;beans:property name="resource" 
+value="file:#{jobParameters[outputResourcePrefix]}"/&gt; 
+        &lt;beans:property name="resourceSuffixCreator" 
+ref="resourceSuffixCreator"/&gt; 
+        &lt;beans:property name="saveState" value="true"/&gt; 
+        &lt;beans:property name="itemCountLimitPerResource" value="50000"/&gt; 
+        &lt;beans:property name="<b>delegate</b>"&gt; 
+<b> 
+            &lt;beans:bean 
+class="org.springframework.batch.item.file.FlatFileItemWriter"&gt; 
+                &lt;beans:property name="encoding" value="UTF-8"/&gt; 
+                &lt;beans:property name="shouldDeleteIfExists" value="true"/&gt; 
+                &lt;beans:property name="lineAggregator" 
+ref="siteMapLineAggregator"/&gt; 
+            &lt;/beans:bean&gt; 
+</b> 
+        &lt;/beans:property&gt; 
+    &lt;/beans:bean&gt; 
+    &lt;beans:bean id="siteMapUrlRowMapper" 
+class="com...sitemapscreator.SiteMapUrlRowMapper"/&gt; 
+    ... 
+&lt;/beans:beans&gt; 
+</code></pre>

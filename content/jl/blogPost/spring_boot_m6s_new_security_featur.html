@@ -1,0 +1,43 @@
+title=Spring Boot M6's new Security features
+date=2013-11-12
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<P> <A href ="http://spring.io/projects/spring-boot">
+ Spring Boot
+</a> is a super impressive way to get started.
+ Check out the various <a href="http://spring.io/guides/"><EM>Getting Started</EM> guides </a> for more on Spring Boot itself.
+Spring Boot exposes great metadata about the application from HTTP when you  depend on the <CODE>spring-boot-starter-actuator</CODE>.
+
+Now, with M6, you can access that same information (and more!) from SSH!  Here's a screencast I created demonstrating the feature. To enable it, you must also add the <CODE>spring-boot-starter-shell-remote</code> and
+	<CODE>spring-boot-starter-security</code>.
+</P>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3R1Yt2QKs38" frameborder="0" allowfullscreen></iframe> 
+
+<P> Here's the code for the Groovy class that you can run by using the <code>spring</code> command line tool incantation: <code>spring run foo.groovy</code>:</P>
+<pre><code>
+@Grab("spring-boot-starter-shell-remote")
+@Grab("spring-boot-starter-security")
+@Grab("spring-boot-starter-actuator")
+@RestController
+class RemoteShellFriendlyController {
+
+  @RequestMapping("/users/{id}")
+	Object someData( @PathVariable int id){
+        [ someId : id ]
+	}
+
+}
+</code></pre>
+
+<P> In the screencast, I just use the default user and password. If you want use the same user and password from both SSH and HTTP, create a file <CODE>application.properties</CODE> and put it in the same directory as the Groovy script and put the following properties inside it:
+</P>
+<PRE><CODE>
+security.user.name=youruser
+security.user.password=yourpassword
+shell.auth=spring
+</CODE></PRE>

@@ -1,0 +1,42 @@
+title=Dependency Injection and Inversion of Control Have Been Commoditized
+date=2011-03-06
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<p>The world of enterprise Java looks very different than it did 10 years ago. 10 years ago, I started following the news, the open-source projects, etc. In essence, I joined the "cult" of Java and haven't looked back. Even as I write Groovy and Scala code, I <em>still</em> feel a part of that cult today.  </p> 
+<p> The marked progress  hasn't been more apparent to me than   today, when I read  that <a href="http://java.dzone.com/dose/daily-dose-mozilla-opens-app">Apache Excalibur had been retired</a>.
+Apache Excalibur, for those of you who weren't lucky enough to watch the IoC and DI wars in the early 2000s, is an IoC container that's been around <em>forever</em>. It hosted Java components that could be defined using the Avalon framework. So, Excalibur was a container with type contracts, like an EJB server was (up until November 2009 when Java EE 6 came out) to EJBs, not a POJO IoC container as you'd expect today. It was basically a way to build and manage enterprise components and also take advantage of the Avalon  component lifecycle and services. 
+ I remember looking at Excalibur in 2001 or 2002 and being very excited by it. Same with the Pico Container which also <a href="http://picocontainer.org">is still alive and kicking today,</a> to my surprise!  
+</p>
+<p>
+So... was anybody using Excalibur today (besides <a href="http://james.apache.org/">Apache James</a>, the open-source Java e-mail server, which I'm not even sure still uses it and which I quite like as a test e-mail server)? 
+Is this a market segment I've just been obvivious too? I've of course been oblivious to community trends at other big events, too. 
+When EJBs first came out, I got suckered by the press and marketing behind it and thought it was going to be a fantastic tool. It took me a year or so to get to a point where I simply didn't care anymore about my job options, I refused  work in EJBs! 
+I think the community also had the same reaction - at one point, we all sort of realized nobody else liked EJBs, either! 
+I became a huge fan of XDoclet during this period, and an even bigger fan of Ant. I no longer have 80 hours a week to spend wrestling with code that could be written in a fraction of the time in .NET or Python. I no longer like Ant, or XDoclet, of course. 
+For that matter, it    took me a long, but happy and oblivious year to realize people were employing JSF 1.0. I didn't think anybody would use JSF if things like Apache Tapestry and, later, Wicket and Echo and GWT were there. 
+So, clearly, I've got a history of bad predictions. 
+Sometimes, when a technology or trend just doesn't make any sense to me, personally, I tend to take for granted that others won't use it, too. 
+Anyway, when the IoC/DI competitions started flaring up, I paid attention because I was <em>definitely</em> looking for an alternative to the then current stack.  
+ </p><p>Things are very different today. Dependency injection is commoditized today - everyone uses the Spring framework, and some  also use Guice or CDI. Naturally, I'm <b>very biased</b> (I work for SpringSource), but I'm pretty sure you'll find that's true too. You might check job listings, or informally just ask people if they use IoC or DI, and if so, which container implementation. 
+</p>
+<p> 
+I would argue that Spring has been, from day one, a very good IoC/DI container. In the beginning, there were arguments about pure-play IoC, and how one container supported constructor-injection, and another supported method or property injection. I remember when <a href="http://hivemind.apache.org/">Apache Hivemind</a> (a project that grew as an offshoot of Howard Lewis Ship's work building Apache Tapestry 4.0) made its debut and only supported interface based injection, all the while giving us novel ideas like factory methods and method-based injection. Spring didn't pick favorites or impose philosophies - it supports all of those things!  
+ Spring goes out of its way to be as straightforward and flexible as possible. </p>
+<p>
+This too doesn't matter, I think. Conceivably somebody could simply build all of these things (and I'm sure many have) pretty easily. 
+ So, while Spring's an excellent DI and IOC container, I hardly think everyone adapted it because of that alone.
+  Spring won because it offered a component model and a supporting ecosystem of libraries and frameworks that were built from the ground up to support clean, IoC-centric, POJO-centric Java code. 
+ Core Spring (and everything you'd need to have a competent, pure-play IoC container) all lives in 1-3 <code>.jars</code>, depending on which parts you want and whether you also want the component model that comes with it.
+</p><p> It's all the other stuff that you can do with Spring that has made it a crucial tool in every developer's toolbox today.
+These frameworks deliver real value to customers because they simplify or  enable outright solutions that they couldn't otherwise build.
+ 
+I think this is more true every day as the industry continues to grow and evolve, and Spring tracks it in lockstep, providing support for all th emerging trends and technologies. The cloud and big-data are two key areas where the players and - indeed-the game itself is changing so fast that no standards body could ever hope to do a good job standardizing there. 
+ </p>
+<p>Anyway, enough of that rant. Just my two cents, as always. If you weren't paying attention to IoC or DI, then you don't know what you missed and this post won't be of much help ;-) It's interesting to see that today there's a very active debate about IoC and DI in both the .NET and ActionScript communities. The discussion there feels very simialar to the <em>intense</em> debates we had in the Java world 10 years ago. And there too, the winners will be the ones that deliver the most business value beyond simply supporting the "dependency injection" pattern.
+ 
+</p><p>Rest in peace, Excalibur.  
+ </p>
+ 

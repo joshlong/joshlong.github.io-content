@@ -1,0 +1,160 @@
+title=Building Servlets With Spring
+date=2009-08-24
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<h2>The Problem</h2> <p> <a 
+href="http://www.joshlong.com/jl/blogPost/quick_update_to_rss.html">Earlier</a>, 
+I wrote about having to build a solution using servlets to write out 
+the contents of the RSS feed for my blog. I am using JSF on this site. 
+There are solutions - like Pretty Faces - that work and provide a 
+lot of flexibility for mouting JSF logic at a given URL. So, 
+initially, my RSS and Atom feeds were being handled by a backing bean 
+in JSF. Being JSF, this necessitated the need for a session cookie 
+(even though, clearly, the RSS / Atom feeds are stateless.) </p> <p> 
+The cookie wouldn't have been so bad, except that - I think as a 
+consequence - RSS readers consuming the blog were being constantly 
+refreshed for the entire contents of the feed, because to them the 
+resultant blog requested was "different" than the previous version. 
+</p> <h2>The Solution </h2> <p>So, I planned to write a servlet that 
+handled the requests and I expose that in my JSF application.  This 
+would be a clear differentiator between the new Spring + JSF version 
+of the software running my blog and the old Spring MVC version: it's 
+uselessly difficult to support stateless endpoints with JSF, where as 
+it's as natural a goal as anything in Spring MVC. </p><p> Using a 
+servlet meant I'd lose two advantages I'd had in the JSF application 
+with Pretty Faces: bookmarkable URLs, and the convenient programming 
+environment that Spring Faces afforded me, namely, configuration, 
+dependency injection, etc. </p> <h2>Refinements</h2> <p> I decided to 
+use <a href="http://tuckey.org/urlrewrite/">URLRewrite</a> to solve 
+the boomkarkable URLs (yes, that means this site is hosting not one, 
+but <i>two</i> solutions for bookmarkable URLs in the same 
+<code>.war</code>!) and Spring's under appreciated 
+<code>HttpRequestHandler</code>. </p> <p> 
+<code>HttpRequestHandler</code> is an interface that, when 
+implemented, becomes serviceable by a Spring framework servlet. The 
+interface looks like: 
+<pre><code> 
+package org.springframework.web; 
+<br/> 
+public interface HttpRequestHandler {<br/> 
+   void handleRequest(HttpServletRequest request, 
+HttpServletResponse response)            throws 
+ServletException, IOException;<br/> 
+} 
+</code></pre></p><p>You then configure a Spring framework class 
+(<code>org.springframework.web.context.support.HttpRequestHandlerServlet</code>) 
+in your web.xml and name the servlet  the same as the bean that 
+implements the <code>HttpRequestHandler</code> interface is named in 
+your Spring application context. By virtue of the fact that your 
+<code>HttpRequestHandler</code> bean is a Spring component, you get 
+all the advantages of using Spring or Spring MVC, without having to 
+load an entire framework. 
+</p><p> For my code, the implementation looks something like the following: 
+<PRE><CODE>package com.joshlong.blawg.site.view.servlets; 
+<br/> 
+import java.io.IOException; 
+import java.util.ArrayList; 
+import java.util.Collection; 
+import java.util.List; 
+<br/> 
+import javax.servlet.ServletException; 
+import javax.servlet.http.HttpServletRequest; 
+import javax.servlet.http.HttpServletResponse; 
+<br/> 
+import org.apache.commons.lang.StringUtils; 
+import org.apache.commons.lang.exception.ExceptionUtils; 
+<br/> 
+import org.springframework.beans.factory.annotation.Autowired; 
+import org.springframework.stereotype.Component; 
+import org.springframework.web.HttpRequestHandler; 
+<br/> 
+import com.joshlong.blawg.BlogService; 
+import com.joshlong.blawg.model.Blog; 
+import com.joshlong.blawg.site.view.util.RssFeedCreationUtils; 
+import com.joshlong.blawg.utils.LoggingUtils; 
+<br/> 
+import com.sun.syndication.feed.synd.SyndEntry; 
+import com.sun.syndication.feed.synd.SyndFeed; 
+import com.sun.syndication.io.SyndFeedOutput; 
+<br/> 
+@Component("feed") 
+public class BlogFeedServlet implements HttpRequestHandler { 
+   static private String FEED_TYPE_VARIABLE = "feedType"; 
+   static private int START_FEED = 0, STOP_FEED = 500; 
+<br/> 
+   @Autowired 
+   private RssFeedCreationUtils rssFeedCreationUtils; 
+<br/> 
+   @Autowired 
+   private BlogService blogService; 
+<br/> 
+   @Autowired 
+   private LoggingUtils loggingUtils; 
+<br/> 
+   private SyndFeed buildEntryList(HttpServletRequest req, 
+HttpServletResponse res, String type, int start, int length) { 
+       SyndFeed feed = ... // build up the SyndFeed however you want 
+       return feed; 
+   } 
+<br/> 
+   private void showAllAtomBlogs(HttpServletRequest request, 
+HttpServletResponse response) throws Throwable { 
+       SyndFeed feed = buildEntryList(request, response, "atom_0.3", 
+START_FEED, STOP_FEED); 
+       response.setContentType("text/xml"); 
+       SyndFeedOutput syndFeedOutput = new SyndFeedOutput(); 
+       syndFeedOutput.output(feed, response.getWriter()); 
+   } 
+<br/> 
+   private void showAllRssBlogs(HttpServletRequest request, 
+HttpServletResponse response) throws Throwable { 
+       SyndFeed feed = buildEntryList(request, response, "rss_2.0", 
+START_FEED, STOP_FEED); 
+       response.setContentType("text/xml"); 
+       SyndFeedOutput syndFeedOutput = new SyndFeedOutput(); 
+       syndFeedOutput.output(feed, response.getWriter()); 
+   }<br/> 
+   public void handleRequest(HttpServletRequest request, 
+HttpServletResponse response) throws ServletException, IOException { 
+       try { 
+           String feedType = 
+StringUtils.defaultString(request.getParameter(FEED_TYPE_VARIABLE)); 
+           if (StringUtils.isEmpty(feedType)) 
+               feedType = "rss"; 
+           if (feedType.equalsIgnoreCase("rss")) 
+               showAllRssBlogs(request, response); 
+           else 
+               showAllAtomBlogs(request, response); 
+       } catch (Throwable th) { 
+           loggingUtils.log(ExceptionUtils.getFullStackTrace(th)); 
+       } 
+   } 
+} 
+</CODE></PRE> 
+</p> 
+<p> Thus, it's simpler than a standard Spring MVC controller or a 
+struts controller (though admittedly lacking a lot of the frills - 
+this happens to be a simple use case.</p> <p> I then configured the 
+web.xml for all of this: <code><pre> 
+   &lt;servlet&gt; 
+       &lt;servlet-name&gt;feed&lt;/servlet-name&gt; 
+       <b>&lt;servlet-class&gt;org.springframework.web.context.support.HttpRequestHandlerServlet&lt;/servlet-class&gt;</b> 
+   &lt;/servlet&gt;<br/> 
+   &lt;servlet-mapping&gt; 
+       &lt;servlet-name&gt;feed&lt;/servlet-name&gt; 
+       &lt;url-pattern&gt;/urlPatternForFeedServlet&lt;/url-pattern&gt; 
+   &lt;/servlet-mapping&gt; 
+</pre></code> 
+</p> 
+<p>Note that we've used the name fo the bean (configured using bean 
+classpath scanning, so the name is in the <code>@Component</code> 
+stereotype at the top of the class - <code>"feed"</code>.) for the 
+servlet name. Sure, it smells a bit like engineered coincadence, but 
+it works well. </p> <p>From here, all that remained was configuring a 
+URLRewrite rule to map the servlet to the endpoints visible on the 
+site right now (<code>"/jl/entries/blog.atom"</code>, and 
+<code>"/jl/entries/blog.rss"</code>)</p><p> Hope this helps 
+somebody... </p>

@@ -1,0 +1,130 @@
+title=You're looking at a work in progress..
+date=2009-08-16
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<h2>Man at work</h2>
+ <p> You're looking at a work in progress. </p>
+ <p> The software that runs this site - joshlong.com - is home-brew. I
+built it myself, not because I feel like I'm going to do an inherently
+better job than any of the numerous pre-built options - furthest thing
+from it, actually.
+</p><p>
+ I built it myself to be able to eat my own dog food. If I had to
+learn at the same pace I take on a new job and get exposed to a new
+skill set by force, I'd know much less. Practice is the only thing
+that can be usefully attributed to improved skills.
+The previous version of this site was written in Spring MVC so I could
+refine my understanding of the @MVC model and truly get a feeling for
+how it works (very nicely, I should add).
+I've long been a fan of Tapestry and have built numerous sites with
+it. I figured, with all the new work going on in the JSF world that it
+was time for me to refresh myself on that platform, especially as JSF
+2.0 creeps ever closer.
+ </p>
+<p> JSF has seen major "upgrades" (in lieu of <i>actual</i> upgrades
+from the specification) from JBoss, with Seam, and with the Spring
+Faces support from SpringSource. Additionally, RichFaces and numerous
+other projects have evolved their component frameworks so much that
+result is rarely portable, but usually very nice. In effect these
+component libraries are their own sort of framework and often carry
+their own specialized support for core framework concepts like
+component development, JavaScript, rendering (i.e., view templates),
+Ajax and internationalization. These frameworks can make JSF very
+pleasant.</p>
+
+<p>Except... when it isn't. It turns out that JSF's many weaknesses  -
+while in some places well addressed by some of these 3rd party
+solutions - are not completely surmountable, and in some cases you're
+forced to simply "grin and bear it."
+ This includes things like statelessness (you'll be greeted with a
+<code>JESSIONID</code> on your first request, for example), binary
+responses, and SEO-friendly URLs. I've talked about solutions for some
+of these problems in Spring MVC before, but they were to augment a
+capability that was already there. Here, the solutions and the
+home-brew components I had to put together were to avail myself of
+these capabilities in the first place.
+
+</p><p> For SEO-friendly URLs, I found an incredible library called <a
+href="http://ocpsoft.com/prettyfaces/">Pretty faces</a>. I'm still
+using <a href="https://jawr.dev.java.net/">JAWR</a>, as before, but
+because I'm also using RichFaces - which has its own CSS/JS
+compression mechanism, the solution's not quite as effective as I
+would have liked. Still, 2 heavily compressed, minified JS files and
+CSS files (one from JAWR, one from RichFaces) still beats 10+ HTTP
+requests on non-minified/non-gzip compressed resources required
+otherwise!)
+</p>
+
+<p> The blog software itself has many components, only about 20% of
+which is the UI layer. Thus, porting to a new UI framework's pretty
+easy because the back end and most of the processing are divorced from
+the UI layer.
+ </p>
+
+<h2>But... Why?</h2>
+ <p>No good reason, really. I know what you're thinking - "what could
+possibly be more 'website site babysitting a database' than a blog?".
+Since I'm trying to experiment with things, I've hit a few different
+places where it's paid to invest in exploiting temporal decoupling,
+and thus in investing other technologies.
+
+Most of these features are part of the creation of blogs, thus, not
+something you'll ever notice.
+  There are two ways to create blogs on this site. An administration
+section in which I can log in and post blogs and save drafts is the
+sort of first-blush approach. It works well enough, but it's not
+nearly as full featured as the equivalent functionality inside GMail
+for composing an email. So, I create a Spring Integration integration
+that polls an email and posts that. It's got a white-list on incoming
+e-mail addresses, of course, and I've had to do a few unconventional
+things to make it work, but it's actually the most fluid way to deal
+with my blog. Not surprisingly, this feature's available in other
+blogging software, too.
+</p>
+<p>
+Once I do send in a blog, processing occurs on the blog entry itself.
+The act of creating the blog triggers a jBPM process that prepares the
+blog for final publication. The jBPM process is handled  in a separate
+VM, with JMS serving as the transactional queue that pops tasks off of
+the queue and handles the work.
+ This is useful because it lets longer running tasks happen with no
+apparent delay to the readers of the site.</p><p>Any externally
+referenced images  in the blog are parsed and their URLs used to
+asynchronously download the image, which gets stored in managed file
+system. Then, in the published blog, you see a URL pointing to that
+managed image, not the original, which means if the original
+disappears, my blog will still look correct.
+</p>
+<p> Another part of the process involves submitting pings to the
+various syndicates for a blog to let them know they should update
+their listing.  This too is something that a lot of other blog
+software will do, but it can take a while which is why in my software
+it's modeled asynchronously.</p>
+<p> The number one reason for building my own blogging solution is,
+simply, that I can say I did. Because the domain model and services
+tier are familiar, it's easy to gauge progress with a UI framework by
+how quickly I'm able to build for it. </p>
+ <p> Naturally, there are many  (seemingly endless) reasons not to do
+what I've done. However, they all focus on practicality with respect
+to setting up a blogging solution. They fail as means by which to
+practice my craft. </p>
+
+<p> Having said that, please excuse any inconsistency in this blog as
+I'm still tweaking things (as I tend to do every 6 months or so.
+ The software's more or less at parity with where it was in Spring
+MVC, having ported the UI layer over. Missing are keywords and
+descriptions in the meta tags, a working version of the admin section
+(though, as I indicated, I use the e-mail integration more frequently
+and that still works since it has nothing to do with JSF or servlets),
+working titles (ie, each post's title should appear between the
+&lt;title&gt; tags in the browser window,  and I'm sure there's more.
+</p>
+<p> There are many fixes in this new software, too, but ideally,
+you'll never notice them :-) </p>
+
+ <p>If you notice anything I'm missing or you think might be worth
+experimenting with adding in a reasonably malleable blogging platform,
+leave a comment. Thanks!</p>

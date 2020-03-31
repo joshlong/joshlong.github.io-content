@@ -1,0 +1,42 @@
+title=REPL vs. Unit Tests misses the Point
+date=2013-03-20
+type=post
+tags=blog
+status=published
+~~~~~~
+
+<P> 
+  An   interesting thread emerged on Twitter today regarding ways to explore a problem: <a href="http://wikipedia.org/wiki/REPL">REPL</a> or Unit tests?   <A href="https://twitter.com/mtnygard">Michael Nygard (@mtnygard)</a> said:
+
+  </p>
+   <blockquote>Exploratory unit tests are a crappy REPL with a really slow response time.</blockquote>
+  <P>
+  This    - to mine own scripting and interpreted-language friendly ears - sounds 
+  about right. 
+  
+  On the other hand, there's definitely an argument to be made for unit tests, which a lot of people did. To wit, <a href="http://twitter.com/judsonlester">@judsonlester</a> replied:
+
+  
+  
+ </P>  <blockquote>
+  Also: a REPL is a crappy unit test that requires a lot of extra typing and programmer recall.
+  </blockquote> 
+  <P> This also makes sense! 
+	  So, we've got two great perspectives offering competing views. It's important to not to get too lost in the methodology and step back from it.
+	  What we have here are two competing perspectives on the <EM>same</EM> agreed upon approach: better programs result from <EM>thinking</EM> about the problem space before trying to solve it.
+	  I would argue that - depending on what you're trying to do - there are a lot of valid approaches. 
+	  If you're trying to build your own API that others will consume - then exploring possible arrangements in  TextMate for me is far more useful than a unit test or a REPL.
+	  
+	  If you're trying to explore and kick the tires on an unknown API, then a REPL (if it's available!) gives you more immediate feedback. Once you've gained some facts about the behavior of the API, codify them with a unit test.  
+  </p>
+  <P>
+	  This whole discussion, of course, centers around whether  or not your programming language of choice supports a REPL! I work principally on the JVM, particularly in Java and Scala. 
+	  As Java has no REPL, it can be useful to drop into some other shell or language and use that. Groovy is great for this as it is a full featured (more-than fully featured) language
+	  that you can interact with in a REPL and that can interface with JVM libraries.  
+  </p><P>
+In the same vein, years ago, there was a project called <A href="http://www.beanshell.org/"> BeanShell</a>, which provided a REPL for Java.   I confess I haven't heard much about it of late, probably due to   the prevalence of Groovy. 
+	There was even <A href="http://jcp.org/en/jsr/detail?id=274"> a JSR (JSR 274) to advance the project</a> to a standard with the expectation that it would one day be folded into the Java platform itself. 
+   </p>
+   <P> 
+ Anyway, I'm just thinking aloud. I thought it was an interesting thread. If you've got any thoughts, I'd love to hear about it on <A href="http://twitter.com/starbuxman">Twitter</a> or <a href="https://plus.google.com/u/0/105805020312347758498/posts">Google+</a>
+   </p>

@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20070124/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20070125/</loc>
+  </url>
+  
+  <url>
+    <loc>/abstracts/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/1/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20070212/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20070221/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20070224/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20070228/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20070227/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/200702241/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20070305/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20070310/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20070401/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20070322/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20070405/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20070408/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20070425/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20070429/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20070505/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20070613/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20070528/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20070722/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20070616/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20071110/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20080119/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20080412/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/200804121/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20080430/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20080525/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20080524/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/20080612/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/a_busy_november/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/a_google_music_api_please/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/a_journey_of_a_thousand/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/a_months_gap_and_no_explanation/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/a_new_post_on_artimacom_called_soa_5_years_in/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/a_quick_guide_to_posting/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/a_script_for_retrieving_wayward_os_x_windows/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/a_very_interesting_technique_for_crossdomain_ajax_requests/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/a_survival_guide_to_maven_or_why_mavens_still_cool/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/accept-incoming-request-intellij/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/a_walking_tour_of_spring_31/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/a_weekend_with_the_voices/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/adobe_max_2010/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/adding_the_actionbar_sherlock_project_to_an_android_application/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/alternatives-to-dropbox/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/and_were_back/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/an-email-on-distributed-state/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/and_were_off_2011s_moving_way_too_quick/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/anders_hejlsberg_introducing_typescript/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/anyone_else_noticing_the_extreme/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/aops_not_just_logging/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/apple_news_mobile_and_otherwise/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/arlington_va_cloud_foundry_dev_day_2012/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/belgium-03-22-2016/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/bubble_wrap/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/birthday_week_2011/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/booking_com_rewrites_the_java_based_yui_compressor_to_perl/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/breaking_the_1000ms_time_to_glass_mobile_barribreaking_the_1000ms_time_to_glass_mobile_barri/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/building_servlets_with_spring/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/chinese_weather/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/christmas_in_shanghai/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/cloud_foundry_open_tour_sofia_bulgaria/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/cloud_foundry_system_integrators_tour_india_archsummit_and_oschina_in_india_and_china_august_2012/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/cloud_native_java_is_done/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/cloudfoundry_opentour_india_2012_pune_and_bangalore/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/coffee_drinks_in_china/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/component_oriented_architectures/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/composite_components_in_jsf_12x/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/continous_integration_conundrum/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/converting_mp4s_to_gifs/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/craftconf-2016-trip-review/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/cruds_not_the_answer/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/data_integration_stream_processing_and_spring_xd/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/devoxx_2010/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/dependency_injection_and_inversion_of_control_have_been_commoditized/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/dependency_injection_with_dagger_on_android/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/devoxx_2012/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/devoxx_2011_report_and_seattle_mongo_2011/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/devoxx_2012_trip_report/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/devoxx_france_21/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/doing_the_maven_dependency_dance_for_spring_android_projects/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/dust/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/dont_want_to_use_maven_with_spring/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/embedding_the_apache_mina_ftp_server/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/functionally_processing_a_string_in_java/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/fixing_facebook/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/geecon_2011_roundup/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/getting_started_with_jbpm_and/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/getting_started_with_spring_roo/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/getting_started_with_cloud_foundry_for_java_and_spring_developers/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/getting_started_with_various_lamp_languages/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/getting_started_with_zero_turnarounds_javarebel/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/google_chrome_beta/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/goto_conference_in_aarhus_denmark_2012/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/great_content_to_get_started_with_neo4j_and_spring_data_graph/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/gwt_continues_to_produce_beautiful/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/happiness_is/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/happy_new_year_and_heres_to_2013/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/hot_to_retrieve_your_application_from_google_app_engine/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/how_to_deploy_cloud_foundry_to_amazon_web_services_using_bosh/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/how_to_get_your_twitter/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/how_to_learn_a_framework/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/how_to_ride_spring_integration/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/http_code_google_com_p/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/huh/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/icloud_part_1/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/idempotent_queues_with_hornetq_or_the_last_value_header/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/installng_postgis_and_the_tiger/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/if_you_build_it_they/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/introducing_spring_boot/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/is_this_thing_on/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/its_2014_happy_new_year/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/intellij_8_0/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/j2me_and_android_consitancy/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/java2days_2010/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/java2days_2012/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/java2days_2012_trip_report/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/java_configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/jfokus_and_vaadin_2012/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/java_configuration_with_spring_batch/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/java_configuration_with_spring_social/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/javafx_1_0_released/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/joshlongcom_on_ec2/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/lanyrd/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/keith_donald_speaking_on_spring/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/living_in_china_for_2_months/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/mamacita/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/maven_2_0_9_andromda/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/libraries_and_component_models_and_apis_in_spring_oh_my/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/moar_hypermedia/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/mobile_news_recap/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/modeling/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/moving_to_los_angeles/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/mvn_archetype_generate/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/my_christmas_wish_or_how_the_jvm_will_outlive_the_cockroach_and_net/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/my_dear_aunt_sandra/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/my_favorite_month/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/my_other_blog_on_artima/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/my_los_angeles_musings_seam_tapestry_5_javaone_spring_workflow_spring_python_and_more/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/my_post_on_spring_at_china_scale/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/my_talk_on_spring_integration_at_theserversidecom_09/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/my_trip_to_jfokus_vaadin_dev_day_and_spring_io_with_my_dad/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/my_tweet_cloud/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/mysterious_algorithm_responsible_for_4_percent_of_all_trading_activity_last_week/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/my_weekend_in_oregon/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/new_article_on_infoq_com/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/new_entry_on_artima_com/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/nice_application_to_enumerate_the_cloud_foundry_environment_properties/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/obsolescence_of_skills/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/on_damien_katz_the_unreasonable_effectiveness_of_c/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/on_java_code_style/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/one_big_bag_of_beansone_big_bag_of_beans/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/ooops/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/oracle_enterprise_pack_for_eclipse/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/oscon-2016/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/oscon_java_2011/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/peppeduporg/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/performance_and_the_restful_web/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/pieter-hintjens/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/pink_people_and_shanghai_french_conne/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/postgresql_84_and_bitronix_xa/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/programmer_pet_peeves/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/python_good_python_on_cloudfoundry_better/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/quick_update_to_rss/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/rabbitmq_is_now_officially_available_on_cloudfoundry/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/reframing_the_question/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/repl_vs_unit_tests_misses_the_point/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/rest_in_peace_ravi_shankar/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/san_francisco/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/revised_spring_integration_maven_codepomxmlcode_example/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/scalability_is_not_an_architectural_capabity_anymore_on_artimacom/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/secure_file_transfer_the_only_way_to_fly_err_copy/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/setting_up_jbpm_4s_xsd_file_in_eclipse/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/shanghai_december_4th/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/simple_things_i_do_to_os_x_itself_whenever_i_set_it_up/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/so_close_but_so_far/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/simplified_web_configuration_with_spring/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/so_much_to_do_so_little_time/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/sorry-about-jpoint/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/spanner_the_goldilocks_database/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/speaking_at_the_aarhus_denmark_java_user_group/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/speaking_at_the_oakland_jug_tonight_at_630/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/spring-cloud-guides/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/speaking_at_javazone_2011/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/spring_and_the_activiti_bpmn2_engine_at_javazone_2010/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/spring_batchs_multiresourceitemwriter/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/spring_blazeds_and_your_riathickthinfat_client/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/spring_boot_m6s_new_security_featur/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/spring_corner_beyond_the_factorybean/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/spring_corner_whats_a_factory_bean/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/spring_data_mongo_transaction_synchronization_does_not_find_a_bound_db/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/spring_enterprise_recipes_from_apress/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/spring_for_forcecom_developers/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/spring_integration_1_0_released/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/spring_integration_adapters_gateways_and_channels/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/spring_integration_and_spring_batch_on_cloudfoundry_talk_from_javazone_2012/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/spring_io_2012/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/spring_mvc_performance_ftw/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/spring_integration_at_oscon/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/springone2gx_2010/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/springing_forward/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/springone2gx_2011/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/springone2gx_2012/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/springone2gx_2012_trip_report/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/springone2gx_2013_is_coming/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/springone_beijing_and_india_trip_report/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/springsource_bag_o_swag/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/subversion_1_5_intellij_idea/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/super_productive_sick_days/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/supporting_your_own_field_or_method_injection_annotation_processors_in_spring/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/tapestry_51/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/tech_tip_geting_started_with_spring_boot/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/testng_spring_testcontext_and_maven/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/thanksgiving/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/the_apache_hadoop_ecosystem_visualized_in_datameer/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/the-version-controlled-os/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/the_h2_embedded_database/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/the_kettle_in_manhattan_beach_los_angeles_at_4am/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/the_code_that_almost_toppled/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/the_last_2_crazy_months/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/the_serverside_java_symposium_2010_recap/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/the_mystery_of_the_indexer_segfault_in_eclipse_cdt_a_true_story/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/the_times_they_are_a_changing/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/the_week_spring_31_went_ga_or_the_holidays_begin_now/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/the_west_wing_house_md_and_mythbusters/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/they_think_of_everything/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/this_guy/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/thinking_about_meebo_s_enterprise/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/travel_is_fatal_to_prejudice/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/trip_roundup_and_the_dallas_spring_user_group/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/trip_roundup_for_october_and_november/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/ubuntu_1010_maverick_meerkat_on_a_macbook_pro/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/upgrading_to_jdk_7_on_osx/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/understanding_go/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/validating_with_spring_mvc_jsr_303_and_bindingresult_arguments/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/web_framework_utility_llibraries_urlrewrite/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/web_messaging_with_spring_40s_support_for_websockets_stomp_and_sockjs/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/webinar_replay_building_rest_apis_with_spring/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/wtf_linked_lists_patented/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/whatever_is_ray_ozzie_going/</loc>
+  </url>
+  
+  <url>
+    <loc>/jl/blogPost/youre_looking_at_a_work_in_progress/</loc>
+  </url>
+  
+</urlset>
