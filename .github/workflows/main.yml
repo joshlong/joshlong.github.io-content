@@ -24,43 +24,34 @@ jobs:
 
       - uses: actions/checkout@v2
 
-      # - uses: actions/checkout@v2 
-      #   with:
-      #     repository: 'joshlong/joshlong.github.io'
-      #     path: site 
-      #     token: ${{ secrets.BLOG_TOKEN  }}
-
       - name: check out via SSH 
         run: git clone git@github.com:joshlong/joshlong.github.io.git ${GITHUB_WORKSPACE}/site
 
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
 
+      - name: Cache bin folder
+        uses: actions/cache@v1
+        with:
+          path: $HOME/bin/
+          key: ${{ runner.os }}-bin
+          restore-keys: ${{ runner.os }}-bin
 
+      - name: Cache Maven repository
+        uses: actions/cache@v1
+        with:
+          path: $HOME/.m2/repository/
+          key: ${{ runner.os }}-m2
+          restore-keys: ${{ runner.os }}-m2
 
-      # - name: Set up JDK 11
-      #   uses: actions/setup-java@v1
-      #   with:
-      #     java-version: 11
-
-      # - name: Cache bin folder
-      #   uses: actions/cache@v1
-      #   with:
-      #     path: $HOME/bin/
-      #     key: ${{ runner.os }}-bin
-      #     restore-keys: ${{ runner.os }}-bin
-
-      # - name: Cache Maven repository
-      #   uses: actions/cache@v1
-      #   with:
-      #     path: $HOME/.m2/repository/
-      #     key: ${{ runner.os }}-m2
-      #     restore-keys: ${{ runner.os }}-m2
-
-      # - name: Cache .sdkman folder 
-      #   uses: actions/cache@v1
-      #   with:
-      #     path: $HOME/.sdkman/
-      #     key: ${{ runner.os }}-sdkman
-      #     restore-keys: ${{ runner.os }}-sdkman
+      - name: Cache .sdkman folder 
+        uses: actions/cache@v1
+        with:
+          path: $HOME/.sdkman/
+          key: ${{ runner.os }}-sdkman
+          restore-keys: ${{ runner.os }}-sdkman
 
       - name: Build 
         run: |
