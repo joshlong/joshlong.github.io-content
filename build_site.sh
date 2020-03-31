@@ -14,10 +14,6 @@ which sdk
 sdk version 
 sdk install jbake $JBAKE_VERSION 
 echo "SDKMAN_DIR is ${SDKMAN_DIR} "
-
-
-# 
-
 source "${HOME}/.sdkman/bin/sdkman-init.sh"
 OUTPUT_DIR=${GITHUB_WORKSPACE}/output
 rm -rf ${OUTPUT_DIR}
@@ -26,8 +22,8 @@ cp -r content/media ${OUTPUT_DIR}/media
 cp CNAME ${OUTPUT_DIR}/CNAME
 
 # BLOG_GITHUB_URI=https://${BLOG_TOKEN}@github.com/joshlong/joshlong.github.io.git
-BLOG_GITHUB_URI=git@github.com:joshlong/joshlong.github.io.git
-BLOG_GITHUB_CHECKOUT=${GITHUB_WORKSPACE}/checkout 
+# BLOG_GITHUB_URI=git@github.com:joshlong/joshlong.github.io.git
+
 
 # rm -rf $BLOG_GITHUB_CHECKOUT
 # if [ ! -d "$BLOG_GITHUB_CHECKOUT" ]; then
@@ -37,8 +33,10 @@ BLOG_GITHUB_CHECKOUT=${GITHUB_WORKSPACE}/checkout
 #     ls -la $BLOG_GITHUB_CHECKOUT 
 # fi
 
-cd $BLOG_GITHUB_CHECKOUT && git checkout master && pwd  
-
+BLOG_GITHUB_CHECKOUT=${GITHUB_WORKSPACE}/site 
+cd $BLOG_GITHUB_CHECKOUT 
+git checkout master 
+pwd  
 cp -r $OUTPUT_DIR/* . 
 git add * 
 git commit -am "new version $NOW "
