@@ -18,13 +18,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+      - uses: webfactory/ssh-agent@v0.2.0
+        with:
+          ssh-private-key: ${{ secrets.BLOG_SSH }}
+
       - uses: actions/checkout@v2
 
-      - uses: actions/checkout@v2 
-        with:
-          repository: 'joshlong/joshlong.github.io'
-          path: site 
-          token: ${{ secrets.BLOG_TOKEN  }}
+      # - uses: actions/checkout@v2 
+      #   with:
+      #     repository: 'joshlong/joshlong.github.io'
+      #     path: site 
+      #     token: ${{ secrets.BLOG_TOKEN  }}
+
+      - name: check out via SSH 
+        run: git clone git@github.com:joshlong/joshlong.github.io.git ${GITHUB_WORKSPACE}/site
+
+
 
 
       # - name: Set up JDK 11
