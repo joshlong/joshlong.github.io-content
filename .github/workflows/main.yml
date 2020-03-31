@@ -56,4 +56,4 @@ jobs:
           git config --global user.email "josh@joshlong.com"
           git config --global user.name "Josh Long"
           cd $GITHUB_WORKSPACE
-          ./build_site.sh
+          ./deploy.sh
