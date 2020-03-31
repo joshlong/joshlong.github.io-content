@@ -16,6 +16,7 @@ cp -r content/media ${OUTPUT_DIR}/media
 cp CNAME ${OUTPUT_DIR}/CNAME
 
 cd $BLOG_GITHUB_CHECKOUT  
+cp -r $OUTPUT_DIR/* . 
 git status
 git add * 
 git commit -am "new version $NOW "
