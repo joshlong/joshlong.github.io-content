@@ -1,4 +1,4 @@
-title=Creating Datbases with the New H2 Database Server 
+title=Creating Databases with the New H2 Database Server 
 date=2020-06-12
 type=post
 tags=blog
