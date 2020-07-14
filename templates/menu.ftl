@@ -17,6 +17,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>index.html">Home</a></li>
+	    <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>feed.html">Activity</a></li>
             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>about.html">About</a></li>
             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>abstracts.html">Abstracts</a></li>
             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>livelessons.html">Livelessons</a></li>
