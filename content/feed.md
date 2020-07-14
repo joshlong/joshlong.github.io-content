@@ -41,6 +41,8 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
+* *2020-07-22* - I'll be speaking at the upcoming SpringOne Tour event at the [_Reactive Spring_ event](https://springonetour.io/2020/reactive)
+* *2020-07-14* - I'll be speaking at the [London Java Community Meetup about Kotlin](https://www.eventbrite.co.uk/e/ljc-virtual-meetup-bootiful-kotlin-tickets-112484117022).
 * *2020-04-21* - On Tuesday, April 21, 2020, I'll be speaking on "Reactive Spring" at the javaBin Online meetup and I hope to see you there! 
 
 <!-- STOP:APPEARANCES -->
@@ -232,3 +234,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2020-07-14T11:11:35.702138 -->
 
 <!-- generated 2020-07-14T11:12:51.446703 -->
+
+<!-- generated 2020-07-14T11:40:07.226951 -->
