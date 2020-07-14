@@ -41,7 +41,7 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
-* [(2020-04-21) virtual javabin meetup](On Tuesday, April 21, 2020, I'll be speaking on "Reactive Spring" at the javaBin Online meetup and I hope to see you there! )
+* *2020-04-21* - On Tuesday, April 21, 2020, I'll be speaking on "Reactive Spring" at the javaBin Online meetup and I hope to see you there! 
 
 <!-- STOP:APPEARANCES -->
 
@@ -230,3 +230,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 
 
 <!-- generated 2020-07-14T11:11:35.702138 -->
+
+<!-- generated 2020-07-14T11:12:51.446703 -->
