@@ -41,6 +41,15 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
+* *2020-09-26* - This Serbian conference is now going [to be online](https://itkonekt.com/en/)
+* *2020-09-23* - InfoShare is the largest tech conferene in CEE and it's now streaming
+* *2020-09-21* - I'll be speaking at the (now virtual) Chicago Cloud Conf again this year. 
+* *2020-09-12* - This Turkish event is now online, and I wholely encourage you to participate if you can. 
+* *2020-09-10* - This KotlinConf _may_ be turned into a virtual event. Either way, I hope to see you there.
+* *2020-09-02* - This J4K (Java and Kubernetes - what else do you need?) is going to be a ton of fun online, and I hope to see you there.
+* *2020-08-31* - It's SpringOne! Online! And FREE! Do _NOT_ miss this. I'll be there, but so will tons of other folks.
+* *2020-08-26* - I'm looking forward to being a part of this upcoming Java 25 mini-conference for [the Dublin JUG](https://ti.to/dublin-java-user-group/java25). I hope to see you there.
+* *2020-08-13* - I'll be doing a 2 day workshop at the epic YOW! event. More details will be forthcoming.
 * *2020-07-22* - I'll be speaking at the upcoming SpringOne Tour event at the [_Reactive Spring_ event](https://springonetour.io/2020/reactive)
 * *2020-07-14* - I'll be speaking at the [London Java Community Meetup about Kotlin](https://www.eventbrite.co.uk/e/ljc-virtual-meetup-bootiful-kotlin-tickets-112484117022).
 * *2020-04-21* - On Tuesday, April 21, 2020, I'll be speaking on "Reactive Spring" at the javaBin Online meetup and I hope to see you there! 
@@ -242,3 +251,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2020-07-16T02:16:51.896147 -->
 
 <!-- generated 2020-07-17T02:17:00.063243 -->
+
+<!-- generated 2020-07-17T02:58:45.983024 -->
