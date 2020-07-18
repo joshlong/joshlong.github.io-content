@@ -41,7 +41,7 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
-* *2020-09-26* - This Serbian conference is now going [to be online](https://itkonekt.com/en/)
+* *2020-09-26* - This Serbian conference - ITkonekt   - is now going [to be online](https://itkonekt.com/en/)
 * *2020-09-23* - InfoShare is the largest tech conferene in CEE and it's now streaming
 * *2020-09-21* - I'll be speaking at the (now virtual) Chicago Cloud Conf again this year. 
 * *2020-09-12* - This Turkish event is now online, and I wholely encourage you to participate if you can. 
@@ -63,6 +63,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2020-07-17) Intuit's Katie Levy on Spring Boot, Kotlin, Android and more ](https://bootiful-podcast-api.cfapps.io/podcasts/70c31ba4-f424-43a3-bbec-6f891aee6610/produced-audio) 
 * [(2020-07-10) Spring Data JDBC co-founder on JDBC, JPA and domain driven design](https://bootiful-podcast-api.cfapps.io/podcasts/a0f59cfb-d9e7-405b-8f5e-0c34894332b1/produced-audio) 
 * [(2020-07-03) Dr. Yordan Karadzhov on instrumenting and visualizing the Linux Kernel](https://bootiful-podcast-api.cfapps.io/podcasts/c1b8b860-8e1a-4b16-bfc2-9db88b7754ab/produced-audio) 
 * [(2020-06-25) VMware Principal Engineer and Tanzu Wavefront co-founder Clement Pang](https://bootiful-podcast-api.cfapps.io/podcasts/4b743f6c-fdf6-4d0f-9bcc-fb47537fc0e7/produced-audio) 
@@ -253,3 +254,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2020-07-17T02:17:00.063243 -->
 
 <!-- generated 2020-07-17T02:58:45.983024 -->
+
+<!-- generated 2020-07-18T02:16:26.075752 -->
