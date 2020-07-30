@@ -49,7 +49,7 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 * *2020-09-02* - This J4K (Java and Kubernetes - what else do you need?) is going to be a ton of fun online, and I hope to see you there.
 * *2020-08-31* - It's SpringOne! Online! And FREE! Do _NOT_ miss this. I'll be there, but so will tons of other folks.
 * *2020-08-26* - I'm looking forward to being a part of this upcoming Java 25 mini-conference for [the Dublin JUG](https://ti.to/dublin-java-user-group/java25). I hope to see you there.
-* *2020-08-13* - I'll be doing a 2 day workshop at the epic YOW! event. More details will be forthcoming.
+* *2020-08-13* - I'll be doing a 2 day workshop at the [epic YOW! event](https://www.eventbrite.com.au/e/yow-workshop-2020-cloud-native-java-aug-14-18-2020-tickets-114222161560?aff=social) on _Cloud Native Java_.
 * *2020-07-22* - I'll be speaking at the upcoming SpringOne Tour event at the [_Reactive Spring_ event](https://springonetour.io/2020/reactive)
 * *2020-07-14* - I'll be speaking at the [London Java Community Meetup about Kotlin](https://www.eventbrite.co.uk/e/ljc-virtual-meetup-bootiful-kotlin-tickets-112484117022).
 * *2020-04-21* - On Tuesday, April 21, 2020, I'll be speaking on "Reactive Spring" at the javaBin Online meetup and I hope to see you there! 
@@ -279,3 +279,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2020-07-28T02:17:45.370244 -->
 
 <!-- generated 2020-07-29T02:17:41.036051 -->
+
+<!-- generated 2020-07-30T02:17:55.628967 -->
