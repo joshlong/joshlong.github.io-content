@@ -63,6 +63,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2020-08-07) 10 Years on the Spring team and JFrog's Baruch Sag](https://bootiful-podcast-api.cfapps.io/podcasts/30740b6f-7781-4c17-b4d2-f7a2536ab245/produced-audio) 
 * [(2020-07-30) Josh Lock on supply chain security, Docker trust, TUF, and more ](https://bootiful-podcast-api.cfapps.io/podcasts/db632a7a-10d6-4027-873f-3b5874a90703/produced-audio) 
 * [(2020-07-24) Spring Data lead Mark Paluch](https://bootiful-podcast-api.cfapps.io/podcasts/b564a312-5a03-4f5d-928f-cb27d0047e3c/produced-audio) 
 * [(2020-07-17) Intuit's Katie Levy on Spring Boot, Kotlin, Android and more ](https://bootiful-podcast-api.cfapps.io/podcasts/70c31ba4-f424-43a3-bbec-6f891aee6610/produced-audio) 
@@ -298,3 +299,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2020-08-06T02:18:47.534426 -->
 
 <!-- generated 2020-08-07T02:19:15.634010 -->
+
+<!-- generated 2020-08-08T02:18:52.994158 -->
