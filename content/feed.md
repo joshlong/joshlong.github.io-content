@@ -42,12 +42,12 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 <!-- START:APPEARANCES -->
 
 * *2020-09-26* - This Serbian conference - ITkonekt   - is now going [to be online](https://itkonekt.com/en/)
-* *2020-09-23* - InfoShare is the largest tech conferene in CEE and it's now streaming
+* *2020-09-25* - InfoShare is the largest tech conferene in CEE and it's now streaming
 * *2020-09-21* - I'll be speaking at the (now virtual) Chicago Cloud Conf again this year. 
 * *2020-09-12* - This Turkish event is now online, and I wholely encourage you to participate if you can. 
 * *2020-09-10* - This KotlinConf _may_ be turned into a virtual event. Either way, I hope to see you there.
+* *2020-09-02* - It's SpringOne! Online! And FREE! Do _NOT_ miss this. I'll be there, but so will tons of other folks.
 * *2020-09-02* - This J4K (Java and Kubernetes - what else do you need?) is going to be a ton of fun online, and I hope to see you there.
-* *2020-08-31* - It's SpringOne! Online! And FREE! Do _NOT_ miss this. I'll be there, but so will tons of other folks.
 * *2020-08-26* - I'm looking forward to being a part of this upcoming Java 25 mini-conference for [the Dublin JUG](https://ti.to/dublin-java-user-group/java25). I hope to see you there.
 * *2020-08-13* - I'll be doing a 2 day workshop at the [epic YOW! event](https://www.eventbrite.com.au/e/yow-workshop-2020-cloud-native-java-aug-14-18-2020-tickets-114222161560?aff=social) on _Cloud Native Java_.
 * *2020-07-22* - I'll be speaking at the upcoming SpringOne Tour event at the [_Reactive Spring_ event](https://springonetour.io/2020/reactive)
@@ -63,6 +63,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2020-08-14) RSocket everywhere and Spring luminary Maciej Walkowiak on Spring Cloud AWS](https://bootiful-podcast-api.cfapps.io/podcasts/95f7ed9e-11b6-4b80-aca6-733921b073d2/produced-audio) 
 * [(2020-08-07) 10 Years on the Spring team and JFrog's Baruch Sag](https://bootiful-podcast-api.cfapps.io/podcasts/30740b6f-7781-4c17-b4d2-f7a2536ab245/produced-audio) 
 * [(2020-07-30) Josh Lock on supply chain security, Docker trust, TUF, and more ](https://bootiful-podcast-api.cfapps.io/podcasts/db632a7a-10d6-4027-873f-3b5874a90703/produced-audio) 
 * [(2020-07-24) Spring Data lead Mark Paluch](https://bootiful-podcast-api.cfapps.io/podcasts/b564a312-5a03-4f5d-928f-cb27d0047e3c/produced-audio) 
@@ -313,3 +314,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2020-08-13T02:19:46.103782 -->
 
 <!-- generated 2020-08-14T02:19:46.939912 -->
+
+<!-- generated 2020-08-15T02:19:56.135702 -->
