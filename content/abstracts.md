@@ -6,6 +6,19 @@ status=published
 
 All talks are workable in a one-hour slot  unless otherwise noted.
 
+
+## The RSocket Revolution 
+
+[RSocket is here!](http://RSocket.io) RSocket is a binary, reactive, and operations-friendly wire protocol that integrates that builds on top of Project Reactor. Engineers originally developed RSocket at Netflix. Then they moved to Facebook. RSocket was the fledgling project for the Reactive Foundation, of which the spring team, Lightbend, Facebook, Alibaba, and others are founding members. RSocket represents the operational insight of some of the largest organizations in the world. And, it readily integrates with Spring. Join me, Spring Developer Advocate [Josh Long (@starbuxman)](http://twitter.com/starbuxman) in this rapid, reactive ride on the RSocket rocket, and we'll look at the rich Spring support for RSocket and its use in building faster, more robust and more scalable services. 
+
+* How to build RSocket-based controllers in Spring Framework 
+* Build RSocket clients using the `RSocketRequester`
+* How to use the `rsc` client 
+* Build processing pipelines using Spring Integration 
+* Secure our services with Spring Security 
+* Introduce bidirectional communication 
+* and more!
+
 ##  Cloud Native Java, part deux 
 
 You know what nobody has ever said to me? "I wish you'd covered even more in your 45 minute 'Cloud Native Java' talk!" And I listened! In this talk, we'll look at Spring Cloud.next to support modern microservices development, focusing on the things that *really* matter (or, at least, the things we've got cooking in Spring Boot 2.0 and Spring Cloud Finchley, both due before April or so):
