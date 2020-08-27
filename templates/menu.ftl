@@ -24,7 +24,8 @@
             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>books.html">Books</a></li>
 	          <li><a href="http://bootifulpodcast.fm">A Bootiful Podcast </a></li>
 	          <li><a href="https://bit.ly/spring-tips-playlist">The Spring Tips Videos </a></li>	   
-            <li><a href="https://patreon.com/joshlong">Patreon</a></li>     
+            <li><a href="https://twitch.tv/javajoshlong">I stream on Twitch</a></li>   
+             <li><a href="https://patreon.com/joshlong">Patreon</a></li>       
             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>feed.xml"><img src="https://www.w3schools.com/xml/pic_rss.gif" width="36" height="14"></a></li>
 
           </ul>
