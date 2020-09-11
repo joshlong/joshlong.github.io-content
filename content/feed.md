@@ -65,6 +65,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2020-09-10) Legendary Spring contributor Rossen Stoyanchev on all things web, reactive and RSocket ](https://bootiful-podcast-api.cfapps.io/podcasts/83ae4357-fb6c-404d-8acf-0788b79f0c71/produced-audio) 
 * [(2020-09-04) SpringOne 2020, Azure Spring Cloud and fellow Java Champion and Microsoft Java architect Jonathan Giles](https://bootiful-podcast-api.cfapps.io/podcasts/64ba7927-685d-429c-a4a4-135425fa6cac/produced-audio) 
 * [(2020-08-27) Soby Chacko and Dave Turanski on Messaging in Spring, Spring Cloud Stream App Starters and More ](https://bootiful-podcast-api.cfapps.io/podcasts/241d560b-0f20-455f-b8ea-551c6d949ba1/produced-audio) 
 * [(2020-08-21) Google Cloud's Elena Felder on Google Cloud, Spanner, and Reactor-based integrations](https://bootiful-podcast-api.cfapps.io/podcasts/97942784-2299-42f4-b647-9e896ac6debf/produced-audio) 
@@ -373,3 +374,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2020-09-09T02:23:53.440161 -->
 
 <!-- generated 2020-09-10T02:23:08.804887 -->
+
+<!-- generated 2020-09-11T02:23:10.283408 -->
