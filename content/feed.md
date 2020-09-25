@@ -41,14 +41,14 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
+* *2020-10-13* - This J4K (Java and Kubernetes - what else do you need?) is going to be a ton of fun online, and I hope to see you there.
 * *2020-09-26* - This Serbian conference - ITkonekt   - is now going [to be online](https://itkonekt.com/en/)
 * *2020-09-25* - InfoShare is the largest tech conferene in CEE and it's now streaming
 * *2020-09-21* - I'll be speaking at the (now virtual) Chicago Cloud Conf again this year. 
 * *2020-09-12* - This Turkish event is now online, and I wholely encourage you to participate if you can. 
 * *2020-09-10* - This KotlinConf _may_ be turned into a virtual event. Either way, I hope to see you there.
 * *2020-09-09* - I'll be doing my new talk _The RSocket Revolution_ at the (virtual) Denver JUG. Join us!
-* *2020-09-02* - It's SpringOne! Online! And FREE! Do _NOT_ miss this. I'll be there, but so will tons of other folks.
-* *2020-09-02* - This J4K (Java and Kubernetes - what else do you need?) is going to be a ton of fun online, and I hope to see you there.
+* *2020-09-03* - It's SpringOne! Online! And FREE! Do _NOT_ miss this. I'll be there, but so will tons of other folks.
 * *2020-08-26* - None
 * *2020-08-26* - I'm looking forward to being a part of this upcoming Java 25 mini-conference for [the Dublin JUG](https://ti.to/dublin-java-user-group/java25). I hope to see you there.
 * *2020-08-13* - I'll be doing a 2 day workshop at the [epic YOW! event](https://www.eventbrite.com.au/e/yow-workshop-2020-cloud-native-java-aug-14-18-2020-tickets-114222161560?aff=social) on _Cloud Native Java_.
@@ -65,6 +65,11 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2020-09-24) Sentry CTO David Cramer on Automated Error Capture and Analysis](https://bootiful-podcast-api.cfapps.io/podcasts/53a8a31e-f454-482a-a7ec-1db83c509918/produced-audio) 
+* [(2020-09-17) Lightbend CTO Jonas Bonér on his epic, aspect-oriented, distributed, reactive work ](https://bootiful-podcast-api.cfapps.io/podcasts/45acdf3e-e8bd-4e66-bc8d-62dd5b092b69/produced-audio) 
+* [(2020-09-10) Legendary Spring contributor Rossen Stoyanchev on all things web, reactive and RSocket ](https://bootiful-podcast-api.cfapps.io/podcasts/83ae4357-fb6c-404d-8acf-0788b79f0c71/produced-audio) 
+* [(2020-09-04) SpringOne 2020, Azure Spring Cloud and fellow Java Champion and Microsoft Java architect Jonathan Giles](https://bootiful-podcast-api.cfapps.io/podcasts/64ba7927-685d-429c-a4a4-135425fa6cac/produced-audio) 
+* [(2020-08-27) Soby Chacko and Dave Turanski on Messaging in Spring, Spring Cloud Stream App Starters and More ](https://bootiful-podcast-api.cfapps.io/podcasts/241d560b-0f20-455f-b8ea-551c6d949ba1/produced-audio) 
 * [(2020-08-21) Google Cloud's Elena Felder on Google Cloud, Spanner, and Reactor-based integrations](https://bootiful-podcast-api.cfapps.io/podcasts/97942784-2299-42f4-b647-9e896ac6debf/produced-audio) 
 * [(2020-08-14) RSocket everywhere and Spring luminary Maciej Walkowiak on Spring Cloud AWS](https://bootiful-podcast-api.cfapps.io/podcasts/95f7ed9e-11b6-4b80-aca6-733921b073d2/produced-audio) 
 * [(2020-08-07) 10 Years on the Spring team and JFrog's Baruch Sag](https://bootiful-podcast-api.cfapps.io/podcasts/30740b6f-7781-4c17-b4d2-f7a2536ab245/produced-audio) 
@@ -343,3 +348,61 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2020-08-26T02:21:14.235810 -->
 
 <!-- generated 2020-08-27T02:21:12.743368 -->
+
+<!-- generated 2020-08-28T02:22:22.440921 -->
+
+<!-- generated 2020-08-29T02:15:32.682383 -->
+
+<!-- generated 2020-08-30T02:12:38.465457 -->
+
+<!-- generated 2020-08-31T02:16:39.586306 -->
+
+<!-- generated 2020-09-01T02:23:04.140079 -->
+
+<!-- generated 2020-09-02T02:22:44.096296 -->
+
+<!-- generated 2020-09-03T02:23:04.632940 -->
+
+<!-- generated 2020-09-04T02:22:57.290530 -->
+
+<!-- generated 2020-09-05T02:53:10.578599 -->
+
+<!-- generated 2020-09-06T02:23:24.767176 -->
+
+<!-- generated 2020-09-07T02:23:45.049786 -->
+
+<!-- generated 2020-09-08T02:23:20.424954 -->
+
+<!-- generated 2020-09-09T02:23:53.440161 -->
+
+<!-- generated 2020-09-10T02:23:08.804887 -->
+
+<!-- generated 2020-09-11T02:23:10.283408 -->
+
+<!-- generated 2020-09-12T02:22:53.042703 -->
+
+<!-- generated 2020-09-13T02:23:24.762942 -->
+
+<!-- generated 2020-09-14T02:23:49.067164 -->
+
+<!-- generated 2020-09-15T02:23:47.088605 -->
+
+<!-- generated 2020-09-16T02:23:28.152237 -->
+
+<!-- generated 2020-09-17T02:23:46.642420 -->
+
+<!-- generated 2020-09-18T02:24:06.750520 -->
+
+<!-- generated 2020-09-19T02:23:41.960304 -->
+
+<!-- generated 2020-09-20T02:23:54.073245 -->
+
+<!-- generated 2020-09-21T02:24:25.589564 -->
+
+<!-- generated 2020-09-22T02:24:24.056532 -->
+
+<!-- generated 2020-09-23T02:24:06.202315 -->
+
+<!-- generated 2020-09-24T02:24:54.704637 -->
+
+<!-- generated 2020-09-25T02:24:36.156175 -->
