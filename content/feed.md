@@ -41,6 +41,7 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
+* *2020-12-07* - Join me, Spring Developer Advocate Josh Long for this 90 minute exploration of all things reactive and RSocket in Spring. This is ideally timed for [folks in APJ](https://tanzu.vmware.com/content/webinars/8-dec-reactive-spring), so sign up now! 
 * *2020-10-13* - This J4K (Java and Kubernetes - what else do you need?) is going to be a ton of fun online, and I hope to see you there.
 * *2020-09-26* - This Serbian conference - ITkonekt   - is now going [to be online](https://itkonekt.com/en/)
 * *2020-09-25* - InfoShare is the largest tech conferene in CEE and it's now streaming
@@ -408,3 +409,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2020-09-25T02:24:36.156175 -->
 
 <!-- generated 2020-09-26T02:24:18.354164 -->
+
+<!-- generated 2020-09-27T02:24:42.478586 -->
