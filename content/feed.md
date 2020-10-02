@@ -66,6 +66,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2020-10-02) Longtime Spring Framework engineer  Arjen Poutsma on Spring's web support, Scala, API Design, Reactive programming and more](https://bootiful-podcast-api.cfapps.io/podcasts/d8b01a23-a4d1-479d-85f6-52d0485dc6c2/produced-audio) 
 * [(2020-09-24) Sentry CTO David Cramer on Automated Error Capture and Analysis](https://bootiful-podcast-api.cfapps.io/podcasts/53a8a31e-f454-482a-a7ec-1db83c509918/produced-audio) 
 * [(2020-09-17) Lightbend CTO Jonas Bonér on his epic, aspect-oriented, distributed, reactive work ](https://bootiful-podcast-api.cfapps.io/podcasts/45acdf3e-e8bd-4e66-bc8d-62dd5b092b69/produced-audio) 
 * [(2020-09-10) Legendary Spring contributor Rossen Stoyanchev on all things web, reactive and RSocket ](https://bootiful-podcast-api.cfapps.io/podcasts/83ae4357-fb6c-404d-8acf-0788b79f0c71/produced-audio) 
@@ -419,3 +420,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2020-09-30T02:25:06.973924 -->
 
 <!-- generated 2020-10-01T02:25:38.098627 -->
+
+<!-- generated 2020-10-02T02:25:33.197824 -->
