@@ -66,6 +66,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2020-10-08)  Reactor team engineer, fellow Java Champion, and conference organizer Audrey Neveu](https://bootiful-podcast-api.cfapps.io/podcasts/fce25c42-1439-42d5-a3d1-4a97ee3fab57/produced-audio) 
 * [(2020-10-02) Longtime Spring Framework engineer  Arjen Poutsma on Spring's web support, Scala, API Design, Reactive programming and more](https://bootiful-podcast-api.cfapps.io/podcasts/d8b01a23-a4d1-479d-85f6-52d0485dc6c2/produced-audio) 
 * [(2020-09-24) Sentry CTO David Cramer on Automated Error Capture and Analysis](https://bootiful-podcast-api.cfapps.io/podcasts/53a8a31e-f454-482a-a7ec-1db83c509918/produced-audio) 
 * [(2020-09-17) Lightbend CTO Jonas Bonér on his epic, aspect-oriented, distributed, reactive work ](https://bootiful-podcast-api.cfapps.io/podcasts/45acdf3e-e8bd-4e66-bc8d-62dd5b092b69/produced-audio) 
@@ -434,3 +435,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2020-10-07T02:26:33.324326 -->
 
 <!-- generated 2020-10-08T02:22:44.501815 -->
+
+<!-- generated 2020-10-09T02:26:39.366082 -->
