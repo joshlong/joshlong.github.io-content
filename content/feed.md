@@ -445,3 +445,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2020-10-12T02:27:42.428567 -->
 
 <!-- generated 2020-10-13T02:27:44.719946 -->
+
+<!-- generated 2020-10-14T02:27:48.729607 -->
