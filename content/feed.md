@@ -41,6 +41,7 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
+* *2020-12-07* - Join me, Spring Developer Advocate Josh Long for this 90 minute exploration of all things reactive and RSocket in Spring. This is ideally timed for [folks in APJ](https://tanzu.vmware.com/content/webinars/8-dec-reactive-spring), so sign up now! 
 * *2020-10-13* - This J4K (Java and Kubernetes - what else do you need?) is going to be a ton of fun online, and I hope to see you there.
 * *2020-09-26* - This Serbian conference - ITkonekt   - is now going [to be online](https://itkonekt.com/en/)
 * *2020-09-25* - InfoShare is the largest tech conferene in CEE and it's now streaming
@@ -65,6 +66,10 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2020-10-22) Optic CEO Aidan Cunniffe on OpenAPI, contract testing, and so much more ](https://bootiful-podcast-api.cfapps.io/podcasts/43544e66-3307-4e8c-817e-8afa92622ae5/produced-audio) 
+* [(2020-10-15) DataStax's Patrick McFadin on DataStax Astra, Cassandra, Cassandra data modeling patterns, and more](https://bootiful-podcast-api.cfapps.io/podcasts/053f0141-2910-4fef-9e4a-08c939506874/produced-audio) 
+* [(2020-10-08)  Reactor team engineer, fellow Java Champion, and conference organizer Audrey Neveu](https://bootiful-podcast-api.cfapps.io/podcasts/fce25c42-1439-42d5-a3d1-4a97ee3fab57/produced-audio) 
+* [(2020-10-02) Longtime Spring Framework engineer  Arjen Poutsma on Spring's web support, Scala, API Design, Reactive programming and more](https://bootiful-podcast-api.cfapps.io/podcasts/d8b01a23-a4d1-479d-85f6-52d0485dc6c2/produced-audio) 
 * [(2020-09-24) Sentry CTO David Cramer on Automated Error Capture and Analysis](https://bootiful-podcast-api.cfapps.io/podcasts/53a8a31e-f454-482a-a7ec-1db83c509918/produced-audio) 
 * [(2020-09-17) Lightbend CTO Jonas Bonér on his epic, aspect-oriented, distributed, reactive work ](https://bootiful-podcast-api.cfapps.io/podcasts/45acdf3e-e8bd-4e66-bc8d-62dd5b092b69/produced-audio) 
 * [(2020-09-10) Legendary Spring contributor Rossen Stoyanchev on all things web, reactive and RSocket ](https://bootiful-podcast-api.cfapps.io/podcasts/83ae4357-fb6c-404d-8acf-0788b79f0c71/produced-audio) 
@@ -406,3 +411,65 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2020-09-24T02:24:54.704637 -->
 
 <!-- generated 2020-09-25T02:24:36.156175 -->
+
+<!-- generated 2020-09-26T02:24:18.354164 -->
+
+<!-- generated 2020-09-27T02:24:42.478586 -->
+
+<!-- generated 2020-09-28T02:24:41.850304 -->
+
+<!-- generated 2020-09-29T02:25:16.211438 -->
+
+<!-- generated 2020-09-30T02:25:06.973924 -->
+
+<!-- generated 2020-10-01T02:25:38.098627 -->
+
+<!-- generated 2020-10-02T02:25:33.197824 -->
+
+<!-- generated 2020-10-03T02:25:15.587287 -->
+
+<!-- generated 2020-10-04T02:25:54.584011 -->
+
+<!-- generated 2020-10-05T02:26:15.637173 -->
+
+<!-- generated 2020-10-06T02:26:15.133012 -->
+
+<!-- generated 2020-10-07T02:26:33.324326 -->
+
+<!-- generated 2020-10-08T02:22:44.501815 -->
+
+<!-- generated 2020-10-09T02:26:39.366082 -->
+
+<!-- generated 2020-10-10T02:26:58.899942 -->
+
+<!-- generated 2020-10-11T02:27:16.728752 -->
+
+<!-- generated 2020-10-12T02:27:42.428567 -->
+
+<!-- generated 2020-10-13T02:27:44.719946 -->
+
+<!-- generated 2020-10-14T02:27:48.729607 -->
+
+<!-- generated 2020-10-15T02:28:17.557063 -->
+
+<!-- generated 2020-10-16T02:28:17.184879 -->
+
+<!-- generated 2020-10-17T02:27:46.429118 -->
+
+<!-- generated 2020-10-18T02:28:18.608261 -->
+
+<!-- generated 2020-10-19T02:28:30.121398 -->
+
+<!-- generated 2020-10-20T02:28:36.947656 -->
+
+<!-- generated 2020-10-22T02:30:02.277864 -->
+
+<!-- generated 2020-10-23T02:30:30.524374 -->
+
+<!-- generated 2020-10-24T02:30:20.463205 -->
+
+<!-- generated 2020-10-25T02:32:04.164399 -->
+
+<!-- generated 2020-10-26T02:32:41.290685 -->
+
+<!-- generated 2020-10-27T02:32:25.912855 -->
