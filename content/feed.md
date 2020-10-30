@@ -67,6 +67,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2020-10-29) Spring Test Framework lead Sam Brannen ](https://bootiful-podcast-api.cfapps.io/podcasts/a07248d7-4aa3-4e90-bb45-0c90ab8671f3/produced-audio) 
 * [(2020-10-22) Optic CEO Aidan Cunniffe on OpenAPI, contract testing, and so much more ](https://bootiful-podcast-api.cfapps.io/podcasts/43544e66-3307-4e8c-817e-8afa92622ae5/produced-audio) 
 * [(2020-10-15) DataStax's Patrick McFadin on DataStax Astra, Cassandra, Cassandra data modeling patterns, and more](https://bootiful-podcast-api.cfapps.io/podcasts/053f0141-2910-4fef-9e4a-08c939506874/produced-audio) 
 * [(2020-10-08)  Reactor team engineer, fellow Java Champion, and conference organizer Audrey Neveu](https://bootiful-podcast-api.cfapps.io/podcasts/fce25c42-1439-42d5-a3d1-4a97ee3fab57/produced-audio) 
@@ -478,3 +479,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2020-10-28T02:33:37.971696 -->
 
 <!-- generated 2020-10-29T02:35:08.388015 -->
+
+<!-- generated 2020-10-30T02:16:15.748179 -->
