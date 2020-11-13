@@ -47,16 +47,16 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 * *2020-12-05* - jlLove conference (talk)
 * *2020-12-04* - jLove conference panel (panel)
 * *2020-12-03* - knoxville JUG
-* *2020-11-23* - JavaHispano JUG presentation
+* *2020-11-23* - JavaHispano JUG presentation. http://www.javahispano.org/portada/2020/11/11/reactive-spring-con-josh-long.html
 * *2020-11-22* - GDG Devfest Shanghai
 * *2020-11-18* - QCon Plus - I'll be doing a presentation and doing live Q&A 
 * *2020-11-18* - JCConf keynote speaker - Rsocket Revolution
 * *2020-11-17* - Ireland Bash Talk - https://instil.co/2020/11/03/the-redeye-bash/  
 * *2020-11-16* - None
-* *2020-11-13* - I'll be speaking virtually at the Build Stuff conference
+* *2020-11-13* - I'll be speaking virtually at the Build Stuff conference -https://www.buildstuff.events/agenda
 * *2020-11-12* - I'll be speaking at [the CapGemini BLD() Tech Talks XXL event](https://www.capgemini.com/nl-nl/evenementen/bldtechtalksxxl-java/)
 * *2020-11-11* - Build Stuff - (virtual) "Rockstar spotlight stage interview"
-* *2020-11-11* - London Java Community meetup 
+* *2020-11-11* - London Java Community meetup -  https://www.eventbrite.co.uk/e/ljc-virtual-meetup-reactive-spring-with-josh-long-tickets-128220961347
 * *2020-11-10* - Webinar on Spring with JetBrains - "Bootiful Kotlin"
 * *2020-11-10* - Reative Summit - Panel - "Is the Future Reactive?"
 * *2020-11-10* - Reactive Summit -Presentation - "Bootiful RSocket"
@@ -105,6 +105,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2020-11-12) Spring Boot 2.4, and then living legend, CTO, and friend John Davies](https://bootiful-podcast-api.cfapps.io/podcasts/8453ecf1-6df9-4c36-aa7c-2614beec8c8b/produced-audio) 
 * [(2020-11-05) Spring legend Thomas Risberg on JDBC, Spring Cloud Data Flow, Kubernetes and so much more](https://bootiful-podcast-api.cfapps.io/podcasts/dc4a4262-a7e2-4af0-879d-328a57fd86b4/produced-audio) 
 * [(2020-10-29) Spring Test Framework lead Sam Brannen ](https://bootiful-podcast-api.cfapps.io/podcasts/a07248d7-4aa3-4e90-bb45-0c90ab8671f3/produced-audio) 
 * [(2020-10-22) Optic CEO Aidan Cunniffe on OpenAPI, contract testing, and so much more ](https://bootiful-podcast-api.cfapps.io/podcasts/43544e66-3307-4e8c-817e-8afa92622ae5/produced-audio) 
@@ -528,3 +529,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2020-11-11T12:04:32.532282 -->
 
 <!-- generated 2020-11-12T02:20:28.554981 -->
+
+<!-- generated 2020-11-13T02:21:03.487091 -->
