@@ -41,17 +41,17 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
-* *2020-12-23* - "Code" streaming on Twitch at noon PDT
-* *2020-12-15* - WarszawaJUG 
-* *2020-12-07* - Join me, Spring Developer Advocate Josh Long for this 90 minute exploration of all things reactive and RSocket in Spring. This is ideally timed for [folks in APJ](https://tanzu.vmware.com/content/webinars/8-dec-reactive-spring), so sign up now! 
-* *2020-12-05* - jlLove conference (talk)
-* *2020-12-04* - jLove conference panel (panel)
-* *2020-12-03* - knoxville JUG
-* *2020-11-23* - JavaHispano JUG presentation. http://www.javahispano.org/portada/2020/11/11/reactive-spring-con-josh-long.html
-* *2020-11-22* - GDG Devfest Shanghai
-* *2020-11-18* - QCon Plus - I'll be doing a presentation and doing live Q&A 
-* *2020-11-18* - JCConf keynote speaker - Rsocket Revolution
-* *2020-11-17* - Ireland Bash Talk - https://instil.co/2020/11/03/the-redeye-bash/  
+* *2020-12-23* - [Join me on our [VMWare Tanzu ](http://twitch.tv/vmwaretanzu) channel - I'll be doing a "Code" stream at noon PDT]
+* *2020-12-15* - I'll be speaking at the Warsaw, Poland JUG - [_Warszawa JUG_. Check the website for more details as they become available]()
+* *2020-12-07* - Join me, Spring Developer Advocate Josh Long for this 90 minute exploration of [all things reactive and RSocket in Spring](https://tanzu.vmware.com/content/webinars/8-dec-springone-tour-apj). This is ideally timed for [folks in APJ](https://tanzu.vmware.com/content/webinars/8-dec-reactive-spring), so sign up now! 
+* *2020-12-04* - [I'll be speaking at the jLove conference, participating in both a talk and a panel](https://javaconf.love/)
+* *2020-12-03* - [Knoxville JUG](https://www.meetup.com/KnoxJava/events/nmfmbrybcpbwb/)
+* *2020-11-23* - [JavaHispano JUG presentation]( http://www.javahispano.org/portada/2020/11/11/reactive-spring-con-josh-long.html)
+* *2020-11-22* - [GDG Devfest Shanghai](https://gdg.community.dev/events/details/google-gdg-shanghai-presents-devfest-shanghai-2020/)
+* *2020-11-19* - the [Kansas City JUG](https://www.meetup.com/KansasCityJUG/events/274575027/)
+* *2020-11-18* - [QCon Plus](https://plus.qconferences.com/) - I'll be doing a presentation and doing live Q&A 
+* *2020-11-18* - [JCConf keynote speaker - Rsocket Revolution](https://jcconf.tw/2020/)
+* *2020-11-17* - [Ireland Bash Talk ](https://instil.co/2020/11/03/the-redeye-bash/ ) 
 * *2020-11-16* - None
 * *2020-11-13* - I'll be speaking virtually at the Build Stuff conference -https://www.buildstuff.events/agenda
 * *2020-11-12* - I'll be speaking at [the CapGemini BLD() Tech Talks XXL event](https://www.capgemini.com/nl-nl/evenementen/bldtechtalksxxl-java/)
@@ -541,3 +541,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2020-11-17T02:22:06.924989 -->
 
 <!-- generated 2020-11-18T01:05:35.238031 -->
+
+<!-- generated 2020-11-18T01:25:24.717552 -->
