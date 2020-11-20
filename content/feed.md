@@ -41,8 +41,42 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
-* *2020-12-07* - Join me, Spring Developer Advocate Josh Long for this 90 minute exploration of all things reactive and RSocket in Spring. This is ideally timed for [folks in APJ](https://tanzu.vmware.com/content/webinars/8-dec-reactive-spring), so sign up now! 
+* *2020-12-23* - [Join me on our [VMWare Tanzu ](http://twitch.tv/vmwaretanzu) channel - I'll be doing a "Code" stream at noon PDT]
+* *2020-12-15* - I'll be speaking at the Warsaw, Poland JUG - [_Warszawa JUG_. Check the website for more details as they become available]()
+* *2020-12-07* - Join me, Spring Developer Advocate Josh Long for this 90 minute exploration of [all things reactive and RSocket in Spring](https://tanzu.vmware.com/content/webinars/8-dec-springone-tour-apj). This is ideally timed for [folks in APJ](https://tanzu.vmware.com/content/webinars/8-dec-reactive-spring), so sign up now! 
+* *2020-12-04* - [I'll be speaking at the jLove conference, participating in both a talk and a panel](https://javaconf.love/)
+* *2020-12-03* - [Knoxville JUG](https://www.meetup.com/KnoxJava/events/nmfmbrybcpbwb/)
+* *2020-11-23* - [JavaHispano JUG presentation]( http://www.javahispano.org/portada/2020/11/11/reactive-spring-con-josh-long.html)
+* *2020-11-22* - [GDG Devfest Shanghai](https://gdg.community.dev/events/details/google-gdg-shanghai-presents-devfest-shanghai-2020/)
+* *2020-11-19* - the [Kansas City JUG](https://www.meetup.com/KansasCityJUG/events/274575027/)
+* *2020-11-18* - [QCon Plus](https://plus.qconferences.com/) - I'll be doing a presentation and doing live Q&A 
+* *2020-11-18* - [JCConf keynote speaker - Rsocket Revolution](https://jcconf.tw/2020/)
+* *2020-11-17* - [Ireland Bash Talk ](https://instil.co/2020/11/03/the-redeye-bash/ ) 
+* *2020-11-16* - None
+* *2020-11-13* - I'll be speaking virtually at the Build Stuff conference -https://www.buildstuff.events/agenda
+* *2020-11-12* - I'll be speaking at [the CapGemini BLD() Tech Talks XXL event](https://www.capgemini.com/nl-nl/evenementen/bldtechtalksxxl-java/)
+* *2020-11-11* - Build Stuff - (virtual) "Rockstar spotlight stage interview"
+* *2020-11-11* - London Java Community meetup -  https://www.eventbrite.co.uk/e/ljc-virtual-meetup-reactive-spring-with-josh-long-tickets-128220961347
+* *2020-11-10* - Webinar on Spring with JetBrains - "Bootiful Kotlin"
+* *2020-11-10* - Reative Summit - Panel - "Is the Future Reactive?"
+* *2020-11-10* - Reactive Summit -Presentation - "Bootiful RSocket"
+* *2020-11-06* - Devoxx Ukraine 2020
+* *2020-11-05* - I'll be speaking at the JFall conference on the 5th of November
+* *2020-11-04* - I'll be on Twitch! Join me on twitch.tv/vmwaretanzu on 11/4/2020
+* *2020-11-03* - DevCon 2020 - keynote
+* *2020-10-21* - GDG DevFest Damanhour 2020
+* *2020-10-18* - DevFest 2020 Ukraine
+* *2020-10-17* - GDG Romania DevFest 2020
+* *2020-10-17* - GDG Poland DevFest 2020
+* *2020-10-17* - GDG Yola DevFest 2020
+* *2020-10-17* - GDG Mountain DevFest 2020
+* *2020-10-16* - I'm looking forward to speaking at the New Delhi JUG on October 16th, 2020
+* *2020-10-15* - I'll be speaking (virtually) at the OpenSlava conference on the 15th of October, 2020
 * *2020-10-13* - This J4K (Java and Kubernetes - what else do you need?) is going to be a ton of fun online, and I hope to see you there.
+* *2020-10-13* - I will be a cohost, along with the legendary Heather VanCura, of the J4K show
+* *2020-10-09* - It was a pleasure to present to the SouJava Brazillian JUG. The presentation is now online https://www.youtube.com/watch?v=CmQ_5TIq0T4
+* *2020-10-06* - I'll be speaking at the NY JavaSig (which is now 25 years old!) on October 6th, 2020
+* *2020-10-05* - I'll be speaking at the inaugural Garden State (New Jersey) Java User Group and I hope you'll join me!
 * *2020-09-26* - This Serbian conference - ITkonekt   - is now going [to be online](https://itkonekt.com/en/)
 * *2020-09-25* - InfoShare is the largest tech conferene in CEE and it's now streaming
 * *2020-09-21* - I'll be speaking at the (now virtual) Chicago Cloud Conf again this year. 
@@ -55,6 +89,11 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 * *2020-08-13* - I'll be doing a 2 day workshop at the [epic YOW! event](https://www.eventbrite.com.au/e/yow-workshop-2020-cloud-native-java-aug-14-18-2020-tickets-114222161560?aff=social) on _Cloud Native Java_.
 * *2020-07-22* - I'll be speaking at the upcoming SpringOne Tour event at the [_Reactive Spring_ event](https://springonetour.io/2020/reactive)
 * *2020-07-14* - I'll be speaking at the [London Java Community Meetup about Kotlin](https://www.eventbrite.co.uk/e/ljc-virtual-meetup-bootiful-kotlin-tickets-112484117022).
+* *2020-06-24* - I'll be speaking (virtually) at the San Francisco JUG in June - https://www.meetup.com/sfjava/events/271297887/
+* *2020-06-09* - On June 9th, I'll be speaking (virtually) at the DC Cloud Meetup 
+* *2020-06-04* - I will be delivering a presentation - "Bootiful Azure" - to the Singapore Java Usergroup and the Singapore Microsoft Azure community 
+* *2020-06-02* - I'll be speaking at the JNation virtual event on June 2nd, at 11:45AM PDT. Join me!
+* *2020-04-29* - On April 30th, I'll be speaking at the Chinese Green Tea JUG! Don't miss this, my friends.
 * *2020-04-21* - On Tuesday, April 21, 2020, I'll be speaking on "Reactive Spring" at the javaBin Online meetup and I hope to see you there! 
 
 <!-- STOP:APPEARANCES -->
@@ -66,101 +105,104 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
-* [(2020-10-22) Optic CEO Aidan Cunniffe on OpenAPI, contract testing, and so much more ](https://bootiful-podcast-api.cfapps.io/podcasts/43544e66-3307-4e8c-817e-8afa92622ae5/produced-audio) 
-* [(2020-10-15) DataStax's Patrick McFadin on DataStax Astra, Cassandra, Cassandra data modeling patterns, and more](https://bootiful-podcast-api.cfapps.io/podcasts/053f0141-2910-4fef-9e4a-08c939506874/produced-audio) 
-* [(2020-10-08)  Reactor team engineer, fellow Java Champion, and conference organizer Audrey Neveu](https://bootiful-podcast-api.cfapps.io/podcasts/fce25c42-1439-42d5-a3d1-4a97ee3fab57/produced-audio) 
-* [(2020-10-02) Longtime Spring Framework engineer  Arjen Poutsma on Spring's web support, Scala, API Design, Reactive programming and more](https://bootiful-podcast-api.cfapps.io/podcasts/d8b01a23-a4d1-479d-85f6-52d0485dc6c2/produced-audio) 
-* [(2020-09-24) Sentry CTO David Cramer on Automated Error Capture and Analysis](https://bootiful-podcast-api.cfapps.io/podcasts/53a8a31e-f454-482a-a7ec-1db83c509918/produced-audio) 
-* [(2020-09-17) Lightbend CTO Jonas Bonér on his epic, aspect-oriented, distributed, reactive work ](https://bootiful-podcast-api.cfapps.io/podcasts/45acdf3e-e8bd-4e66-bc8d-62dd5b092b69/produced-audio) 
-* [(2020-09-10) Legendary Spring contributor Rossen Stoyanchev on all things web, reactive and RSocket ](https://bootiful-podcast-api.cfapps.io/podcasts/83ae4357-fb6c-404d-8acf-0788b79f0c71/produced-audio) 
-* [(2020-09-04) SpringOne 2020, Azure Spring Cloud and fellow Java Champion and Microsoft Java architect Jonathan Giles](https://bootiful-podcast-api.cfapps.io/podcasts/64ba7927-685d-429c-a4a4-135425fa6cac/produced-audio) 
-* [(2020-08-27) Soby Chacko and Dave Turanski on Messaging in Spring, Spring Cloud Stream App Starters and More ](https://bootiful-podcast-api.cfapps.io/podcasts/241d560b-0f20-455f-b8ea-551c6d949ba1/produced-audio) 
-* [(2020-08-21) Google Cloud's Elena Felder on Google Cloud, Spanner, and Reactor-based integrations](https://bootiful-podcast-api.cfapps.io/podcasts/97942784-2299-42f4-b647-9e896ac6debf/produced-audio) 
-* [(2020-08-14) RSocket everywhere and Spring luminary Maciej Walkowiak on Spring Cloud AWS](https://bootiful-podcast-api.cfapps.io/podcasts/95f7ed9e-11b6-4b80-aca6-733921b073d2/produced-audio) 
-* [(2020-08-07) 10 Years on the Spring team and JFrog's Baruch Sag](https://bootiful-podcast-api.cfapps.io/podcasts/30740b6f-7781-4c17-b4d2-f7a2536ab245/produced-audio) 
-* [(2020-07-30) Josh Lock on supply chain security, Docker trust, TUF, and more ](https://bootiful-podcast-api.cfapps.io/podcasts/db632a7a-10d6-4027-873f-3b5874a90703/produced-audio) 
-* [(2020-07-24) Spring Data lead Mark Paluch](https://bootiful-podcast-api.cfapps.io/podcasts/b564a312-5a03-4f5d-928f-cb27d0047e3c/produced-audio) 
-* [(2020-07-17) Intuit's Katie Levy on Spring Boot, Kotlin, Android and more ](https://bootiful-podcast-api.cfapps.io/podcasts/70c31ba4-f424-43a3-bbec-6f891aee6610/produced-audio) 
-* [(2020-07-10) Spring Data JDBC co-founder on JDBC, JPA and domain driven design](https://bootiful-podcast-api.cfapps.io/podcasts/a0f59cfb-d9e7-405b-8f5e-0c34894332b1/produced-audio) 
-* [(2020-07-03) Dr. Yordan Karadzhov on instrumenting and visualizing the Linux Kernel](https://bootiful-podcast-api.cfapps.io/podcasts/c1b8b860-8e1a-4b16-bfc2-9db88b7754ab/produced-audio) 
-* [(2020-06-25) VMware Principal Engineer and Tanzu Wavefront co-founder Clement Pang](https://bootiful-podcast-api.cfapps.io/podcasts/4b743f6c-fdf6-4d0f-9bcc-fb47537fc0e7/produced-audio) 
-* [(2020-06-19) Nisha Kumar and Rose Judge on the Linux Foundation's Tern](https://bootiful-podcast-api.cfapps.io/podcasts/49689040-28d8-4434-afa4-7f41d22b9c37/produced-audio) 
-* [(2020-06-11) Kubernetes guru Paul Czarkowski](https://bootiful-podcast-api.cfapps.io/podcasts/64c3b8ef-2aa2-4f91-bc93-7e7be75c85df/produced-audio) 
-* [(2020-06-05) Kubernetes contributor and Kubernetes Release SIG Chair Tim Pepper](https://bootiful-podcast-api.cfapps.io/podcasts/85dc9285-ba68-4180-aec2-52cccc140655/produced-audio) 
-* [(2020-05-28) A Bootiful Podcast: Dr. Malini Bhandaru on EdgeX and the opportunities for developers in the IoT space](https://bootiful-podcast-api.cfapps.io/podcasts/60026531-40a7-4e6b-a404-7bc033172af9/produced-audio) 
-* [(2020-05-21) Jenkins founder and Launchable founder Kohsuke Kawaguchi](https://bootiful-podcast-api.cfapps.io/podcasts/6c26eeff-ac5d-4b69-ab05-c351d12e6c5e/produced-audio) 
-* [(2020-05-14) VMWare COO Sanjay Poonen](https://bootiful-podcast-api.cfapps.io/podcasts/b2bbe730-2e31-46d1-a391-1a6270211de2/produced-audio) 
-* [(2020-05-07) Spring and Java community member Eddú Meléndez about working in open-source, his journey to Spring and its community, contributing to Spring and more.](https://bootiful-podcast-api.cfapps.io/podcasts/7d323056-84e8-4026-a783-4704db38709d/produced-audio) 
-* [(2020-05-01) Adrian Cole, founder or co-founder of Feign, JClouds, and Spring Cloud Sleuth and major contributor to OpenZipkin](https://bootiful-podcast-api.cfapps.io/podcasts/ee343a8d-368e-4711-8f9c-4b571fa7a8e4/produced-audio) 
-* [(2020-04-24) Linux Kernel hacker and Real Time patch founder Steve Rostedt on how the kernel sees our busy Spring applications](https://bootiful-podcast-api.cfapps.io/podcasts/16c8789f-5562-4062-b88a-61770e2af9db/produced-audio) 
-* [(2020-04-17) Jetbrains developer advocacy head and Kotlin rockstar Hadi Hariri](https://bootiful-podcast-api.cfapps.io/podcasts/98e8d404-ff07-42ed-9100-cc3c5c20eef5/produced-audio) 
-* [(2020-04-10) Microsoft's Kushagra Thapar on Spring Data CosmosDB](https://bootiful-podcast-api.cfapps.io/podcasts/e4fa038c-8a13-4c1d-acb6-734f5f543f13/produced-audio) 
-* [(2020-04-03) Kubernetes co-creator Joe Beda ](https://bootiful-podcast-api.cfapps.io/podcasts/faf00426-0b5d-4a0d-912a-20504ae6f694/produced-audio) 
-* [(2020-03-27) Apache Groovy, Testcontainers, and Reactor committer Sergei Egorov](https://bootiful-podcast-api.cfapps.io/podcasts/0bfe08cd-3443-4f7e-9d62-5da50408621c/produced-audio) 
-* [(2020-03-20) The Smile-Inducing and Brilliant Glenn Renfro](https://bootiful-podcast-api.cfapps.io/podcasts/f2533aba-2850-410c-aeec-2f8f3833f075/produced-audio) 
-* [(2020-03-12) John Hawley on OSS at VMWare, Python, Security, and more. Plus: Announcing Spring Live!](https://bootiful-podcast-api.cfapps.io/podcasts/7c73e1a6-47a2-4d11-8be2-0aa763053b9a/produced-audio) 
-* [(2020-03-06) Spring I/O organizer and Spring trainer extraordinairre Sergi Almar ](https://bootiful-podcast-api.cfapps.io/podcasts/456c2f06-502f-41ca-a8c9-4430849066c3/produced-audio) 
-* [(2020-02-28) Spring Cloud Contract lead Marcin Grzejszczak on Spring Cloud Contract, Spring Cloud Sleuth, Continuous Integration and more](https://bootiful-podcast-api.cfapps.io/podcasts/ed5d9a39-7ca5-477d-a743-3cb74ebc866f/produced-audio) 
-* [(2020-02-21) Building China Scale Infrastructure at Alibaba with Spring Cloud, RSocket, and more](https://bootiful-podcast-api.cfapps.io/podcasts/fee894b7-62e5-48b0-9bd1-12dd84e3e5e6/produced-audio) 
-* [(2020-02-13) Vedran Pavic on Spring Session, Croatia, and so much more](https://bootiful-podcast-api.cfapps.io/podcasts/d1dc9637-bb9d-483c-93d3-e989db4cfff7/produced-audio) 
-* [(2020-02-07) Oleg Šelajev on ZeroTurnaround, GraalVM, the vJUG and so much more](https://bootiful-podcast-api.cfapps.io/podcasts/5eb141fd-fcbe-4962-840d-f82c6f582a90/produced-audio) 
-* [(2020-01-30) "The Phoenix Project" author Gene Kim](https://bootiful-podcast-api.cfapps.io/podcasts/4bf03a77-495d-4e58-9ef1-c4583b400681/produced-audio) 
-* [(2020-01-23) Neo4j's mad scientist Michael Hunger on graphs, databases and relationships](https://bootiful-podcast-api.cfapps.io/podcasts/91c4de22-69d8-44ad-a120-d859acbe251e/produced-audio) 
-* [(2020-01-16) Spring Cloud Services teammate Bella (Yuxin) Bai](https://bootiful-podcast-api.cfapps.io/podcasts/59f63044-5c25-40d9-8c9f-232083137be5/produced-audio) 
-* [(2020-01-09) Pivotal Labs Sydney director David Julia](https://bootiful-podcast-api.cfapps.io/podcasts/b7a9786d-fdef-419a-8da7-5475a90b4631/produced-audio) 
-* [(2020-01-03) The Good Dr. Dave Syer](https://bootiful-podcast-api.cfapps.io/podcasts/3d0c5700-8e81-4220-a9b2-9ebc7a29b88a/produced-audio) 
-* [(2019-12-26) Microsoft's Jialin Dai on Spring for Azure](https://bootiful-podcast-api.cfapps.io/podcasts/c102dbe9-5464-4e6b-9c36-b6e2001e76b4/produced-audio) 
-* [(2019-12-20) Reactor team Simon Baslé](https://bootiful-podcast-api.cfapps.io/podcasts/c19fc45e-16b4-4d7f-b87c-8d5e23ac7cfd/produced-audio) 
-* [(2019-12-12) I need to talk about my father, Clark "Bud" Long, who just passed away](https://bootiful-podcast-api.cfapps.io/podcasts/4677643c-a921-4fef-a30f-64c813d7e8ca/produced-audio) 
-* [(2019-12-05) Pivotal's Katrina Bakas on Pivotal Healthwatch, Kubernetes, Cloud Foundry and more](https://bootiful-podcast-api.cfapps.io/podcasts/2545ebeb-6949-4bdb-9f07-12e8463b7f58/produced-audio) 
-* [(2019-11-28) Spring Tools lead Martin Lippert](https://bootiful-podcast-api.cfapps.io/podcasts/2b956f1a-9407-4556-a19d-03a0ec68c076/produced-audio) 
-* [(2019-11-21) Spring Security engineer Ria Stein](https://bootiful-podcast-api.cfapps.io/podcasts/a9c1eb1a-8efd-4bae-97b1-7b24c4cf9ca5/produced-audio) 
-* [(2019-11-15) RedHat / IBM's Sébastien Blanc on OAuth, KeyCloak, the French riviera, and more](https://bootiful-podcast-api.cfapps.io/podcasts/1d189c9e-5679-4b8f-821d-1bad2a8cd501/produced-audio) 
-* [(2019-11-07) Michael Simons on Spring Boot, reactive Spring Data Neo4j, and more](https://bootiful-podcast-api.cfapps.io/podcasts/d525acbf-3f65-4431-ae47-a7e856f4691a/produced-audio) 
-* [(2019-10-31) Hibernate community legend Vlad Mihalcea on the project, Hibernate, databases and more](https://bootiful-podcast-api.cfapps.io/podcasts/eaae6699-6e67-438c-a1a5-0762aa1a1434/produced-audio) 
-* [(2019-10-24) Apache Tomcat, Netty and Spring Framework contributor Violeta Georgieva](https://bootiful-podcast-api.cfapps.io/podcasts/aa3da822-e1c0-4e22-b794-a54c249e2319/produced-audio) 
-* [(2019-10-18) Bytebuddy and Mockito maestro Rafael Winterhalter](https://bootiful-podcast-api.cfapps.io/podcasts/c106105d-fc05-4321-ad4b-5b7b18e0e722/produced-audio) 
-* [(2019-10-10) Spring mad scientist Andy Clement on AspectJ, SpEL, Eclipse, Graal and more](https://bootiful-podcast-api.cfapps.io/podcasts/f40131bf-1501-4e3d-9ff3-6324f206e26d/produced-audio) 
-* [(2019-10-04) Oracle's Geertjan Wielenga on his new book "Developer, Advocate!"](https://bootiful-podcast-api.cfapps.io/podcasts/291814bf-1fb3-43f9-adc0-12ec96d91b1a/produced-audio) 
-* [(2019-09-26) Java Champion and Jetbrains Developer Advocate Mala Gupta](https://bootiful-podcast-api.cfapps.io/podcasts/7d5cb1e4-1c74-4474-b80c-329ad504e5cd/produced-audio) 
-* [(2019-09-19) Nicolai Parlog on Java modularity](https://bootiful-podcast-api.cfapps.io/podcasts/5734a058-2bc9-4930-acc4-61bb730edf40/produced-audio) 
-* [(2019-09-12) Spring Framework co-founder and lead Juergen Hoeller on Spring Framework 5.2 and more](https://bootiful-podcast-api.cfapps.io/podcasts/ed2466e8-a739-4be8-9b14-4881137b834f/produced-audio) 
-* [(2019-09-06) Spring Integration lead Gary Russell on Apache Kafka, RabbitMQ, Spring Integration and more](https://bootiful-podcast-api.cfapps.io/podcasts/d65ae607-5298-4436-91a9-2b4976c96242/produced-audio) 
-* [(2019-08-29) Spring Cloud Data Flow legend Ilayaperumal Gopinathan](https://bootiful-podcast-api.cfapps.io/podcasts/edeb6cb9-294c-41f6-8c4f-7f89e2ad9136/produced-audio) 
-* [(2019-08-23) James Ward, Matt Raible, and Ryan Knight](https://bootiful-podcast-api.cfapps.io/podcasts/df2f53a6-0d32-4302-9d1b-0e49622f2e8e/produced-audio) 
-* [(2019-08-15) Spring teammate Brian Clozel on new features in Spring 5.2 and Spring Boot 2.2](https://bootiful-podcast-api.cfapps.io/podcasts/e9d5a15b-fabf-4d7b-8852-907d2d313307/produced-audio) 
-* [(2019-08-08) Devops luminary and all around great guy John Willis](https://bootiful-podcast-api.cfapps.io/podcasts/70c3fa93-ffd1-458e-b2d3-4b9321a99f88/produced-audio) 
-* [(2019-08-01) Gradle Developer Advocate Jenn Strater](https://bootiful-podcast-api.cfapps.io/podcasts/f6aaf7fa-8cc8-4bef-9e39-177524b7298f/produced-audio) 
-* [(2019-07-26) Spring team legend Oliver Drotbohm on Spring Data, HATEOAS, Hypermedia, and more](https://bootiful-podcast-api.cfapps.io/podcasts/f96eaaa5-3beb-4bc4-b21b-2d70980ff96b/produced-audio) 
-* [(2019-07-19) Azul CTO Gil Tene on JVMs, Garbage Collection, Performance and so much More](https://bootiful-podcast-api.cfapps.io/podcasts/484c3fea-c15c-4a6c-b7d6-05def2b9ee7c/produced-audio) 
-* [(2019-07-12) "Mr. REST" Mike Amundsen on APIs, Microservices, HTTP and more](https://bootiful-podcast-api.cfapps.io/podcasts/a92a98a8-3d87-48a0-9038-15036041ef02/produced-audio) 
-* [(2019-07-04) Dr. Venkat Subramaniam on Kotlin, Java, Spring, open-source, being productive, and so much more](https://bootiful-podcast-api.cfapps.io/podcasts/9e69e673-3dbc-4860-9209-b2a6360e7f12/produced-audio) 
-* [(2019-06-27) Datadog's Jason Yee on observability, operations, metrics, Kubernetes, language and more](https://bootiful-podcast-api.cfapps.io/podcasts/35df7bc5-d7c6-403b-a2c8-fd9a1a40c196/produced-audio) 
-* [(2019-06-21) IBM's Pratik Patel on function-as-a-service, Spring Cloud Function, Spring, Java and Devnexus](https://bootiful-podcast-api.cfapps.io/podcasts/b852db47-14eb-4188-bbfc-9a16f54c8996/produced-audio) 
-* [(2019-06-13) Pivotal SVP Ian Andrews on our customers, new announcements, Kubernetes, and more](https://bootiful-podcast-api.cfapps.io/podcasts/b6aaf914-7ea8-4292-a79c-e5587e9407da/produced-audio) 
-* [(2019-06-06) Spring Cloud lead Spencer Gibb](https://bootiful-podcast-api.cfapps.io/podcasts/9d421c4d-bf5b-4ed4-96cf-b8e1413f7dfb/produced-audio) 
-* [(2019-05-30) Go-lang and Kubernetes legend Verónica Lopez](https://bootiful-podcast-api.cfapps.io/podcasts/fe8afa8f-f73a-42fd-b133-473c693ae6bd/produced-audio) 
-* [(2019-05-24) Twitter's Chris Thalinger on Java, Graal, JVMs, JITs, Sao Paolo, Hawaii, and more](https://bootiful-podcast-api.cfapps.io/podcasts/8182415b-d8d6-4238-9141-83d845d98498/produced-audio) 
-* [(2019-05-16) Nicolas Frankel on application security, integration testing, Kotlin and more](https://bootiful-podcast-api.cfapps.io/podcasts/974acc14-5396-4122-8f07-765352c7e558/produced-audio) 
-* [(2019-05-09) Kotlin team engineer Roman Elisarov](https://bootiful-podcast-api.cfapps.io/podcasts/71ba05ed-7a4a-44b3-b20f-028a35185484/produced-audio) 
-* [(2019-05-03) Spring Cloud Engineer Olga Maciaszek-Sharma](https://bootiful-podcast-api.cfapps.io/podcasts/91847c03-82f4-4575-8801-8a7c74976313/produced-audio) 
-* [(2019-04-25) Spring Batch and Spring Cloud Task lead Michael Minella](https://bootiful-podcast-api.cfapps.io/podcasts/564af652-f099-4d4d-9930-85c725567dea/produced-audio) 
-* [(2019-04-18) Pivotal Field CTO and OG Cloud Native Matt Stine on Architecture](https://bootiful-podcast-api.cfapps.io/podcasts/155d863c-5dd5-4431-b0ae-300417d7805e/produced-audio) 
-* [(2019-04-11) Rabobank's Roy Braam](https://bootiful-podcast-api.cfapps.io/podcasts/75983beb-8fa6-45e9-a33f-9760e5d4c3e5/produced-audio) 
-* [(2019-04-04) Kylie Liang and Theresa Nguyen on Microsoft's Java and Spring integrations](https://bootiful-podcast-api.cfapps.io/podcasts/05b4ae01-52ce-4e19-a3d3-0bdf286f7b3d/produced-audio) 
-* [(2019-03-28) Josh Mckenty - "Better Josh" - on data sovereignty, Python, the cloud, Pivotal, and more](https://bootiful-podcast-api.cfapps.io/podcasts/ac45826d-ffaa-414f-9895-9511b2f9a363/produced-audio) 
-* [(2019-03-21) CQRS with AxonIQ's Steven van Beelen and Pivotal's Ben Wilcock](https://bootiful-podcast-api.cfapps.io/podcasts/47b9e94f-4314-4a52-8fb0-3c9ca317b48c/produced-audio) 
-* [(2019-03-14) Joe Grandja on Spring Security 5's OAuth Support](https://bootiful-podcast-api.cfapps.io/podcasts/13d87c27-cba4-46b4-b978-9b472353992c/produced-audio) 
-* [(2019-03-07) Matt Raible and James Ward at Devnexus 2019](https://bootiful-podcast-api.cfapps.io/podcasts/61e314c4-763a-4746-abdd-39406c14f08c/produced-audio) 
-* [(2019-02-28) Reactor project lead Stéphane Maldini](https://bootiful-podcast-api.cfapps.io/podcasts/863c6399-c65d-4a60-ba24-327ac3db4c44/produced-audio) 
-* [(2019-02-21) Pivotal Application Platform Security Senior Manager Sree Tummidi](https://bootiful-podcast-api.cfapps.io/podcasts/bbbbfbc4-fe9b-4f0c-ab4f-10279d739875/produced-audio) 
-* [(2019-02-14) Spring Contributor and "Learning Spring Boot 2.0" author Greg Turnquist](https://bootiful-podcast-api.cfapps.io/podcasts/8affbc01-89c8-4cdf-adc8-29daf4f78bec/produced-audio) 
-* [(2019-02-07) Codota's Dror Weiss](https://bootiful-podcast-api.cfapps.io/podcasts/d99dcb7f-8aec-427b-8940-bc13eabcff67/produced-audio) 
-* [(2019-01-31) Spring Cloud Stream lead Oleg Zhurakousky](https://bootiful-podcast-api.cfapps.io/podcasts/520f6c5d-25f1-4d59-8ad3-3d02c63e0bd0/produced-audio) 
-* [(2019-01-25) Spring Boot engineer Madhura Bhave](https://bootiful-podcast-api.cfapps.io/podcasts/31e0f731-398d-43d9-bacb-f2c7b578c1f7/produced-audio) 
-* [(2019-01-16) Google Developer Advocate Ray Tsang](https://bootiful-podcast-api.cfapps.io/podcasts/15a96291-9267-476d-b743-60d1cab2f6c6/produced-audio) 
-* [(2018-12-20) Jon Schneider on his project metrics collection facade Micrometer](https://bootiful-podcast-api.cfapps.io/podcasts/a00968ac-fb9b-4228-9d50-8a0375f7dec3/produced-audio) 
-* [(2018-10-10) Pivotal's Senior Director of Technology Cornelia Davis](https://bootiful-podcast-api.cfapps.io/podcasts/07d32ead-cb0a-418f-bd0f-0d508ea86f54/produced-audio) 
+* [(2020-11-12) Spring Boot 2.4, and then living legend, CTO, and friend John Davies](http://api.bootifulpodcast.online/podcasts/8453ecf1-6df9-4c36-aa7c-2614beec8c8b/produced-audio) 
+* [(2020-11-05) Spring legend Thomas Risberg on JDBC, Spring Cloud Data Flow, Kubernetes and so much more](http://api.bootifulpodcast.online/podcasts/dc4a4262-a7e2-4af0-879d-328a57fd86b4/produced-audio) 
+* [(2020-10-29) Spring Test Framework lead Sam Brannen ](http://api.bootifulpodcast.online/podcasts/a07248d7-4aa3-4e90-bb45-0c90ab8671f3/produced-audio) 
+* [(2020-10-22) Optic CEO Aidan Cunniffe on OpenAPI, contract testing, and so much more ](http://api.bootifulpodcast.online/podcasts/43544e66-3307-4e8c-817e-8afa92622ae5/produced-audio) 
+* [(2020-10-15) DataStax's Patrick McFadin on DataStax Astra, Cassandra, Cassandra data modeling patterns, and more](http://api.bootifulpodcast.online/podcasts/053f0141-2910-4fef-9e4a-08c939506874/produced-audio) 
+* [(2020-10-08)  Reactor team engineer, fellow Java Champion, and conference organizer Audrey Neveu](http://api.bootifulpodcast.online/podcasts/fce25c42-1439-42d5-a3d1-4a97ee3fab57/produced-audio) 
+* [(2020-10-02) Longtime Spring Framework engineer  Arjen Poutsma on Spring's web support, Scala, API Design, Reactive programming and more](http://api.bootifulpodcast.online/podcasts/d8b01a23-a4d1-479d-85f6-52d0485dc6c2/produced-audio) 
+* [(2020-09-24) Sentry CTO David Cramer on Automated Error Capture and Analysis](http://api.bootifulpodcast.online/podcasts/53a8a31e-f454-482a-a7ec-1db83c509918/produced-audio) 
+* [(2020-09-17) Lightbend CTO Jonas Bon?r on his epic, aspect-oriented, distributed, reactive work ](http://api.bootifulpodcast.online/podcasts/45acdf3e-e8bd-4e66-bc8d-62dd5b092b69/produced-audio) 
+* [(2020-09-10) Legendary Spring contributor Rossen Stoyanchev on all things web, reactive and RSocket ](http://api.bootifulpodcast.online/podcasts/83ae4357-fb6c-404d-8acf-0788b79f0c71/produced-audio) 
+* [(2020-09-04) SpringOne 2020, Azure Spring Cloud and fellow Java Champion and Microsoft Java architect Jonathan Giles](http://api.bootifulpodcast.online/podcasts/64ba7927-685d-429c-a4a4-135425fa6cac/produced-audio) 
+* [(2020-08-27) Soby Chacko and Dave Turanski on Messaging in Spring, Spring Cloud Stream App Starters and More ](http://api.bootifulpodcast.online/podcasts/241d560b-0f20-455f-b8ea-551c6d949ba1/produced-audio) 
+* [(2020-08-21) Google Cloud's Elena Felder on Google Cloud, Spanner, and Reactor-based integrations](http://api.bootifulpodcast.online/podcasts/97942784-2299-42f4-b647-9e896ac6debf/produced-audio) 
+* [(2020-08-14) RSocket everywhere and Spring luminary Maciej Walkowiak on Spring Cloud AWS](http://api.bootifulpodcast.online/podcasts/95f7ed9e-11b6-4b80-aca6-733921b073d2/produced-audio) 
+* [(2020-08-07) 10 Years on the Spring team and JFrog's Baruch Sag](http://api.bootifulpodcast.online/podcasts/30740b6f-7781-4c17-b4d2-f7a2536ab245/produced-audio) 
+* [(2020-07-30) Josh Lock on supply chain security, Docker trust, TUF, and more ](http://api.bootifulpodcast.online/podcasts/db632a7a-10d6-4027-873f-3b5874a90703/produced-audio) 
+* [(2020-07-24) Spring Data lead Mark Paluch](http://api.bootifulpodcast.online/podcasts/b564a312-5a03-4f5d-928f-cb27d0047e3c/produced-audio) 
+* [(2020-07-17) Intuit's Katie Levy on Spring Boot, Kotlin, Android and more ](http://api.bootifulpodcast.online/podcasts/70c31ba4-f424-43a3-bbec-6f891aee6610/produced-audio) 
+* [(2020-07-10) Spring Data JDBC co-founder on JDBC, JPA and domain driven design](http://api.bootifulpodcast.online/podcasts/a0f59cfb-d9e7-405b-8f5e-0c34894332b1/produced-audio) 
+* [(2020-07-03) Dr. Yordan Karadzhov on instrumenting and visualizing the Linux Kernel](http://api.bootifulpodcast.online/podcasts/c1b8b860-8e1a-4b16-bfc2-9db88b7754ab/produced-audio) 
+* [(2020-06-25) VMware Principal Engineer and Tanzu Wavefront co-founder Clement Pang](http://api.bootifulpodcast.online/podcasts/4b743f6c-fdf6-4d0f-9bcc-fb47537fc0e7/produced-audio) 
+* [(2020-06-19) Nisha Kumar and Rose Judge on the Linux Foundation's Tern](http://api.bootifulpodcast.online/podcasts/49689040-28d8-4434-afa4-7f41d22b9c37/produced-audio) 
+* [(2020-06-11) Kubernetes guru Paul Czarkowski](http://api.bootifulpodcast.online/podcasts/64c3b8ef-2aa2-4f91-bc93-7e7be75c85df/produced-audio) 
+* [(2020-06-05) Kubernetes contributor and Kubernetes Release SIG Chair Tim Pepper](http://api.bootifulpodcast.online/podcasts/85dc9285-ba68-4180-aec2-52cccc140655/produced-audio) 
+* [(2020-05-28) A Bootiful Podcast: Dr. Malini Bhandaru on EdgeX and the opportunities for developers in the IoT space](http://api.bootifulpodcast.online/podcasts/60026531-40a7-4e6b-a404-7bc033172af9/produced-audio) 
+* [(2020-05-21) Jenkins founder and Launchable founder Kohsuke Kawaguchi](http://api.bootifulpodcast.online/podcasts/6c26eeff-ac5d-4b69-ab05-c351d12e6c5e/produced-audio) 
+* [(2020-05-14) VMWare COO Sanjay Poonen](http://api.bootifulpodcast.online/podcasts/b2bbe730-2e31-46d1-a391-1a6270211de2/produced-audio) 
+* [(2020-05-07) Spring and Java community member Edd? Mel?ndez about working in open-source, his journey to Spring and its community, contributing to Spring and more.](http://api.bootifulpodcast.online/podcasts/7d323056-84e8-4026-a783-4704db38709d/produced-audio) 
+* [(2020-05-01) Adrian Cole, founder or co-founder of Feign, JClouds, and Spring Cloud Sleuth and major contributor to OpenZipkin](http://api.bootifulpodcast.online/podcasts/ee343a8d-368e-4711-8f9c-4b571fa7a8e4/produced-audio) 
+* [(2020-04-24) Linux Kernel hacker and Real Time patch founder Steve Rostedt on how the kernel sees our busy Spring applications](http://api.bootifulpodcast.online/podcasts/16c8789f-5562-4062-b88a-61770e2af9db/produced-audio) 
+* [(2020-04-17) Jetbrains developer advocacy head and Kotlin rockstar Hadi Hariri](http://api.bootifulpodcast.online/podcasts/98e8d404-ff07-42ed-9100-cc3c5c20eef5/produced-audio) 
+* [(2020-04-10) Microsoft's Kushagra Thapar on Spring Data CosmosDB](http://api.bootifulpodcast.online/podcasts/e4fa038c-8a13-4c1d-acb6-734f5f543f13/produced-audio) 
+* [(2020-04-03) Kubernetes co-creator Joe Beda ](http://api.bootifulpodcast.online/podcasts/faf00426-0b5d-4a0d-912a-20504ae6f694/produced-audio) 
+* [(2020-03-27) Apache Groovy, Testcontainers, and Reactor committer Sergei Egorov](http://api.bootifulpodcast.online/podcasts/0bfe08cd-3443-4f7e-9d62-5da50408621c/produced-audio) 
+* [(2020-03-20) The Smile-Inducing and Brilliant Glenn Renfro](http://api.bootifulpodcast.online/podcasts/f2533aba-2850-410c-aeec-2f8f3833f075/produced-audio) 
+* [(2020-03-12) John Hawley on OSS at VMWare, Python, Security, and more. Plus: Announcing Spring Live!](http://api.bootifulpodcast.online/podcasts/7c73e1a6-47a2-4d11-8be2-0aa763053b9a/produced-audio) 
+* [(2020-03-06) Spring I/O organizer and Spring trainer extraordinairre Sergi Almar ](http://api.bootifulpodcast.online/podcasts/456c2f06-502f-41ca-a8c9-4430849066c3/produced-audio) 
+* [(2020-02-28) Spring Cloud Contract lead Marcin Grzejszczak on Spring Cloud Contract, Spring Cloud Sleuth, Continuous Integration and more](http://api.bootifulpodcast.online/podcasts/ed5d9a39-7ca5-477d-a743-3cb74ebc866f/produced-audio) 
+* [(2020-02-21) Building China Scale Infrastructure at Alibaba with Spring Cloud, RSocket, and more](http://api.bootifulpodcast.online/podcasts/fee894b7-62e5-48b0-9bd1-12dd84e3e5e6/produced-audio) 
+* [(2020-02-13) Vedran Pavic on Spring Session, Croatia, and so much more](http://api.bootifulpodcast.online/podcasts/d1dc9637-bb9d-483c-93d3-e989db4cfff7/produced-audio) 
+* [(2020-02-07) Oleg ?elajev on ZeroTurnaround, GraalVM, the vJUG and so much more](http://api.bootifulpodcast.online/podcasts/5eb141fd-fcbe-4962-840d-f82c6f582a90/produced-audio) 
+* [(2020-01-30) "The Phoenix Project" author Gene Kim](http://api.bootifulpodcast.online/podcasts/4bf03a77-495d-4e58-9ef1-c4583b400681/produced-audio) 
+* [(2020-01-23) Neo4j's mad scientist Michael Hunger on graphs, databases and relationships](http://api.bootifulpodcast.online/podcasts/91c4de22-69d8-44ad-a120-d859acbe251e/produced-audio) 
+* [(2020-01-16) Spring Cloud Services teammate Bella (Yuxin) Bai](http://api.bootifulpodcast.online/podcasts/59f63044-5c25-40d9-8c9f-232083137be5/produced-audio) 
+* [(2020-01-09) Pivotal Labs Sydney director David Julia](http://api.bootifulpodcast.online/podcasts/b7a9786d-fdef-419a-8da7-5475a90b4631/produced-audio) 
+* [(2020-01-03) The Good Dr. Dave Syer](http://api.bootifulpodcast.online/podcasts/3d0c5700-8e81-4220-a9b2-9ebc7a29b88a/produced-audio) 
+* [(2019-12-26) Microsoft's Jialin Dai on Spring for Azure](http://api.bootifulpodcast.online/podcasts/c102dbe9-5464-4e6b-9c36-b6e2001e76b4/produced-audio) 
+* [(2019-12-20) Reactor team Simon Basl?](http://api.bootifulpodcast.online/podcasts/c19fc45e-16b4-4d7f-b87c-8d5e23ac7cfd/produced-audio) 
+* [(2019-12-12) I need to talk about my father, Clark "Bud" Long, who just passed away](http://api.bootifulpodcast.online/podcasts/4677643c-a921-4fef-a30f-64c813d7e8ca/produced-audio) 
+* [(2019-12-05) Pivotal's Katrina Bakas on Pivotal Healthwatch, Kubernetes, Cloud Foundry and more](http://api.bootifulpodcast.online/podcasts/2545ebeb-6949-4bdb-9f07-12e8463b7f58/produced-audio) 
+* [(2019-11-28) Spring Tools lead Martin Lippert](http://api.bootifulpodcast.online/podcasts/2b956f1a-9407-4556-a19d-03a0ec68c076/produced-audio) 
+* [(2019-11-21) Spring Security engineer Ria Stein](http://api.bootifulpodcast.online/podcasts/a9c1eb1a-8efd-4bae-97b1-7b24c4cf9ca5/produced-audio) 
+* [(2019-11-15) RedHat / IBM's S?bastien Blanc on OAuth, KeyCloak, the French riviera, and more](http://api.bootifulpodcast.online/podcasts/1d189c9e-5679-4b8f-821d-1bad2a8cd501/produced-audio) 
+* [(2019-11-07) Michael Simons on Spring Boot, reactive Spring Data Neo4j, and more](http://api.bootifulpodcast.online/podcasts/d525acbf-3f65-4431-ae47-a7e856f4691a/produced-audio) 
+* [(2019-10-31) Hibernate community legend Vlad Mihalcea on the project, Hibernate, databases and more](http://api.bootifulpodcast.online/podcasts/eaae6699-6e67-438c-a1a5-0762aa1a1434/produced-audio) 
+* [(2019-10-24) Apache Tomcat, Netty and Spring Framework contributor Violeta Georgieva](http://api.bootifulpodcast.online/podcasts/aa3da822-e1c0-4e22-b794-a54c249e2319/produced-audio) 
+* [(2019-10-18) Bytebuddy and Mockito maestro Rafael Winterhalter](http://api.bootifulpodcast.online/podcasts/c106105d-fc05-4321-ad4b-5b7b18e0e722/produced-audio) 
+* [(2019-10-10) Spring mad scientist Andy Clement on AspectJ, SpEL, Eclipse, Graal and more](http://api.bootifulpodcast.online/podcasts/f40131bf-1501-4e3d-9ff3-6324f206e26d/produced-audio) 
+* [(2019-10-04) Oracle's Geertjan Wielenga on his new book "Developer, Advocate!"](http://api.bootifulpodcast.online/podcasts/291814bf-1fb3-43f9-adc0-12ec96d91b1a/produced-audio) 
+* [(2019-09-26) Java Champion and Jetbrains Developer Advocate Mala Gupta](http://api.bootifulpodcast.online/podcasts/7d5cb1e4-1c74-4474-b80c-329ad504e5cd/produced-audio) 
+* [(2019-09-19) Nicolai Parlog on Java modularity](http://api.bootifulpodcast.online/podcasts/5734a058-2bc9-4930-acc4-61bb730edf40/produced-audio) 
+* [(2019-09-12) Spring Framework co-founder and lead Juergen Hoeller on Spring Framework 5.2 and more](http://api.bootifulpodcast.online/podcasts/ed2466e8-a739-4be8-9b14-4881137b834f/produced-audio) 
+* [(2019-09-06) Spring Integration lead Gary Russell on Apache Kafka, RabbitMQ, Spring Integration and more](http://api.bootifulpodcast.online/podcasts/d65ae607-5298-4436-91a9-2b4976c96242/produced-audio) 
+* [(2019-08-29) Spring Cloud Data Flow legend Ilayaperumal Gopinathan](http://api.bootifulpodcast.online/podcasts/edeb6cb9-294c-41f6-8c4f-7f89e2ad9136/produced-audio) 
+* [(2019-08-23) James Ward, Matt Raible, and Ryan Knight](http://api.bootifulpodcast.online/podcasts/df2f53a6-0d32-4302-9d1b-0e49622f2e8e/produced-audio) 
+* [(2019-08-15) Spring teammate Brian Clozel on new features in Spring 5.2 and Spring Boot 2.2](http://api.bootifulpodcast.online/podcasts/e9d5a15b-fabf-4d7b-8852-907d2d313307/produced-audio) 
+* [(2019-08-08) Devops luminary and all around great guy John Willis](http://api.bootifulpodcast.online/podcasts/70c3fa93-ffd1-458e-b2d3-4b9321a99f88/produced-audio) 
+* [(2019-08-01) Gradle Developer Advocate Jenn Strater](http://api.bootifulpodcast.online/podcasts/f6aaf7fa-8cc8-4bef-9e39-177524b7298f/produced-audio) 
+* [(2019-07-26) Spring team legend Oliver Drotbohm on Spring Data, HATEOAS, Hypermedia, and more](http://api.bootifulpodcast.online/podcasts/f96eaaa5-3beb-4bc4-b21b-2d70980ff96b/produced-audio) 
+* [(2019-07-19) Azul CTO Gil Tene on JVMs, Garbage Collection, Performance and so much More](http://api.bootifulpodcast.online/podcasts/484c3fea-c15c-4a6c-b7d6-05def2b9ee7c/produced-audio) 
+* [(2019-07-12) "Mr. REST" Mike Amundsen on APIs, Microservices, HTTP and more](http://api.bootifulpodcast.online/podcasts/a92a98a8-3d87-48a0-9038-15036041ef02/produced-audio) 
+* [(2019-07-04) Dr. Venkat Subramaniam on Kotlin, Java, Spring, open-source, being productive, and so much more](http://api.bootifulpodcast.online/podcasts/9e69e673-3dbc-4860-9209-b2a6360e7f12/produced-audio) 
+* [(2019-06-27) Datadog's Jason Yee on observability, operations, metrics, Kubernetes, language and more](http://api.bootifulpodcast.online/podcasts/35df7bc5-d7c6-403b-a2c8-fd9a1a40c196/produced-audio) 
+* [(2019-06-21) IBM's Pratik Patel on function-as-a-service, Spring Cloud Function, Spring, Java and Devnexus](http://api.bootifulpodcast.online/podcasts/b852db47-14eb-4188-bbfc-9a16f54c8996/produced-audio) 
+* [(2019-06-13) Pivotal SVP Ian Andrews on our customers, new announcements, Kubernetes, and more](http://api.bootifulpodcast.online/podcasts/b6aaf914-7ea8-4292-a79c-e5587e9407da/produced-audio) 
+* [(2019-06-06) Spring Cloud lead Spencer Gibb](http://api.bootifulpodcast.online/podcasts/9d421c4d-bf5b-4ed4-96cf-b8e1413f7dfb/produced-audio) 
+* [(2019-05-30) Go-lang and Kubernetes legend Ver?nica Lopez](http://api.bootifulpodcast.online/podcasts/fe8afa8f-f73a-42fd-b133-473c693ae6bd/produced-audio) 
+* [(2019-05-24) Twitter's Chris Thalinger on Java, Graal, JVMs, JITs, Sao Paolo, Hawaii, and more](http://api.bootifulpodcast.online/podcasts/8182415b-d8d6-4238-9141-83d845d98498/produced-audio) 
+* [(2019-05-16) Nicolas Frankel on application security, integration testing, Kotlin and more](http://api.bootifulpodcast.online/podcasts/974acc14-5396-4122-8f07-765352c7e558/produced-audio) 
+* [(2019-05-09) Kotlin team engineer Roman Elisarov](http://api.bootifulpodcast.online/podcasts/71ba05ed-7a4a-44b3-b20f-028a35185484/produced-audio) 
+* [(2019-05-03) Spring Cloud Engineer Olga Maciaszek-Sharma](http://api.bootifulpodcast.online/podcasts/91847c03-82f4-4575-8801-8a7c74976313/produced-audio) 
+* [(2019-04-25) Spring Batch and Spring Cloud Task lead Michael Minella](http://api.bootifulpodcast.online/podcasts/564af652-f099-4d4d-9930-85c725567dea/produced-audio) 
+* [(2019-04-18) Pivotal Field CTO and OG Cloud Native Matt Stine on Architecture](http://api.bootifulpodcast.online/podcasts/155d863c-5dd5-4431-b0ae-300417d7805e/produced-audio) 
+* [(2019-04-11) Rabobank's Roy Braam](http://api.bootifulpodcast.online/podcasts/75983beb-8fa6-45e9-a33f-9760e5d4c3e5/produced-audio) 
+* [(2019-04-04) Kylie Liang and Theresa Nguyen on Microsoft's Java and Spring integrations](http://api.bootifulpodcast.online/podcasts/05b4ae01-52ce-4e19-a3d3-0bdf286f7b3d/produced-audio) 
+* [(2019-03-28) Josh Mckenty - "Better Josh" - on data sovereignty, Python, the cloud, Pivotal, and more](http://api.bootifulpodcast.online/podcasts/ac45826d-ffaa-414f-9895-9511b2f9a363/produced-audio) 
+* [(2019-03-21) CQRS with AxonIQ's Steven van Beelen and Pivotal's Ben Wilcock](http://api.bootifulpodcast.online/podcasts/47b9e94f-4314-4a52-8fb0-3c9ca317b48c/produced-audio) 
+* [(2019-03-14) Joe Grandja on Spring Security 5's OAuth Support](http://api.bootifulpodcast.online/podcasts/13d87c27-cba4-46b4-b978-9b472353992c/produced-audio) 
+* [(2019-03-07) Matt Raible and James Ward at Devnexus 2019](http://api.bootifulpodcast.online/podcasts/61e314c4-763a-4746-abdd-39406c14f08c/produced-audio) 
+* [(2019-02-28) Reactor project lead St?phane Maldini](http://api.bootifulpodcast.online/podcasts/863c6399-c65d-4a60-ba24-327ac3db4c44/produced-audio) 
+* [(2019-02-21) Pivotal Application Platform Security Senior Manager Sree Tummidi](http://api.bootifulpodcast.online/podcasts/bbbbfbc4-fe9b-4f0c-ab4f-10279d739875/produced-audio) 
+* [(2019-02-14) Spring Contributor and "Learning Spring Boot 2.0" author Greg Turnquist](http://api.bootifulpodcast.online/podcasts/8affbc01-89c8-4cdf-adc8-29daf4f78bec/produced-audio) 
+* [(2019-02-07) Codota's Dror Weiss](http://api.bootifulpodcast.online/podcasts/d99dcb7f-8aec-427b-8940-bc13eabcff67/produced-audio) 
+* [(2019-01-31) Spring Cloud Stream lead Oleg Zhurakousky](http://api.bootifulpodcast.online/podcasts/520f6c5d-25f1-4d59-8ad3-3d02c63e0bd0/produced-audio) 
+* [(2019-01-25) Spring Boot engineer Madhura Bhave](http://api.bootifulpodcast.online/podcasts/31e0f731-398d-43d9-bacb-f2c7b578c1f7/produced-audio) 
+* [(2019-01-16) Google Developer Advocate Ray Tsang](http://api.bootifulpodcast.online/podcasts/15a96291-9267-476d-b743-60d1cab2f6c6/produced-audio) 
+* [(2018-12-20) Jon Schneider on his project metrics collection facade Micrometer](http://api.bootifulpodcast.online/podcasts/a00968ac-fb9b-4228-9d50-8a0375f7dec3/produced-audio) 
+* [(2018-10-10) Pivotal's Senior Director of Technology Cornelia Davis](http://api.bootifulpodcast.online/podcasts/07d32ead-cb0a-418f-bd0f-0d508ea86f54/produced-audio) 
 
 <!-- STOP:PODCASTS -->
 
@@ -473,3 +515,37 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2020-10-26T02:32:41.290685 -->
 
 <!-- generated 2020-10-27T02:32:25.912855 -->
+
+<!-- generated 2020-10-28T02:33:37.971696 -->
+
+<!-- generated 2020-10-29T02:35:08.388015 -->
+
+<!-- generated 2020-10-30T02:16:15.748179 -->
+
+<!-- generated 2020-11-11T11:15:21.446562 -->
+
+<!-- generated 2020-11-11T11:28:55.328205 -->
+
+<!-- generated 2020-11-11T12:04:32.532282 -->
+
+<!-- generated 2020-11-12T02:20:28.554981 -->
+
+<!-- generated 2020-11-13T02:21:03.487091 -->
+
+<!-- generated 2020-11-14T02:21:20.513779 -->
+
+<!-- generated 2020-11-15T02:21:23.340856 -->
+
+<!-- generated 2020-11-16T02:21:48.118477 -->
+
+<!-- generated 2020-11-17T02:22:06.924989 -->
+
+<!-- generated 2020-11-18T01:05:35.238031 -->
+
+<!-- generated 2020-11-18T01:25:24.717552 -->
+
+<!-- generated 2020-11-18T02:23:23.890156 -->
+
+<!-- generated 2020-11-19T02:23:32.278387 -->
+
+<!-- generated 2020-11-20T02:24:11.688099 -->
