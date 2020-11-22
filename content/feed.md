@@ -41,8 +41,8 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
-* *2020-12-23* - [Join me on our [VMWare Tanzu ](http://twitch.tv/vmwaretanzu) channel - I'll be doing a "Code" stream at noon PDT]
 * *2020-12-15* - I'll be speaking at the Warsaw, Poland JUG - [_Warszawa JUG_. Check the website for more details as they become available]()
+* *2020-12-09* - [Join me on our [VMWare Tanzu ](http://twitch.tv/vmwaretanzu) channel - I'll be doing a "Code" stream at noon PDT]
 * *2020-12-07* - Join me, Spring Developer Advocate Josh Long for this 90 minute exploration of [all things reactive and RSocket in Spring](https://tanzu.vmware.com/content/webinars/8-dec-springone-tour-apj). This is ideally timed for [folks in APJ](https://tanzu.vmware.com/content/webinars/8-dec-reactive-spring), so sign up now! 
 * *2020-12-04* - [I'll be speaking at the jLove conference, participating in both a talk and a panel](https://javaconf.love/)
 * *2020-12-03* - [Knoxville JUG](https://www.meetup.com/KnoxJava/events/nmfmbrybcpbwb/)
@@ -551,3 +551,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2020-11-20T02:24:11.688099 -->
 
 <!-- generated 2020-11-21T02:23:46.618143 -->
+
+<!-- generated 2020-11-22T02:24:02.926312 -->
