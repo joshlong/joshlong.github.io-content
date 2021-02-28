@@ -163,6 +163,7 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 
 <!-- START:SCREENCASTS-->
 
+* [(2021-02-23) Spring Cloud Gateway, Redux](https://www.youtube.com/watch?v=puIJ1Mn9_LE) 
 * [(2020-06-06) Spring Native Images (pt. 2)](https://www.youtube.com/watch?v=aTNLtU5YYtg) 
 * [(2020-04-29) Wavefront](https://www.youtube.com/watch?v=R8RAgTJvbEc) 
 * [(2020-04-23) Configuration](https://www.youtube.com/watch?v=PsNNGuLi0ns) 
@@ -512,3 +513,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2020-11-25T02:25:03.127608 -->
 
 <!-- generated 2021-02-28T08:20:49.312042 -->
+
+<!-- generated 2021-02-28T08:37:09.034896 -->
