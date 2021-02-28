@@ -41,60 +41,11 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
-* *2020-12-15* - I'll be speaking at the Warsaw, Poland JUG - [_Warszawa JUG_. Check the website for more details as they become available]()
-* *2020-12-09* - [Join me on our [VMWare Tanzu ](http://twitch.tv/vmwaretanzu) channel - I'll be doing a "Code" stream at noon PDT]
-* *2020-12-07* - Join me, Spring Developer Advocate Josh Long for this 90 minute exploration of [all things reactive and RSocket in Spring](https://tanzu.vmware.com/content/webinars/8-dec-springone-tour-apj). This is ideally timed for [folks in APJ](https://tanzu.vmware.com/content/webinars/8-dec-reactive-spring), so sign up now! 
-* *2020-12-04* - [I'll be speaking at the jLove conference, participating in both a talk and a panel](https://javaconf.love/)
-* *2020-12-03* - [Knoxville JUG](https://www.meetup.com/KnoxJava/events/nmfmbrybcpbwb/)
-* *2020-11-23* - [JavaHispano JUG presentation]( http://www.javahispano.org/portada/2020/11/11/reactive-spring-con-josh-long.html)
-* *2020-11-22* - [GDG Devfest Shanghai](https://gdg.community.dev/events/details/google-gdg-shanghai-presents-devfest-shanghai-2020/)
-* *2020-11-19* - the [Kansas City JUG](https://www.meetup.com/KansasCityJUG/events/274575027/)
-* *2020-11-18* - [QCon Plus](https://plus.qconferences.com/) - I'll be doing a presentation and doing live Q&A 
-* *2020-11-18* - [JCConf keynote speaker - Rsocket Revolution](https://jcconf.tw/2020/)
-* *2020-11-17* - [Ireland Bash Talk ](https://instil.co/2020/11/03/the-redeye-bash/ ) 
-* *2020-11-16* - None
-* *2020-11-13* - I'll be speaking virtually at the Build Stuff conference -https://www.buildstuff.events/agenda
-* *2020-11-12* - I'll be speaking at [the CapGemini BLD() Tech Talks XXL event](https://www.capgemini.com/nl-nl/evenementen/bldtechtalksxxl-java/)
-* *2020-11-11* - Build Stuff - (virtual) "Rockstar spotlight stage interview"
-* *2020-11-11* - London Java Community meetup -  https://www.eventbrite.co.uk/e/ljc-virtual-meetup-reactive-spring-with-josh-long-tickets-128220961347
-* *2020-11-10* - Webinar on Spring with JetBrains - "Bootiful Kotlin"
-* *2020-11-10* - Reative Summit - Panel - "Is the Future Reactive?"
-* *2020-11-10* - Reactive Summit -Presentation - "Bootiful RSocket"
-* *2020-11-06* - Devoxx Ukraine 2020
-* *2020-11-05* - I'll be speaking at the JFall conference on the 5th of November
-* *2020-11-04* - I'll be on Twitch! Join me on twitch.tv/vmwaretanzu on 11/4/2020
-* *2020-11-03* - DevCon 2020 - keynote
-* *2020-10-21* - GDG DevFest Damanhour 2020
-* *2020-10-18* - DevFest 2020 Ukraine
-* *2020-10-17* - GDG Romania DevFest 2020
-* *2020-10-17* - GDG Poland DevFest 2020
-* *2020-10-17* - GDG Yola DevFest 2020
-* *2020-10-17* - GDG Mountain DevFest 2020
-* *2020-10-16* - I'm looking forward to speaking at the New Delhi JUG on October 16th, 2020
-* *2020-10-15* - I'll be speaking (virtually) at the OpenSlava conference on the 15th of October, 2020
-* *2020-10-13* - This J4K (Java and Kubernetes - what else do you need?) is going to be a ton of fun online, and I hope to see you there.
-* *2020-10-13* - I will be a cohost, along with the legendary Heather VanCura, of the J4K show
-* *2020-10-09* - It was a pleasure to present to the SouJava Brazillian JUG. The presentation is now online https://www.youtube.com/watch?v=CmQ_5TIq0T4
-* *2020-10-06* - I'll be speaking at the NY JavaSig (which is now 25 years old!) on October 6th, 2020
-* *2020-10-05* - I'll be speaking at the inaugural Garden State (New Jersey) Java User Group and I hope you'll join me!
-* *2020-09-26* - This Serbian conference - ITkonekt   - is now going [to be online](https://itkonekt.com/en/)
-* *2020-09-25* - InfoShare is the largest tech conferene in CEE and it's now streaming
-* *2020-09-21* - I'll be speaking at the (now virtual) Chicago Cloud Conf again this year. 
-* *2020-09-12* - This Turkish event is now online, and I wholely encourage you to participate if you can. 
-* *2020-09-10* - This KotlinConf _may_ be turned into a virtual event. Either way, I hope to see you there.
-* *2020-09-09* - I'll be doing my new talk _The RSocket Revolution_ at the (virtual) Denver JUG. Join us!
-* *2020-09-03* - It's SpringOne! Online! And FREE! Do _NOT_ miss this. I'll be there, but so will tons of other folks.
-* *2020-08-26* - None
-* *2020-08-26* - I'm looking forward to being a part of this upcoming Java 25 mini-conference for [the Dublin JUG](https://ti.to/dublin-java-user-group/java25). I hope to see you there.
-* *2020-08-13* - I'll be doing a 2 day workshop at the [epic YOW! event](https://www.eventbrite.com.au/e/yow-workshop-2020-cloud-native-java-aug-14-18-2020-tickets-114222161560?aff=social) on _Cloud Native Java_.
-* *2020-07-22* - I'll be speaking at the upcoming SpringOne Tour event at the [_Reactive Spring_ event](https://springonetour.io/2020/reactive)
-* *2020-07-14* - I'll be speaking at the [London Java Community Meetup about Kotlin](https://www.eventbrite.co.uk/e/ljc-virtual-meetup-bootiful-kotlin-tickets-112484117022).
-* *2020-06-24* - I'll be speaking (virtually) at the San Francisco JUG in June - https://www.meetup.com/sfjava/events/271297887/
-* *2020-06-09* - On June 9th, I'll be speaking (virtually) at the DC Cloud Meetup 
-* *2020-06-04* - I will be delivering a presentation - "Bootiful Azure" - to the Singapore Java Usergroup and the Singapore Microsoft Azure community 
-* *2020-06-02* - I'll be speaking at the JNation virtual event on June 2nd, at 11:45AM PDT. Join me!
-* *2020-04-29* - On April 30th, I'll be speaking at the Chinese Green Tea JUG! Don't miss this, my friends.
-* *2020-04-21* - On Tuesday, April 21, 2020, I'll be speaking on "Reactive Spring" at the javaBin Online meetup and I hope to see you there! 
+* *2021-03-09* - I'll be doing a talk for the Java User Group Passau on Reactive Spring
+* *2021-02-24* - I'll be on a panel for Undo software along with others like Mary Grygleski, Jonathan Harris, Daniel Bryant and Angie Jones. Do Not Miss This! 
+* *2021-02-24* - Join me on Tanzu TV - twitch.tv/vmwaretanzu - and we'll look at Spring Cloud Gateway
+* *2021-02-18* - I'll be speaking at JavaDayLviv and I hope to see you there!
+* *2021-02-09* - Join me for the epic OOP Java conference where I'll be talking about Cloud Native Java
 
 <!-- STOP:APPEARANCES -->
 
@@ -559,3 +510,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2020-11-24T02:24:47.273754 -->
 
 <!-- generated 2020-11-25T02:25:03.127608 -->
+
+<!-- generated 2021-02-28T08:20:49.312042 -->
