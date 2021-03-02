@@ -42,6 +42,7 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 <!-- START:APPEARANCES -->
 
 * *2021-03-09* - I'll be doing a talk for the Java User Group Passau on Reactive Spring
+* *2021-03-01* - New York Times Workshop 
 * *2021-02-24* - I'll be on a panel for Undo software along with others like Mary Grygleski, Jonathan Harris, Daniel Bryant and Angie Jones. Do Not Miss This! 
 * *2021-02-24* - Join me on Tanzu TV - twitch.tv/vmwaretanzu - and we'll look at Spring Cloud Gateway
 * *2021-02-18* - I'll be speaking at JavaDayLviv and I hope to see you there!
@@ -539,3 +540,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-02-28T08:54:24.547360 -->
 
 <!-- generated 2021-03-01T02:39:09.346173 -->
+
+<!-- generated 2021-03-02T02:29:44.037815 -->
