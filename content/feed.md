@@ -41,6 +41,8 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
+* *2021-03-17* - Meet up Java in the Cloud Native World
+* *2021-03-10* - Spring time is here! This year's SpringOne Tour event is going to be _amazing_! Do not miss it. I'll be doing a presentation with Mark Heckler, Nate Schutta, Cora Iberkleid, Paul Czarkowski, and Tiffany Jernigan. It'll be a production-centric adventure.
 * *2021-03-09* - I'll be doing a talk for the Java User Group Passau on Reactive Spring
 * *2021-03-01* - New York Times Workshop 
 * *2021-02-24* - I'll be on a panel for Undo software along with others like Mary Grygleski, Jonathan Harris, Daniel Bryant and Angie Jones. Do Not Miss This! 
@@ -544,3 +546,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-03-02T02:29:44.037815 -->
 
 <!-- generated 2021-03-03T02:36:41.173695 -->
+
+<!-- generated 2021-03-04T02:37:45.347375 -->
