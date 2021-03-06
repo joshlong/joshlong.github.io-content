@@ -41,6 +41,9 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
+* *2021-05-25* - None
+* *2021-04-06* - I'll be doing a live training for O'Reilly on Spring Boot and Kotlin. I hope you'll join me here from 11am to 2pm on the 6th of April: https://www.oreilly.com/live-training/courses/spring-boot-and-kotlin/0636920053993/
+* *2021-03-18* - Bootiful Cassandra with DataStax's Patrick McFadin 
 * *2021-03-17* - Meet up Java in the Cloud Native World
 * *2021-03-11* - Spring time is here! This year's SpringOne Tour event is going to be _amazing_! Do not miss it. I'll be doing a presentation with Mark Heckler, Nate Schutta, Cora Iberkleid, Paul Czarkowski, and Tiffany Jernigan. It'll be a production-centric adventure.
 * *2021-03-09* - I'll be doing a talk for the Java User Group Passau on Reactive Spring
@@ -551,3 +554,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-03-04T02:37:45.347375 -->
 
 <!-- generated 2021-03-05T02:38:48.595732 -->
+
+<!-- generated 2021-03-06T02:37:51.061785 -->
