@@ -63,6 +63,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2021-03-18) fellow Java champion and legend Angie Jones](/podcasts/9a152f89-03b4-42b2-9aaa-3fa0072fd136/produced-audio) 
 * [(2021-03-11) FF4J project creator and DataStax Astra SDK engineer Cedrick Lunven](/podcasts/22305306-bfb0-4a06-b860-56b311eafa44/produced-audio) 
 * [(2021-03-04) Spring Cloud Gateway for Kubernetes lead Chris Sterling on API Gateways, Microservices, Spring Cloud and more](/podcasts/8831ff85-31e9-41ef-ade5-310b9cda1005/produced-audio) 
 * [(2021-02-26) Spring legend Greg Turnquist on Spring Data REST, HATEOAS, continuous integration and so much more](/podcasts/2bb02476-2bf2-46da-ba30-b42413d05b07/produced-audio) 
@@ -582,3 +583,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-03-17T02:43:39.108258 -->
 
 <!-- generated 2021-03-18T02:41:23.163055 -->
+
+<!-- generated 2021-03-19T02:43:57.799818 -->
