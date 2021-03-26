@@ -63,6 +63,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2021-03-25) Shigeru Urushibara, President and CEO at UL Systems, Inc., and Japanese technology ecosystem legend](/podcasts/c9ffbd9e-1d62-4b62-9c55-10f64d09dbdc/produced-audio) 
 * [(2021-03-18) fellow Java champion and legend Angie Jones](/podcasts/9a152f89-03b4-42b2-9aaa-3fa0072fd136/produced-audio) 
 * [(2021-03-11) FF4J project creator and DataStax Astra SDK engineer Cedrick Lunven](/podcasts/22305306-bfb0-4a06-b860-56b311eafa44/produced-audio) 
 * [(2021-03-04) Spring Cloud Gateway for Kubernetes lead Chris Sterling on API Gateways, Microservices, Spring Cloud and more](/podcasts/8831ff85-31e9-41ef-ade5-310b9cda1005/produced-audio) 
@@ -597,3 +598,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-03-24T02:45:04.832770 -->
 
 <!-- generated 2021-03-25T02:20:16.717483 -->
+
+<!-- generated 2021-03-26T02:25:36.742821 -->
