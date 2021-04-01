@@ -6,10 +6,10 @@ status=published
 
 All talks are workable in a one-hour slot  unless otherwise noted.
 
-## Bootiful Kubernetes: a Rom-Com for the Ages
 
-Real love in the modern rom-com world means having to do some seriously outrageous things. Join Spring Developer Advocate Josh Long (@starbuxman) as he pursues production - and avoids disaster - with Spring and Kubernetes. 
+## Kubernetes Native Java
 
+Spring is all about helping developers get to production quickly and safely. These days, "production" is all but guaranteed to mean Kubernetes, and Spring has you covered. Join me, Spring Developer Advocate Josh Long (@starbuxman), and we'll look at how Spring Boot makes writing blisteringly fast, cloud-native, and scalable services more effortless than ever. 
 
 
 ## The RSocket Revolution 
