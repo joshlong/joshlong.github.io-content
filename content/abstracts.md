@@ -9,7 +9,7 @@ All talks are workable in a one-hour slot  unless otherwise noted.
 
 ## Kubernetes Native Java
 
-Spring is all about helping developers get to production quickly and safely. These days, "production" is all but guaranteed to mean Kubernetes, and Spring has you covered. Join me, Spring Developer Advocate Josh Long (@starbuxman), and we'll look at how Spring Boot makes writing blisteringly fast, cloud-native, and scalable services more effortless than ever. 
+Spring is all about helping developers get to production quickly and safely. These days, "production" is all but guaranteed to mean Kubernetes, and Spring has you covered. Join me, Spring Developer Advocate [Josh Long (@starbuxman)](https://twitter.com/starbuxman), and we'll look at how Spring Boot makes writing blisteringly fast, cloud-native, and scalable services more effortless than ever. 
 
 
 ## The RSocket Revolution 
