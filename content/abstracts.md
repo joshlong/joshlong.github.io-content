@@ -23,45 +23,23 @@ Spring is all about helping developers get to production quickly and safely. The
 * Secure our services with Spring Security 
 * Introduce bidirectional communication 
 * and more!
-
-##  Cloud Native Java, part deux 
-
-You know what nobody has ever said to me? "I wish you'd covered even more in your 45 minute 'Cloud Native Java' talk!" And I listened! In this talk, we'll look at Spring Cloud.next to support modern microservices development, focusing on the things that *really* matter (or, at least, the things we've got cooking in Spring Boot 2.0 and Spring Cloud Finchley, both due before April or so):
-
-- functions-as-a-service with Spring Cloud Function. We've got FUNCTIONS (wrapped in apps, in containers, running on servers, in datacenters)
-- functional reactive REST endpoints (totally different meaning for "function" here, though)
-- reactive programming with Spring Framework 5. Leverage flow control at every layer and make the most efficient use of every  CPU when doing input/output. You're going to need every bit of efficiency that you can get after you've installed the patches for Spectre and Meltdown!
-- Kotlin. Yes, KOTLIN: you wanted Java and I'm giving it to you.. in libraries that I'll use from Kotlin.
-- messaging with Apache Kafka. Nothing funny here. It's just awesome.
-- Live on the edge with the new, reactive, rate-limiting, proxying, websocket-aware Spring Cloud Gateway 
-- ASCII art!
-
-## Spring and the Clouds 
-
-Production is my favorite place on the internet. I LOVE production. YOU should love production. You should go as early, and often, as possible. Bring the kids, the whole family. The weather is amazing! It's the happiest place on earth! In this talk, join Spring Developer Advocate Josh Long (your friendly neighborhood @starbuxman) to learn how to use Spring as the onramp to production, and to cloud platforms like Azure Spring Cloud, Cloud Foundry, and more.   
-
-## The Bootiful (Reactive) Application
-
-Alright, so maybe "bootiful" won't ever work, but I tried, and it was worth it too because you're reading this. Spring Boot, the new convention-over-configuration centric framework from the Spring team at Pivotal, marries Spring's flexibility with conventional, common sense defaults to make application development not just fly, but pleasant! Spring Boot aims to make address the common functional and non-functional requirements that gate quickly moving to production.
-
-Join Spring developer advocate Josh Long for a look at what Spring Boot is, why it's turning heads, why you should consider it for your next application (REST, micro services, web, batch, big data, integration, whatever!) and how to get started.
+  
 
 ## Reactive Spring
 
 
 Microservices and big-data increasingly confront us with the  limitations of traditional input/output. In traditional IO, work that is IO-bound dominates   threads. This wouldn't be such a big deal if we could add more threads cheaply, but threads are expensive on the JVM, and most other platforms. Even if threads were cheap and infinitely scalable, we'd still be confronted with the faulty nature of networks. Things break, and they often do so in subtle, but non-exceptional ways. Traditional approaches to integration bury the faulty nature of networks behind overly simplifying abstractions. We need something better. 
 
-Spring Framework 5 is here ! It introduces the Spring developer to a growing world of support for reactive programming across the Spring portfolio, starting with a new Netty-based web runtime, component model and module called Spring WebFlux, and then continuing to Spring Data Kay, Spring Security 5.0, Spring Boot 2.0 and Spring Cloud Finchley. Sure, it sounds like a lot, but don't worry! Join me, your guide, Spring developer advocate Josh Long, and we'll explore the wacky, wonderful world of Reactive Spring together.
+Spring Framework 5 is here! It introduces the Spring developer to a growing world of support for reactive programming across the Spring portfolio, starting with a new Netty-based web runtime, component model and module called Spring WebFlux, and then continuing to Spring Data Kay, Spring Security 5.0, Spring Boot 2.0 and Spring Cloud Finchley. Sure, it sounds like a lot, but don't worry! Join me, your guide, Spring developer advocate Josh Long, and we'll explore the wacky, wonderful world of Reactive Spring together.
 
 
 
 ## Bootiful Testing (1-3h)
 
-How would you feel if you knew that any pat of the code was at most a few minutes away from being shippable and delivered into production?  How would you feel if you knew that any part of the code is a few ctrl+z's away from being shippable and delivered into production? Emboldened and confident? Test driven development (TDD) gives you that. TDD allows you to proceed with confidence that you're building the right thing. It provides you with imminent-horizons that you can meet and    measure. TDD gives developers the confidence to go faster, secure in the knowledge that what they break they will fix and be able to improve. In this talk, join Spring Developer Advocate Josh Long (@starbuxman) as he looks at how to test Spring applications and services. We'll look at how to test basic components, mocks, how to take advantage of test slices, and how to test web applications. We'll also  look at how to  ensure that  API producers and API consumers work well together using consumer driven contract testing (CDCT) without sacrificing the testing pyramid for  end-to-end integration tests.
+How would you feel if you knew that any pat of the code was at most a few minutes away from being shippable and delivered into production?  How would you feel if you knew that any part of the code is a few ctrl+z's away from being shippable and delivered into production? Emboldened and confident? Test driven development (TDD) gives you that. TDD allows you to proceed with confidence that you're building the right thing. It provides you with imminent-horizons that you can meet and measure. TDD gives developers the confidence to go faster, secure in the knowledge that what they break they will fix and be able to improve. In this talk, join Spring Developer Advocate Josh Long (@starbuxman) as he looks at how to test Spring applications and services. We'll look at how to test basic components, mocks, how to take advantage of test slices, and how to test web applications. We'll also  look at how to  ensure that  API producers and API consumers work well together using consumer driven contract testing (CDCT) without sacrificing the testing pyramid for  end-to-end integration tests.
 
 
 ## Bootiful Kotlin
-
 
 Spring Boot, the convention-over-configuration centric framework from the Spring team at Pivotal, marries Spring's flexibility with conventional, common sense defaults to make application development on the JVM not just fly, but pleasant! Spring Boot aims to make address the common functional and non-functional requirements that gate quickly moving to production. The framework is as clean as it gets, wouldn't it be nice if the language matched its elegance?
 
@@ -139,20 +117,4 @@ In this workshop we'll cover:
 
 - *Functions-as-a-service* - In this section we'll look at how to build serverless-style applications (Spring Cloud Function)
 
-
-## The Reactive Revolution (SpringOne Tour 2019 Talk)
-
-
-The reactive revolution continues. For as much as we've been talking about reactive programming in Spring for the last few years the journey has only just begun. Join me, Spring Developer Advocate Josh Long (@starbuxman), and we'll take our reactive applications further, looking at how to build microservices for cloud platforms like Pivotal Application Service (Cloud Foundry) and PKS (Kubernetes). 
-
-Some of the things we may cover include: 
-
-* reactive NoSQL data access 
-* reactive SQL data access with R2DBC 
-* orchestration and reliability patterns like client-side loadbalancing, circuit breakers, and hedging 
-* messaging and service integration with Apache Kafka or RSocket 
-* API gateways with Spring Cloud Gateway and patterns like rate limiting and 
-* API adapters 
-* serverless programming with Spring Cloud Function and project Riff 
-* reactive authentication and authorization with Spring Security 
-
+ 
