@@ -63,6 +63,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2021-04-01) SpringFox creator Marty Pitt on Swagger, Vyne and Taxi lang, and much more](/podcasts/99accae2-267d-445c-8989-949ef56a70cd/produced-audio) 
 * [(2021-03-25) Shigeru Urushibara, President and CEO at UL Systems, Inc., and Japanese technology ecosystem legend](/podcasts/c9ffbd9e-1d62-4b62-9c55-10f64d09dbdc/produced-audio) 
 * [(2021-03-18) fellow Java champion and legend Angie Jones](/podcasts/9a152f89-03b4-42b2-9aaa-3fa0072fd136/produced-audio) 
 * [(2021-03-11) FF4J project creator and DataStax Astra SDK engineer Cedrick Lunven](/podcasts/22305306-bfb0-4a06-b860-56b311eafa44/produced-audio) 
@@ -612,3 +613,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-03-31T02:27:05.405574 -->
 
 <!-- generated 2021-04-01T02:33:32.147468 -->
+
+<!-- generated 2021-04-02T02:34:38.870894 -->
