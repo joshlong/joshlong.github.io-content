@@ -63,6 +63,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2021-04-16) Biden campaign CTO, Spinnaker cofounder, Target distinguished engineer, and all around epic guy Dan Woods](/podcasts/c39eda76-3962-48a6-abf2-b447b52b1a68/produced-audio) 
 * [(2021-04-09) Ambassador Labs devrel director, InfoQ contributor, lifelong learner, and awesome human, and friend Daniel Bryant](/podcasts/8259af4d-b744-4b83-b989-a3ed638a6b7b/produced-audio) 
 * [(2021-04-01) SpringFox creator Marty Pitt on Swagger, Vyne and Taxi lang, and much more](/podcasts/99accae2-267d-445c-8989-949ef56a70cd/produced-audio) 
 * [(2021-03-25) Shigeru Urushibara, President and CEO at UL Systems, Inc., and Japanese technology ecosystem legend](/podcasts/c9ffbd9e-1d62-4b62-9c55-10f64d09dbdc/produced-audio) 
@@ -644,3 +645,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-04-15T02:26:03.426138 -->
 
 <!-- generated 2021-04-16T02:29:27.461658 -->
+
+<!-- generated 2021-04-17T02:25:41.224882 -->
