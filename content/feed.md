@@ -41,7 +41,7 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
-* *2021-05-25* - None
+* *2021-05-25* - 
 * *2021-04-06* - I'll be doing a live training for O'Reilly on Spring Boot and Kotlin. I hope you'll join me here from 11am to 2pm on the 6th of April: https://www.oreilly.com/live-training/courses/spring-boot-and-kotlin/0636920053993/
 * *2021-03-26* - Cloud Builders Conference 
 * *2021-03-18* - Bootiful Cassandra with DataStax's Patrick McFadin 
@@ -655,3 +655,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-04-20T02:27:34.050065 -->
 
 <!-- generated 2021-04-21T02:28:40.284805 -->
+
+<!-- generated 2021-04-22T02:29:12.296734 -->
