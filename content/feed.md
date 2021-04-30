@@ -63,6 +63,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2021-04-29) Oracle's Dilip Krishnan on SpringFox, the Oracle Cloud Lift team, and more](/podcasts/4e7fee0c-7112-46bc-8fc8-027e806b509f/produced-audio) 
 * [(2021-04-23) Reliably CEO Russ MIles](/podcasts/547d70b6-e5e1-4e48-97a7-a4a6d21462dd/produced-audio) 
 * [(2021-04-16) Biden campaign CTO, Spinnaker cofounder, Target distinguished engineer, and all around epic guy Dan Woods](/podcasts/c39eda76-3962-48a6-abf2-b447b52b1a68/produced-audio) 
 * [(2021-04-09) Ambassador Labs devrel director, InfoQ contributor, lifelong learner, and awesome human, and friend Daniel Bryant](/podcasts/8259af4d-b744-4b83-b989-a3ed638a6b7b/produced-audio) 
@@ -672,3 +673,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-04-28T02:32:16.318007 -->
 
 <!-- generated 2021-04-29T02:28:24.520444 -->
+
+<!-- generated 2021-04-30T02:29:34.562395 -->
