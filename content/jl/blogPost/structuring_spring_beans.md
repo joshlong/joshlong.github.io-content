@@ -5,7 +5,7 @@ tags=blog
 status=published
 ~~~~~~
 
-It's hard to think about structuring applications. Three's a lot to think about at the higher level -  is it a batch job, a web application, a messaging application, etc. The frameworks - Spring Batch, Spring Webflux, Spring Integration, respectively - will guide those decisions.
+It's hard to think about structuring applications. There's a lot to think about at the higher level -  is it a batch job, a web application, a messaging application, etc. The frameworks - Spring Batch, Spring Webflux, Spring Integration, respectively - will guide those decisions.
 
 It is easier to talk about how to structure your Java objects to work well in an IoC container like Spring. Remember, at the end of the day, Spring is a big bag of objects. It needs to know how you want to arrange your objects - how they wire up and how they relate to each other - to provide services to them. For example, it can begin and commit transactions when a method starts and stops. It can create HTTP endpoints that invoke your Spring controller handler methods when a request arrives. It can invoke your message listener objects in response to new messages coming from an Apache Kafka broker or AWS SQS or RabbitMQ or whatever. The list of things Spring can do goes on and on, but it all assumes that you've registered the objects with Spring, first. 
 
