@@ -6,6 +6,16 @@ status=published
 
 All talks are workable in a one-hour slot  unless otherwise noted.
 
+## Bootiful GraphQL 
+
+Hi Spring fans! Data wants to be free and so much of what we do in the wide and wonderful world of microservices is all about connecting data. It's difficult. There's a tension between how we build well-encapsulated microservices and how we connect their data in our clients. Until now. Facebook open sourced GraphQL in 2015 (also the same year that "Avengers: Age of Ultron," a movie about a psychotic super computer that wanted to take over the world came out. No coincidence, surely...). GraphQL is an alternative to the REST constraint on HTTP. It provides an easy way to model queries (reads, like an HTTP `GET`), subscriptions (longer-lived, asynchronous notifications sent to the client) and mutations (updates). Join me, Spring Developer Advocate Josh Long (@starbuxman), and we'll look at how to build data gateways for every clients' needs with Spring GraphQL. 
+
+
+## Bootiful Edge Services 
+
+Hi, Spring fans! So much of the difficult of microservices is not the services themselves, but the clients that connect to them. There are just so many things that can go wrong or cause bumps on the road to production! Clients may not speak the same protocols as the services to which they're connecting. Clients may need to adapt the data coming from services to suit their use cases, tailoring them to the user interface' particular requirements. Join me, Spring Developer Advocate Josh Long (@starbuxman) and we'll look at how to use reactive to build better API adapters, how to use Spring GraphQL to build better data integration gateways, and we'll look at Spring Cloud Gateway to build API gateways. 
+
+
 
 ## Kubernetes Native Java
 
