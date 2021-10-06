@@ -66,10 +66,10 @@ The Spring and Kotlin teams have worked hard to make sure that Kotlin and Spring
 
 Work takes time to flow through an organization and ultimately be deployed to production where it captures value. It’s critical to reduce time-to-production. Software - for many organizations and industries - is a competitive advantage. Organizations break their larger software ambitions into smaller, independently deployable, feature -centric batches of work - microservices. In order to reduce the round-trip between stations of work, organizations collapse or consolidate as much of them as possible and automate the rest; developers and operations beget “devops,” cloud-based services and platforms automate operations work and break down the need for ITIL tickets and change management boards. But velocity, for velocity’s sake, is dangerous. Microservices invite architectural complexity that few are prepared to address. In this talk, we’ll look at how high performance organizations like Ticketmaster, Alibaba, and Netflix make short work of that complexity with Spring Boot and Spring Cloud.
 
-In this workshop we'll look at how to build cloud-native Java systems that are elastic, agile, observable and robust.
 
 ## Cloud Native Java (2 days) 
 
+In this workshop we'll look at how to build cloud-native Java systems that are elastic, agile, observable and robust.
 
 * Bootcamp: this will be our first hands-on experience. It'll be useful as a way to validate that we have most everything required for the course
 	* First Steps with Spring 
