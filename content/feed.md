@@ -41,6 +41,7 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
+* *2021-10-22* - I'll be speaking at Voxxed Days Romania about building edge services with reactive programming, GraphQL, and Spring Cloud Gateway
 * *2021-10-06* - I'll be presenting "Bootiful Edge Services" at J4K.io, and I'll be there to answer any and all questions. 
 * *2021-09-14* - I'll be speaking at the Japanese Java User Group on the topic of "Kubernetes Native Java" - I hope you'll join us for this online event.
 * *2021-06-25* - I'll be returning to the JLove conference again, this time to talk about Kubernetes Native Java. I hope you'll join me!
@@ -727,3 +728,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-10-09T09:21:37.437823 -->
 
 <!-- generated 2021-10-09T09:31:02.731519 -->
+
+<!-- generated 2021-10-09T09:38:42.442791 -->
