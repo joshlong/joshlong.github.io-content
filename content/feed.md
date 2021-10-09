@@ -42,7 +42,7 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 <!-- START:APPEARANCES -->
 
 * *2021-11-01* - I'll be doing a 3h workshop at Devoxx UK that you should not miss! Join me and we'll look at what building microservices at scale looks like in this workshop, 'Cloud Native Java.'
-* *2021-10-27* - I'll be doing a 'Masterclass Taster' talk with GOTO Academy on all things Spring, Kubernetes and Microservices!!!
+* *2021-10-27* - I'll be doing a 'Masterclass Taster' talk with GOTO Academy on all things Spring, Kubernetes and Microservices...
 * *2021-10-22* - I'll be speaking at Voxxed Days Romania about building edge services with reactive programming, GraphQL, and Spring Cloud Gateway
 * *2021-10-06* - I'll be presenting "Bootiful Edge Services" at J4K.io, and I'll be there to answer any and all questions. 
 * *2021-09-14* - I'll be speaking at the Japanese Java User Group on the topic of "Kubernetes Native Java" - I hope you'll join us for this online event.
@@ -752,3 +752,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-10-09T10:23:15.436710 -->
 
 <!-- generated 2021-10-09T10:27:47.708578 -->
+
+<!-- generated 2021-10-09T10:37:39.328696 -->
