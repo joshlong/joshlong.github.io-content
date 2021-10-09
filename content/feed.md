@@ -71,7 +71,6 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
-* [(2021-10-07) Heiko Scherrer on OpenWMS, Spring, Spring Boot, Spring Data, workflow with Activiti and more](/podcasts/c13dc974-272e-462b-b22e-3b5a68ef0402/produced-audio) 
 * [(2021-10-07) Heiko Scherrer on OpenWMS, Spring, Spring Boot, Spring Data, workflow with Activiti and more  ](/podcasts/b8388222-4439-479c-9726-432838e34162/produced-audio) 
 * [(2021-09-30) Spring Data engineer Christoph Strobl on MongoDB, Redis, GraphQL and Spring Native`](/podcasts/cee57942-7d95-418a-9c6c-21fefb60835b/produced-audio) 
 * [(2021-09-24) Spring web legend Rossen Stoyanchev on RSocket, GraphQL and more](/podcasts/7e3544e6-325c-4f21-ab3c-01e368ca7d4c/produced-audio) 
@@ -756,3 +755,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-10-09T10:37:39.328696 -->
 
 <!-- generated 2021-10-09T10:51:14.741603 -->
+
+<!-- generated 2021-10-09T10:52:29.669949 -->
