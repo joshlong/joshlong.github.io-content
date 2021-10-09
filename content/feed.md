@@ -41,6 +41,9 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
+* *2021-06-22* - 
+* *2021-06-02* - 
+* *2021-05-28* - 
 * *2021-05-25* - 
 * *2021-04-06* - I'll be doing a live training for O'Reilly on Spring Boot and Kotlin. I hope you'll join me here from 11am to 2pm on the 6th of April: https://www.oreilly.com/live-training/courses/spring-boot-and-kotlin/0636920053993/
 * *2021-03-26* - Cloud Builders Conference 
@@ -48,7 +51,6 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 * *2021-03-17* - Meet up Java in the Cloud Native World
 * *2021-03-11* - Spring time is here! This year's SpringOne Tour event is going to be _amazing_! Do not miss it. I'll be doing a presentation with Mark Heckler, Nate Schutta, Cora Iberkleid, Paul Czarkowski, and Tiffany Jernigan. It'll be a production-centric adventure.
 * *2021-03-09* - I'll be doing a talk for the Java User Group Passau on Reactive Spring
-* *2021-03-01* - New York Times Workshop 
 * *2021-02-24* - I'll be on a panel for Undo software along with others like Mary Grygleski, Jonathan Harris, Daniel Bryant and Angie Jones. Do Not Miss This! 
 * *2021-02-24* - Join me on Tanzu TV - twitch.tv/vmwaretanzu - and we'll look at Spring Cloud Gateway
 * *2021-02-18* - I'll be speaking at JavaDayLviv and I hope to see you there!
@@ -63,6 +65,30 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2021-10-07) Heiko Scherrer on OpenWMS, Spring, Spring Boot, Spring Data, workflow with Activiti and more](/podcasts/c13dc974-272e-462b-b22e-3b5a68ef0402/produced-audio) 
+* [(2021-10-07) Heiko Scherrer on OpenWMS, Spring, Spring Boot, Spring Data, workflow with Activiti and more  ](/podcasts/b8388222-4439-479c-9726-432838e34162/produced-audio) 
+* [(2021-09-30) Spring Data engineer Christoph Strobl on MongoDB, Redis, GraphQL and Spring Native`](/podcasts/cee57942-7d95-418a-9c6c-21fefb60835b/produced-audio) 
+* [(2021-09-24) Spring web legend Rossen Stoyanchev on RSocket, GraphQL and more](/podcasts/7e3544e6-325c-4f21-ab3c-01e368ca7d4c/produced-audio) 
+* [(2021-09-17) The Good Dr. Mark Pollack on Spring.NET, physics, Spring Data, Spring XD, Spring Cloud Data Flow, and so much more](/podcasts/1a6e6eee-917d-4b57-8f1a-5b368e4c4770/produced-audio) 
+* [(2021-09-09) Spring Security engineer Josh Cummings](/podcasts/c8d1af8a-14d7-4578-aafd-a53fa14d611a/produced-audio) 
+* [(2021-09-02) SpringOne 2021 and Tatu Saloranta](/podcasts/d344fb16-6919-491c-88a4-73b1ff112249/produced-audio) 
+* [(2021-08-26) Richard North and Sergei Egorov on Testcontainers, their new company AtomicJar, and more](/podcasts/c5bef105-6464-4ea0-aeaf-02cd6db0ec29/produced-audio) 
+* [(2021-08-19) Microsoft Azure engineering manager Rome Li on his work supporting Microsoft Azure in IntelliJ, Visual Studio, Maven, Eclipse, and Visual Studio Code](/podcasts/8705b853-a83c-45ac-bfee-7967dd62dc3e/produced-audio) 
+* [(2021-08-12) Neo4J CEO and Spring Data cofounder Emil Eifrem on graphs, Neo4J, and more](/podcasts/db4a7d8d-c779-4dcb-b0b8-f2b89018c7fd/produced-audio) 
+* [(2021-08-06) Microsoft's Sean Li on Azure, Spring Boot, Azure Spring Cloud, Spring integrations and more](/podcasts/91c2a368-ed3c-4a50-aad1-654874f8b041/produced-audio) 
+* [(2021-07-29) Microsoft's Asir V. Selvasingh on Spring Boot, Spring Cloud, Microsoft Azure, and Azure Spring Cloud](/podcasts/e1eeb4ed-7226-4b73-b0b4-fbc9d1b3dd63/produced-audio) 
+* [(2021-07-22) Industry analyst, fascinating person, strategist, and storyteller Michael Coté](/podcasts/0abd5bb9-fd60-435d-b09e-aa3cc294cf59/produced-audio) 
+* [(2021-07-15) Visualizing software architecture with the C4 model with architect Simon Brown](/podcasts/b8e6ddc2-f4e7-4d6f-8088-88e0ea3f054b/produced-audio) 
+* [(2021-07-08) MATT RAIBLE!!](/podcasts/ed6e6498-f26d-4626-93fb-a09b3235ca55/produced-audio) 
+* [(2021-07-01) Benjamin Wilms, founder of the Chaos Monkey for Spring Boot and Steadybit, a company to help you build more robust services](/podcasts/7f1b3393-46ba-4865-8bb4-c3b8089e143b/produced-audio) 
+* [(2021-06-24) webassembly, IoT, data-science, and Java guru Brian Sletten](/podcasts/4b5c8ba5-df0f-49e4-ae4b-8949f69486cf/produced-audio) 
+* [(2021-06-17) Azure Developer Advocate Rory Preddy on Spring, Java, and Azure Spring Cloud](/podcasts/6b38f0b4-8b56-4254-8d4a-b14aa90a2741/produced-audio) 
+* [(2021-06-11) Redgate technical lead for the Flyway team Mikiel Agutu on database migrations and continuous delivery](/podcasts/e33f8dbc-5647-4ad4-ba51-ac0a186c1655/produced-audio) 
+* [(2021-06-03) JHipster creator and Microsoft Java Developer Advocacy manager Julien Dubois](/podcasts/76485cfd-edff-41ac-8655-4eefa76c4545/produced-audio) 
+* [(2021-05-27) Micrometer project lead and observability guru Tommy Ludwig](/podcasts/fdd92e23-28b1-49a0-9d02-4ccc7c8bccb2/produced-audio) 
+* [(2021-05-20) James Ward](/podcasts/6a6aaca5-ce2c-4786-9bae-4fa9e885ef5f/produced-audio) 
+* [(2021-05-13) Axon Framework founder Allard Buijze on CQRS](/podcasts/5a73fd94-5c4b-450d-ada8-f36f24a3ce00/produced-audio) 
+* [(2021-05-06) Friend, fellow Spring Developer Advocate, Kotlin Google Developer Expert, and Java Champion, Mark Heckler](/podcasts/2abe823c-0724-4d88-9f36-d9db5676b6c4/produced-audio) 
 * [(2021-04-29) Oracle's Dilip Krishnan on SpringFox, the Oracle Cloud Lift team, and more](/podcasts/4e7fee0c-7112-46bc-8fc8-027e806b509f/produced-audio) 
 * [(2021-04-23) Reliably CEO Russ MIles](/podcasts/547d70b6-e5e1-4e48-97a7-a4a6d21462dd/produced-audio) 
 * [(2021-04-16) Biden campaign CTO, Spinnaker cofounder, Target distinguished engineer, and all around epic guy Dan Woods](/podcasts/c39eda76-3962-48a6-abf2-b447b52b1a68/produced-audio) 
@@ -675,3 +701,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-04-29T02:28:24.520444 -->
 
 <!-- generated 2021-04-30T02:29:34.562395 -->
+
+<!-- generated 2021-10-09T07:55:02.648694 -->
