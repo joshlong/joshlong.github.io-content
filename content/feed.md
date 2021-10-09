@@ -41,8 +41,11 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
-* *2021-06-22* - 
-* *2021-06-02* - 
+* *2021-10-06* - I'll be presenting "Bootiful Edge Services" at J4K.io, and I'll be there to answer any and all questions. 
+* *2021-09-14* - I'll be speaking at the Japanese Java User Group on the topic of "Kubernetes Native Java" - I hope you'll join us for this online event.
+* *2021-06-25* - I'll be returning to the JLove conference again, this time to talk about Kubernetes Native Java. I hope you'll join me!
+* *2021-06-22* - I'll be the Okta Dev Twitch Stream with Matt Raible and Brian Demers - don't miss this! We'll be working on Spring Native and the Okta Spring Boot starter.
+* *2021-06-02* - Join me for Craft 2021 - where I'll be presenting "Cloud Native Java"
 * *2021-05-28* - 
 * *2021-05-25* - 
 * *2021-04-06* - I'll be doing a live training for O'Reilly on Spring Boot and Kotlin. I hope you'll join me here from 11am to 2pm on the 6th of April: https://www.oreilly.com/live-training/courses/spring-boot-and-kotlin/0636920053993/
@@ -221,6 +224,15 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 
 <!-- START:SCREENCASTS-->
 
+* [(2021-10-07) Spring GraphQL](https://www.youtube.com/watch?v=kVSYVhmvNCI) 
+* [(2021-09-29) Bootiful Edge Services](https://www.youtube.com/watch?v=nrTw4w1xJck) 
+* [(2021-09-15) SpringOne 2021 Recap](https://www.youtube.com/watch?v=VMtUzytjo6Y) 
+* [(2021-08-04) Better Data-Driven Applications with Redis](https://www.youtube.com/watch?v=Yq8Cc7eOgF8) 
+* [(2021-07-14) The Spring Integration Zip Module and Native Images](https://www.youtube.com/watch?v=O17OjxBLVrs) 
+* [(2021-07-07) Spring Cloud Square](https://www.youtube.com/watch?v=G8R-tEK18BY) 
+* [(2021-06-30) Spring Retrosocket](https://www.youtube.com/watch?v=vHOztWJNnBs) 
+* [(2021-06-23) Kubernetes Native Java](https://www.youtube.com/watch?v=6XIakve0GjI) 
+* [(2021-06-14) Spring Native 0.10.0](https://www.youtube.com/watch?v=JsUAGJqdvaA) 
 * [(2021-02-23) Spring Cloud Gateway, Redux](https://www.youtube.com/watch?v=puIJ1Mn9_LE) 
 * [(2020-06-06) Spring Native Images (pt. 2)](https://www.youtube.com/watch?v=aTNLtU5YYtg) 
 * [(2020-04-29) Wavefront](https://www.youtube.com/watch?v=R8RAgTJvbEc) 
@@ -261,11 +273,11 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 * [(2018-06-06) JPA](https://www.youtube.com/watch?v=2E8_0Qxi6Tg) 
 * [(2018-05-30) JDBC](https://www.youtube.com/watch?v=TUOwlaqZ0eo) 
 * [(2018-05-23) Apache Camel](https://www.youtube.com/watch?v=-KupcZ3bA-Y) 
-* [(2018-05-16) Project Riff and Spring Cloud Function ](https://www.youtube.com/watch?v=E55oAtOhWZU) 
+* [(2018-05-16) Project Riff and Spring Cloud Function](https://www.youtube.com/watch?v=E55oAtOhWZU) 
 * [(2018-05-09) Spring Security 5 OAuth Clients](https://www.youtube.com/watch?v=gSUeGi4sLlA) 
 * [(2018-05-02) Metrics Collection in Spring Boot 2 with Micrometer](https://www.youtube.com/watch?v=JAdxO1XboJY) 
 * [(2018-04-25) Spring Statemachine](https://www.youtube.com/watch?v=M4Aa45Gpc4w) 
-* [(2018-04-18) Redis ](https://www.youtube.com/watch?v=_M8xoagybzU) 
+* [(2018-04-18) Redis](https://www.youtube.com/watch?v=_M8xoagybzU) 
 * [(2018-04-11) The Cloud Foundry Java Client](https://www.youtube.com/watch?v=EtxD_RzKSwk) 
 * [(2018-04-04) Spring Cloud Stream Kafka Streams](https://www.youtube.com/watch?v=YPDzcmqwCNo) 
 * [(2017-12-15) Bootiful Banners](https://www.youtube.com/watch?v=nh2seTeGw5A) 
@@ -705,3 +717,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-10-09T07:55:02.648694 -->
 
 <!-- generated 2021-10-09T08:07:34.224327 -->
+
+<!-- generated 2021-10-09T08:51:20.505722 -->
