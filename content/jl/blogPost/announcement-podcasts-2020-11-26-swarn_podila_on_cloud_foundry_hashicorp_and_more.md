@@ -5,5 +5,5 @@ type=post
 tags=blog
 status=published
 ~~~~~~
-[(2020-11-26) Swarn Podila on Cloud Foundry, Hashicorp and more](/podcasts/c7172875-a743-436c-96b0-ba25b81b03d4/produced-audio) 
+[(2020-11-26) Swarn Podila on Cloud Foundry, Hashicorp and more](http://api.bootifulpodcast.fm//podcasts/c7172875-a743-436c-96b0-ba25b81b03d4/produced-audio) 
             
