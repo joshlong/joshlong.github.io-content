@@ -5,5 +5,5 @@ type=post
 tags=blog
 status=published
 ~~~~~~
-*2021-10-12* - 
+*2021-10-12* - I'll be on SnykLive doing a session about the state of Java Report 
             
