@@ -1,6 +1,6 @@
 
 title=Upcoming Appearance: SnykLive session about the state of Java Report 
-date=2021-10-10
+date=2021-10-11
 type=post
 tags=blog
 status=published
