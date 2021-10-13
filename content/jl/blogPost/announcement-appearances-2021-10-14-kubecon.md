@@ -1,6 +1,6 @@
 
 title=Upcoming Appearance: KubeCon
-date=2021-10-12
+date=2021-10-13
 type=post
 tags=blog
 status=published
