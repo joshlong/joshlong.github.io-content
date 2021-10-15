@@ -75,6 +75,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2021-10-15) .NET legend Layla Porter on Azure Spring Cloud, Steeltoe.NET, and more](http://api.bootifulpodcast.fm/podcasts/941c07ee-1362-41fe-b9a0-a123dcb4405d/produced-audio) 
 * [(2021-10-07) Heiko Scherrer on OpenWMS, Spring, Spring Boot, Spring Data, workflow with Activiti and more  ](http://api.bootifulpodcast.fm/podcasts/b8388222-4439-479c-9726-432838e34162/produced-audio) 
 * [(2021-09-30) Spring Data engineer Christoph Strobl on MongoDB, Redis, GraphQL and Spring Native`](http://api.bootifulpodcast.fm/podcasts/cee57942-7d95-418a-9c6c-21fefb60835b/produced-audio) 
 * [(2021-09-24) Spring web legend Rossen Stoyanchev on RSocket, GraphQL and more](http://api.bootifulpodcast.fm/podcasts/7e3544e6-325c-4f21-ab3c-01e368ca7d4c/produced-audio) 
@@ -230,6 +231,7 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 
 <!-- START:SCREENCASTS-->
 
+* [(2021-10-13) Spring Plugin](https://www.youtube.com/watch?v=GlV5sXdXPu4) 
 * [(2021-10-07) Spring GraphQL](https://www.youtube.com/watch?v=kVSYVhmvNCI) 
 * [(2021-09-29) Bootiful Edge Services](https://www.youtube.com/watch?v=nrTw4w1xJck) 
 * [(2021-09-15) SpringOne 2021 Recap](https://www.youtube.com/watch?v=VMtUzytjo6Y) 
@@ -809,3 +811,6 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-10-14T02:19:37.218640+00:00 -->
 
 <!-- generated 2021-10-14T04:03:30.343636+00:00 -->
+
+
+<!-- generated 2021-10-15T02:20:04.065151+00:00 -->
