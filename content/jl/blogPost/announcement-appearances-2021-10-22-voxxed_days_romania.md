@@ -1,6 +1,6 @@
 
 title=Upcoming Appearance: Voxxed Days Romania
-date=2021-10-15
+date=2021-10-16
 type=post
 tags=blog
 status=published
