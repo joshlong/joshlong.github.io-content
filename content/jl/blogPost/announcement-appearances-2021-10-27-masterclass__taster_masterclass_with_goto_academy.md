@@ -1,6 +1,6 @@
 
 title=Upcoming Appearance: Masterclass + Taster Masterclass with GOTO Academy
-date=2021-10-17
+date=2021-10-18
 type=post
 tags=blog
 status=published
