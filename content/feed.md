@@ -45,6 +45,7 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 * *2021-10-27* - I'll be doing a 'Masterclass Taster' talk with GOTO Academy on all things Spring, Kubernetes and Microservices...
 * *2021-10-26* - I'll be doing a virtual talk on Sprign GraphQL for the epic Joker conference in St. Petersburg, Russia
 * *2021-10-22* - I'll be speaking at Voxxed Days Romania about building edge services with reactive programming, GraphQL, and Spring Cloud Gateway
+* *2021-10-20* - I'll be doing my talk "Kubernetes Native Java" for the Romanian show [Tech Talks Online](https://www.hipo.ro/locuri-de-munca/locuri_de_munca/168033) at 5am PDT - it'll be a lot of fun and I hope you'll join me! 
 * *2021-10-14* - I'm not presenting, but I'll be there virtually and happy to chat if you see me trawling the various tracks and chats!
 * *2021-10-13* - Come join me and we'll look at an assortment of Spring Tips in this installment of Code
 * *2021-10-12* - I'll be on SnykLive doing a session about the state of Java Report 
@@ -830,3 +831,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-10-19T02:20:57.626104+00:00 -->
 
 <!-- generated 2021-10-20T02:37:43.685801+00:00 -->
+
+<!-- generated 2021-10-21T02:40:04.021495+00:00 -->
