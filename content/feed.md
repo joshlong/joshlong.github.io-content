@@ -9,7 +9,7 @@ status=published
 
 
 Josh ([@starbuxman](https://twitter.com/starbuxman)) has (officially) been a Spring Developer Advocate since 2010. Josh is a Java Champion, a Kotlin Google Developer Expert,
-author of 6 books (including O’Reilly’s [Cloud Native Java: Designing Resilient Systems with Spring Boot](https://www.amazon.com/Cloud-Native-Java-Designing-Resilient/dp/1449374646, Spring Cloud, and Cloud Foundry) and the upcoming [Reactive Spring](http://reactivespring.io/)) and numerous best-selling video trainings (including [Building Microservices with Spring Boot Livelessons](https://www.safaribooksonline.com/library/view/building-microservices-with/9780134192468/) with Spring Boot co-founder Phil Webb), and an open-source contributor (Spring Boot, Spring Integration, Spring Cloud, Activiti and Vaadin), [a podcaster (A Bootiful Podcast)](http://bit.ly/a-bootiful-podcast) and a [screencaster](http://bit.ly/spring-tips-playlist).
+author of 6 books (including O’Reilly's [Cloud Native Java: Designing Resilient Systems with Spring Boot, Spring Cloud, and Cloud Foundry](https://www.amazon.com/Cloud-Native-Java-Designing-Resilient/dp/1449374646) and the upcoming [Reactive Spring](http://reactivespring.io/)) and numerous best-selling video trainings (including [Building Microservices with Spring Boot Livelessons](https://www.safaribooksonline.com/library/view/building-microservices-with/9780134192468/) with Spring Boot co-founder Phil Webb), and an open-source contributor (Spring Boot, Spring Integration, Spring Cloud, Activiti and Vaadin), [a podcaster (A Bootiful Podcast)](http://bit.ly/a-bootiful-podcast) and a [screencaster](http://bit.ly/spring-tips-playlist).
 
 
 <!--more-->
@@ -43,8 +43,12 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 * *2021-11-01* - I'll be doing a 3h workshop at Devoxx UK that you should not miss! Join me and we'll look at what building microservices at scale looks like in this workshop, 'Cloud Native Java.'
 * *2021-10-27* - I'll be doing a 'Masterclass Taster' talk with GOTO Academy on all things Spring, Kubernetes and Microservices...
+* *2021-10-26* - I'll be doing a virtual talk on Sprign GraphQL for the epic Joker conference in St. Petersburg, Russia
 * *2021-10-22* - I'll be speaking at Voxxed Days Romania about building edge services with reactive programming, GraphQL, and Spring Cloud Gateway
-* *2021-10-12* - 
+* *2021-10-20* - I'll be doing my talk "Kubernetes Native Java" for the Romanian show [Tech Talks Online](https://www.hipo.ro/locuri-de-munca/locuri_de_munca/168033) at 5am PDT - it'll be a lot of fun and I hope you'll join me! 
+* *2021-10-14* - I'm not presenting, but I'll be there virtually and happy to chat if you see me trawling the various tracks and chats!
+* *2021-10-13* - Come join me and we'll look at an assortment of Spring Tips in this installment of Code
+* *2021-10-12* - I'll be on SnykLive doing a session about the state of Java Report 
 * *2021-10-06* - I'll be presenting "Bootiful Edge Services" at J4K.io, and I'll be there to answer any and all questions. 
 * *2021-09-14* - I'll be speaking at the Japanese Java User Group on the topic of "Kubernetes Native Java" - I hope you'll join us for this online event.
 * *2021-06-25* - I'll be returning to the JLove conference again, this time to talk about Kubernetes Native Java. I hope you'll join me!
@@ -72,6 +76,8 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2021-10-21) RabbitMQ and Weaveworks founder Alexis Richardson on RabbitMQ, Pivotal, Spring, Kubernetes, and FluxCD](http://api.bootifulpodcast.fm/podcasts/d8587f45-7a2d-4608-922c-b399e5e332ce/produced-audio) 
+* [(2021-10-15) .NET legend Layla Porter on Azure Spring Cloud, Steeltoe.NET, and more](http://api.bootifulpodcast.fm/podcasts/941c07ee-1362-41fe-b9a0-a123dcb4405d/produced-audio) 
 * [(2021-10-07) Heiko Scherrer on OpenWMS, Spring, Spring Boot, Spring Data, workflow with Activiti and more  ](http://api.bootifulpodcast.fm/podcasts/b8388222-4439-479c-9726-432838e34162/produced-audio) 
 * [(2021-09-30) Spring Data engineer Christoph Strobl on MongoDB, Redis, GraphQL and Spring Native`](http://api.bootifulpodcast.fm/podcasts/cee57942-7d95-418a-9c6c-21fefb60835b/produced-audio) 
 * [(2021-09-24) Spring web legend Rossen Stoyanchev on RSocket, GraphQL and more](http://api.bootifulpodcast.fm/podcasts/7e3544e6-325c-4f21-ab3c-01e368ca7d4c/produced-audio) 
@@ -227,6 +233,7 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 
 <!-- START:SCREENCASTS-->
 
+* [(2021-10-13) Spring Plugin](https://www.youtube.com/watch?v=GlV5sXdXPu4) 
 * [(2021-10-07) Spring GraphQL](https://www.youtube.com/watch?v=kVSYVhmvNCI) 
 * [(2021-09-29) Bootiful Edge Services](https://www.youtube.com/watch?v=nrTw4w1xJck) 
 * [(2021-09-15) SpringOne 2021 Recap](https://www.youtube.com/watch?v=VMtUzytjo6Y) 
@@ -786,3 +793,48 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-10-10T06:28:21.197767+00:00 -->
 
 <!-- generated 2021-10-10T06:33:52.316925+00:00 -->
+
+<!-- generated 2021-10-10T22:52:38.935341+00:00 -->
+
+<!-- generated 2021-10-10T22:56:43.014653+00:00 -->
+
+<!-- generated 2021-10-11T02:21:19.194579+00:00 -->
+
+<!-- generated 2021-10-11T04:03:05.988856+00:00 -->
+
+<!-- generated 2021-10-12T02:20:45.522551+00:00 -->
+
+<!-- generated 2021-10-12T04:02:58.272102+00:00 -->
+
+<!-- generated 2021-10-13T02:22:06.495029+00:00 -->
+
+<!-- generated 2021-10-13T04:02:46.711538+00:00 -->
+
+<!-- generated 2021-10-14T02:19:37.218640+00:00 -->
+
+<!-- generated 2021-10-14T04:03:30.343636+00:00 -->
+
+
+<!-- generated 2021-10-15T02:20:04.065151+00:00 -->
+
+<!-- generated 2021-10-15T04:03:02.661787+00:00 -->
+
+<!-- generated 2021-10-16T02:24:15.591056+00:00 -->
+
+<!-- generated 2021-10-16T04:02:57.218645+00:00 -->
+
+<!-- generated 2021-10-17T02:18:56.339881+00:00 -->
+
+<!-- generated 2021-10-17T04:03:23.382123+00:00 -->
+
+<!-- generated 2021-10-18T02:24:23.895940+00:00 -->
+
+<!-- generated 2021-10-19T02:20:57.626104+00:00 -->
+
+<!-- generated 2021-10-20T02:37:43.685801+00:00 -->
+
+<!-- generated 2021-10-21T02:40:04.021495+00:00 -->
+
+<!-- generated 2021-10-22T02:38:18.187595+00:00 -->
+
+<!-- generated 2021-10-23T02:39:52.658222+00:00 -->
