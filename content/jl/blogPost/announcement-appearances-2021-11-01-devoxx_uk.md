@@ -1,6 +1,6 @@
 
 title=Upcoming Appearance: Devoxx UK
-date=2021-10-22
+date=2021-10-23
 type=post
 tags=blog
 status=published
