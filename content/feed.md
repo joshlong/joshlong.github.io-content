@@ -76,6 +76,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2021-10-21) RabbitMQ and Weaveworks founder Alexis Richardson on RabbitMQ, Pivotal, Spring, Kubernetes, and FluxCD](http://api.bootifulpodcast.fm/podcasts/d8587f45-7a2d-4608-922c-b399e5e332ce/produced-audio) 
 * [(2021-10-15) .NET legend Layla Porter on Azure Spring Cloud, Steeltoe.NET, and more](http://api.bootifulpodcast.fm/podcasts/941c07ee-1362-41fe-b9a0-a123dcb4405d/produced-audio) 
 * [(2021-10-07) Heiko Scherrer on OpenWMS, Spring, Spring Boot, Spring Data, workflow with Activiti and more  ](http://api.bootifulpodcast.fm/podcasts/b8388222-4439-479c-9726-432838e34162/produced-audio) 
 * [(2021-09-30) Spring Data engineer Christoph Strobl on MongoDB, Redis, GraphQL and Spring Native`](http://api.bootifulpodcast.fm/podcasts/cee57942-7d95-418a-9c6c-21fefb60835b/produced-audio) 
@@ -833,3 +834,7 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-10-20T02:37:43.685801+00:00 -->
 
 <!-- generated 2021-10-21T02:40:04.021495+00:00 -->
+
+<!-- generated 2021-10-22T02:38:18.187595+00:00 -->
+
+<!-- generated 2021-10-23T02:39:52.658222+00:00 -->
