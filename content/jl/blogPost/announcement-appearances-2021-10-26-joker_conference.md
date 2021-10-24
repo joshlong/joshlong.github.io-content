@@ -1,6 +1,6 @@
 
 title=Upcoming Appearance: Joker Conference 
-date=2021-10-23
+date=2021-10-24
 type=post
 tags=blog
 status=published
