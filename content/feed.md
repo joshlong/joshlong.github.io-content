@@ -76,6 +76,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2021-10-28) Daniel Mikusa on Buildpacks, Paketo, UPX, Tilt, GraalVM Native Images, Docker Containers and more](http://api.bootifulpodcast.fm/podcasts/33c6dbcc-7463-4d9f-acc8-0b863bb894d1/produced-audio) 
 * [(2021-10-21) RabbitMQ and Weaveworks founder Alexis Richardson on RabbitMQ, Pivotal, Spring, Kubernetes, and FluxCD](http://api.bootifulpodcast.fm/podcasts/d8587f45-7a2d-4608-922c-b399e5e332ce/produced-audio) 
 * [(2021-10-15) .NET legend Layla Porter on Azure Spring Cloud, Steeltoe.NET, and more](http://api.bootifulpodcast.fm/podcasts/941c07ee-1362-41fe-b9a0-a123dcb4405d/produced-audio) 
 * [(2021-10-07) Heiko Scherrer on OpenWMS, Spring, Spring Boot, Spring Data, workflow with Activiti and more  ](http://api.bootifulpodcast.fm/podcasts/b8388222-4439-479c-9726-432838e34162/produced-audio) 
@@ -233,6 +234,8 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 
 <!-- START:SCREENCASTS-->
 
+* [(2021-10-27) @Controllers: The "C" in Model 2 MVC](https://www.youtube.com/watch?v=hUBrFekxn0Y) 
+* [(2021-10-20) Refreshable configuration with Spring Cloud Bus, and the Spring Cloud Config Monitor](https://www.youtube.com/watch?v=aC_siBP8rx8) 
 * [(2021-10-13) Spring Plugin](https://www.youtube.com/watch?v=GlV5sXdXPu4) 
 * [(2021-10-07) Spring GraphQL](https://www.youtube.com/watch?v=kVSYVhmvNCI) 
 * [(2021-09-29) Bootiful Edge Services](https://www.youtube.com/watch?v=nrTw4w1xJck) 
@@ -848,3 +851,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-10-27T02:35:55.638594+00:00 -->
 
 <!-- generated 2021-10-28T02:36:22.236767+00:00 -->
+
+<!-- generated 2021-10-29T02:35:50.954690+00:00 -->
