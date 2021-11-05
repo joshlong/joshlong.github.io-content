@@ -76,6 +76,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2021-11-04) Legend, Dutchess founder, Devoxx4Kids contributor, and fellow Java Champion Linda van der Pal  ](http://api.bootifulpodcast.fm/podcasts/6af7c9df-213c-4e52-a82a-009057b12e26/produced-audio) 
 * [(2021-10-28) Daniel Mikusa on Buildpacks, Paketo, UPX, Tilt, GraalVM Native Images, Docker Containers and more](http://api.bootifulpodcast.fm/podcasts/33c6dbcc-7463-4d9f-acc8-0b863bb894d1/produced-audio) 
 * [(2021-10-21) RabbitMQ and Weaveworks founder Alexis Richardson on RabbitMQ, Pivotal, Spring, Kubernetes, and FluxCD](http://api.bootifulpodcast.fm/podcasts/d8587f45-7a2d-4608-922c-b399e5e332ce/produced-audio) 
 * [(2021-10-15) .NET legend Layla Porter on Azure Spring Cloud, Steeltoe.NET, and more](http://api.bootifulpodcast.fm/podcasts/941c07ee-1362-41fe-b9a0-a123dcb4405d/produced-audio) 
@@ -865,3 +866,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-11-03T02:36:29.237830+00:00 -->
 
 <!-- generated 2021-11-04T02:38:04.202269+00:00 -->
+
+<!-- generated 2021-11-05T02:37:43.415942+00:00 -->
