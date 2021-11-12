@@ -76,6 +76,9 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2021-11-11) JMS and Messaging legend, HornetQ and Artemis cofounder, Clebert Suconic ](http://api.bootifulpodcast.fm/podcasts/1dd08522-7323-4ebd-b0e1-d0e9621675cf/produced-audio) 
+* [(2021-11-11) JMS and Messaging legend, HornetQ and Artemis cofounder, Clebert Suconic ](http://api.bootifulpodcast.fm/podcasts/c695cf3d-34c3-4a95-9194-026cfc81f68a/produced-audio) 
+* [(2021-11-11) JMS and Messaging legend, HornetQ and Artemis cofounder, Clebert Suconic](http://api.bootifulpodcast.fm/podcasts/ba1180c6-9faf-4820-8c78-c1e9dbd757dd/produced-audio) 
 * [(2021-11-04) Legend, Dutchess founder, Devoxx4Kids contributor, and fellow Java Champion Linda van der Pal  ](http://api.bootifulpodcast.fm/podcasts/6af7c9df-213c-4e52-a82a-009057b12e26/produced-audio) 
 * [(2021-10-28) Daniel Mikusa on Buildpacks, Paketo, UPX, Tilt, GraalVM Native Images, Docker Containers and more](http://api.bootifulpodcast.fm/podcasts/33c6dbcc-7463-4d9f-acc8-0b863bb894d1/produced-audio) 
 * [(2021-10-21) RabbitMQ and Weaveworks founder Alexis Richardson on RabbitMQ, Pivotal, Spring, Kubernetes, and FluxCD](http://api.bootifulpodcast.fm/podcasts/d8587f45-7a2d-4608-922c-b399e5e332ce/produced-audio) 
@@ -872,3 +875,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-11-10T02:37:48.300046+00:00 -->
 
 <!-- generated 2021-11-11T02:37:38.945607+00:00 -->
+
+<!-- generated 2021-11-12T02:37:55.962304+00:00 -->
