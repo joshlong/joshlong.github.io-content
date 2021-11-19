@@ -76,6 +76,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2021-11-19) Fellow Java Champion Kate Stanley on Kubernetes and Apache Kafka ](http://api.bootifulpodcast.fm/podcasts/c3d3fe38-78d8-4bf1-af9d-a65524de626a/produced-audio) 
 * [(2021-11-11) JMS and Messaging legend, HornetQ and Artemis cofounder, Clebert Suconic](http://api.bootifulpodcast.fm/podcasts/ba1180c6-9faf-4820-8c78-c1e9dbd757dd/produced-audio) 
 * [(2021-11-04) Legend, Dutchess founder, Devoxx4Kids contributor, and fellow Java Champion Linda van der Pal  ](http://api.bootifulpodcast.fm/podcasts/6af7c9df-213c-4e52-a82a-009057b12e26/produced-audio) 
 * [(2021-10-28) Daniel Mikusa on Buildpacks, Paketo, UPX, Tilt, GraalVM Native Images, Docker Containers and more](http://api.bootifulpodcast.fm/podcasts/33c6dbcc-7463-4d9f-acc8-0b863bb894d1/produced-audio) 
@@ -887,3 +888,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-11-17T02:37:45.161913+00:00 -->
 
 <!-- generated 2021-11-18T02:37:45.809782+00:00 -->
+
+<!-- generated 2021-11-19T02:38:58.105888+00:00 -->
