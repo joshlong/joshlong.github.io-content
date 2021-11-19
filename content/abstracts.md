@@ -10,6 +10,12 @@ All talks are workable in a one-hour slot  unless otherwise noted.
 
 Hi Spring fans! Data wants to be free and so much of what we do in the wide and wonderful world of microservices is all about connecting data. It's difficult. There's a tension between how we build well-encapsulated microservices and how we connect their data in our clients. Until now. Facebook open sourced GraphQL in 2015 (also the same year that "Avengers: Age of Ultron," a movie about a psychotic super computer that wanted to take over the world came out. No coincidence, surely...). GraphQL is an alternative to the REST constraint on HTTP. It provides an easy way to model queries (reads, like an HTTP `GET`), subscriptions (longer-lived, asynchronous notifications sent to the client) and mutations (updates). Join me, Spring Developer Advocate Josh Long (@starbuxman), and we'll look at how to build data gateways for every clients' needs with Spring GraphQL. 
 
+## Bootiful GraalVM 
+
+Hi, Spring fans! Spring Framework 6 and Spring Boot 3 imply a new baseline, bringing the Spring ecosystem in line with the needs of tomorrow's workloads. A huge part of that is the new baselines of Jakarta EE and Java 17 and the new support for GraalVM native images, based on the work of Spring Native. Join me, Spring Developer Advocate Josh Long, and we'll explore the implications of this exciting new technology for your Spring Boot applications and services. 
+
+We'll look at things like using the GraalVM AOT compiler to produce native images that take up a markedly smaller memory footprint and start up in 10s or maybe hundreds of milliseconds. We'll look at how to containerize those workloads. We'll look at how to tame the GraalVM compiler when something goes wrong. And we'll look at how to teach GraalVM about your custom workloads. 
+
 
 ## Bootiful Edge Services 
 
