@@ -5,5 +5,5 @@ type=post
 tags=blog
 status=published
 ~~~~~~
-(2021-03-18) Bootiful Cassandra with DataStax's Patrick McFadin  
+(2021-03-18) **Bootiful Cassandra with DataStax's Patrick McFadin **: Bootiful Cassandra with DataStax's Patrick McFadin  
             
