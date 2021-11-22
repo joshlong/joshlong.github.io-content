@@ -41,31 +41,31 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
-* [(2021-11-01) I'll be doing a 3h workshop at Devoxx UK that you should not miss! Join me and we'll look at what building microservices at scale looks like in this workshop, 'Cloud Native Java.'](I'll be doing a 3h workshop at Devoxx UK that you should not miss! Join me and we'll look at what building microservices at scale looks like in this workshop, 'Cloud Native Java.') 
-* [(2021-10-27) I'll be doing a 'Masterclass Taster' talk with GOTO Academy on all things Spring, Kubernetes and Microservices...](I'll be doing a 'Masterclass Taster' talk with GOTO Academy on all things Spring, Kubernetes and Microservices...) 
-* [(2021-10-26) I'll be doing a virtual talk on Sprign GraphQL for the epic Joker conference in St. Petersburg, Russia](I'll be doing a virtual talk on Sprign GraphQL for the epic Joker conference in St. Petersburg, Russia) 
-* [(2021-10-22) I'll be speaking at Voxxed Days Romania about building edge services with reactive programming, GraphQL, and Spring Cloud Gateway](I'll be speaking at Voxxed Days Romania about building edge services with reactive programming, GraphQL, and Spring Cloud Gateway) 
-* [(2021-10-20) I'll be doing my talk "Kubernetes Native Java" for the Romanian show [Tech Talks Online](https://www.hipo.ro/locuri-de-munca/locuri_de_munca/168033) at 5am PDT - it'll be a lot of fun and I hope you'll join me! ](I'll be doing my talk "Kubernetes Native Java" for the Romanian show [Tech Talks Online](https://www.hipo.ro/locuri-de-munca/locuri_de_munca/168033) at 5am PDT - it'll be a lot of fun and I hope you'll join me! ) 
-* [(2021-10-14) I'm not presenting, but I'll be there virtually and happy to chat if you see me trawling the various tracks and chats!](I'm not presenting, but I'll be there virtually and happy to chat if you see me trawling the various tracks and chats!) 
-* [(2021-10-13) Come join me and we'll look at an assortment of Spring Tips in this installment of Code](Come join me and we'll look at an assortment of Spring Tips in this installment of Code) 
-* [(2021-10-12) I'll be on SnykLive doing a session about the state of Java Report ](I'll be on SnykLive doing a session about the state of Java Report ) 
-* [(2021-10-06) I'll be presenting "Bootiful Edge Services" at J4K.io, and I'll be there to answer any and all questions. ](I'll be presenting "Bootiful Edge Services" at J4K.io, and I'll be there to answer any and all questions. ) 
-* [(2021-09-14) I'll be speaking at the Japanese Java User Group on the topic of "Kubernetes Native Java" - I hope you'll join us for this online event.](I'll be speaking at the Japanese Java User Group on the topic of "Kubernetes Native Java" - I hope you'll join us for this online event.) 
-* [(2021-06-25) I'll be returning to the JLove conference again, this time to talk about Kubernetes Native Java. I hope you'll join me!](I'll be returning to the JLove conference again, this time to talk about Kubernetes Native Java. I hope you'll join me!) 
-* [(2021-06-22) I'll be the Okta Dev Twitch Stream with Matt Raible and Brian Demers - don't miss this! We'll be working on Spring Native and the Okta Spring Boot starter.](I'll be the Okta Dev Twitch Stream with Matt Raible and Brian Demers - don't miss this! We'll be working on Spring Native and the Okta Spring Boot starter.) 
-* [(2021-06-02) Join me for Craft 2021 - where I'll be presenting 'Cloud Native Java'](Join me for Craft 2021 - where I'll be presenting 'Cloud Native Java') 
-* [(2021-05-28) I'll be on the XGeeks Youtube channel answering questions. I look forward to seeing you there.](I'll be on the XGeeks Youtube channel answering questions. I look forward to seeing you there.) 
-* [(2021-05-25) I'm looking forward to presenting Cloud Native Java at "Java Day Istanbul 2021"! ](I'm looking forward to presenting Cloud Native Java at "Java Day Istanbul 2021"! ) 
-* [(2021-04-06) I'll be doing a live training for O'Reilly on Spring Boot and Kotlin. I hope you'll join me here from 11am to 2pm on the 6th of April: https://www.oreilly.com/live-training/courses/spring-boot-and-kotlin/0636920053993/](I'll be doing a live training for O'Reilly on Spring Boot and Kotlin. I hope you'll join me here from 11am to 2pm on the 6th of April: https://www.oreilly.com/live-training/courses/spring-boot-and-kotlin/0636920053993/) 
+* [(2021-11-01) Devoxx UK](I'll be doing a 3h workshop at Devoxx UK that you should not miss! Join me and we'll look at what building microservices at scale looks like in this workshop, 'Cloud Native Java.') 
+* [(2021-10-27) Masterclass + Taster Masterclass with GOTO Academy](I'll be doing a 'Masterclass Taster' talk with GOTO Academy on all things Spring, Kubernetes and Microservices...) 
+* [(2021-10-26) Joker Conference ](I'll be doing a virtual talk on Sprign GraphQL for the epic Joker conference in St. Petersburg, Russia) 
+* [(2021-10-22) Voxxed Days Romania](I'll be speaking at Voxxed Days Romania about building edge services with reactive programming, GraphQL, and Spring Cloud Gateway) 
+* [(2021-10-20) Keynote @ TechTalks Online ](I'll be doing my talk "Kubernetes Native Java" for the Romanian show [Tech Talks Online](https://www.hipo.ro/locuri-de-munca/locuri_de_munca/168033) at 5am PDT - it'll be a lot of fun and I hope you'll join me! ) 
+* [(2021-10-14) KubeCon](I'm not presenting, but I'll be there virtually and happy to chat if you see me trawling the various tracks and chats!) 
+* [(2021-10-13) Code on https://twitch.tv/VmwareTanzu](Come join me and we'll look at an assortment of Spring Tips in this installment of Code) 
+* [(2021-10-12) SnykLive session about the state of Java Report ](I'll be on SnykLive doing a session about the state of Java Report ) 
+* [(2021-10-06) J4K.io speaker session ](I'll be presenting "Bootiful Edge Services" at J4K.io, and I'll be there to answer any and all questions. ) 
+* [(2021-09-14) Japan Java User Group ](I'll be speaking at the Japanese Java User Group on the topic of "Kubernetes Native Java" - I hope you'll join us for this online event.) 
+* [(2021-06-25) jLove Conference ](I'll be returning to the JLove conference again, this time to talk about Kubernetes Native Java. I hope you'll join me!) 
+* [(2021-06-22) OktaDev Twitch stream ](I'll be the Okta Dev Twitch Stream with Matt Raible and Brian Demers - don't miss this! We'll be working on Spring Native and the Okta Spring Boot starter.) 
+* [(2021-06-02) Craft 2021 ](Join me for Craft 2021 - where I'll be presenting 'Cloud Native Java') 
+* [(2021-05-28) Presentation on Xgeeks youtube channel ](I'll be on the XGeeks Youtube channel answering questions. I look forward to seeing you there.) 
+* [(2021-05-25) Java Day Istanbul 2021 ](I'm looking forward to presenting Cloud Native Java at "Java Day Istanbul 2021"! ) 
+* [(2021-04-06) Live O'Reilly training on Spring Boot and Kotlin. Register your seat now!](I'll be doing a live training for O'Reilly on Spring Boot and Kotlin. I hope you'll join me here from 11am to 2pm on the 6th of April: https://www.oreilly.com/live-training/courses/spring-boot-and-kotlin/0636920053993/) 
 * [(2021-03-26) Cloud Builders Conference ](Cloud Builders Conference ) 
 * [(2021-03-18) Bootiful Cassandra with DataStax's Patrick McFadin ](Bootiful Cassandra with DataStax's Patrick McFadin ) 
 * [(2021-03-17) Meet up Java in the Cloud Native World](Meet up Java in the Cloud Native World) 
-* [(2021-03-11) Spring time is here! This year's SpringOne Tour event is going to be _amazing_! Do not miss it. I'll be doing a presentation with Mark Heckler, Nate Schutta, Cora Iberkleid, Paul Czarkowski, and Tiffany Jernigan. It'll be a production-centric adventure.](Spring time is here! This year's SpringOne Tour event is going to be _amazing_! Do not miss it. I'll be doing a presentation with Mark Heckler, Nate Schutta, Cora Iberkleid, Paul Czarkowski, and Tiffany Jernigan. It'll be a production-centric adventure.) 
-* [(2021-03-09) I'll be doing a talk for the Java User Group Passau on Reactive Spring](I'll be doing a talk for the Java User Group Passau on Reactive Spring) 
-* [(2021-02-24) I'll be on a panel for Undo software along with others like Mary Grygleski, Jonathan Harris, Daniel Bryant and Angie Jones. Do Not Miss This! ](I'll be on a panel for Undo software along with others like Mary Grygleski, Jonathan Harris, Daniel Bryant and Angie Jones. Do Not Miss This! ) 
-* [(2021-02-24) Join me on Tanzu TV - twitch.tv/vmwaretanzu - and we'll look at Spring Cloud Gateway](Join me on Tanzu TV - twitch.tv/vmwaretanzu - and we'll look at Spring Cloud Gateway) 
-* [(2021-02-18) I'll be speaking at JavaDayLviv and I hope to see you there!](I'll be speaking at JavaDayLviv and I hope to see you there!) 
-* [(2021-02-09) Join me for the epic OOP Java conference where I'll be talking about Cloud Native Java](Join me for the epic OOP Java conference where I'll be talking about Cloud Native Java) 
+* [(2021-03-11) SpringOne Tour](Spring time is here! This year's SpringOne Tour event is going to be _amazing_! Do not miss it. I'll be doing a presentation with Mark Heckler, Nate Schutta, Cora Iberkleid, Paul Czarkowski, and Tiffany Jernigan. It'll be a production-centric adventure.) 
+* [(2021-03-09) Talk for Java User Group Passau- Reactive Spring - 45 minute talk and 15 Q&A](I'll be doing a talk for the Java User Group Passau on Reactive Spring) 
+* [(2021-02-24) Panelist Invite - How to prevent debugging from becoming a productivity & delivery killer other panel members: Daniel Bryant  (Ambassador Labs), Mary Grygleski (IBM), Jonathan Harris (Undo)](I'll be on a panel for Undo software along with others like Mary Grygleski, Jonathan Harris, Daniel Bryant and Angie Jones. Do Not Miss This! ) 
+* [(2021-02-24) Code on Twitch](Join me on Tanzu TV - twitch.tv/vmwaretanzu - and we'll look at Spring Cloud Gateway) 
+* [(2021-02-18) JavaDayLviv 2021](I'll be speaking at JavaDayLviv and I hope to see you there!) 
+* [(2021-02-09) OOP German Conference](Join me for the epic OOP Java conference where I'll be talking about Cloud Native Java) 
 
 <!-- STOP:APPEARANCES -->
 
@@ -898,3 +898,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-11-22T02:38:59.623273+00:00 -->
 
 <!-- generated 2021-11-22T04:06:57.777216+00:00 -->
+
+<!-- generated 2021-11-22T09:02:11.803683+00:00 -->
