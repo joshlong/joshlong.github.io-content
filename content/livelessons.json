@@ -1,5 +1,12 @@
 [
  
+  	{
+		"title" :"Reactive Spring Boot Livelessons",
+		"html" : "<P>Want to learn about how to build reactive systems and services with Spring Boot? Then you're in luck! These are just the lessons for you!</P>",
+		"imageUrl" : "https://joshlong.com/media/livelessons/ReactiveSpringLL-2E.jpg" 
+	} ,
+
+
  	{
 		"title" :"Reactive Spring Boot Livelessons",
 		"html" : "<P>Want to learn about how to build reactive systems and services with Spring Boot? Then you're in luck! These are just the lessons for you!</P>",
@@ -8,8 +15,8 @@
 
 
 	{
-		"title" :"Spring Boot and Kotlin Livelessons",
-		"html" : "<P> I'm a Spring Developer Advocate, a Java Champion, <EM>and</EM> a Kotlin Google Developer Expert! Kotlin is typified by its pragmatic approach to building applications on both the server-side and the client. It's amazing. In this video we'll explore some of the amazing possibilities for people building applications intended for the server-side with Spring.</P>",
-		"imageUrl" : "http://joshlong.com/media/livelessons/spring-boot-and-kotlin.jpg" 
+		"title" :"Cloud Foundry Livelessons",
+		"html" : "<P>  CloudFoundry is the leading on-prem Platform-as-a-Service. It's been designed from the ground up to allow organiztions to deliver value - software, systems, and services - into production with ease. As a Spring Developer, it's a natural fit and this is your must-watch introduction to going to production with Cloud Foundry.</P>",
+		"imageUrl" : "http://joshlong.com/media/livelessons/CloudNativeJavaLL.jpg" 
 	} 
 ]
