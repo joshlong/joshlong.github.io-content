@@ -1,5 +1,10 @@
 [
  
+ 	{
+		"title" :"The Reactive Spring Book",
+		"html" : "<P> I'm working <a href=\"http://www.ReactiveSpring.io\">on a new book</a> that aims to introduce people to the wide world of reactive Spring. </P><P>Follow <a href=\"http://twitter.com/ReactiveSpring\">@ReactiveSpring</a> on Twitter for more</P>",
+		"imageUrl" : "https://joshlong.com/media/books/reactive-spring/cover.png" 
+	} ,
 	{
 		"title" :"Cloud Native Java",
 		"imageUrl" :"https://joshlong.com/media/books/cloud-native-java/english.jpg",
@@ -7,8 +12,8 @@
 	} ,
 
 	{
-		"title" :"The Reactive Spring Book",
-		"html" : "<P> I'm working <a href=\"http://www.ReactiveSpring.io\">on a new book</a> that aims to introduce people to the wide world of reactive Spring. </P><P>Follow <a href=\"http://twitter.com/ReactiveSpring\">@ReactiveSpring</a> on Twitter for more</P>",
-		"imageUrl" : "https://joshlong.com/media/books/reactive-spring/cover.png" 
+		"title" : "Apress' Pro Spring Recipes",
+		"html" : "<P>  I was lucky enough in 2010 to be picked to update Gary Mak's epic tome <EM>Spring Recipes</EM>. The book has been updated several time since, and is a great recource for folks who want to have a recipe-centric approach to building Spring applications. </P>",
+		"imageUrl" : "https://joshlong.com/media/books/pro-spring-recipes/cover.png" 
 	} 
 ]
