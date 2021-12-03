@@ -76,6 +76,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2021-12-03) DataStax's Christopher Bradford on the Apache Cassandra operator for Kubernetes, K8ssandra ](http://api.bootifulpodcast.fm/podcasts/c85b9bd9-e2c8-4d33-81f1-77823f980ace/produced-audio) 
 * [(2021-11-25) Reactive-System and Functional Programming legend Debasish Ghosh](http://api.bootifulpodcast.fm/podcasts/26a84ebc-a137-4c83-8498-455beb5ef5a5/produced-audio) 
 * [(2021-11-19) Fellow Java Champion Kate Stanley on Kubernetes and Apache Kafka ](http://api.bootifulpodcast.fm/podcasts/c3d3fe38-78d8-4bf1-af9d-a65524de626a/produced-audio) 
 * [(2021-11-11) JMS and Messaging legend, HornetQ and Artemis cofounder, Clebert Suconic](http://api.bootifulpodcast.fm/podcasts/ba1180c6-9faf-4820-8c78-c1e9dbd757dd/produced-audio) 
@@ -925,3 +926,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-12-01T02:41:53.441793+00:00 -->
 
 <!-- generated 2021-12-02T02:40:31.040390+00:00 -->
+
+<!-- generated 2021-12-03T02:39:31.780550+00:00 -->
