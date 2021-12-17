@@ -76,6 +76,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2021-12-17) Ronald Dehuysser, Creator of the Distributed Job Scheduler JobRunr](http://api.bootifulpodcast.fm/podcasts/e0521ed9-65a2-402b-bd7f-593ba103cb88/produced-audio) 
 * [(2021-12-09) Transformative leader, brilliant technologist, my friend, Patrick Chanezon](http://api.bootifulpodcast.fm/podcasts/5878ef4e-c575-463b-a27e-67548fbad6d0/produced-audio) 
 * [(2021-12-03) DataStax's Christopher Bradford on the Apache Cassandra operator for Kubernetes, K8ssandra ](http://api.bootifulpodcast.fm/podcasts/c85b9bd9-e2c8-4d33-81f1-77823f980ace/produced-audio) 
 * [(2021-11-25) Reactive-System and Functional Programming legend Debasish Ghosh](http://api.bootifulpodcast.fm/podcasts/26a84ebc-a137-4c83-8498-455beb5ef5a5/produced-audio) 
@@ -955,3 +956,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-12-15T02:41:08.486259+00:00 -->
 
 <!-- generated 2021-12-16T02:40:22.891388+00:00 -->
+
+<!-- generated 2021-12-17T02:42:56.613689+00:00 -->
