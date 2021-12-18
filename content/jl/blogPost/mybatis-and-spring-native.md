@@ -277,3 +277,4 @@ City(id=4, name=NYC, state=NY, country=USA)
 ```
 
 
+I've preserved all the code for this in the `mybatis-spring` [branch in this Git repository](https://github.com/joshlong/mybatis-spring-native/tree/mybatis-spring). 
