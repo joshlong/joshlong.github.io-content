@@ -5,7 +5,7 @@ tags=blog
 status=published
 ~~~~~~
 
-
+The sample code that I'm reproducing here can be [found in this Github Repository](https://github.com/joshlong/graphql-spring-native).
 
 I wanted to make Spring GraphQL and Spring Native work well together. It's pretty easy to get the absolute basic application working. Go to the Spring Initializr and generate a new application usign Spring Webflux an Spring Native. Spring GraphQL works with both the Servlet API (and something like Apache Tomcat) and the reactive, non-blocking Spring Webflux webstack. I obviously quite prefer anything reactive, so I chose that. 
 
