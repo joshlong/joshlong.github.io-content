@@ -973,3 +973,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-12-23T02:44:03.949391+00:00 -->
 
 <!-- generated 2021-12-24T02:43:26.142856+00:00 -->
+
+<!-- generated 2021-12-25T02:45:41.113018+00:00 -->
