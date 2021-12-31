@@ -76,6 +76,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2021-12-31) Geertjan Wielenga, senior director of opensource projects at Azul Systems and Foojay.io founder](http://api.bootifulpodcast.fm/podcasts/064d0edd-7332-4814-8d9a-845472a1e615/produced-audio) 
 * [(2021-12-23) Yugabyte CEO Karthik Ranganathan](http://api.bootifulpodcast.fm/podcasts/76d8c335-16b8-4cae-84ba-b11d6d5cbeaf/produced-audio) 
 * [(2021-12-17) Ronald Dehuysser, Creator of the Distributed Job Scheduler JobRunr](http://api.bootifulpodcast.fm/podcasts/e0521ed9-65a2-402b-bd7f-593ba103cb88/produced-audio) 
 * [(2021-12-09) Transformative leader, brilliant technologist, my friend, Patrick Chanezon](http://api.bootifulpodcast.fm/podcasts/5878ef4e-c575-463b-a27e-67548fbad6d0/produced-audio) 
@@ -985,3 +986,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-12-29T02:43:14.760776+00:00 -->
 
 <!-- generated 2021-12-30T02:42:50.547431+00:00 -->
+
+<!-- generated 2021-12-31T02:45:38.782640+00:00 -->
