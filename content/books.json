@@ -13,7 +13,7 @@
 
 	{
 		"title" : "Apress' Pro Spring Recipes",
-		"html" : "<P>  I was lucky enough in 2010 to be picked to update Gary Mak's epic tome <EM>Spring Recipes</EM>. The book has been updated several time since, and is a great recource for folks who want to have a recipe-centric approach to building Spring applications. </P>",
+		"html" : "<P>I was so very lucky enough in 2010 to be picked to update Gary Mak's epic tome <EM>Spring Recipes</EM>. The book has been updated several time since, and is a great recource for folks who want to have a recipe-centric approach to building Spring applications. </P>",
 		"imageUrl" : "https://api.joshlong.com/media/books/pro-spring-recipes/cover.png" 
 	} 
 ]
