@@ -7,7 +7,7 @@
 	} ,
 	{
 		"title" :"Cloud Native Java",
-		"imageUrl" :"https://joshlong.com/media/books/cloud-native-java/english.jpg",
+		"imageUrl" :"https://api.joshlong.com/media/books/cloud-native-java/english.jpg",
 		"html": "<p> I wrote <a href=\"http://api.cloudnativejava.io/\">this book</a> with my buddy Kenny Bastani. It's all about how to build applications that survive and thrive in the cloud in terms of Spring Boot, Spring Cloud, and cloud technologies like Cloud Foundry.  Consider this your one-stop shop for building cloud-native applications. It's available in a number of languages (left to right, top to bottom): English, Chinese, Korean, and Russian.  </p> <P>Follow <a href=\"http://twitter.com/CloudNativeJava\">@CloudNativeJava</a> on Twitter for more</P>"
 	} ,
 
