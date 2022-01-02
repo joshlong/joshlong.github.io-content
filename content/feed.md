@@ -243,6 +243,13 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 
 <!-- START:SCREENCASTS-->
 
+* [(2021-12-22) @Controllers: Wrapup (All Together Now...!)](https://www.youtube.com/watch?v=xhNGqTwsGw0) 
+* [(2021-12-15) @Controllers: GraphQL](https://www.youtube.com/watch?v=eVqmB2hsIVk) 
+* [(2021-12-09) Spring Native 0.11](https://www.youtube.com/watch?v=DVo5vmk5Cuw) 
+* [(2021-12-01) @Controllers: RSocket](https://www.youtube.com/watch?v=d4HAqS_VfkQ) 
+* [(2021-11-17) @Controllers: WebSockets](https://www.youtube.com/watch?v=m0K3ElazGE0) 
+* [(2021-11-10) My Reactive Summit 2021 Day 2 Keynote with James Ward](https://www.youtube.com/watch?v=uAb2NtRrxSk) 
+* [(2021-11-03) @Controllers: Give HTTP a REST](https://www.youtube.com/watch?v=V9KVOHkcxPo) 
 * [(2021-10-27) @Controllers: The "C" in Model 2 MVC](https://www.youtube.com/watch?v=hUBrFekxn0Y) 
 * [(2021-10-20) Refreshable configuration with Spring Cloud Bus, and the Spring Cloud Config Monitor](https://www.youtube.com/watch?v=aC_siBP8rx8) 
 * [(2021-10-13) Spring Plugin](https://www.youtube.com/watch?v=GlV5sXdXPu4) 
@@ -990,3 +997,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2021-12-31T02:45:38.782640+00:00 -->
 
 <!-- generated 2022-01-01T02:47:31.901613+00:00 -->
+
+<!-- generated 2022-01-02T02:45:35.254412+00:00 -->
