@@ -18,6 +18,11 @@
 		"imageUrl" : "https://api.joshlong.com/media/livelessons/spring-boot-and-kotlin.jpg" 
 	} ,
 
+	{
+		"title" :"Applied Continuous Delivery Livelessons ",
+		"html" : "<P> Go faster! Go! Go! Go! They all cry. But any idiot can get in a Ferarri and drive it into a wall and great speed. Speed without safety is pointless!     In this video, join Spring Cloud contributor, Spring Cloud Contract founder, and my friend Marcin Grzejszczak   and me, and we'll look at how to embrace continuous delivery to build applications and get them to production not just quickly, but <em>safely</eM>.     </P>  ",
+		"imageUrl" : "http://api.joshlong.com/media/livelessons/AppliedCDLL.jpg" 
+	} ,
 
 	{
 		"title" :"Building Microservices with Spring Boot Livelessons ",
