@@ -5,7 +5,12 @@
 		"html" : "<P>Want to learn about how to build reactive systems and services with Spring Boot? Then you're in luck! These are just the lessons for you!</P> ",
 		"imageUrl" : "https://api.joshlong.com/media/livelessons/ReactiveSpringLL-2E.jpg" 
 	} ,
-
+	{ 
+		"title" : "Spring Security Livelessons" , 
+		"html": "<P> Spring Security has been around almost as long as Spring itself. In the early days, it was called the Acegi framework. It has come quite the distance since then! Spring Security features the most robust ecosystem for security integrations for enterprise Java developers (or, indeed, all developers!) and you should definitely get to know it. Join Spring Security project lead Rob Winch and yours truly and we'll look at how to build secure Spring Boot applications and services. </p> " ,
+		"imageUrl" : "https://api.joshlong.com/media/livelessons/SpringSecurityLL.jpg" 
+	
+	} ,
 
  	{
 		"title" :"Spring Boot and Kotlin Livelessons",
