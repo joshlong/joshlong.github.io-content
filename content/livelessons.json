@@ -29,7 +29,11 @@
 		"html" : "<P>     This should be your first stop if you haven't used Spring Boot before! This video, featuring Spring Boot lead and project cofounder Phil Webb and yours truly presents an exhaustive look at the framework and its various, supported use cases.   </P>  ",
 		"imageUrl" : "http://api.joshlong.com/media/livelessons/BuildMicroserviceswSpringBoot_2eLL.jpg" 
 	} ,
-
+	{
+		"title" :"RESTful APIs with Spring Livelessons ",
+		"html" : "<P> HTTP and REST are the backbone of the service-oriented web, and Spring is one of the best ways to build HTTP endpoints. Join me, and we'll look at how Spring Boot makes building HTTP endpoints and elegant REST APIs easy! </P>  ",
+		"imageUrl" : "http://api.joshlong.com/media/livelessons/RESTfulAPIswSpringLL.jpg" 
+	} ,
        {
 		"title" :"Cloud Foundry Livelessons",
 		"html" : "<P>  CloudFoundry is the leading on-prem Platform-as-a-Service. It's been designed from the ground up to allow organiztions to deliver value - software, systems, and services - into production with ease. As a Spring Developer, it's a natural fit and this is your must-watch introduction to going to production with Cloud Foundry. I put together this video with cloud infrastructure legend Josh McKenty (creator of OpenStack, among other things) so that you could get the operator's experience <em>and</em> the developer's experience for building cloud native applications with Spring Boot.</P>  ",
