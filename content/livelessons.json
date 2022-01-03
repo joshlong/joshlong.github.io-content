@@ -15,15 +15,15 @@
 
 
 	{
-		"title" :"Cloud Foundry Livelessons",
-		"html" : "<P>  CloudFoundry is the leading on-prem Platform-as-a-Service. It's been designed from the ground up to allow organiztions to deliver value - software, systems, and services - into production with ease. As a Spring Developer, it's a natural fit and this is your must-watch introduction to going to production with Cloud Foundry.</P>  ",
-		"imageUrl" : "http://api.joshlong.com/media/livelessons/CloudNativeJavaLL.jpg" 
+		"title" :"Building Microservices with Spring Boot Livelessons ",
+		"html" : "<P>     This should be your first stop if you haven't used Spring Boot before! This video, featuring Spring Boot lead and project cofounder Phil Webb and yours truly presents an exhaustive look at the framework and its various, supported use cases.   </P>  ",
+		"imageUrl" : "http://api.joshlong.com/media/livelessons/BuildMicroserviceswSpringBoot_2eLL.jpg" 
 	} ,
 
 {
 		"title" :"Cloud Foundry Livelessons",
 		"html" : "<P>  CloudFoundry is the leading on-prem Platform-as-a-Service. It's been designed from the ground up to allow organiztions to deliver value - software, systems, and services - into production with ease. As a Spring Developer, it's a natural fit and this is your must-watch introduction to going to production with Cloud Foundry.</P>  ",
 		"imageUrl" : "http://api.joshlong.com/media/livelessons/CloudNativeJavaLL.jpg" 
-	} ,
+	}  
 
 ]
