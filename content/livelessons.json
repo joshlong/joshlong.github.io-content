@@ -27,7 +27,7 @@
 
        {
 		"title" :"Cloud Foundry Livelessons",
-		"html" : "<P>  CloudFoundry is the leading on-prem Platform-as-a-Service. It's been designed from the ground up to allow organiztions to deliver value - software, systems, and services - into production with ease. As a Spring Developer, it's a natural fit and this is your must-watch introduction to going to production with Cloud Foundry.</P>  ",
+		"html" : "<P>  CloudFoundry is the leading on-prem Platform-as-a-Service. It's been designed from the ground up to allow organiztions to deliver value - software, systems, and services - into production with ease. As a Spring Developer, it's a natural fit and this is your must-watch introduction to going to production with Cloud Foundry. I put together this video with cloud infrastructure legend Josh McKenty (creator of OpenStack, among other things) so that you could get the operator's experience <em>and</em> the developer's experience for building cloud native applications with Spring Boot.</P>  ",
 		"imageUrl" : "http://api.joshlong.com/media/livelessons/CloudFoundryLL.jpg" 
 	}   ,
 	
