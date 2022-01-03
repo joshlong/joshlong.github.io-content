@@ -22,8 +22,15 @@
 		"title" :"Applied Continuous Delivery Livelessons ",
 		"html" : "<P> Go faster! Go! Go! Go! They all cry. But any idiot can get in a Ferarri and drive it into a wall and great speed. Speed without safety is pointless!     In this video, join Spring Cloud contributor, Spring Cloud Contract founder, and my friend Marcin Grzejszczak   and me, and we'll look at how to embrace continuous delivery to build applications and get them to production not just quickly, but <em>safely</eM>.     </P>  ",
 		"imageUrl" : "http://api.joshlong.com/media/livelessons/AppliedCDLL.jpg" 
-	} ,
-
+	} , 
+	
+	   {
+		"title" :"Spring Framework Livelessons",
+		"html" : "<P>Want to learn all about the wide and wonderful world of Springdom? Well, look no further! Join me, Spring Developer Advocate Josh Long and we'll look at the various ecosystem components of Spring. NB: this video predates Spring Boot. It provides a good grounding on the components that provide the foundation for Spring Boot.</P>  ",
+		"imageUrl" : "http://api.joshlong.com/media/livelessons/SpringFrameworkLL.jpg" 
+	}   ,
+	
+	
 	{
 		"title" :"Building Microservices with Spring Boot Livelessons ",
 		"html" : "<P>     This should be your first stop if you haven't used Spring Boot before! This video, featuring Spring Boot lead and project cofounder Phil Webb and yours truly presents an exhaustive look at the framework and its various, supported use cases.   </P>  ",
