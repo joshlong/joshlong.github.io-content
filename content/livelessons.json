@@ -1,16 +1,16 @@
 [
  
   	{
-		"title" :"Reactive Spring Boot Livelessons",
+		"title" :"Reactive Spring Boot Livelessons (2nd Edition)",
 		"html" : "<P>Want to learn about how to build reactive systems and services with Spring Boot? Then you're in luck! These are just the lessons for you!</P> ",
 		"imageUrl" : "https://api.joshlong.com/media/livelessons/ReactiveSpringLL-2E.jpg" 
 	} ,
 
 
  	{
-		"title" :"Reactive Spring Boot Livelessons",
-		"html" : "<P>Want to learn about how to build reactive systems and services with Spring Boot? Then you're in luck! These are just the lessons for you!</P>",
-		"imageUrl" : "https://api.joshlong.com/media/livelessons/ReactiveSpringLL-2E.jpg" 
+		"title" :"Spring Boot and Kotlin Livelessons",
+		"html" : "<P>  Kotlin is the new JVM language sensation that's sweeping nations. It's elegant, concise, easy-to-learn and - most importantly: very, very, very pragmatic. This pragmatism was born of deep collaborations with various communities (like server-side JVM-based workloads and mobile Android-based workloads) and their use cases. Join me, Spring Developer Advocate Josh Long and we'll look at why Spring Boot and Kotlin were made for each other!  </P>",
+		"imageUrl" : "https://api.joshlong.com/media/livelessons/spring-boot-and-kotlin.jpg" 
 	} ,
 
 
@@ -18,5 +18,12 @@
 		"title" :"Cloud Foundry Livelessons",
 		"html" : "<P>  CloudFoundry is the leading on-prem Platform-as-a-Service. It's been designed from the ground up to allow organiztions to deliver value - software, systems, and services - into production with ease. As a Spring Developer, it's a natural fit and this is your must-watch introduction to going to production with Cloud Foundry.</P>  ",
 		"imageUrl" : "http://api.joshlong.com/media/livelessons/CloudNativeJavaLL.jpg" 
-	} 
+	} ,
+
+{
+		"title" :"Cloud Foundry Livelessons",
+		"html" : "<P>  CloudFoundry is the leading on-prem Platform-as-a-Service. It's been designed from the ground up to allow organiztions to deliver value - software, systems, and services - into production with ease. As a Spring Developer, it's a natural fit and this is your must-watch introduction to going to production with Cloud Foundry.</P>  ",
+		"imageUrl" : "http://api.joshlong.com/media/livelessons/CloudNativeJavaLL.jpg" 
+	} ,
+
 ]
