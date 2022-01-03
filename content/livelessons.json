@@ -25,9 +25,15 @@
 		"imageUrl" : "http://api.joshlong.com/media/livelessons/BuildMicroserviceswSpringBoot_2eLL.jpg" 
 	} ,
 
-{
+       {
 		"title" :"Cloud Foundry Livelessons",
 		"html" : "<P>  CloudFoundry is the leading on-prem Platform-as-a-Service. It's been designed from the ground up to allow organiztions to deliver value - software, systems, and services - into production with ease. As a Spring Developer, it's a natural fit and this is your must-watch introduction to going to production with Cloud Foundry.</P>  ",
+		"imageUrl" : "http://api.joshlong.com/media/livelessons/CloudNativeJavaLL.jpg" 
+	}   ,
+	
+	{
+		"title" :"Cloud Native Java Livelessons (with Kubernetes)",
+		"html" : "<P>  Spring Boot is the most efficient and productive way to get to production and these days, as often as not, production <EM>is</em> Kubernetes. Join me, and we'll look at how to applications that survive and thrive in the cloud, an on Kubernetes, in particular </P>  ",
 		"imageUrl" : "http://api.joshlong.com/media/livelessons/CloudNativeJavaLL.jpg" 
 	}  
 
