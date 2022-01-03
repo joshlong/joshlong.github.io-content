@@ -1,10 +1,27 @@
 [
-
+	{
+		"title" :"Cloud Native Java Livelessons (with Kubernetes)",
+		"html" : "<P>  Spring Boot is the most efficient and productive way to get to production and these days, as often as not, production <EM>is</em> Kubernetes. Join me, and we'll look at how to applications that survive and thrive in the cloud, an on Kubernetes, in particular </P>  <div class=\"buttons\"><a class=\"icon livelessons\" href=\"https://www.informit.com/store/cloud-native-java-with-kubernetes-livelessons-2nd-edition-9780137833993\">Buy</a></div>",
+		"imageUrl" : "http://api.joshlong.com/media/livelessons/CNJAndk8sLL-2E.png" 
+	}  
+ ,
 		{
 		"title" :"Reactive Spring Boot Livelessons (2nd Edition)",
 		"html" : "<P>Want to learn about how to build reactive systems and services with Spring Boot? Then you're in luck! These are just the lessons for you!</P>    <div class=\"buttons\"><a class=\"icon livelessons\" href=\"https://www.safaribooksonline.com/library/view/reactive-spring-boot/9780135255124/\">Buy</a> </div>   ",
 		"imageUrl" : "https://api.joshlong.com/media/livelessons/ReactiveSpringLL-2E.jpg" 
 	} ,
+			{
+		"title" :"Spring Boot and Kotlin Livelessons",
+		"html" : "<P>  Kotlin is the new JVM language sensation that's sweeping nations. It's elegant, concise, easy-to-learn and - most importantly: very, very, very pragmatic. This pragmatism was born of deep collaborations with various communities (like server-side JVM-based workloads and mobile Android-based workloads) and their use cases. Join me, Spring Developer Advocate Josh Long and we'll look at why Spring Boot and Kotlin were made for each other!  </P>   <div class=\"buttons\"><a class=\"icon livelessons\" href=\"https://www.oreilly.com/library/view/spring-boot-and/9780136836377/\">Buy</a> </div>",
+		"imageUrl" : "https://api.joshlong.com/media/livelessons/spring-boot-and-kotlin.jpg" 
+	} ,
+	
+	{
+		"title" :"Building Microservices with Spring Boot Livelessons ",
+		"html" : "<P>This should be your first stop if you haven't used Spring Boot before! This video, featuring Spring Boot lead and project cofounder Phil Webb and yours truly presents an exhaustive look at the framework and its various, supported use cases.   </P> <div class=\"buttons\"><a class=\"icon livelessons\" href=\"https://www.safaribooksonline.com/library/view/building-microservices-with/9780134192468\">Buy</a></div>     ",
+		"imageUrl" : "http://api.joshlong.com/media/livelessons/BuildMicroserviceswSpringBoot_2eLL.jpg" 
+	} ,
+	
 	{ 
 		"title" : "Spring Security Livelessons" , 
 		"html": "<P> Spring Security has been around almost as long as Spring itself. In the early days, it was called the Acegi framework. It has come quite the distance since then! Spring Security features the most robust ecosystem for security integrations for enterprise Java developers (or, indeed, all developers!) and you should definitely get to know it. Join Spring Security project lead Rob Winch and yours truly and we'll look at how to build secure Spring Boot applications and services. </p>  <div class=\"buttons\"><a class=\"icon livelessons\" href=\"http://www.informit.com/store/spring-security-livelessons-video-training-9780135383117\">Buy</a> </div> " ,
@@ -12,11 +29,7 @@
 
 	} ,
 
-		{
-		"title" :"Spring Boot and Kotlin Livelessons",
-		"html" : "<P>  Kotlin is the new JVM language sensation that's sweeping nations. It's elegant, concise, easy-to-learn and - most importantly: very, very, very pragmatic. This pragmatism was born of deep collaborations with various communities (like server-side JVM-based workloads and mobile Android-based workloads) and their use cases. Join me, Spring Developer Advocate Josh Long and we'll look at why Spring Boot and Kotlin were made for each other!  </P>   <div class=\"buttons\"><a class=\"icon livelessons\" href=\"https://www.oreilly.com/library/view/spring-boot-and/9780136836377/\">Buy</a> </div>",
-		"imageUrl" : "https://api.joshlong.com/media/livelessons/spring-boot-and-kotlin.jpg" 
-	} ,
+
 
 	{
 		"title" :"Applied Continuous Delivery Livelessons ",
@@ -31,11 +44,6 @@
 	}   ,
 
 	{
-		"title" :"Building Microservices with Spring Boot Livelessons ",
-		"html" : "<P>This should be your first stop if you haven't used Spring Boot before! This video, featuring Spring Boot lead and project cofounder Phil Webb and yours truly presents an exhaustive look at the framework and its various, supported use cases.   </P> <div class=\"buttons\"><a class=\"icon livelessons\" href=\"https://www.safaribooksonline.com/library/view/building-microservices-with/9780134192468\">Buy</a></div>     ",
-		"imageUrl" : "http://api.joshlong.com/media/livelessons/BuildMicroserviceswSpringBoot_2eLL.jpg" 
-	} ,
-	{
 		"title" :"RESTful APIs with Spring Livelessons ",
 		"html" : "<P> HTTP and REST are the backbone of the service-oriented web, and Spring is one of the best ways to build HTTP endpoints. Join me, and we'll look at how Spring Boot makes building HTTP endpoints and elegant REST APIs easy! </P> <div class=\"buttons\"><a class=\"icon livelessons\" href=\"http://shop.oreilly.com/product/0636920006126.do\">Buy</a></div> ",
 		"imageUrl" : "http://api.joshlong.com/media/livelessons/RESTfulAPIswSpringLL.jpg" 
@@ -44,12 +52,7 @@
 		"title" :"Cloud Foundry Livelessons",
 		"html" : "<P>  CloudFoundry is the leading on-prem Platform-as-a-Service. It's been designed from the ground up to allow organiztions to deliver value - software, systems, and services - into production with ease. As a Spring Developer, it's a natural fit and this is your must-watch introduction to going to production with Cloud Foundry. I put together this video with cloud infrastructure legend Josh McKenty (creator of OpenStack, among other things) so that you could get the operator's experience <em>and</em> the developer's experience for building cloud native applications with Spring Boot.</P>  <div class=\"buttons\"><a class=\"icon livelessons\" href=\"https://www.safaribooksonline.com/library/view/cloud-foundry-livelessons/9780134836126/\">Buy</a></div> ",
 		"imageUrl" : "http://api.joshlong.com/media/livelessons/CloudFoundryLL.jpg" 
-	}   ,
+	}    
 
-	{
-		"title" :"Cloud Native Java Livelessons (with Kubernetes)",
-		"html" : "<P>  Spring Boot is the most efficient and productive way to get to production and these days, as often as not, production <EM>is</em> Kubernetes. Join me, and we'll look at how to applications that survive and thrive in the cloud, an on Kubernetes, in particular </P>  <div class=\"buttons\"><a class=\"icon livelessons\" href=\"https://www.informit.com/store/cloud-native-java-with-kubernetes-livelessons-2nd-edition-9780137833993\">Buy</a></div>",
-		"imageUrl" : "http://api.joshlong.com/media/livelessons/CloudNativeJavaLL.jpg" 
-	}  
 
 	]
