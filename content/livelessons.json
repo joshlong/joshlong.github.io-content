@@ -24,7 +24,7 @@
 	
 	{ 
 		"title" : "Spring Security Livelessons" , 
-		"html": "<P> Spring Security has been around almost as long as Spring itself. In the early days, it was called the Acegi framework. It has come quite the distance since then! Spring Security features the most robust ecosystem for security integrations for enterprise Java developers (or, indeed, all developers!) and you should definitely get to know it. Join Spring Security project lead Rob Winch and yours truly and we'll look at how to build secure Spring Boot applications and services. </p>  <div class=\"buttons\"><a class=\"icon livelessons\" href=\"http://www.informit.com/store/spring-security-livelessons-video-training-9780135383117\">Buy</a> </div> " ,
+		"html": "<P> Spring Security has been around almost as long as Spring itself. In the early days, it was called the Acegi framework. It has come quite the distance since then! Spring Security features the most robust ecosystem for security integrations for enterprise Java developers (or, indeed, all developers!) and you should definitely get to know it. Join Spring Security project lead Rob Winch and yours truly and we'll look at how to build secure Spring Boot applications and services. </p>  <div class=\"buttons\"><a class=\"icon livelessons\" href=\"https://www.informit.com/store/spring-security-livelessons-video-training-9780135383117\">Buy</a> </div> " ,
 		"imageUrl" : "https://api.joshlong.com/media/livelessons/SpringSecurityLL.jpg" 
 
 	} ,
@@ -45,13 +45,13 @@
 
 	{
 		"title" :"RESTful APIs with Spring Livelessons ",
-		"html" : "<P> HTTP and REST are the backbone of the service-oriented web, and Spring is one of the best ways to build HTTP endpoints. Join me, and we'll look at how Spring Boot makes building HTTP endpoints and elegant REST APIs easy! </P> <div class=\"buttons\"><a class=\"icon livelessons\" href=\"http://shop.oreilly.com/product/0636920006126.do\">Buy</a></div> ",
-		"imageUrl" : "http://api.joshlong.com/media/livelessons/RESTfulAPIswSpringLL.jpg" 
+		"html" : "<P> HTTP and REST are the backbone of the service-oriented web, and Spring is one of the best ways to build HTTP endpoints. Join me, and we'll look at how Spring Boot makes building HTTP endpoints and elegant REST APIs easy! </P> <div class=\"buttons\"><a class=\"icon livelessons\" href=\"https://shop.oreilly.com/product/0636920006126.do\">Buy</a></div> ",
+		"imageUrl" : "https://api.joshlong.com/media/livelessons/RESTfulAPIswSpringLL.jpg" 
 	} ,
 	   {
 		"title" :"Cloud Foundry Livelessons",
 		"html" : "<P>  CloudFoundry is the leading on-prem Platform-as-a-Service. It's been designed from the ground up to allow organiztions to deliver value - software, systems, and services - into production with ease. As a Spring Developer, it's a natural fit and this is your must-watch introduction to going to production with Cloud Foundry. I put together this video with cloud infrastructure legend Josh McKenty (creator of OpenStack, among other things) so that you could get the operator's experience <em>and</em> the developer's experience for building cloud native applications with Spring Boot.</P>  <div class=\"buttons\"><a class=\"icon livelessons\" href=\"https://www.safaribooksonline.com/library/view/cloud-foundry-livelessons/9780134836126/\">Buy</a></div> ",
-		"imageUrl" : "http://api.joshlong.com/media/livelessons/CloudFoundryLL.jpg" 
+		"imageUrl" : "https://api.joshlong.com/media/livelessons/CloudFoundryLL.jpg" 
 	}    
 
 
