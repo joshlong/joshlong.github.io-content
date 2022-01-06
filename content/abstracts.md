@@ -2,6 +2,7 @@ title=Abstracts
 date=2021-04-02
 type=page
 status=published
+listed=true
 ~~~~~~
 
 All talks are workable in a one-hour slot  unless otherwise noted.
