@@ -7,6 +7,9 @@ listed=true
 
 All talks are workable in a one-hour slot  unless otherwise noted.
 
+## Bootiful Spring Boot 3
+Spring Framework 6 and Spring Boot 3 are almost here and you know what that means? New `.jar`s! And also new baselines and new possibilities! Spring Framework implies a Java 17 and Jakarta EE baseline, and offers new support for building GraalVM-native images. It also offers a new observability layer, an amalgamation of some of the work in the [Micrometer](https://micrometer.io) project and [Spring Cloud Sleuth](https://spring.io/projects/spring-cloud-sleuth). Spring Boot 3 builds upon all of this, and integrates all of this into our application. Join me, Spring Developer Advocate Josh Long (@starbuxman), and we'll look at  next-gen Spring.
+
 ## Bootiful GraphQL 
 
 Hi Spring fans! Data wants to be free and so much of what we do in the wide and wonderful world of microservices is all about connecting data. It's difficult. There's a tension between how we build well-encapsulated microservices and how we connect their data in our clients. Until now. Facebook open sourced GraphQL in 2015 (also the same year that "Avengers: Age of Ultron," a movie about a psychotic super computer that wanted to take over the world came out. No coincidence, surely...). GraphQL is an alternative to the REST constraint on HTTP. It provides an easy way to model queries (reads, like an HTTP `GET`), subscriptions (longer-lived, asynchronous notifications sent to the client) and mutations (updates). Join me, Spring Developer Advocate Josh Long (@starbuxman), and we'll look at how to build data gateways for every clients' needs with Spring GraphQL. 
