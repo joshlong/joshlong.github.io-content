@@ -41,7 +41,7 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
-
+* (2021-03-25) **Voxxed Days Bucharest**: I'll be doing a keynote for this year's Voxxed Days Bucharest event!  
 
 <!-- STOP:APPEARANCES -->
 
@@ -981,3 +981,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2022-01-02T02:45:35.254412+00:00 -->
 
 <!-- generated 2022-01-29T22:38:44.469640+00:00 -->
+
+<!-- generated 2022-01-29T22:56:31.143663+00:00 -->
