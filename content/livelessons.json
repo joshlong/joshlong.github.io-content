@@ -1,27 +1,24 @@
 [
 	{
-		"title" :"Cloud Native Java Livelessons (with Kubernetes)",
-		"htmlRef" : "/jl/blogpost/livelessons-cloud-native-java-with-kubernetes.html",
-		"imageUrl" : "https://api.joshlong.com/media/livelessons/CNJAndk8sLL-2E.png" 
-	}  
- ,
-		{
-		"title" :"Reactive Spring Boot Livelessons (3rd Edition)",
-		"htmlRef" : "/jl/blogpost/livelessons-reactive-spring-3e.html",
-		"imageUrl" : "https://api.joshlong.com/media/livelessons/ReactiveSpringLL-3E.jpg" 
+		"title" :		"Cloud Native Java Livelessons (with Kubernetes)",
+		"htmlRef" : 	"/jl/blogpost/livelessons-cloud-native-java-with-kubernetes.html",
+		"imageUrl" : 	"https://api.joshlong.com/media/livelessons/CNJAndk8sLL-2E.png" 
+	},
+	{
+		"title" :		"Reactive Spring Boot Livelessons (3rd Edition)",
+		"htmlRef" : 	"/jl/blogpost/livelessons-reactive-spring-3e.html",
+		"imageUrl" : 	"https://api.joshlong.com/media/livelessons/ReactiveSpringLL-3E.jpg" 
 	} ,
 	{
-		"title" :"Spring Boot and Kotlin Livelessons",
-		"htmlRef" : "/jl/blogpost/livelessons-spring-boot-and-kotlin.html", 
-		"imageUrl" : "https://api.joshlong.com/media/livelessons/spring-boot-and-kotlin.jpg" 
+		"title" :		"Spring Boot and Kotlin Livelessons",
+		"htmlRef" : 	"/jl/blogpost/livelessons-spring-boot-and-kotlin.html", 
+		"imageUrl" : 	"https://api.joshlong.com/media/livelessons/spring-boot-and-kotlin.jpg" 
 	} ,
-	
 	{
-		"title" :"Building Microservices with Spring Boot Livelessons ",
-		"htmlRef" : "",
-		"imageUrl" : "https://api.joshlong.com/media/livelessons/BuildMicroserviceswSpringBoot_2eLL.jpg" 
+		"title" :		"Building Microservices with Spring Boot Livelessons ",
+		"htmlRef" : 	"/jl/blogpost/livelessons-building-microservices-with-spring-boot.html",
+		"imageUrl" : 	"https://api.joshlong.com/media/livelessons/BuildMicroserviceswSpringBoot_2eLL.jpg"
 	} ,
-	
 	{ 
 		"title" : "Spring Security Livelessons" , 
 		"html": "<P> Spring Security has been around almost as long as Spring itself. In the early days, it was called the Acegi framework. It has come quite the distance since then! Spring Security features the most robust ecosystem for security integrations for enterprise Java developers (or, indeed, all developers!) and you should definitely get to know it. Join Spring Security project lead Rob Winch and yours truly and we'll look at how to build secure Spring Boot applications and services. </p>  <div class=\"buttons\"><a class=\"icon livelessons\" href=\"https://www.informit.com/store/spring-security-livelessons-video-training-9780135383117\">Buy on InformIT</a> </div> " ,
