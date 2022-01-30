@@ -12,13 +12,13 @@
 	} ,
 	{
 		"title" :"Spring Boot and Kotlin Livelessons",
-		"html" : "/jl/blogpost/livelessons-spring-boot-and-kotlin.html", 
+		"htmlRef" : "/jl/blogpost/livelessons-spring-boot-and-kotlin.html", 
 		"imageUrl" : "https://api.joshlong.com/media/livelessons/spring-boot-and-kotlin.jpg" 
 	} ,
 	
 	{
 		"title" :"Building Microservices with Spring Boot Livelessons ",
-		"html" : "<P>This should be your first stop if you haven't used Spring Boot before! This video, featuring Spring Boot lead and project cofounder Phil Webb and yours truly presents an exhaustive look at the framework and its various, supported use cases.   </P> <div class=\"buttons\"><a class=\"icon livelessons\" href=\"https://www.safaribooksonline.com/library/view/building-microservices-with/9780134192468\">Buy on InformIT</a></div>     ",
+		"htmlRef" : "",
 		"imageUrl" : "https://api.joshlong.com/media/livelessons/BuildMicroserviceswSpringBoot_2eLL.jpg" 
 	} ,
 	
