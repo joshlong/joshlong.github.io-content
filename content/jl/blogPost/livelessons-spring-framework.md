@@ -10,4 +10,4 @@ Want to learn all about the wide and wonderful world of Springdom? Well, look no
 
 <div class="buttons"><a class="icon oreilly" href="https://www.safaribooksonline.com/library/view/spring-framework/9780133477252/">
 Buy on O'REILLY
-</a><a class="icon livelessons" href="https://www.safaribooksonline.com/library/view/spring-framework/9780133477252/">Buy on InformIT</a></div>
+</a></div>
