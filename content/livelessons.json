@@ -1,16 +1,16 @@
 [
 	{
 		"title" :"Cloud Native Java Livelessons (with Kubernetes)",
-		"html" : "<P>  Spring Boot is the most efficient and productive way to get to production and these days, as often as not, production <EM>is</em> Kubernetes. Join me, and we'll look at how to applications that survive and thrive in the cloud, an on Kubernetes, in particular </P>  <div class=\"buttons\"><a class=\"icon livelessons\" href=\"https://www.informit.com/store/cloud-native-java-with-kubernetes-livelessons-2nd-edition-9780137833993\">Buy on InformIT</a></div>",
+		"htmlRef" : "/jl/blogpost/livelessons-cloud-native-java-with-kubernetes.html",
 		"imageUrl" : "https://api.joshlong.com/media/livelessons/CNJAndk8sLL-2E.png" 
 	}  
  ,
 		{
-		"title" :"Reactive Spring Boot Livelessons (2nd Edition)",
-		"html" : "<P>Want to learn about how to build reactive systems and services with Spring Boot? Then you're in luck! These are just the lessons for you!</P>    <div class=\"buttons\"><a class=\"icon livelessons\" href=\"https://www.safaribooksonline.com/library/view/reactive-spring-boot/9780135255124/\">Buy on InformIT</a> </div>   ",
-		"imageUrl" : "https://api.joshlong.com/media/livelessons/ReactiveSpringLL-2E.jpg" 
+		"title" :"Reactive Spring Boot Livelessons (3rd Edition)",
+		"htmlRef" : "/jl/blogpost/livelessons-reactive-spring-3e.html",
+		"imageUrl" : "https://api.joshlong.com/media/livelessons/ReactiveSpringLL-3E.jpg" 
 	} ,
-			{
+	{
 		"title" :"Spring Boot and Kotlin Livelessons",
 		"html" : "<P>  Kotlin is the new JVM language sensation that's sweeping nations. It's elegant, concise, easy-to-learn and - most importantly: very, very, very pragmatic. This pragmatism was born of deep collaborations with various communities (like server-side JVM-based workloads and mobile Android-based workloads) and their use cases. Join me, Spring Developer Advocate Josh Long and we'll look at why Spring Boot and Kotlin were made for each other!  </P>   <div class=\"buttons\"><a class=\"icon livelessons\" href=\"https://www.oreilly.com/library/view/spring-boot-and/9780136836377/\">Buy on InformIT</a> </div>",
 		"imageUrl" : "https://api.joshlong.com/media/livelessons/spring-boot-and-kotlin.jpg" 
