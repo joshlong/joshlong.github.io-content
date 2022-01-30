@@ -10,9 +10,11 @@ Spring Boot is the most efficient and productive way to get to production and th
 
 <div class="buttons">
 
-<a class="icon oreilly" href="https://learning.oreilly.com/videos/cloud-native-java/9780137834051/">Buy on O'REILLY</a>
 
 <a class="icon livelessons" href="https://www.informit.com/store/cloud-native-java-with-kubernetes-livelessons-2nd-edition-9780137833993">Buy on InformIT</a>
+
+<a class="icon oreilly" href="https://learning.oreilly.com/videos/cloud-native-java/9780137834051/">Buy on O'REILLY</a>
+
 
 </div>
 
