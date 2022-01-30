@@ -26,13 +26,13 @@
 	} ,
 	{
 		"title" :		"Applied Continuous Delivery Livelessons ",
-		"html" : 		"/jl/blogpost/livelessons-applied-continuous-delivery.html",
+		"htmlRef" : 	"/jl/blogpost/livelessons-applied-continuous-delivery.html",
 		"imageUrl" : 	"https://api.joshlong.com/media/livelessons/AppliedCDLL.jpg" 
 	} , 
    	{
-		"title" :"Spring Framework Livelessons",
-		"html" : "<P>Want to learn all about the wide and wonderful world of Springdom? Well, look no further! Join me, Spring Developer Advocate Josh Long and we'll look at the various ecosystem components of Spring. NB: this video predates Spring Boot. It provides a good grounding on the components that provide the foundation for Spring Boot.</P><div class=\"buttons\"><a class=\"icon livelessons\" href=\"https://www.safaribooksonline.com/library/view/spring-framework/9780133477252/\">Buy on InformIT</a></div>    ",
-		"imageUrl" : "https://api.joshlong.com/media/livelessons/SpringFrameworkLL.jpg" 
+		"title" :		"Spring Framework Livelessons",
+		"htmlRef" : 	"",
+		"imageUrl" : 	"https://api.joshlong.com/media/livelessons/SpringFrameworkLL.jpg" 
 	}   ,
 
 	{
