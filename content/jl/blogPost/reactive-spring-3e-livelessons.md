@@ -8,4 +8,4 @@ status=published
 
 I was so excited to return to the studio last year for the first time since the pandemic to update this video looking at reactive programming with Spring. 
 
-<div class="buttons"><a class="icon oreilly" href="https://learning.oreilly.com/videos/reactive-spring-boot/9780137831463/">Buy on O'REILLY</a><a class="icon livelessons" href="https://www.informit.com/store/reactive-spring-boot-livelessons-video-training-9780137831401">Buy on InformIT</a></div> 
+You can buy this video  on [O'REILLY ](https://learning.oreilly.com/videos/reactive-spring-boot/9780137831463/) or on [InformIT](https://www.informit.com/store/reactive-spring-boot-livelessons-video-training-9780137831401).
