@@ -25,3 +25,4 @@ In the video we look at, among other things:
 This was my first video in studio since the pandemic started. I had been gathering all sorts of material over the last couple of years and was so happy to finally put it all out there in one place. 
 
 If you have to pick one video to buy this year, may I humbly recommend this one? This video took _weeks_ to film and months to produce. It's as good a video as Pearson and I have ever done together and I'm very proud of it. 
+
