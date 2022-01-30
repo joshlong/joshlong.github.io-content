@@ -5,9 +5,9 @@ tags=blog
 status=published
 ~~~~~~
 
-Hi, Spring fans! Late last year I returned to the studio to update my best-selling videos for the Pearson _Livelessons_ series. 
+Hi, Spring fans! Late last year I returned to the studio to update my best-selling videos for the Pearson _Livelessons_ series. First, I updated the original **_Cloud Native Java_** video to include a focus on **Kubernetes**. The new video is available as **_Cloud Native Java with Kubernetes Livelessons_**  and has been completely redone. It's _huge_ now. Buy the video on [InformIT](https://www.informit.com/store/cloud-native-java-with-kubernetes-livelessons-2nd-edition-9780137833993) or on [O'Reilly's Safari Platform](https://learning.oreilly.com/videos/cloud-native-java/9780137834051/). You can buy this for 50% off with this special code: **LONGVID50**. 
 
-First, I updated the original **_Cloud Native Java_** video to include a focus on **Kubernetes**. The new video is available as **_Cloud Native Java with Kubernetes Livelessons_**  and has been completely redone. It's _huge_ now. In the video we look at, among other things: 
+In the video we look at, among other things: 
 
 * what motivates the move to cloud native software
 * getting started with Spring Framework and Spring Boot 
@@ -25,6 +25,3 @@ First, I updated the original **_Cloud Native Java_** video to include a focus o
 This was my first video in studio since the pandemic started. I had been gathering all sorts of material over the last couple of years and was so happy to finally put it all out there in one place. 
 
 If you have to pick one video to buy this year, may I humbly recommend this one? This video took _weeks_ to film and months to produce. It's as good a video as Pearson and I have ever done together and I'm very proud of it. 
-
-Buy the video on [InformIT](https://www.informit.com/store/cloud-native-java-with-kubernetes-livelessons-2nd-edition-9780137833993) or on [O'Reilly's Safari Platform](https://learning.oreilly.com/videos/cloud-native-java/9780137834051/). You can buy this for 50% off with this special code: **LONGVID50**. 
- 
