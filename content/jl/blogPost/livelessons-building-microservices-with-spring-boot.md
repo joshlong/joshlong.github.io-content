@@ -11,11 +11,4 @@ This should be your first stop if you haven't used Spring Boot before! This vide
 
 
 
-<div class="buttons">
-
-<a class="icon oreilly" href="https://www.safaribooksonline.com/library/view/building-microservices-with/9780134192468">Buy on O'REILLY</a>
-
-
-<a class="icon livelessons" href="https://www.informit.com/store/building-microservices-with-spring-boot-livelessons-9780134678665">Buy on InformIT</a>
-
-</div>
+<div class="buttons"><a class="icon oreilly" href="https://www.safaribooksonline.com/library/view/building-microservices-with/9780134192468">Buy on O'REILLY</a><a class="icon livelessons" href="https://www.informit.com/store/building-microservices-with-spring-boot-livelessons-9780134678665">Buy on InformIT</a></div>
