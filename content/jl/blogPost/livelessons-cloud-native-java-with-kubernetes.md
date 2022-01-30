@@ -6,7 +6,7 @@ listed=false
 status=published
 ~~~~~~
 
-Spring Boot is the most efficient and productive way to get to production and these days, as often as not, production  _is_ Kubernetes. Join me, and we'll look at how to applications that survive and thrive in the cloud, an on Kubernetes, in particular   
+Spring Boot is the most efficient and productive way to get to production and these days, as often as not, production _is_ Kubernetes. Join me, and we'll look at how to applications that survive and thrive in the cloud, an on Kubernetes, in particular.   
 
 <div class="buttons">
 
