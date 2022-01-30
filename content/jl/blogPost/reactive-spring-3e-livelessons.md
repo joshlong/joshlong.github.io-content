@@ -2,7 +2,6 @@ title=Reactive Spring Livelessons 3rd Edition
 date=2022-01-28
 type=post
 tags=blog
-listed=false
 status=published
 ~~~~~~
 
