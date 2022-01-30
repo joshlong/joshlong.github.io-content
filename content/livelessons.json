@@ -23,28 +23,25 @@
 		"title" : 		"Spring Security Livelessons" , 
 		"htmlRef": 		"/jl/blogpost/livelessons-spring-security.html" ,
 		"imageUrl" : 	"https://api.joshlong.com/media/livelessons/SpringSecurityLL.jpg" 
-	} ,
+	},
 	{
 		"title" :		"Applied Continuous Delivery Livelessons ",
 		"htmlRef" : 	"/jl/blogpost/livelessons-applied-continuous-delivery.html",
 		"imageUrl" : 	"https://api.joshlong.com/media/livelessons/AppliedCDLL.jpg" 
-	} , 
+	}, 
    	{
 		"title" :		"Spring Framework Livelessons",
 		"htmlRef" : 	"/jl/blogpost/livelessons-spring-framework.html",
 		"imageUrl" : 	"https://api.joshlong.com/media/livelessons/SpringFrameworkLL.jpg" 
-	}   ,
-
+	},
 	{
-		"title" :"RESTful APIs with Spring Livelessons ",
-		"html" : "<P> HTTP and REST are the backbone of the service-oriented web, and Spring is one of the best ways to build HTTP endpoints. Join me, and we'll look at how Spring Boot makes building HTTP endpoints and elegant REST APIs easy! </P> <div class=\"buttons\"><a class=\"icon livelessons\" href=\"https://shop.oreilly.com/product/0636920006126.do\">Buy on InformIT</a></div> ",
-		"imageUrl" : "https://api.joshlong.com/media/livelessons/RESTfulAPIswSpringLL.jpg" 
+		"title" :		"RESTful APIs with Spring Livelessons ",
+		"htmlRef" : 	"/jl/blogpost/livelessons-restful-spring.html",
+		"imageUrl" : 	"https://api.joshlong.com/media/livelessons/RESTfulAPIswSpringLL.jpg" 
 	} ,
-	   {
-		"title" :"Cloud Foundry Livelessons",
-		"html" : "<P>  CloudFoundry is the leading on-prem Platform-as-a-Service. It's been designed from the ground up to allow organiztions to deliver value - software, systems, and services - into production with ease. As a Spring Developer, it's a natural fit and this is your must-watch introduction to going to production with Cloud Foundry. I put together this video with cloud infrastructure legend Josh McKenty (creator of OpenStack, among other things) so that you could get the operator's experience <em>and</em> the developer's experience for building cloud native applications with Spring Boot.</P>  <div class=\"buttons\"><a class=\"icon livelessons\" href=\"https://www.safaribooksonline.com/library/view/cloud-foundry-livelessons/9780134836126/\">Buy on InformIT</a></div> ",
-		"imageUrl" : "https://api.joshlong.com/media/livelessons/CloudFoundryLL.jpg" 
+   	{
+		"title" :		"Cloud Foundry Livelessons",
+		"htmlRef" : 	"/jl/blogpost/livelessons-cloudfoundry.html",
+		"imageUrl" : 	"https://api.joshlong.com/media/livelessons/CloudFoundryLL.jpg" 
 	}    
-
-
-	]
+]
