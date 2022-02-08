@@ -1002,3 +1002,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2022-02-06T02:44:20.517793+00:00 -->
 
 <!-- generated 2022-02-07T02:37:15.341494+00:00 -->
+
+<!-- generated 2022-02-08T02:38:44.978290+00:00 -->
