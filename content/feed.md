@@ -52,6 +52,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2022-02-10) Jens Schauder on his journey through depression](http://api.bootifulpodcast.fm/podcasts/702d3140-ed39-4069-933c-2eabbff9ab1d/produced-audio) 
 * [(2022-02-04) Spring Data lead and architect extraordinaire, Oliver Drotbohm](http://api.bootifulpodcast.fm/podcasts/1a1dc9ea-c306-46b8-a835-5e248f7d4636/produced-audio) 
 * [(2022-01-28) Spring Framework cofounder and project lead, friend, and all around amazing human being, Juergen Hoeller](http://api.bootifulpodcast.fm/podcasts/1c136ac9-2cc3-4b76-80fa-da458fedbafe/produced-audio) 
 * [(2022-01-20) RedHat's Kate Stanley on the distinction between traditional brokers and Apache Kafka](http://api.bootifulpodcast.fm/podcasts/17def1ed-a89a-4f83-9197-163504736175/produced-audio) 
@@ -1008,3 +1009,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2022-02-09T02:40:24.611731+00:00 -->
 
 <!-- generated 2022-02-10T02:36:06.055803+00:00 -->
+
+<!-- generated 2022-02-11T02:39:01.637797+00:00 -->
