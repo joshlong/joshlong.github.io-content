@@ -41,6 +41,8 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
+* (2022-04-19) **Philly Emerging Technologies for the Enterprise (ETE)**: I'm looking forward to speaking at the Philly ETE show once again! 
+* (2022-04-12) **Devnexus 2022**: I'm so looking forward to returning to Atlanta, GA for the Devnexus show, one of the last big shows I did right before the virus descended. 
 * (2021-03-25) **Voxxed Days Bucharest**: I'll be doing a keynote for this year's Voxxed Days Bucharest event!  
 
 <!-- STOP:APPEARANCES -->
@@ -1011,3 +1013,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2022-02-10T02:36:06.055803+00:00 -->
 
 <!-- generated 2022-02-11T02:39:01.637797+00:00 -->
+
+<!-- generated 2022-02-12T02:44:14.040939+00:00 -->
