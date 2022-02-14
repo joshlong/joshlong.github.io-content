@@ -5,6 +5,8 @@ tags=blog
 status=published
 ~~~~~~
 
+<img src="https://api.joshlong.com/media/books/reactive-spring/cover.png"  width="400" style = "float: left; margin-right:10px" /> 
+
 Hi, Spring fans! I've decided to update my [_Reactive Spring Book_](https://reactivespring.io). I released the first edition in 2020. I want to get a minor update out of the way before Spring Framework 5 and Spring Boot 3 arrive. Then, once that generation lands and the ecosystem stabilizes around it, I hope to release another update.  
 
 I'll make the finished update available on Amazon for Kindle and print editions once it's done. If you want to get your hands on the unfinished draft, it's available on  [Leanpub.com/reactive-spring](https://leanpub.com/reactive-spring). 
@@ -23,4 +25,3 @@ The new book updates the contents to reflect the latest-and-greatest dependencie
 
 I am still noodling over what else to introduce. It makes sense, I think, to include coverage of Kotlin, Spring Native, and Spring GraphQL. Stay tuned! 
 
-<img src="https://api.joshlong.com/media/books/reactive-spring/cover.png" width = "300" />
