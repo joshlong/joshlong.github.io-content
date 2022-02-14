@@ -22,3 +22,5 @@ Thanks to all those who've sent me feedback on typos over the years and thanks t
 The new book updates the contents to reflect the latest-and-greatest dependencies for the Spring Framework 5.x and Spring Boot 3.x generation. I've already added a whole new chapter on Java, and I've almost completely rewritten and greatly expanded the scope of the chapter on I/O. 
 
 I am still noodling over what else to introduce. It makes sense, I think, to include coverage of Kotlin, Spring Native, and Spring GraphQL. Stay tuned! 
+
+<img src="https://api.joshlong.com/media/books/reactive-spring/cover.png" width = "300" />
