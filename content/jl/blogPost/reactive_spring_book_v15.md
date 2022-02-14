@@ -5,7 +5,7 @@ tags=blog
 status=published
 ~~~~~~
 
-<img src="https://api.joshlong.com/media/books/reactive-spring/cover.png"  width="400" style = "float: left; margin-right:10px" /> 
+<img src="https://api.joshlong.com/media/books/reactive-spring/cover.png"  width="400"   /> 
 
 Hi, Spring fans! I've decided to update my [**_Reactive Spring_**](https://reactivespring.io) book. I released the first edition in 2020. I want to get a minor update out of the way before Spring Framework 5 and Spring Boot 3 arrive. Then, once that generation lands and the ecosystem stabilizes around it, I hope to release another update.  
 
