@@ -43,6 +43,7 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 * (2022-04-19) **Philly Emerging Technologies for the Enterprise (ETE)**: I'm looking forward to speaking at the Philly ETE show once again! 
 * (2022-04-12) **Devnexus 2022**: I'm so looking forward to returning to Atlanta, GA for the Devnexus show, one of the last big shows I did right before the virus descended. 
+* (2022-03-23) **Redis Days**: Hi, Spring fans! I'm so looking forward to speaking at this year's RedisDays event on March 23rd! 
 * (2022-03-16) **JavaLand 2022 Flyer Top Speaker Feature.**: I'm looking forward to  <a href="https://bit.ly/3gK4gS6">speaking at JavaLand 2022 this year</a> 
 * (2021-03-25) **Voxxed Days Bucharest**: I'll be doing a keynote for this year's Voxxed Days Bucharest event!  
 
@@ -1025,3 +1026,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2022-02-15T02:40:00.408860+00:00 -->
 
 <!-- generated 2022-02-16T02:39:08.569922+00:00 -->
+
+<!-- generated 2022-02-17T02:33:50.828659+00:00 -->
