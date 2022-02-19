@@ -41,8 +41,10 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 
 <!-- START:APPEARANCES -->
 
+* (2022-07-17) **JBCNConf**: I'll be speaking at JBCNConf (live, in Barcelona, Spain, on 18-20 July, 2022)! Nos vemos! 
 * (2022-04-19) **Philly Emerging Technologies for the Enterprise (ETE)**: I'm looking forward to speaking at the Philly ETE show once again! 
 * (2022-04-12) **Devnexus 2022**: I'm so looking forward to returning to Atlanta, GA for the Devnexus show, one of the last big shows I did right before the virus descended. 
+* (2022-03-24) **Oracle Developer Live: Java Innovations**: I am so excited to be a speaker at [Oracle's forthcoming DevLive event. Register now](https://developer.oracle.com/developer-live/java-innovations-mar-2022/) 
 * (2022-03-23) **Redis Days**: Hi, Spring fans! I'm so looking forward to speaking at this year's RedisDays event on March 23rd! 
 * (2022-03-16) **JavaLand 2022 Flyer Top Speaker Feature.**: I'm looking forward to  <a href="https://bit.ly/3gK4gS6">speaking at JavaLand 2022 this year</a> 
 * (2021-03-25) **Voxxed Days Bucharest**: I'll be doing a keynote for this year's Voxxed Days Bucharest event!  
@@ -1031,3 +1033,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2022-02-17T02:33:50.828659+00:00 -->
 
 <!-- generated 2022-02-18T02:39:31.628441+00:00 -->
+
+<!-- generated 2022-02-19T02:38:27.052543+00:00 -->
