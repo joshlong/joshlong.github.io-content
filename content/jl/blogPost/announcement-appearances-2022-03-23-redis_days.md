@@ -1,6 +1,6 @@
 
 title=Upcoming Appearance: Redis Days
-date=2022-02-20
+date=2022-02-21
 type=post
 tags=blog
 status=published
