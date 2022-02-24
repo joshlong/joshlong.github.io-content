@@ -1,6 +1,6 @@
 
 title=Upcoming Appearance: JavaLand 2022 Flyer Top Speaker Feature.
-date=2022-02-23
+date=2022-02-24
 type=post
 tags=blog
 status=published
