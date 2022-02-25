@@ -58,6 +58,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2022-02-24) InfoQ editor and Java Champion, Dr. Alex Blewitt](http://api.bootifulpodcast.fm/podcasts/94a17702-1720-4bf1-9182-935151a8c0ff/produced-audio) 
 * [(2022-02-17) Java team luminary Sharat Chander](http://api.bootifulpodcast.fm/podcasts/af8b106e-273f-4fc9-ad19-97f3da52906f/produced-audio) 
 * [(2022-02-10) Jens Schauder on his journey through depression](http://api.bootifulpodcast.fm/podcasts/702d3140-ed39-4069-933c-2eabbff9ab1d/produced-audio) 
 * [(2022-02-04) Spring Data lead and architect extraordinaire, Oliver Drotbohm](http://api.bootifulpodcast.fm/podcasts/1a1dc9ea-c306-46b8-a835-5e248f7d4636/produced-audio) 
@@ -1046,3 +1047,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2022-02-23T02:39:44.705820+00:00 -->
 
 <!-- generated 2022-02-24T02:42:22.556308+00:00 -->
+
+<!-- generated 2022-02-25T02:40:32.621861+00:00 -->
