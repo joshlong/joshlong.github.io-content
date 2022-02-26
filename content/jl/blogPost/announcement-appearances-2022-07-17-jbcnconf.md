@@ -1,6 +1,6 @@
 
 title=Upcoming Appearance: JBCNConf
-date=2022-02-25
+date=2022-02-26
 type=post
 tags=blog
 status=published
