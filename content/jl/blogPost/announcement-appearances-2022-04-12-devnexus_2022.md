@@ -1,6 +1,6 @@
 
 title=Upcoming Appearance: Devnexus 2022
-date=2022-03-08
+date=2022-03-09
 type=post
 tags=blog
 status=published
