@@ -57,6 +57,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2022-03-10) Microsoft Azure Developer Advocate Mark Heckler](http://api.bootifulpodcast.fm/podcasts/515b6730-e7b2-42aa-a569-45d1b4cf2cb7/produced-audio) 
 * [(2022-03-03) Reactive Streams cofounder, former deputy CTO at Lightbend, and legend Viktor Klang](http://api.bootifulpodcast.fm/podcasts/982c9941-4e60-4d6b-81df-e7d4ba7bea0a/produced-audio) 
 * [(2022-02-24) InfoQ editor and Java Champion, Dr. Alex Blewitt](http://api.bootifulpodcast.fm/podcasts/94a17702-1720-4bf1-9182-935151a8c0ff/produced-audio) 
 * [(2022-02-17) Java team luminary Sharat Chander](http://api.bootifulpodcast.fm/podcasts/af8b106e-273f-4fc9-ad19-97f3da52906f/produced-audio) 
@@ -1077,3 +1078,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2022-03-09T02:46:51.646909+00:00 -->
 
 <!-- generated 2022-03-10T02:53:06.535870+00:00 -->
+
+<!-- generated 2022-03-11T02:48:24.341138+00:00 -->
