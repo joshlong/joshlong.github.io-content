@@ -1,6 +1,6 @@
 
 title=Upcoming Appearance: Voxxed Days Bucharest
-date=2022-03-22
+date=2022-03-23
 type=post
 tags=blog
 status=published
