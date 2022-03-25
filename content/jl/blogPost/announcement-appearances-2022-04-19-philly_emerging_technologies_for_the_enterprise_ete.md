@@ -1,6 +1,6 @@
 
 title=Upcoming Appearance: Philly Emerging Technologies for the Enterprise (ETE)
-date=2022-03-24
+date=2022-03-25
 type=post
 tags=blog
 status=published
