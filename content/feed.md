@@ -57,6 +57,7 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2022-03-25) Event streaming guru Jan Svoboda on Apache Kafka Design Patterns ](http://api.bootifulpodcast.fm/podcasts/5d132ca1-def3-4500-a23c-dc1aafa9e5a6/produced-audio) 
 * [(2022-03-17) Elastic's Felix Barnsteiner on APM for Spring Developers ](http://api.bootifulpodcast.fm/podcasts/3d24a6ae-2971-45e5-acd7-cbcc789e3587/produced-audio) 
 * [(2022-03-10) Microsoft Azure Developer Advocate Mark Heckler](http://api.bootifulpodcast.fm/podcasts/515b6730-e7b2-42aa-a569-45d1b4cf2cb7/produced-audio) 
 * [(2022-03-03) Reactive Streams cofounder, former deputy CTO at Lightbend, and legend Viktor Klang](http://api.bootifulpodcast.fm/podcasts/982c9941-4e60-4d6b-81df-e7d4ba7bea0a/produced-audio) 
@@ -1109,3 +1110,5 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2022-03-24T02:55:38.048484+00:00 -->
 
 <!-- generated 2022-03-25T02:52:20.983953+00:00 -->
+
+<!-- generated 2022-03-26T02:53:42.374319+00:00 -->
