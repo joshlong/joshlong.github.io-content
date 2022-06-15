@@ -6,3 +6,4 @@ This blog uses `jbake` to process the Markdown, Asciidoctor and HTML files and t
 
 Make a change (such as editing an existing file or adding a new one to, for example, `content/jl/blogPost/*`) and then `git commit` and `git push` the change and you'll trigger a CI build. The CI build runs `jbake` on the content, then `git clone`s the Github pages site for the actual blog itself, adds the updated site to that build and then `git add` and `git commit`s everything to the repository. The changes then usually appear live on the blog. The whole process takes a minute or so. Just keep refreshing and your change will land, eventually.
 
+
