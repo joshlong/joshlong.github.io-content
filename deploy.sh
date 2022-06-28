@@ -22,4 +22,5 @@ git add *
 git commit -am "new version $NOW "
 git push 
 
+
 echo "finished." 
