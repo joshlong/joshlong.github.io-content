@@ -47,7 +47,6 @@ I might be speaking in a town near you! Or, I might be speaking virtually. Eithe
 * (2022-03-25) **Voxxed Days Bucharest**: I'll be doing a keynote for this year's Voxxed Days Bucharest event!  
 * (2022-03-24) **Oracle Developer Live: Java Innovations**: I am so excited to be a speaker at [Oracle's forthcoming DevLive event. Register now](https://developer.oracle.com/developer-live/java-innovations-mar-2022/) 
 * (2022-03-23) **Redis Days**: Hi, Spring fans! I'm so looking forward to speaking at this year's RedisDays event on March 23rd! 
-* (2022-03-16) **JavaLand 2022 Flyer Top Speaker Feature.**: I'm looking forward to  <a href="https://bit.ly/3gK4gS6">speaking at JavaLand 2022 this year</a> 
 
 <!-- STOP:APPEARANCES -->
 
@@ -58,6 +57,10 @@ I run a podcast [called _A Bootiful Podcast_](http://bootifulpodcast.fm). It's a
 
 <!-- START:PODCASTS -->
 
+* [(2022-03-25) Event streaming guru Jan Svoboda on Apache Kafka Design Patterns ](http://api.bootifulpodcast.fm/podcasts/5d132ca1-def3-4500-a23c-dc1aafa9e5a6/produced-audio) 
+* [(2022-03-17) Elastic's Felix Barnsteiner on APM for Spring Developers ](http://api.bootifulpodcast.fm/podcasts/3d24a6ae-2971-45e5-acd7-cbcc789e3587/produced-audio) 
+* [(2022-03-10) Microsoft Azure Developer Advocate Mark Heckler](http://api.bootifulpodcast.fm/podcasts/515b6730-e7b2-42aa-a569-45d1b4cf2cb7/produced-audio) 
+* [(2022-03-03) Reactive Streams cofounder, former deputy CTO at Lightbend, and legend Viktor Klang](http://api.bootifulpodcast.fm/podcasts/982c9941-4e60-4d6b-81df-e7d4ba7bea0a/produced-audio) 
 * [(2022-02-24) InfoQ editor and Java Champion, Dr. Alex Blewitt](http://api.bootifulpodcast.fm/podcasts/94a17702-1720-4bf1-9182-935151a8c0ff/produced-audio) 
 * [(2022-02-17) Java team luminary Sharat Chander](http://api.bootifulpodcast.fm/podcasts/af8b106e-273f-4fc9-ad19-97f3da52906f/produced-audio) 
 * [(2022-02-10) Jens Schauder on his journey through depression](http://api.bootifulpodcast.fm/podcasts/702d3140-ed39-4069-933c-2eabbff9ab1d/produced-audio) 
@@ -233,6 +236,8 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 
 <!-- START:SCREENCASTS-->
 
+* [(2022-03-02) Reliable Database Migrations with Liquibase and Spring Boot](https://www.youtube.com/watch?v=YhicwD489xQ) 
+* [(2022-02-23) Easy IOT integration with HiveMQ, Spring Integration MQTT, and Spring Native](https://www.youtube.com/watch?v=o8MgZ1C7V6U) 
 * [(2022-02-16) MyBatis and Spring Native](https://www.youtube.com/watch?v=EWWq3ts9Tv4) 
 * [(2022-02-09) Spring Tips: IO, IO, It's Off To Work We Go](https://www.youtube.com/watch?v=eKfNoT07k_s) 
 * [(2021-12-22) @Controllers: Wrapup (All Together Now...!)](https://www.youtube.com/watch?v=xhNGqTwsGw0) 
@@ -1059,3 +1064,61 @@ I run a screencast   [called Spring Tips](http://bit.ly/spring-tips-playlist). I
 <!-- generated 2022-03-01T02:51:24.769541+00:00 -->
 
 <!-- generated 2022-03-02T02:46:12.828604+00:00 -->
+
+<!-- generated 2022-03-03T02:49:51.393986+00:00 -->
+
+<!-- generated 2022-03-04T02:50:42.506444+00:00 -->
+
+<!-- generated 2022-03-05T02:43:08.670126+00:00 -->
+
+<!-- generated 2022-03-06T02:40:31.847212+00:00 -->
+
+<!-- generated 2022-03-07T02:45:41.081555+00:00 -->
+
+<!-- generated 2022-03-08T02:41:44.410060+00:00 -->
+
+<!-- generated 2022-03-09T02:46:51.646909+00:00 -->
+
+<!-- generated 2022-03-10T02:53:06.535870+00:00 -->
+
+<!-- generated 2022-03-11T02:48:24.341138+00:00 -->
+
+<!-- generated 2022-03-12T02:40:34.562686+00:00 -->
+
+<!-- generated 2022-03-13T02:39:14.669210+00:00 -->
+
+<!-- generated 2022-03-14T02:45:59.011109+00:00 -->
+
+<!-- generated 2022-03-15T02:47:26.949486+00:00 -->
+
+<!-- generated 2022-03-16T02:51:32.991270+00:00 -->
+
+<!-- generated 2022-03-17T02:47:42.122430+00:00 -->
+
+<!-- generated 2022-03-18T02:51:01.949342+00:00 -->
+
+<!-- generated 2022-03-19T02:44:06.431654+00:00 -->
+
+<!-- generated 2022-03-20T02:44:20.934510+00:00 -->
+
+<!-- generated 2022-03-21T02:57:08.115085+00:00 -->
+
+<!-- generated 2022-03-22T02:58:28.424426+00:00 -->
+
+<!-- generated 2022-03-23T03:01:22.399110+00:00 -->
+
+<!-- generated 2022-03-24T02:55:38.048484+00:00 -->
+
+<!-- generated 2022-03-25T02:52:20.983953+00:00 -->
+
+<!-- generated 2022-03-26T02:53:42.374319+00:00 -->
+
+<!-- generated 2022-03-27T02:52:38.395146+00:00 -->
+
+<!-- generated 2022-03-28T03:05:13.963588+00:00 -->
+
+<!-- generated 2022-03-29T03:04:37.226517+00:00 -->
+
+<!-- generated 2022-03-30T03:03:51.962315+00:00 -->
+
+<!-- generated 2022-03-31T03:00:56.571289+00:00 -->

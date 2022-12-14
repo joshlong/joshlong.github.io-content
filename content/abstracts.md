@@ -198,3 +198,6 @@ In this workshop we'll cover:
 - *Functions-as-a-service* - In this section we'll look at how to build serverless-style applications (Spring Cloud Function)
 
  
+## Bootiful Kafka: Get the Message!
+
+Hi, Spring fans! I once met Dave Chapelle (no, not _that_ Dave Chapelle!), who was a legend from the messaging industry. He worked on SonicMQ and a bunch of other famous messaging initiatives. He also wrote _the_ O'Reilly book on the Java Messaging Service. I met him once, asked him to sign my copy of the book. He wrote, "Get the message!" and then signed it. I always loved him for that. And that's what I want you to do. Spring Boot and Apache Kafka are leaders in their respective fields and it's no surprise that they work well together. Join me, Spring Developer Advocate [Josh Long (@starbuxman)](https://twitter.com/starbuxman) and we'll look at how to use Spring Boot and Apache Kafka to build better, scalable systems and services so that you, too, can _get the message_! 
