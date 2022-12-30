@@ -7,7 +7,7 @@ status=published
 
 Happy new year! The world is about to ring in a new year, and with it comes a chance to reflect, to prioritize, to _clean_. My Github repositories were proliferating like rabbits! It was getting out of hand, and something needed to be done!
 
-<img src = "https://pbs.twimg.com/media/FlLXjnnaMAAry2y?format=jpg&name=4096x4096" />
+<img width="100%" src = "https://pbs.twimg.com/media/FlLXjnnaMAAry2y?format=jpg&name=4096x4096" />
 
 You know, I use Github a _lot_. I love Github. I feel like they love me, too. Either way, I love them. I use it a _lot_. Waaay too much. I've got more than a thousand repositories across dozens of Github organizations, partly because of my contributions to other Github organizations and partly because I created my own to solve some sort of particular problem. Heck, I created a few organizations just to house the demo code for some book and course content I've authored! In part because I'm so prolific at shows, I've got 8.3k followers on Github. Who knew _that_ was a metric? Apparently, that's a lot. All that to say, I use and abuse Github a lot and people seem to take note, but I think I could do a lot better. I had countless Github repositories laying around, abandoned, rejected, ephemeral. A lot of these repositories were just created to triage a bug or sketch out an idea. A lot of them were created for a particular version of a talk that I haven't given since. Whatever the reason, these things were piling up! 
 
