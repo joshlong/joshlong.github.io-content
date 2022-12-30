@@ -5,7 +5,7 @@ tags=blog
 status=published
 ~~~~~~
 
-Happy new year! The world is about to ring in a new year, and with it comes a chance to reflect, to prioritize, to _clean_. My Github repositories were proliferating like rabbits! It was getting out of hand, and something needed to be done!
+Happy new year! The world is about to ring in a new year, and with it comes a chance to reflect, to prioritize, to _clean_. My Github repositories were proliferating like rabbits! It was getting out of hand, and **something needed to be done**!
 
 <img width="100%" src = "https://pbs.twimg.com/media/FlLXjnnaMAAry2y?format=jpg&name=4096x4096" />
 
