@@ -12,7 +12,7 @@ All talks are workable in a one-hour slot  unless otherwise noted.
 Hi, Spring fans! It's 2022, a brand new year, and this year's going to be a big one! There's a lot in store - Spring Framework 6 and Spring Boot 3, Spring GraphQL, GraalVM native image support, and so much more. Join me, Spring Developer Advocate Josh Long (@starbuxman), and we'll look at a new Spring for a new year and new paradigms.
 
 ## Bootiful Spring Boot 3
-Spring Framework 6 and Spring Boot 3 are almost here, and you know what that means. New baselines and new possibilities! Spring Framework implies a Java 17 and Jakarta EE baseline and offers new support for building GraalVM-native images and a compile-time component model in the new Spring AOT engine. It also offers a new observability layer, declarative HTTP and RSocket clients, preliminary Project Loom and CRaC support, Problem-Details support, and so much more.  Join me, Spring Developer Advocate Josh Long (@starbuxman), and we'll look at next-gen Spring.
+Spring Framework 6 and Spring Boot 3 are  here, and you know what that means. New baselines and new possibilities! Spring Framework implies a Java 17 and Jakarta EE baseline and offers new support for building GraalVM-native images and a compile-time component model in the new Spring AOT engine. It also offers a new observability layer, declarative HTTP and RSocket clients, preliminary Project Loom and CRaC support, Problem-Details support, and so much more.  Join me, Spring Developer Advocate Josh Long (@starbuxman), and we'll look at next-gen Spring.
 
 
 ## Bootiful GraphQL 
