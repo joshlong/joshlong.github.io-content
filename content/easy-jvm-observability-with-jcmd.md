@@ -1,4 +1,4 @@
-title=JCMD
+title=Easy JVM Observability with the JCMD CLI
 date=2023-01-11
 type=page
 status=published
