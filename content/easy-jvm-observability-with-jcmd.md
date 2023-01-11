@@ -22,9 +22,7 @@ jcmd
 Alternatively, Spring Boot will print the PID in the console when the application starts up:
 
 ```
-
 ... Starting JcmdApplication using Java 17.0.5 with PID 66488 ...
-
 ```
 
 The PID for my application is 66488. So, run `jmcd <pid>` and you'll get a number of commands to which the JVM will respond for that application.
