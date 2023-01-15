@@ -65,7 +65,7 @@ public class WithdrawalEvent {
 We'll need to tailor the Esper `Configuration` class so that it knows about these types. Please think of this as registering our data schema with the repository. NB: this is  _not_ Spring's `@Configuration`, but an object of the same name. The Spring Boot autoconfiguration will define a default instance of this type. The autoconfiguration exposes a `com.joshlong.esper.EsperConfigurationCustomizer` interface. You could just define your own `Configuration` bean and the autoconfiguration will defer to your definition. If there are multiple creations to make to the `Configuration`, it'll be easier to implement the interface. Create a bean that implements this type and use it to tailor the Esper `Configuration`:
 
 
-"`java
+```java
 	@Bean
 	EsperConfigurationCustomizer esperConfigurationCustomizer() {
 		return configuration -> List.of( WithdrawalEvent.class)
@@ -76,7 +76,7 @@ We'll need to tailor the Esper `Configuration` class so that it knows about thes
 Finally, we're going to want to create our queries and attach a listener to them:
 
 
-"`java
+```java
 package bootiful;
 
 import com.espertech.esper.compiler.client.CompilerArguments;
@@ -137,7 +137,7 @@ So, now, whenever somebody emits an event, it'll be added to the repository, and
 Let's define a client that works with Esper to emit events:
 
 
-"`java
+```java
 @Component
 @RequiredArgsConstructor
 class BankClient {
