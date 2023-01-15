@@ -35,7 +35,7 @@ Here's how you'd override the dependency in Apache Maven:
 
 <properties>
     <!-- ... -->
-    <janino.version>3.1.0</janino.version>
+    <janino.version>3.1.6</janino.version>
 </properties>
 
 ```
