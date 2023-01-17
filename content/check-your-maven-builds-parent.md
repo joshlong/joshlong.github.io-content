@@ -1,5 +1,5 @@
 title=Adventures in Maven Dependency Conflict Resolution
-date=2023-01-19
+date=2023-01-17
 type=post
 tags=blog
 status=published
