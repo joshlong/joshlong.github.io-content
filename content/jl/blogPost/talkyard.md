@@ -1,5 +1,5 @@
 title=Blog comments, brought to you by Talkyard
-date=2023-01-18
+date=2023-01-19
 type=post
 tags=blog
 status=published
