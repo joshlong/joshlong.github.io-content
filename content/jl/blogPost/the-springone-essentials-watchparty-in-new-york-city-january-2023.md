@@ -1,0 +1,28 @@
+title=the SpringOne Essentials Watchparty in New York City, January 2023
+date=2023-01-29
+type=post
+tags=blog
+status=published
+~~~~~~
+
+
+
+Bah. I’m on a plane going home to San Francisco. My partner Tammie and I just spent a fantastic week in New York City, and now we’re headed home. I love home, and my birthday is coming up, so that’ll be fun. But we _really_ enjoyed our time in NYC. 
+
+I came to NYC to host the SpringOne Essentials livestream watch party at the VMware NYC office. It was awesome! SpringOne Essentials was our abbreviated, steamed version of SpringOne, packed with content recapping the latest and greatest in the wide, wonderful world of Spring. It’s an online event and you’ll be able to join the fun when the videos get posted online, of course, but it was a ton of fun being in-office with some customers and community members before the livestream kicked off. 
+
+NYC is infinite many things to many people. It is robust, fast, quiet, exciting, amazing, etc., all at once. It is so many things to so many people. Like a stream, it’s impossible to step in the same New York City twice. We had so much fun. We’ve both been to NYC before so we didn’t need to do the usual things like the Statue of Liberty, the World Trade Center, the Empire State Building. Instead, we got to basically live there. It was amazing. 
+
+That’s not quite true. We did _some_ relatively touristy things. We went to go see a taping of the _Late Show with Stephen Colbert_, for example. I’ve loved his stuff since he was on Comedy Central’s _The Colbert Report_, and I grew to appreciate him even more during the pandemic where he represented a voice of reason in a crazy moment in time. It was a privilege to see him live. Even if only from afar. He’s a class act. 
+
+I’m pretty lucky: my business is also my pleasure. The time I spent in New York was a flurry of friends in our customers, community, and beyond. 
+
+There are some people in NYC that I always hang out with, anytime I’m in town, including my teammate Dr. Mark Pollack and my teammate [Cora Iberkleid](https://twitter.com/ciberkleid). Cora was, unfortunately, out of town hosting a different watch party in another city, but I was able to see Dr. Pollack. I love [Dr. Pollack](https://twitter.com/markpollack). He’s amazing. He did an episode of the podcast, [for reference](https://spring.io/blog/2021/09/16/a-bootiful-podcast-dr-mark-pollack-on-physics-spring-cloud-data-flow-spring-data-spring-net-spring-xd-and-so-much-more). TL;DR: he created Spring.NET (yes, there was a Spring Framework for .NET back in the days…); was the first lead of the Spring Data project; confounded Spring XD and Spring Cloud Data Flow. He’s a legend.  
+
+Next up: former [Spring](https://spring.io)  and [Micrometer](https://micrometer.io)  founder Jon Schneider, who flew in from Miami, FL, just to hang out. What a mensch. He’s the founder of an amazing company - [Moderne](https://www.moderne.io). I don’t even know how to begin to explain it, but I’m going to try. You know that technology called [OpenRewrite](https://github.com/openrewrite)? It’s a framework that makes it easy to transform Java (and other language) source code. So, suppose you want to upgrade your Spring Boot 2.x application to Spring Boot 3.x.  There are some breaking changes, mostly in transitive APIs, but it happens. For example, Java EE has become Jakarta EE, and requires you to change the package from `javax` to `jakarta*` . There are some changes in Spring Security itself, around the use of the DSL. Spring Batch applications in Spring Boot no longer require the `@EnableBatchProcessing` annotation, and in fact using that annotation _disables_ the opt-in functionality that it used to _enable_.  The list goes on.
+
+So imagine you had a way to write code to analyze a code base and migrate the code. That’s what OpenRewrite does. You can even package recipes up in a `.jar` and have them picked up by a build plugin for Gradle or Maven. Easy.   But you gotta set it up, for all projects that need it. So, now, take that to the logical extension. Imagine you work for a large bank, you pay for Moderne’s SaaS service, and now have a way to author, disseminate, and apply recipes for your organizations’ 25,000 Spring Boot 2.x applications to move them and their particular requirements to Spring Boot 3.x. In minutes. Mouth watering, yet? The best part is that the recipes, which work with the opensource OpenRewrite project, are all OSS. Try before you buy. And feel free to contribute your own. Honestly, I’m going to be spending a lot of time diving into the possibilities here. 
+
+[This was so much fun](https://youtube.com/shorts/XRz24CvRosM?feature=share). I can’t be sure, but I bet that it’s probably a very close race between the New York City region, the San Francisco Bay Area, and London, for the region with the highest number of Java Champions. New York City is lousy with ‘em! And, as it just so happens, one of our most illustratious members, [Trisha Gee](https://twitter.com/trisha_gee), a newly minted Gradle employee (congratulations Gradle and Trisha!) was also in town to speak at the New York City Java SIG. As you can imagine, fun ensued when fellow Java Champions Frank Greco, Pratik Patel, Ray Tsang, Jeanne Boyarsky, Trisha Gee, Chandra Guntur, and more joined Jon Schneider, my partner Tammie, and me. Especially so, since I haven’t seen some of these amazing friends since before the pandemic. I’ve missed them so!
+
+Bah. I wish we could’ve stayed longer! But it’ll be good to get home, see our kid and her grandparents, celebrate my birthday, and get ready for my trip to Stockholm, Sweden, for the JFokus event in early February. Onward! 
