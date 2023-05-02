@@ -14,3 +14,4 @@ You may see quite a bit of mention of VMware Tanzu, which is essentially the clo
 Second, the COVID-19 crisis hit and I've done vastly less travel this year than in any year since I joined the Spring team.  I don't need to remind you all of what the COVID-19 crisis is - it's worldwide and has affected you too. 
 
 I really appreciate [all](https://twitter.com/starbuxman/status/1289826281660362752) the [kind](https://twitter.com/starbuxman/status/1289818502199537672) tweet [replies](https://twitter.com/starbuxman/status/1289826281660362752) I [got](https://twitter.com/starbuxman/status/1289830310557843456) today, my friends. I appreciate [the opportunity to serve](https://spring.io/team/jlong) and look forward to next ten years and beyond! 
+
