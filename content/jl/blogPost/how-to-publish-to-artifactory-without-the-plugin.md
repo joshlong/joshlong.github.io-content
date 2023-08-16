@@ -120,5 +120,42 @@ So, you'd either make sure to setup environment variables, or you'd run the buil
 ./gradlew -Partifactory_user=my-user  ...  publish
 ```
 
-Now, that sorted, to get back to coding... 
+And of course, once that's done, it's trivial to use it from a Gradle project, like this:
+
+
+```groovy
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.1.2'
+    id 'io.spring.dependency-management' version '1.1.2'
+    id 'org.graalvm.buildtools.native' version '0.9.23'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+
+java {
+    sourceCompatibility = '17'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://cloudnativejava.jfrog.io/artifactory/libs-snapshot-local'
+    }
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'com.joshlong:social-hub-client:0.0.1-SNAPSHOT'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+```
+
+Now then, that sorted, back to coding... 
 
