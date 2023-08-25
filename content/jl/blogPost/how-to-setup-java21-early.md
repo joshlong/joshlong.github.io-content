@@ -5,8 +5,6 @@ tags=blog
 status=published
 ~~~~~~
 
-# Trying out the new stuff
-
 In order for me to play with Java 21, which - and I can not stress this enough - is coming out on September 19th, 2023!, 
 
 ## Installing the JDK 
