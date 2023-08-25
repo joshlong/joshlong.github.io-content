@@ -5,7 +5,9 @@ tags=blog
 status=published
 ~~~~~~
 
-In order for me to play with Java 21, which - and I can not stress this enough - is coming out on September 19th, 2023!, 
+There has never been a better time to be a Java developer. Java 21  - and I can not stress this enough - is coming out on September 19th, 2023! It'll be followed shortly thereafter by a GraalVM release which will permite native image compilation. I can't wait to get my code to GraalVM native images on Java 21, so I wanted to chronicle the steps involved in setting things up today, before the final releases. I want to acknowledge the extra dedicated and valuable help of [Alina Yurenko](https://twitter.com/alina_yurenko), GraalVM developer advocate extraordinairre, in pulling all this information together. _THANK YOU_. 
+
+Also, I think Alina and I are doing a presentation at a conference near you at some point in the future, so if you want to learn from the best, and also from me, then be sure to watch that! :) 
 
 ## Installing the JDK 
 
