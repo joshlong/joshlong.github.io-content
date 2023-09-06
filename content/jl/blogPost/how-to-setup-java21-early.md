@@ -21,9 +21,14 @@ I changed the default project settings to remove all the old JDK versions. I mad
 
 ## Configuring my Spring Boot build 
 
-If you go to [the Spring Initializr](https://start.spring.io), you'll notice that the max it'll let you specify, as of the date of publication, is Java 20. Choose that and be sure to choose the latest release of Spring Boot 3.2 which, as of the date of publicatiohn is 3.2 M2. Download it and then, in a text editor, before you've opened it in your IDE, add the following feature enabling preview builds for GraalVM:
+If you go to [the Spring Initializr](https://start.spring.io), you'll notice that the max it'll let you specify, as of the date of publication, is Java 20. Choose that and be sure to choose the latest release of Spring Boot 3.2 which, as of the date of publication is 3.2 M2. Download it and then, in a text editor, before you've opened it in your IDE, add the following feature enabling preview builds for GraalVM:
 
 ```groovy
+
+java {
+    sourceCompatibility = '21'
+}
+
 graalvmNative {
 
     binaries {
@@ -32,9 +37,14 @@ graalvmNative {
         }
     }
 }
+
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(21) }
+}
+
 ```
 
-And make sure of course to set `sourceCompatability = 21`.
+
 
 That's it. Save your changes and then open the project in your IDE: `idea build.gradle`. If, upon opening it, it's using Java 21 as the JDk in the Run dialog, and in your Java code the following code - `Executors.newVirtualThreadPerTaskExecutor().submit(() -> System.out.println("hello, virtual threads!"))` -  compiles, then you're all set! 
 
