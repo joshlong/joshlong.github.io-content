@@ -6,7 +6,7 @@ status=published
 ~~~~~~
 
 
-<img src ="https://d2vw57jh8139vw.cloudfront.net/_next/static/media/jjj.ecdcd921.jpg" />
+<img width = "500" src ="https://d2vw57jh8139vw.cloudfront.net/_next/static/media/jjj.ecdcd921.jpg" />
 
 After moving to a more spacious apartment in San Francisco at the height of the pandemic in 2020, my trusty Apple Airport Extreme wireless router struggled to keep up with the new dimensions. My daughter's room was on the opposite end of condo as the ethernet drop was. Enter Amazon's Eero mesh routers. I was initially hesitant about Amazon's recent acquisition of Eero, but dove in feet-first anyway. I set up the main gateway by the ethernet and added two beacons—one in the hallway and another in the living room—to boost the signal. It was decent - but not perfect - and the limited ports for wired connectivity was a constraint.
 
