@@ -5,11 +5,14 @@ status=published
 listed=true
 ~~~~~~
 
+
 All talks are workable in a one-hour slot  unless otherwise noted.
 
 
-## Bootiful Spring Boot 3.x
-Spring Framework 6+ and Spring Boot 3+ are here, which means new baselines and possibilities. Spring Framework implies a Java 17 and Jakarta EE baseline and offers new support for building GraalVM-native images and a compile-time component model in the new Spring AOT engine. It also features a new observability layer, declarative HTTP and RSocket clients, preliminary Project Loom and CRaC support, ProblemDetail support, and much more. Developer productivity is second to none with first class support for Testcontainers, Docker Compose, and live reloads. Spring makes idiomatic use of the latest Kotlin features like coroutines and extension functions. Join me Spring Developer Advocate Josh Long (@starbuxman) and we’ll explore next-gen Spring together
+# Bootiful Spring Boot 3.x
+
+Spring Boot 3.x and Java 21 are here, and there's never been a better time to be a Java developer! In this talk we'll look at the incredible opportunities that lay ahead for the Spring Boot developer, and especially those using Java 21 and later. Spring Boot continues to offer the most sophisticated and robust ecosystem of integrations - supporting AI, GraphQL, easy data access, security (hello, Spring Authorization Server!), and so much more. And, it offers cutting edge support for production-centric optimizations like Project Loom's virtual threads, Project CRaC, and GraalVM. Join me Spring Developer Advocate Josh Long (@starbuxman) and we’ll explore next-gen Spring together
+
 
 
 ## Bootiful GraphQL 
