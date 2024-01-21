@@ -70,6 +70,37 @@ Kotlin, the productivity-focused language from our friends at JetBrains, takes u
 The Spring and Kotlin teams have worked hard to make sure that Kotlin and Spring Boot are a first-class experience for all developers trying to get to production, faster and safer. Come for the Spring and stay for the Bootiful Kotlin.
 
 
+## A Bootiful Service 
+
+Hi, Spring fans! Getting to production is hard, but building an application shouldn't be. In this workshop, we will explore several concepts and technologies in the Spring ecosystem to help you make better applications and systems with Spring Boot. 
+
+* **Your First Steps** 
+	* basic dependency injection 
+	* start.spring.io
+* **Java 21**
+	* Data-Oriented Programming
+	* Virtual Threads
+* **Data Driven Applications** 
+	* the joy of data
+	* Spring Data JDBC
+* **The Web**
+	* HTTP and REST
+	* GraphQL 
+* **Structuring your Spring Boot application**
+	* decoupling with events
+	* clean modular services with Spring Modulith
+* **Introducing Messaging** 
+	* RabbitMQ or Apache Kafka; the choice is yours 
+* **Smarter Clients**
+	* We're publishing events, now we need to refresh our view of the data, now what?
+	* the Spring declarative clients
+* **Security with the Spring Authorization Server**
+	* introducing OAuth  
+* **Easy API Gateways with Spring Cloud Gateway**
+	* sidestepping CORS with a good proxy
+	* token relays
+* **Packaging for Production**
+	* GraalVM native images
 
 
 ## Cloud Native Java (3-6h)
