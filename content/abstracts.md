@@ -9,7 +9,7 @@ listed=true
 All talks are workable in a one-hour slot  unless otherwise noted.
 
 
-# Bootiful Spring Boot 3.x
+## Bootiful Spring Boot 3.x
 
 Spring Boot 3.x and Java 21 are here, and there's never been a better time to be a Java developer! In this talk we'll look at the incredible opportunities that lay ahead for the Spring Boot developer, and especially those using Java 21 and later. Spring Boot continues to offer the most sophisticated and robust ecosystem of integrations - supporting AI, GraphQL, easy data access, security (hello, Spring Authorization Server!), and so much more. And, it offers cutting edge support for production-centric optimizations like Project Loom's virtual threads, Project CRaC, and GraalVM. Join me Spring Developer Advocate Josh Long (@starbuxman) and we’ll explore next-gen Spring together
 
