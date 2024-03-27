@@ -98,3 +98,5 @@ Bonus: ask your boss for the money saved in cloud infrastructure spend to be dep
 There's an interesting knock-on effect here, too: `Thread`s are _cheap_! you can create _millions_ or _tens of millions_ of them now. Indeed, the virtual `Executor` isn't even a "pool" per se. It just creates new threads _ad infinitum_ and lets them get garbage collected. 
 
 This, in turn, means a whole class of architectural decisions and conventions could be challenged. Do you really need to send that long-running email, or report generation, or image resizing job to another cluster node to do its work, in an admirable but probably pointless attempt at keeping the front end thread pool with as much capacity as possible? Why not run it on the same node as the web server? It's not like the webserver is going to run out of capacity any time soon.
+
+There's never been a better time to be a Java and Spring developer!
