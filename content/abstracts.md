@@ -13,7 +13,9 @@ All talks are workable in a one-hour slot  unless otherwise noted.
 
 Spring Boot 3.x and Java 21 are here, and there's never been a better time to be a Java developer! In this talk we'll look at the incredible opportunities that lay ahead for the Spring Boot developer, and especially those using Java 21 and later. Spring Boot continues to offer the most sophisticated and robust ecosystem of integrations - supporting AI, GraphQL, easy data access, security (hello, Spring Authorization Server!), and so much more. And, it offers cutting edge support for production-centric optimizations like Project Loom's virtual threads, Project CRaC, and GraalVM. Join me Spring Developer Advocate Josh Long (@starbuxman) and we’ll explore next-gen Spring together
 
+## Bootiful Spring AI
 
+The age of artificial intelligence (because the search for regular intelligence hasn't gone well..) is nearly at hand, and it's _everywhere_! But is it in your application? It should be. AI is about integration, and here the Java and Spring communities come second to nobody. In this talk, we'll demystify the concepts of modern day Artificial Intelligence and look at its integration with the white hot new Spring AI project, a framework that builds on the richness of Spring Boot to extend them to the wide world of AI engineering.
 
 ## Bootiful GraphQL 
 
