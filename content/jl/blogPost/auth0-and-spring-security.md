@@ -5,13 +5,13 @@ tags=blog
 status=published
 ~~~~~~
 
-
-
 A very common and useful pattern is to use OAuth (and OIDC in particular) to secure a proxy (a Spring Cloud Gateway instance) as an OAuth client. An OAuth client looks at incoming requests, determines if they have a valid OAuth token, and forces them to log in if not. The login part is handled by an Authorization Server, like Spring Authorization Server, Okta/Auth0, Active Directory, or Keycloak. These authorization servers redirect back to the OAuth client, hopefully with a token. Once the token is established, the OAuth client (which is also acting as a gateway) proxies all incoming requests, forwarding those requests and the token downstream to pure-play microservice APIs. These APIs also defend against invalid requests by rejecting those without tokens. They validate the token against the issuer URI of the authorization service. If the tokens don’t validate, the resource server rejects the requests. So, both the OAuth client/gateway and the OAuth resource server/API reject requests without tokens, but only the OAuth client/gateway is prepared to help you obtain one.
 
 I've done countless blogs and videos on using the Spring Authorization Server. In this blog, I wanted to look at the integration of Auth0. Auth0 is a company that has its own IDP (identity provider). A little while back, they acquired Okta. Okta also had its own IDP. If you want to integrate with these services, you can use stock-standard Spring Security and its built-in OAuth support with a little customization. Or, you can use the official blessed Okta Spring Boot starter, which simplifies things. Confusingly, you will find various attempts at documentation showing how to use the Okta starter with Okta, how to use the Okta starter with Auth0, and how to use stock-standard Spring Security with Okta or Auth0. Most of these documents focus on the OAuth client capability, conveniently forgetting the OAuth resource server implementation.
 
 In this blog, I'm going to look at using stock-standard Spring Security and Auth0. I couldn't sign up for a new Okta account, so I think by and large, you don't need to worry if you're starting today. You'll be using Auth0's IDP, which is a little different from Okta's.
+
+The code for the [example lives here](https://github.com/joshlong-attic/auth0-signin-example). Who knows? I might even keep it up to date. Hopefully. Probably not.
 
 ## Setup an Account
 
