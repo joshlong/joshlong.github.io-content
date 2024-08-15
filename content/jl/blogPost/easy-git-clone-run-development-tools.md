@@ -259,7 +259,7 @@ Then I can memorialize it in an environment file in the local directory:
 sdk env init
 ```
 
-This will create a `.sdkmanrc` in the current directory. (Make sure to add, commit, and push it to your Git repository!) Now, anybody else using SDKMAN.io with the auto_env feature enable can git clone-and-run your project with the right JDK. 
+This will create a `.sdkmanrc` in the current directory. (Make sure to add, commit, and push it to your Git repository!) Now, anybody else using SDKMAN.io with the `auto_env` feature enabled can git clone-and-run your project with the right JDK. 
 
 
 ## Conclusion 
