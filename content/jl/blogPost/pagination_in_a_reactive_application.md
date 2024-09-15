@@ -1,5 +1,5 @@
 title=Pagination in a Reactive Application
-date=2022-07-6
+date=2022-07-06
 type=post
 tags=blog
 status=published
