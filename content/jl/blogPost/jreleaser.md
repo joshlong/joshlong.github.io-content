@@ -195,5 +195,4 @@ Congrats! you now should have a working project deployed to Maven Central. Give 
 
 Oh, by the way: JReleaser also created a Github Package for the release, too! Nice. 
 
-## Changelog
-- 2024-09-25 14:51:11 - huge thanks to Andres Almiray, creator of JReleaser, for all the amazing help and the awesome project! 
+A huge thanks to [Andres Almiray](https://github.com/aalmiray), creator of [JReleaser](https://jreleaser.org), for all the amazing help and the awesome project! 
