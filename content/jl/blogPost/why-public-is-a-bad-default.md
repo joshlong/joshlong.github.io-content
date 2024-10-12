@@ -19,7 +19,7 @@ If you want every type be visible (`public`) in a global namespace, just use C! 
 
 The same logic applies to microservices. We create microservices not because they’re technically simpler - they’re not. They have more moving parts. No, we create them because have a well defined surface area - the network boundary - inside of which teams are able to iterate and innovate as fast as they want, and they can also deploy independent of other teams. So even though there are more moving parts, this can be an accelerant, assuming there’s proper convention and automation around deployment. Things slow down when you need to get consensus. Integration with other parts of the team or organization will always be slower than proceeding full-steam ahead in your own well-defined swimlane. But if you have a swimlane, you will know when you've departed from it and when it's time to do the arduous work of integration. Otherwise, you're never going to be sure. And you'll never get the productivity you desire without some pause.
 
-## Layer by function, not by role
+## Package by feature, not by layer
 
 I see this far too often in code. It’s anti pattern to layer your code by role. 
 
@@ -27,7 +27,9 @@ Don’t do:
 
 `app.models.Customer`, `app.repositories.CustomerRepository`, `app.services.CustomerService`, and `app.controllers.CustomerController`, etc. 
 
-In this scheme, every type except perhaps the controller would need to be public. Why is that acceptable? The model and repository are implementation details of the service and the service might be an implementation details of the controller. It's very hard to enforce a _bounded context_ in this arrangement, too.  
+In this scheme, every type except perhaps the controller would need to be public. Why is that acceptable? The model and repository are implementation details of the service and the service might be an implementation details of the controller. It's very hard to enforce a _bounded context_ in this arrangement, too.
+
+These packages have very poor cohesion and high coupling: many types in one package are coupled to many other packages. 
 
 Instead, do: 
 
@@ -41,7 +43,16 @@ etc.
 
 In this arrangement, we layer by feature. All of our types can be package private. If we truly want something to be accessible and visible to other parts of the codebase, we can make that decision deliberately.
 
-Most technologies, including Spring, don't need your types to be `public`. It buys you nothing but extra code. Indeed, Spring works even better in a scenario where your types aren't `public` because it allows you a form of information hiding. You might have a core interface, that's `public`, at the root of your code, and an implementation - that's package private ` -in one of the subpackages. You can define the Spring `@Configuration` in the subpackage and consumers may inject it by its interface, ignorant to the particular implementation. You could rename the class altogether and nothing in the consuming code would need to change.
+Most technologies, including Spring, don't need your types to be `public`. It buys you nothing but extra code. Indeed, Spring works even better in a scenario where your types aren't `public` because it allows you a form of information hiding. You might have a core interface, that's `public`, at the root of your code, and an implementation - that's package private  - in one of the subpackages. You can define the Spring `@Configuration` in the subpackage and consumers may inject it by its interface, ignorant to the particular implementation. You could rename the class altogether and nothing in the consuming code would need to change.
 
 
 
+
+
+## References
+* Tom Hombergs deck for ["Let's Build Components, not Layers"](https://speakerdeck.com/thombergs/lets-build-components-not-layers?slide=69)
+* want to use feature flags? [it's easier when everything is by feature](https://martinfowler.com/articles/feature-toggles.html)
+* [a nice break down on packaging by feature, not by layer](http://www.javapractices.com/topic/TopicAction.do?Id=205)
+* Here's a nice blog by Martin Fowler from 2005 in which he [summarizes some rules](https://martinfowler.com/bliki/LayeringPrinciples.html) put together by attendees at a design workshop in Norway about layer principles.
+* Simon Brown, architect extraordinairre and creator of the C4 model, talks [about _modular monoliths_ in this presentation](https://static.simonbrown.je/modular-monoliths.pdf)
+ 
