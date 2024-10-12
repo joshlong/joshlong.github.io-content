@@ -6,7 +6,7 @@ status=published
 ~~~~~~
 
 
-please proofread the following text 
+
 
 
 I recently posted a "poll" on Twitter, tongue very firmly planted in cheek, asking whether IntelliJ IDEA should stop defaulting new classes created in a Java project  with the visibility keyword `public`. [Here's my "poll"](https://x.com/starbuxman/status/1844658796154507709?s=61). Naturally, somebody asked "why not?" Here's my answer. I'll put it here and potentially update it over time as my thinking gets clearer.
