@@ -18,3 +18,12 @@ In *Edge*, it should be the same process, perhaps under different menus, but I'm
 As far as I can tell, *Firefox* doesn't have an equivalent feature...
 
 In Safari and Chrome, the integration is really slick. You get a windowless/chromeless browser window and your page. It's like using Slack or Spotify - Electron apps; they look nothing like the native desktop, but they're beautiful and you just know that the experience will be well looked after compared to the relatively less in demand macOS native experience.  
+
+Here's the Bluesky app running on macOS. I also have the settings for the window opened. They're in the normal place for macOS settings (see the App Name in the menu, then choose `Settings`):
+
+<img style=" max-width: 100%; height: auto;" src="https://api.joshlong.com/media/easy-desktop-apps-from-sites/bluesky.png" />
+
+Here's how the Bluesky application looks when in my macOS Dock. Slick!
+
+<img style="max-width: 100%; height: auto;" src="https://api.joshlong.com/media/easy-desktop-apps-from-sites/icon-in-dock.png" />
+
