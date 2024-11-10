@@ -9,13 +9,13 @@ I just stumbled upon a few nice settings in the `Settings` menu in IntelliJ IDEA
 
 Here's the IDE after the changes have been applied. 
 
-<img width ="600" src= "https://api.joshlong.com/media/streamlined-jetbrains-intellij.png" />
+<img width ="800" src= "https://api.joshlong.com/media/streamlined-jetbrains-intellij.png" />
 
 Not a huge difference, but quite a bit nicer. I quite like how svelte the Project view is. Means I can keep the panel open while also not wishing I had more space on a laptop.
 
 And here's the settings I clicked to get the effect:
 
-<img  width ="600" src= "https://api.joshlong.com/media/streamlined-jetbrains-settings.png" />
+<img  width ="800" src= "https://api.joshlong.com/media/streamlined-jetbrains-settings.png" />
 
 
 Nice! Maybe these have been here for 20 years and I simply never noticed. But I quite like them. Well done, as always, Jetbrains! 
