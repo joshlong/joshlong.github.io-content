@@ -15,12 +15,7 @@ Hi, Spring fans! Developers today are being asked to deliver more with less time
 
 Here's a rough outline whose contents we may, or may not, get to assuming enough time (a day or two):
 
-
-
-## README 
-
-bit.ly/spring-tips-playlist
-youtube.com/@coffeesoftware
+The code [is here](bit.ly/spring-tips-playlist) and you can learn more about this stuff on the [channel I help run](https://youtube.com/@coffeesoftware)
 
 ### Basics
 * which IDE? IntelliJ, VSCode, and Eclipse
