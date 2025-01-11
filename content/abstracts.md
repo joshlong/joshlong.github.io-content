@@ -9,6 +9,133 @@ listed=true
 All talks are workable in a one-hour slot  unless otherwise noted.
 
 
+## Bootiful Spring Boot: the Workshop 
+
+Hi, Spring fans! Developers today are being asked to deliver more with less time and build ever more efficient services, and Spring is ready to help you meet the demands. In this workshop, we'll take a roving tour of all things Spring, looking at fundamentals of the Spring component model, look at Spring Boot, and then see how to apply Spring in the context of batch processing, security, data processing, modular architecture, miroservices, messaging, AI, and so much more. 
+
+Here's a rough outline whose contents we may, or may not, get to assuming enough time (a day or two):
+
+
+
+## README 
+
+bit.ly/spring-tips-playlist
+youtube.com/@coffeesoftware
+
+### Basics
+* which IDE? IntelliJ, VSCode, and Eclipse
+* your choice of Java: GraalVM
+* start.spring.io, an API, website, and an IDE wizard 
+* Devtools
+* Docker Compose 
+* Testcontainers
+* banner.txt
+
+### Development Desk Check
+* the Spring JavaFormat Plugin 
+	* Python, `gofmt`, your favorite IDE, and 
+* the power of environment variables
+* SDKMAN
+	* `.sdkman`
+* direnv 
+	*  `.envrc`
+* a good password manager for secrets 
+
+### Data Oriented Programming in Java 21+ 
+* an example
+
+### Beans
+* dependency injection from first principles
+* bean configuration
+* XML
+* stereotype annotations
+* lifecycle 
+	* BeanPostProcessor
+	* BeanFactoryPostProcessor
+* auto configuration 
+* AOP
+* Spring's event publisher
+* configuration and the `Environment`
+* configuration processor
+
+### AOT & GraalVM
+* installing GraalVM 
+* GraalVM native images 
+* basics
+* AOT lifecycles
+
+### Scalability 
+* non-blocking IO
+* virtual threads
+* José Paumard's demo
+* Cora Iberkleid's demo 
+
+
+### Cloud Native Java (with Kubernetes)
+ * graceful shutdown 
+ * `ConfigMap` and you 
+ * Buildpacks and Docker support
+ * Actuator readiness and liveness probes
+
+### Data 
+* `JdbcClient`
+* SQL Initialization
+* Flyway
+* Spring Data JDBC
+
+
+### Web Programming
+* clients: `RestTemplate`, `RestClient`, declarative interface clients
+* REST
+	* controllers
+	* functional style
+* GraphQL 
+	* batches
+
+
+### Architecting for Modularity
+* Privacy
+* Spring Modulith 
+* Externalized messages
+* Testing 
+
+### Batch Processing 
+* Spring Batch
+* load some data from a CSV file to a SQL database
+
+### Microservices
+* centralized configuration 
+* API gateways 
+	* reactive or not reactive
+* event bus and refreshable configuration
+* service registration and discovery
+
+### Messaging and Integration
+* "What do you mean by Event Driven?"
+* Messaging Technologies like RabbitMQ or Apache Kafka
+* Spring Integration
+* files to events
+
+### Kafka 
+* a look at Spring for Apache Kafka 
+* Spring Integration 
+* Spring Cloud Stream
+* Spring Cloud Stream Kafka Streams
+
+### Security 
+* adding form login to an application
+* authentication 
+* authorization
+* passkeys
+* one time tokens
+* OAuth 
+	* the Spring Authorizatinm Server
+	* OAuth clients
+	* OAuth resource servers
+	* protecting messaging code
+
+
+
 ## Bootiful Spring Boot: A DOGumentary
 
 Spring Boot 3.x and Java 21 have arrived, making it an exciting time to be a Java developer! Join me, Josh Long (@starbuxman), as we dive into the future of Spring Boot with Java 21. Discover how to scale your applications and codebases effortlessly. We'll explore the robust Spring Boot ecosystem, featuring AI, modularity, seamless data access, and cutting-edge production optimizations like Project Loom's virtual threads, GraalVM, AppCDS, and more. Let's explore the latest-and-greatest in Spring Boot to build faster, more scalable, more efficient, more modular, more secure, and more intelligent systems and services.
