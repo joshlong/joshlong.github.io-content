@@ -9,7 +9,7 @@ listed=true
 All talks are workable in a one-hour slot  unless otherwise noted.
 
 
-## Bootiful Spring Boot: the Workshop 
+## Bootiful Spring Boot: the Deep-Dive 
 
 Hi, Spring fans! Developers today are being asked to deliver more with less time and build ever more efficient services, and Spring is ready to help you meet the demands. In this workshop, we'll take a roving tour of all things Spring, looking at fundamentals of the Spring component model, look at Spring Boot, and then see how to apply Spring in the context of batch processing, security, data processing, modular architecture, miroservices, messaging, AI, and so much more. 
 
