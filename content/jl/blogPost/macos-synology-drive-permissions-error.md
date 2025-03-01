@@ -9,9 +9,9 @@ I use the Synology NAS. It's an appliance that gives you a push-button simple RA
 
 But not everything's been perfect. I've been experiencing this odd issue where, on every reboot, the Synology Drive client prompts macOS to ask me for permissions (shown below). Each time, I approve the permission, but the error persists on restart. Ugh.
 
-<img style="max-width: 100%; height: auto;" src="https://api.joshlong.com/media/easy-desktop-apps-from-sites/2025-03-01-macos-sequoia-synology-error.png" />
+<img style="max-width: 100%; height: auto;" src="https://api.joshlong.com/media/2025-03-01-macos-sequoia-synology-error.png" />
 
-Some context: I've just reinstalled everything on my Apple M4, which I had sent in for repair by Apple. _Why_ did I send it in? Well, [read this](https://joshlong.com/) for the whole story. Anyway, everything's basically fine _except_ for Synology Drive, which has this weird error. 
+Some context: I've just reinstalled everything on my Apple M4, which I had sent in for repair by Apple. _Why_ did I send it in? Well, [read this](https://joshlong.com/jl/blogPost/apple-macos-sequoia-154-beta-broke-docker.html) for the whole story. Anyway, everything's basically fine _except_ for Synology Drive, which has this weird error. 
 
 I found [this solution](https://community.synology.com/enu/forum/72/post/190576) online after consulting ChatGPT and Claude to no avail. It works! 
 
