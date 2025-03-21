@@ -8,6 +8,9 @@ listed=true
 
 All talks are workable in a one-hour slot  unless otherwise noted.
 
+## Bootiful Spring Applications
+
+Hi, Spring fans! There's never been a better time to be a JVM / Spring developer! Spring brings the worlds of security, batch processing, NoSQL and SQL data access, enterprise application integration, web and microservices, gRPC, GraphQL, observability, AI, agentic systems, and so much more to your doorstep. In this talk we're going to look at some of the amazing opportunities that lay before the Spring Boot developer in 2025!
 
 ## Bootiful Spring Boot: the Deep-Dive 
 
