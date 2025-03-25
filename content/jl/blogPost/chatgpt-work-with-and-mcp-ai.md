@@ -19,12 +19,15 @@ Turns out this is a feature that was introduced a few weeks ago and is already s
 
 You can check the ChatGPT desktop app's "Settings" screen to see what. It _also_ works in Apple Notes, Apple TextEdit, Apple Script Editor, and Apple's Terminal, too! 
 
-And, if you install a plugin, it can be made to work in Visual Studio Code, too! 
+And, if you install a plugin, it can be made to work in Visual Studio Code, too! Here's the plugin I had to install.
 
 <img width = "500"  src="https://api.joshlong.com/media/chatgpt-work-with/chatgpt-work-with-visual-studio-code-plugin.png" />
+
+And here's me working with this very post in ChatGPT, even tho the main edits were occurring in `Visual Studio Code.app`. (Now, when will this work with `emacs`?)
 
 
 <img width = "500" src="https://api.joshlong.com/media/chatgpt-work-with/chatgpt-work-with-visual-studio-code-edits.png" />
 
+Anyway, good stuff! I can't wait to see more of this. 
 
 Nice!
