@@ -10,22 +10,21 @@ It's amazing how smart these tools are in the wake of AI. First, we saw Anthropi
 
 Now ChatGPT has the "work with me" feature. I was sitting in IntelliJ IDEA working on some text and I switched over to ChatGPT to ask it about a phrasing or something, and I noticed a little "README.adoc" icon above the ChatGPT text input area. It _knew_ about my IDE's context! 
 
-<img src="https://api.joshlong.com/media/chatgpt-work-with/chatgpt-work-with-readme-with-idea.png" />
+<img width = "500"  src="https://api.joshlong.com/media/chatgpt-work-with/chatgpt-work-with-readme-with-idea.png" />
 
 
 Turns out this is a feature that was introduced a few weeks ago and is already supported across the entire fleet of JetBrains technologies! 
 
-<img src="https://api.joshlong.com/media/chatgpt-work-with/chatgpt-work-with-chatgpt-settings.png" />
+<img width = "500" src="https://api.joshlong.com/media/chatgpt-work-with/chatgpt-work-with-chatgpt-settings.png" />
 
 You can check the ChatGPT desktop app's "Settings" screen to see what. It _also_ works in Apple Notes, Apple TextEdit, Apple Script Editor, and Apple's Terminal, too! 
 
 And, if you install a plugin, it can be made to work in Visual Studio Code, too! 
 
-<img src="https://api.joshlong.com/media/chatgpt-work-with/chatgpt-work-with-visual-studio-code-plugin.png" />
+<img width = "500"  src="https://api.joshlong.com/media/chatgpt-work-with/chatgpt-work-with-visual-studio-code-plugin.png" />
 
 
-<img src="https://api.joshlong.com/media/chatgpt-work-with/chatgpt-work-with-visual-studio-code-edits.png" />
-
+<img width = "500" src="https://api.joshlong.com/media/chatgpt-work-with/chatgpt-work-with-visual-studio-code-edits.png" />
 
 
 Nice!
