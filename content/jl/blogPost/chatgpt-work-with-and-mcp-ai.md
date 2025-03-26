@@ -6,6 +6,12 @@ status=published
 ~~~~~~
 
 
+**update**: Sam Altman just announced official support for MCP! 
+
+<img width = "500"  src="https://api.joshlong.com/media/chatgpt-work-with/samaltman-mcp.png" />
+
+So, you know what this means? You need to be checking out [Spring AI's amazing MCP support](https://start.spring.io)! Just search for `MCP` in the `Dependencies` dropdown!
+
 It's amazing how smart these tools are in the wake of AI. First, we saw Anthropic's Claude Desktop app (on Windows and macOS) sprout MCP last November. MCP has already enabled thousands of unique and amazing integrations and interactions on the desktop (and beyond). ([By the way, did you see my MCP video?](https://www.youtube.com/watch?v=cE1h-rC2o2U))  
 
 Now ChatGPT has the "work with me" feature. I was sitting in IntelliJ IDEA working on some text and I switched over to ChatGPT to ask it about a phrasing or something, and I noticed a little "README.adoc" icon above the ChatGPT text input area. It _knew_ about my IDE's context! 
