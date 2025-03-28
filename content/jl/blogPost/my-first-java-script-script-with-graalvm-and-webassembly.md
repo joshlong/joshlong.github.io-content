@@ -2,7 +2,7 @@ title=Sorcery with WebAssembly, GraalVM, and Java!
 date=2025-03-28
 type=post
 tags=blog
-status=published
+status=draft
 ~~~~~~
 
 
