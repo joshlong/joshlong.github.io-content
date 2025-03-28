@@ -10,6 +10,7 @@ Alternative title: _How I like to write my JavaScripts: in Java via WebAssembly!
 
 TL;DR: the code [is _here_](https://github.com/coffee-software-show/graalvm-and-webassembly) if you want to try it! But, I suggest you read on. 
 
+
 Second: I don't have the ability to test or document any of this on Windows. I'm sorry. Though  I've committed the final built WebAssembly artifact so one imagines that, given `node` on Windows, you could run the application...
 
 OK, read on! 
@@ -17,6 +18,10 @@ OK, read on!
 One of my favorite doctors, [Dr. Niephaus](https://medium.com/@fniephaus), is at it again! 
 
 He's doing a presentation at WASM.io this [very day](https://2025.wasm.io/sessions/the-future-of-write-once-run-anywhere-from-java-to-webassembly/) looking at how to use a new WebAssembly backend for GraalVM! Yes, you heard me, you can write Java code and target WebAssembly! 
+
+The full length talk from WASM.io should be online soon, and I can't wait to watch  it and greatly expand upon the pittance of a scrap of a rotten morself of knowledge  that is this post on which we must contentedly dine, for the moment...
+
+
 
 Now, there are - as you might imagine - _several_ limitations. First, it's nowhere near done! Second, it's work that's being done on at the very least GraalVM for Java 25. Third, it's targeting Oracle GraalVM (as opposed to GraalVM community edition). Fourth,  there's no networking support.   
 
