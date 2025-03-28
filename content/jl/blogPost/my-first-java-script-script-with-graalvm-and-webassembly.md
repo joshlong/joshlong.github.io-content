@@ -8,7 +8,7 @@ status=published
 
 Alternative title: _How I like to write my JavaScripts: in Java via WebAssembly!_ 
 
-TL;DR: the code is _here_ if you want to try it! But, I suggest you read on. 
+TL;DR: the code [is _here_](https://github.com/coffee-software-show/graalvm-and-webassembly) if you want to try it! But, I suggest you read on. 
 
 Second: I don't have the ability to test or document any of this on Windows. I'm sorry. Though  I've committed the final built WebAssembly artifact so one imagines that, given `node` on Windows, you could run the application...
 
