@@ -1,5 +1,5 @@
 title=Some Over Indulgent fun with ChatGPT's Image Rendering
-date=2025-94-04
+date=2025-04-04
 type=post
 tags=blog
 status=published
