@@ -6,7 +6,12 @@ listed=true
 ~~~~~~
 
 
-All talks are workable in a one-hour slot  unless otherwise noted.
+## Bootiful GraalVM 
+
+My first favorite place is production. I love production. You love production. And I don’t know anything that makes it easier to survive and thrive in production than Spring and GraalVM!
+
+In this session, join me -  Spring Developer Advocate Josh Long - and we’ll look at some of the amazing ways that Spring and GraalVM are an insurmountable win for your JVM applications in 2025. Experience blazingly fast startup, better security, and lower footprint for greener and cheaper production deployments!
+
 
 
 ## Bootiful Spring Boot: A DOGumentary
