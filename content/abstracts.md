@@ -16,7 +16,7 @@ In this session, join me -  Spring Developer Advocate Josh Long - and we’ll lo
 
 ## Bootiful Spring Boot: A DOGumentary
 
-Spring Boot 3.x and Java 21 have arrived, making it an exciting time to be a Java developer! Join me, Josh Long (@starbuxman), as we dive into the future of Spring Boot with Java 21. Discover how to scale your applications and codebases effortlessly. We'll explore the robust Spring Boot ecosystem, featuring AI, modularity, seamless data access, and cutting-edge production optimizations like Project Loom's virtual threads, GraalVM, AppCDS, and more. Let's explore the latest-and-greatest in Spring Boot to build faster, more scalable, more efficient, more modular, more secure, and more intelligent systems and services.
+Spring Boot 4.x and Java 25 have arrived, making it an exciting time to be a Java developer! Join me, Josh Long (@starbuxman), as we dive into the future of Spring Boot with Java 25. We'll learn how to scale your applications and codebases effortlessly, explore the robust Spring Boot ecosystem featuring AI, modularity, seamless data access, security, and cutting-edge production optimizations like Project Loom's virtual threads, GraalVM, AppCDS, and more. Let's explore the latest-and-greatest in Spring Boot to build faster, more scalable, more efficient, more modular, more secure, and more intelligent systems and services.
 
 ## Bootiful Spring Boot
 
