@@ -18,7 +18,7 @@ I just got back from Malmö, Sweden, where I spoke at the amazing ØREDEV confer
 
 Here's the obligatory selfie: 
 
-<img src  = "https://api.joshlong.com/media/18780" alt ="a picture of me and Randall Munroe in 2013" /> 
+<img src  = "https://api.joshlong.com/media/18780" class = "fullwidth" alt ="a picture of me and Randall Munroe in 2013" /> 
 
 I was there in 2013 and got to hang out with my friend, AWS developer advocate, hero, and industry legend James Ward. So imagine my delight - delirious delight! - in being able to speak at this year's event _with_ him! I adore that guy and whenever we hang out, I always learn new stuff from him. Such a privilege, so I was very, very grateful for that. 
 
