@@ -22,11 +22,11 @@ And it seemed, finally, that my dreams were answered when I discovered this keyb
 Finally, a few weeks ago it was available on the Keychron store. Bought it and here we are. It's amazing. 
 
 
-<img src="https://api.joshlong.com/media/my-new-keychron-ergo-keyboard/the-keyboard-in-a-box.png" width="800" />
+<img src="https://api.joshlong.com/media/my-new-keychron-ergo-keyboard/the-keyboard-in-a-box.png" class= "fullwidth" />
 
 Here's the keyboard on my desk, next to a Logitech MX Masters mouse (pictured slightly off screen) and my finger. It's _small_, but mighty! 
 
-<img src = "https://api.joshlong.com/media/my-new-keychron-ergo-keyboard/the-keyboard.png" width = "800" />
+<img src = "https://api.joshlong.com/media/my-new-keychron-ergo-keyboard/the-keyboard.png" class="fullwidth" />
 
 
 Types like a dream. Fast, portable, wireless, etc. It's taking some work to get comfortable on it, of course. I'm much more familiar with the slightly larger, older model. I'm also very comfortable on my Macbook Pro keyboard. I can get to more than 100 words per minute on my Macbook Pro (but then my wrists hurt after a day or so of sustained use), where as on the ergonomic keyboards I tend to hover around 80 wpm.
@@ -39,4 +39,4 @@ Types like a dream. Fast, portable, wireless, etc. It's taking some work to get 
 
 I am getting ahead, however.  I have successfuly gotten the new keyboard over 100 wpm on TypeRacer.com and - since I was hovering at so much lower in my previous attempts on the new keyboard, it prompted me to _prove_ I'm not cheating. 
 
-<img src = "https://api.joshlong.com/media/my-new-keychron-ergo-keyboard/getting-faster.png" alt = "cheat? moi? what would be the gain and game of that?" />
+<img src = "https://api.joshlong.com/media/my-new-keychron-ergo-keyboard/getting-faster.png" class= "fullwidth" alt = "cheat? moi? what would be the gain and game of that?" />
