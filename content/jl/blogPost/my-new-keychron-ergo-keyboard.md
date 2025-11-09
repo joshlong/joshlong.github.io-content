@@ -5,6 +5,15 @@ tags=blog
 status=published
 ~~~~~~
 
+<style>
+  img.fullwidth {
+    width: 100%;
+    height: auto;
+    display: block; /* removes small gaps below images */
+  }
+</style>
+
+
 I just got back from Malmö, Sweden, where I spoke at the amazing ØREDEV conference. I love that show! I'ves spoken there various times over the years, including [waaaay back in 2013](https://joshlong.com/jl/blogPost/a_busy_november.html) where I had the pleasure of meeting XKCD creator Randall Munroe.
 
 Here's the obligatory selfie: 
