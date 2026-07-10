@@ -5,18 +5,19 @@ status=published
 listed=true
 ~~~~~~
 
+## Bootiful Spring AI
 
-## Bootiful GraalVM 
-
-My first favorite place is production. I love production. You love production. And I don’t know anything that makes it easier to survive and thrive in production than Spring and GraalVM!
-
-In this session, join me -  Spring Developer Advocate Josh Long - and we’ll look at some of the amazing ways that Spring and GraalVM are an insurmountable win for your JVM applications in 2025. Experience blazingly fast startup, better security, and lower footprint for greener and cheaper production deployments!
+The age of artificial intelligence (because the search for regular intelligence hasn't gone well..) is nearly at hand, and it's _everywhere_! But is it in your application? It should be. AI is about integration, and here the Java and Spring communities come second to nobody. In this talk, we'll demystify the concepts of modern day Artificial Intelligence and look at its integration with the white hot new Spring AI project, a framework that builds on the richness of Spring Boot to extend them to the wide world of AI engineering.
 
 
+
+## Bootiful Spring Security 
+
+It's not real until it's secure, and there's no better framework with which to secure your applications than Spring Security. Join me and we'll look at how Spring Security works, how to integrate it into your applications, and where you can scale out to secure your systems and services. 
 
 ## Bootiful Spring Boot: A DOGumentary
 
-Spring Boot 4.x and Java 25 have arrived, making it an exciting time to be a Java developer! Join me, Josh Long (@starbuxman), as we dive into the future of Spring Boot with Java 25. We'll learn how to scale your applications and codebases effortlessly, explore the robust Spring Boot ecosystem featuring AI, modularity, seamless data access, security, and cutting-edge production optimizations like Project Loom's virtual threads, GraalVM, AppCDS, and more. Let's explore the latest-and-greatest in Spring Boot to build faster, more scalable, more efficient, more modular, more secure, and more intelligent systems and services.
+Spring Boot 4.x and Java 25+ have arrived, making it an exciting time to be a Java developer! Join me, Josh Long (@starbuxman), as we dive into the future of Spring Boot with Java 25. We'll learn how to scale your applications and codebases effortlessly, explore the robust Spring Boot ecosystem featuring AI, modularity, seamless data access, security, and cutting-edge production optimizations like Project Loom's virtual threads, Project Leyden, GraalVM, and more. Let's explore the latest-and-greatest in Spring Boot to build faster, more scalable, more efficient, more modular, more secure, and more intelligent systems and services.
 
 ## Bootiful Spring Boot
 
@@ -142,9 +143,6 @@ The code [is here](bit.ly/spring-tips-playlist) and you can learn more about thi
 	* OAuth resource servers
 	* protecting messaging code
 
-## Bootiful Spring AI
-
-The age of artificial intelligence (because the search for regular intelligence hasn't gone well..) is nearly at hand, and it's _everywhere_! But is it in your application? It should be. AI is about integration, and here the Java and Spring communities come second to nobody. In this talk, we'll demystify the concepts of modern day Artificial Intelligence and look at its integration with the white hot new Spring AI project, a framework that builds on the richness of Spring Boot to extend them to the wide world of AI engineering.
 
 ## Bootiful GraphQL 
 
@@ -177,3 +175,11 @@ Work takes time to flow through an organization and ultimately be deployed to pr
 ## Bootiful Kafka: Get the Message!
 
 Hi, Spring fans! I once met Dave Chapelle (no, not _that_ Dave Chapelle!), who was a legend from the messaging industry. He worked on SonicMQ and a bunch of other famous messaging initiatives. He also wrote _the_ O'Reilly book on the Java Messaging Service. I met him once, asked him to sign my copy of the book. He wrote, "Get the message!" and then signed it. I always loved him for that. And that's what I want you to do. Spring Boot and Apache Kafka are leaders in their respective fields and it's no surprise that they work well together. Join me, Spring Developer Advocate [Josh Long (@starbuxman)](https://twitter.com/starbuxman) and we'll look at how to use Spring Boot and Apache Kafka to build better, scalable systems and services so that you, too, can _get the message_! 
+
+
+## Bootiful GraalVM 
+
+My first favorite place is production. I love production. You love production. And I don’t know anything that makes it easier to survive and thrive in production than Spring and GraalVM!
+
+In this session, join me -  Spring Developer Advocate Josh Long - and we’ll look at some of the amazing ways that Spring and GraalVM are an insurmountable win for your JVM applications in 2025. Experience blazingly fast startup, better security, and lower footprint for greener and cheaper production deployments!
+
