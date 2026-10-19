@@ -5,15 +5,20 @@ status=published
 listed=true
 ~~~~~~
 
-## Bootiful Spring AI
-
-The age of artificial intelligence (because the search for regular intelligence hasn't gone well..) is nearly at hand, and it's _everywhere_! But is it in your application? It should be. AI is about integration, and here the Java and Spring communities come second to nobody. In this talk, we'll demystify the concepts of modern day Artificial Intelligence and look at its integration with the white hot new Spring AI project, a framework that builds on the richness of Spring Boot to extend them to the wide world of AI engineering.
-
-
 
 ## Bootiful Spring Security 
 
 It's not real until it's secure, and there's no better framework with which to secure your applications than Spring Security. Join me and we'll look at how Spring Security works, how to integrate it into your applications, and where you can scale out to secure your systems and services. 
+
+
+## Bootiful Spring AI
+
+The age of artificial intelligence (because the search for regular intelligence hasn't gone well..) is nearly at hand, and it's _everywhere_! But is it in your application? It should be. AI is about integration, and here the Java and Spring communities come second to nobody. In this talk, we'll demystify the concepts of modern day Artificial Intelligence and look at its integration with the white hot new Spring AI project, a framework that builds on the richness of Spring Boot to extend them to the wide world of AI engineering.
+
+## Spring for Builders
+
+I live in San Francisco, which is right next to startup-ville, USA—a.k.a. Silicon Valley! There's a lot going on there that makes no sense at all! E.g., matcha cold brews, water fasts, Oura ring obsessions, nonsensical ramblings about something called "transhumanism," landlords that accept equity in startups, actually doing pitches in elevators, and most of all, the rent! But there are some things there that are interesting and that work a little differently than we're perhaps used to. In the enterprise, our work is integration. It's designing systems to fold neatly into a large organization's existing technical infrastructure. Startups are different: their goal is to get an MVP up and running and to almost religiously guard against scope creep and extra liability. Join me, Spring Developer Advocate Josh Long, and we'll look at the JVM and Spring Boot's place in the startup.
+
 
 ## Bootiful Spring Boot: A DOGumentary
 
