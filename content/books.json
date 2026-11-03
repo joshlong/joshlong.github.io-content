@@ -5,6 +5,11 @@
         "html": "<p>I'm working on a new book about securing Spring Boot applications wherever they run. We'll start with authentication, authorization, and OAuth, then use Spring Security and Spring Authorization Server to secure HTTP, MCP, gRPC, desktop, CLI, and messaging applications.</p><div class=\"buttons\"><a href=\"https://leanpub.com/secure-all-the-things-with-spring-security\" class=\"icon leanpub\">Read it on Leanpub</a></div>"
     },
     {
+        "title": "Bootiful Spring AI",
+        "imageUrl": "https://api.joshlong.com/media/books/bootiful-spring-ai/cover.png",
+        "html": "<p>I'm writing <em>Bootiful Spring AI</em> with James Ward. We're exploring how to build AI agents and applications with Java and Spring. The book is coming soon; sign up on Leanpub to be notified when it's published.</p><div class=\"buttons\"><a href=\"https://leanpub.com/bootifulspringai\" class=\"icon leanpub\">Get notified on Leanpub</a></div>"
+    },
+    {
         "title" :"The Reactive Spring Book",
         "html" : "<P> I don't know how you would build architectures today without reactive programming. Once you've gone reactive, it's super hard to go back, because  - deep down - you <em> know</em> you can  deliver more performant, robust, resilient, scalable software with reactive. Why would you do otherwise? I love reactive programming, because it makes writing production-worthy software easier and faster. In this book, <a href=\"http://www.ReactiveSpring.io\"><EM>Reactive Spring</em></a>, I'll show you why by introducing the wide world of reactive Spring. </P><P>Follow <a href=\"http://twitter.com/ReactiveSpring\">@ReactiveSpring</a> on Twitter for more</P>    <div class=\"buttons\"><a class=\"icon amazon\" href=\"https://www.amazon.com/Reactive-Spring-Josh-Long/dp/1732910413\"> Buy on Amazon</a><a href=\"https://leanpub.com/reactive-spring\"  class=\"icon leanpub\">Buy on Leanpub</a></div>    ",
         "imageUrl" : "https://api.joshlong.com/media/books/reactive-spring/cover.png" 
