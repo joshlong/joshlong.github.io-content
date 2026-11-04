@@ -6,6 +6,7 @@ listed=true
 ~~~~~~
 
 
+
 ## Bootiful Spring Security 
 
 It's not real until it's secure, and there's no better framework with which to secure your applications than Spring Security. Join me and we'll look at how Spring Security works, how to integrate it into your applications, and where you can scale out to secure your systems and services. 
@@ -161,6 +162,9 @@ Spring is all about helping developers get to production quickly and safely. The
 ## Bootiful Testing (1-3h)
 
 How would you feel if you knew that any pat of the code was at most a few minutes away from being shippable and delivered into production?  How would you feel if you knew that any part of the code is a few ctrl+z's away from being shippable and delivered into production? Emboldened and confident? Test driven development (TDD) gives you that. TDD allows you to proceed with confidence that you're building the right thing. It provides you with imminent-horizons that you can meet and measure. TDD gives developers the confidence to go faster, secure in the knowledge that what they break they will fix and be able to improve. In this talk, join Spring Developer Advocate Josh Long (@starbuxman) as he looks at how to test Spring applications and services. We'll look at how to test basic components, mocks, how to take advantage of test slices, and how to test web applications. We'll also  look at how to  ensure that  API producers and API consumers work well together using consumer driven contract testing (CDCT) without sacrificing the testing pyramid for  end-to-end integration tests.
+
+## Bootiful Event-Driven Architectures
+I've been committing bugs to Spring Integration since 2008! It was the first framework to which I felt compelled to contribute because it solved a huge problem: it unshackled me from the likes of webMethods, Rendezvous, MQSeries, and the like. It gave me a framework that let me design robust, messaging-centric, decoupled, and scalable systems and services. I've never looked back. Join me as we explore Spring Integration and why it should be your go-to solution for your application integration needs.
 
 
 ## Bootiful Kotlin
