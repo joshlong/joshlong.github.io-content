@@ -1,4 +1,4 @@
-title=Technical Debt Isn’t an Engineering Annoyance - It’s a Security Crisis
+title=Technical Debt is a Security Crisis
 date=2026-11-20
 type=post
 tags=blog
