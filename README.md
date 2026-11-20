@@ -1,10 +1,36 @@
-# Content for the JoshLong.com blog 
+# Content for the JoshLong.com blog
 
-![Build Status](https://github.com/joshlong/joshlong.github.io-content/workflows/Build%20the%20Blawg/badge.svg)
+This repository holds the Markdown and HTML content that people [read on the blog](https://joshlong.com).
 
-This blog uses `jbake` to process the Markdown, Asciidoctor and HTML files and turn them into content that people can [read on the blog](http://joshlong.com). 
+## Publishing a post
 
+Add a file to `content/jl/blogPost/` with a header like this one, then `git commit` and `git push`.
 
-Make a change (such as editing an existing file or adding a new one to, for example, `content/jl/blogPost/*`) and then `git commit` and `git push` the change and you'll trigger a CI build. The CI build runs `jbake` on the content, then `git clone`s the Github pages site for the actual blog itself, adds the updated site to that build and then `git add` and `git commit`s everything to the repository. The changes then usually appear live on the blog. The whole process takes a minute or so. Just keep refreshing and your change will land, eventually.
+```
+title=My New Post
+date=2026-11-20
+type=post
+tags=blog
+status=published
+~~~~~~
 
+The post starts here.
+```
 
+Only posts with `status=published` show up on the site.
+Images go in `content/media/`.
+
+## How it gets to the site
+
+There is no build in this repository.
+A GitHub webhook on every push calls [`joshlong-api`](https://github.com/developer-advocacy/joshlong-api) at `https://api.joshlong.com/index`.
+The API pulls this repository, rebuilds its index, and the site at joshlong.com renders the posts from the API.
+The API also rebuilds once a day, in case a webhook is missed.
+
+A post usually appears within a minute or so of the push.
+
+## Not seeing your post?
+
+* Check the webhook deliveries in this repository's settings, under `Webhooks`, for a `202`.
+* Check that the header has a `date` and `status=published`, and the `~~~~~~` divider.
+* Check the `joshlong-api` logs for `rebuilt the index for the webhook`.
