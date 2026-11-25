@@ -107,7 +107,6 @@ The code [is here](bit.ly/spring-tips-playlist) and you can learn more about thi
 * GraphQL 
 	* batches
 
-
 ### Architecting for Modularity
 * Privacy
 * Spring Modulith 
@@ -149,6 +148,13 @@ The code [is here](bit.ly/spring-tips-playlist) and you can learn more about thi
 	* OAuth resource servers
 	* protecting messaging code
 
+### Artificial Intelligence
+* the `ChatClient`
+* advisors
+* RAG
+* tool calling
+* MCP
+* security
 
 ## Bootiful GraphQL 
 
